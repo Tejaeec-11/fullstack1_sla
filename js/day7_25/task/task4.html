@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 4 - Find a Student</title>
+</head>
+<body>
+<h1>find a student</h1>
+<script>
+let students = [
+    {
+        name: "Arun",
+        mark: 85
+    },
+    {
+        name: "Priya",
+        mark: 92
+    },
+    {
+        name: "Kumar",
+        mark: 78
+    }
+];
+
+let targetName = "Priya";
+
+for (let i = 0; i < students.length; i++) {
+    if (students[i].name === targetName) {
+        document.write("Name: " + students[i].name + "<br>");
+        document.write("Mark: " + students[i].mark);
+        break;
+    }
+}
+</script>
+
+</body>
+</html>

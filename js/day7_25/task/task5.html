@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 5 - Salary Filter</title>
+</head>
+<body>
+    <pre>
+        array[index] → Access array elements
+        object.property → Access object properties
+        array[index].property → Access properties inside an array of objects
+        for → Loop through arrays
+        if → Check conditions
+        break → Stop the loop after finding the required student
+    </pre>
+<h1>salary filter</h1>
+<script>
+let employees = [
+    {
+        name: "Arun",
+        salary: 35000
+    },
+    {
+        name: "Priya",
+        salary: 45000
+    },
+    {
+        name: "Kumar",
+        salary: 55000
+    },
+    {
+        name: "Divya",
+        salary: 40000
+    }
+];
+
+for (let i = 0; i < employees.length; i++) {
+    if (employees[i].salary > 40000) {
+        document.write(
+            "Name: " + employees[i].name +
+            " - Salary: ₹" + employees[i].salary +
+            "<br>"
+        );
+    }
+}
+</script>
+
+</body>
+</html>
