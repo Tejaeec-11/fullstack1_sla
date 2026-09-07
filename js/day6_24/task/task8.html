@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 8</title>
+</head>
+<body>
+<h1>reverse number</h1>
+<script>
+let number = 12345;
+let reverse = 0;
+
+for (; number > 0; number = Math.floor(number / 10)) {
+    let digit = number % 10;
+    reverse = reverse * 10 + digit;
+}
+
+document.write(reverse);
+</script>
+
+</body>
+</html>
