@@ -1,0 +1,37 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+a{
+    text-decoration: none;
+}
+ .box1 {
+            background-color: #e74c3c;
+            width: 200px;
+            height: 100px;
+            margin: 10px;
+}
+.box2 {
+            background-color: #3498db;
+            width: 200px;
+            height: 100px;
+            margin: 10px;
+            display: none;  /* Hides completely - space removed */ 
+}
+.box3 {
+            background-color: #2ecc71;
+            width: 200px;
+            height: 100px;
+            margin: 10px;
+            visibility: hidden; /* Hides but space remains */
+}
+.box4 {
+            background-color: #f39c12;
+            width: 200px;
+            height: 100px;
+            margin: 10px;
+ }

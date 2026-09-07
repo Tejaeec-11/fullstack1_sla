@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ABC Tech Solutions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f0f2f5;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .header {
+            background: #003366;
+            color: white;
+            padding: 15px 25px;
+            border-radius: 8px;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 28px;
+        }
+        .header p {
+            margin: 5px 0 0;
+            font-size: 14px;
+            opacity: 0.8;
+        }
+        .nav {
+            background: #e8ecf1;
+            padding: 12px 20px;
+            margin: 15px 0;
+            border-radius: 6px;
+        }
+        .nav a {
+            margin-right: 25px;
+            text-decoration: none;
+            color: #003366;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        .row {
+            display: flex;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+        .sidebar {
+            flex: 1;
+            min-width: 220px;
+        }
+        .sidebar-box {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+        }
+        .sidebar-box h3 {
+            background: #003366;
+            color: white;
+            padding: 8px 12px;
+            border-radius: 4px;
+            margin: -15px -15px 15px -15px;
+        }
+        .sidebar-box ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .sidebar-box ul li {
+            padding: 6px 0;
+            border-bottom: 1px solid #eee;
+        }
+        .sidebar-box ul li a {
+            text-decoration: none;
+            color: #333;
+            font-size: 14px;
+        }
+        .content {
+            flex: 2.5;
+            min-width: 300px;
+        }
+        .welcome {
+            background: #004080;
+            color: white;
+            padding: 18px 22px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .welcome h2 {
+            margin: 0 0 5px;
+            font-size: 22px;
+        }
+        .welcome p {
+            margin: 5px 0;
+            font-size: 14px;
+        }
+        .btn {
+            background: white;
+            color: #004080;
+            padding: 6px 18px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 8px;
+            font-size: 13px;
+        }
+        .company-info {
+            background: #f8f9fa;
+            padding: 12px 18px;
+            border-radius: 6px;
+            border-left: 4px solid #004080;
+            margin-bottom: 20px;
+            font-size: 13px;
+        }
+        .profile-card {
+            background: #f8f9fa;
+            padding: 18px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            margin-bottom: 20px;
+        }
+        .profile-card h3 {
+            margin: 0 0 4px;
+            color: #003366;
+        }
+        .profile-card .designation {
+            color: #004080;
+            font-weight: bold;
+            font-size: 14px;
+            margin: 0 0 10px;
+        }
+        .profile-card p {
+            margin: 4px 0;
+            font-size: 13px;
+        }
+        .edit-btn {
+            background: #004080;
+            color: white;
+            padding: 4px 16px;
+            border-radius: 16px;
+            text-decoration: none;
+            font-size: 12px;
+            display: inline-block;
+            margin-top: 8px;
+        }
+        .announce-item {
+            background: #f8f9fa;
+            padding: 12px 15px;
+            border-radius: 6px;
+            margin-bottom: 10px;
+            border-left: 4px solid #004080;
+        }
+        .announce-item h4 {
+            margin: 0 0 4px;
+            color: #003366;
+            font-size: 14px;
+        }
+        .announce-item p {
+            margin: 4px 0;
+            font-size: 13px;
+        }
+        .announce-item .date {
+            font-size: 11px;
+            color: #888;
+        }
+        .apply-leave {
+            background: #f8f9fa;
+            padding: 18px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            margin-bottom: 20px;
+        }
+        .apply-leave h3 {
+            margin: 0 0 12px;
+            color: #003366;
+        }
+        .apply-leave label {
+            font-weight: bold;
+            font-size: 13px;
+            display: block;
+            margin: 10px 0 4px;
+        }
+        .apply-leave select, .apply-leave input, .apply-leave textarea {
+            width: 100%;
+            padding: 6px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 13px;
+        }
+        .apply-leave .file-input {
+            padding: 4px 0;
+        }
+        .apply-leave .btn-group {
+            margin-top: 12px;
+        }
+        .apply-leave .btn-group input {
+            width: auto;
+            padding: 6px 20px;
+            margin-right: 10px;
+            background: #004080;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .apply-leave .btn-group input[type="reset"] {
+            background: #888;
+        }
+        .employee-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            font-size: 13px;
+        }
+        .employee-table th {
+            background: #004080;
+            color: white;
+            padding: 8px;
+            text-align: left;
+        }
+        .employee-table td, .employee-table th {
+            border: 1px solid #ddd;
+            padding: 7px;
+        }
+        .employee-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        .section-title {
+            color: #003366;
+            margin: 25px 0 10px;
+            font-size: 20px;
+        }
+        .footer {
+            background: #003366;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            border-radius: 6px;
+            margin-top: 20px;
+            font-size: 13px;
+        }
+        .footer-links {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            padding: 15px 0;
+            background: #f8f9fa;
+            border-radius: 6px;
+            margin: 15px 0;
+            border: 1px solid #ddd;
+        }
+        .footer-links div {
+            min-width: 150px;
+        }
+        .footer-links h4 {
+            color: #003366;
+            margin: 0 0 8px;
+        }
+        .footer-links ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .footer-links ul li {
+            padding: 3px 0;
+            font-size: 13px;
+        }
+        .footer-links ul li a {
+            text-decoration: none;
+            color: #333;
+        }
+        .about-text {
+            font-size: 13px;
+            color: #555;
+            margin: 10px 0;
+        }
+        hr {
+            border: 1px solid #ddd;
+            margin: 20px 0;
+        }
+        .view-all {
+            color: #004080;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 13px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- HEADER -->
+    <div class="header">
+        <h1>ABC TECH SOLUTIONS</h1>
+        <p>Innovate - Integrate - Succeed</p>
+    </div>
+
+    <!-- NAVIGATION -->
+    <div class="nav">
+        <a href="#">Dashboard</a>
+        <a href="#">Employees</a>
+        <a href="#">Departments</a>
+        <a href="#">Leave</a>
+        <a href="#">Reports</a>
+        <a href="#">Contact</a>
+        <a href="#">Logout</a>
+    </div>
+
+    <!-- MAIN ROW -->
+    <div class="row">
+
+        <!-- SIDEBAR -->
+        <div class="sidebar">
+            <div class="sidebar-box">
+                <h3>EMPLOYEE PORTAL</h3>
+                <ul>
+                    <li><a href="#">Dashboard</a></li>
+                    <li><a href="#">My Profile</a></li>
+                    <li><a href="#">Leave Apply</a></li>
+                    <li><a href="#">My Leaves</a></li>
+                    <li><a href="#">Payroll</a></li>
+                    <li><a href="#">Performance</a></li>
+                    <li><a href="#">Documents</a></li>
+                    <li><a href="#">Announcements</a></li>
+                    <li><a href="#">Settings</a></li>
+                </ul>
+            </div>
+
+            <!-- COMPANY INFO IN SIDEBAR -->
+            <div class="sidebar-box">
+                <h3>COMPANY INFO</h3>
+                <p><strong>ABC Tech Solutions Pvt. Ltd.</strong></p>
+                <p>123, Tech Park,<br>Chennai - 600 001, India</p>
+                <p>+91 98765 43210</p>
+                <p>info@abctech.com</p>
+                <p>www.abctech.com</p>
+            </div>
+        </div>
+
+        <!-- CONTENT -->
+        <div class="content">
+
+            <!-- WELCOME -->
+            <div class="welcome">
+                <h2>EMPLOYEE PORTAL</h2>
+                <p>Welcome to ABC Tech Solutions</p>
+                <p>Access your profile, manage leaves, view announcements and stay updated with company information.</p>
+                <a href="#" class="btn">View Profile</a>
+            </div>
+
+            <!-- PROFILE CARD -->
+            <div class="profile-card">
+                <h3>Aravindhan L</h3>
+                <p class="designation">Senior NOC Engineer</p>
+                <p><strong>EMP ID :</strong> EMP10025</p>
+                <p><strong>Department :</strong> IT Operations</p>
+                <p><strong>Email :</strong> aravindhan@abctech.com</p>
+                <p><strong>Phone :</strong> +91 86828 65830</p>
+                <p><strong>Location :</strong> Chennai, India</p>
+                <a href="#" class="edit-btn">Edit Profile</a>
+            </div>
+
+            <!-- ANNOUNCEMENTS -->
+            <h3 style="color:#003366;">ANNOUNCEMENTS</h3>
+            <div class="announce-item">
+                <h4>Annual Day Celebration</h4>
+                <p>Join us for the Annual Day celebration on 25th May 2025.</p>
+                <span class="date">10 May 2025</span>
+            </div>
+            <div class="announce-item">
+                <h4>Training Program</h4>
+                <p>AWS Re/Start training program on 18th May 2025.</p>
+                <span class="date">08 May 2025</span>
+            </div>
+            <div class="announce-item">
+                <h4>System Maintenance</h4>
+                <p>System maintenance on 15th May 2025 from 11:00 PM to 2:00 AM.</p>
+                <span class="date">07 May 2025</span>
+            </div>
+            <a href="#" class="view-all">View All Announcements →</a>
+
+            <!-- APPLY LEAVE -->
+            <div class="apply-leave">
+                <h3>APPLY LEAVE</h3>
+                <label>Leave Type</label>
+                <select>
+                    <option>- Select Leave Type -</option>
+                    <option>Casual Leave</option>
+                    <option>Sick Leave</option>
+                    <option>Earned Leave</option>
+                </select>
+
+                <label>Reason</label>
+                <textarea rows="3" placeholder="Enter reason for leave..."></textarea>
+
+                <label>Upload Document</label>
+                <div class="file-input">
+                    <input type="file">
+                    <span style="font-size:13px; color:#888;">No file chosen</span>
+                </div>
+
+                <div class="btn-group">
+                    <input type="submit" value="Submit Leave">
+                    <input type="reset" value="Reset">
+                </div>
+            </div>
+
+            <!-- EMPLOYEE LIST -->
+            <h3 class="section-title">EMPLOYEE LIST</h3>
+            <table class="employee-table">
+                <tr>
+                    <th>EMP ID</th>
+                    <th>EMPLOYEE NAME</th>
+                    <th>DEPARTMENT</th>
+                    <th>DESIGNATION</th>
+                    <th>JOINING DATE</th>
+                    <th>SALARY</th>
+                    <th>STATUS</th>
+                </tr>
+                <tr><td>EMP10021</td><td>Ramesh Kumar</td><td>IT Operations</td><td>NOC Engineer</td><td>12-06-2021</td><td>₹ 45,000</td><td>Active</td></tr>
+                <tr><td>EMP10022</td><td>Priya Sharma</td><td>Network</td><td>Network Engineer</td><td>18-08-2021</td><td>₹ 48,000</td><td>Active</td></tr>
+                <tr><td>EMP10023</td><td>Karthik R</td><td>Cloud Services</td><td>Cloud Engineer</td><td>22-11-2021</td><td>₹ 52,000</td><td>Active</td></tr>
+                <tr><td>EMP10024</td><td>Sneha Patel</td><td>Security</td><td>Security Analyst</td><td>05-01-2022</td><td>₹ 50,000</td><td>Active</td></tr>
+                <tr><td>EMP10025</td><td>Aravindhan L</td><td>IT Operations</td><td>Senior NOC Engineer</td><td>15-02-2022</td><td>₹ 60,000</td><td>Active</td></tr>
+                <tr><td>EMP10026</td><td>Vikram Singh</td><td>DevOps</td><td>DevOps Engineer</td><td>20-04-2022</td><td>₹ 55,000</td><td>Active</td></tr>
+            </table>
+            <a href="#" class="view-all">VIEW ALL EMPLOYEES →</a>
+
+            <!-- ABOUT US -->
+            <h3 class="section-title">ABOUT US</h3>
+            <p class="about-text">ABC Tech Solutions is a leading IT services company delivering innovative solutions to businesses worldwide.</p>
+            <p style="font-size:13px; color:#888;">© 2025 ABC Tech Solutions Pvt. Ltd.</p>
+
+            <hr>
+
+            <!-- FOOTER LINKS -->
+            <div class="footer-links">
+                <div>
+                    <h4>QUICK LINKS</h4>
+                    <ul>
+                        <li><a href="#">Dashboard</a></li>
+                        <li><a href="#">My Profile</a></li>
+                        <li><a href="#">Leave Apply</a></li>
+                        <li><a href="#">Payroll</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>POLICIES</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Leave Policy</a></li>
+                        <li><a href="#">Code of Conduct</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>CONTACT US</h4>
+                    <ul>
+                        <li>123, Tech Park, Chennai - 600 001</li>
+                        <li>+91 98765 43210</li>
+                        <li>info@abctech.com</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- FOOTER -->
+            <div class="footer">
+                <p>&copy; 2025 ABC Tech Solutions Pvt. Ltd.</p>
+            </div>
+
+        </div> <!-- end content -->
+    </div> <!-- end row -->
+</div> <!-- end container -->
+
+</body>
+</html>

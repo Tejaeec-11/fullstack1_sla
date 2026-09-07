@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section>
+
+    </section>
+    <script>
+         //arrow function
+        const add = ()=>{
+          
+        }
+        add()
+
+        //tmplate feature(to print same line we sue +)
+        console.log('1-------------------------------------------')
+        const a = "this is my varaiable data"
+        const b = 10
+        console.log(a+','+b); //string plus use panna string contation number use panna only athermic operation
+        console.log("this is my string concatitination"+a+","+b)
+
+        //tempalte literius(advance vision t print in same line)
+        console.log('2-------------------------------------------')
+        const c = "this is my varaiable data"
+        const d = 10
+        console.log(`this is my template for the string concat-${a} this i s my number $(b)`);//``this is call back ticket
+        //to add varable we use $ simboyl without + we used back ticket `
+        
+          //tempalte literius-multi line
+        console.log('2-------------------------------------------')
+        console.log(`
+        iudfgkjfhkwejf
+
+        jhfkjshdsff
+
+        sdhfgjsdf ${a}  
+        `)//string concat and multi we use
+
+
+        //default parameter(called this as fall back value empty vtha its show error we needto give deafalt or real value any value )
+        
+        console.log("4-------------------------------------------------");
+        const ade =(s,t)=>{
+            console.log(s+t);
+
+        }
+        ade(10+20)
+
+        console.log("5-------------------------------------------------");
+        const aed =(y=10,n=20)=>{//we use this to put default value parameters
+            console.log(y+n);
+
+        }
+        aed()//if we did pause the value here 
+        //if we only value aed(12 ) output y =12 show and n = 20
+    
+        //rest parameters -only used in function p or a
+        console.log("6-------------------------------------------------");
+        const rest =(...datas)=>{//... rest p operotr same but ... store data in array with out array
+            console.log(datas);//only kep in definition
+        }
+        rest(10,20,30,40,567,5746,43756,575645,"react")
+        //can give rest or restOP both cinvert to array
+
+         //rest parameters -and spearate are same--only used in function p or a
+        console.log("7-------------------------------------------------");
+        const restOP =(...datas)=>{
+            console.log(datas);
+            for(let a=0;a<datas.length;a++){
+            console.log(datas[a]);
+            
+            }
+        }
+        restOP(10,20,30,40,567,5746,43756,57564)
+        //take random 10 string reverse
+
+
+        //[this is array barket]
+        //sperate operator (copy ur array or concate or unpack )
+         console.log("8---------------------------------------------")
+        const arr = [1,2,3,4,5]
+        console.log(arr)
+        arr[1] = 'react'
+        console.log(arr)
+        const copy =[...arr,1,2,3,4,5]//this is spearate operator 
+        //this is sallow copy and deep copy 
+       // console.log('copy',datasone);
+
+       //  this is sallow copy and deep copy 
+       console.log('8.1-------------------------------------------------------');
+       const arrone = [234,23456,4657543]
+        const arrtwo = ['react','data','new']
+        const datasone = [...arrone,...arrtwo]//this is sallow copy and deep copy 
+        console.log('copy',datasone);
+        
+        //sperate operator
+        console.log('9---------------------------------------------')
+        const strings ='react'
+        const copyone = [...strings]
+        console.log(strings)//this is normal
+        console.log(copyone);//this is extract
+
+         //for of or for in
+         console.log('9.1------------------------------------------')
+        for(const datas of copyone){
+            console.log(datas);
+         } //if we pot this show react in one by one 
+        for(const datas in copyone){
+            //for in show index value
+           console.log(datas);
+        }
+            
+         //for of or for in
+         console.log('9.2------------------------------------------')
+         const obj ={naame:"react", dataas:"123"} 
+        //we cant use for means object but we use in for(const user of obj){
+        for(const users in obj){
+        console.log(users);
+
+        //9.3------------------------
+         console.log(obj[users])
+        }
+
+        //ternary operator - every in statement but we change it into expression
+        const e =10
+        const condition =a===true?"this is true":"this is false"
+        console.log(condition);
+        
+    </script>
+</body>
+</html>

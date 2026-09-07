@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Pseudo Class & Pseudo Element Practice</title>
+
+    <style>
+        /* =========================
+           TASK 1 - Button Hover
+        ========================== */
+
+        .buttons button {
+            padding: 10px 20px;
+            margin: 5px;
+            border: none;
+            background-color: #3498db;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .buttons button:hover {
+            background-color: #2c3e50;
+            color: #f1c40f;
+        }
+
+
+        /* =========================
+           TASK 2 - Student Form
+        ========================== */
+
+        .student-form {
+            margin-top: 30px;
+        }
+
+        .student-form input {
+            display: block;
+            width: 250px;
+            padding: 10px;
+            margin: 10px 0;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .student-form input:focus {
+            border-color: #3498db;
+            background-color: #eaf6ff;
+            outline: none;
+        }
+
+
+        /* =========================
+           TASK 3 - Student List
+        ========================== */
+
+        .students li {
+            margin: 8px;
+        }
+
+        .students li:first-child {
+            color: green;
+            font-weight: bold;
+        }
+
+        .students li:last-child {
+            color: red;
+            font-weight: bold;
+        }
+
+
+        /* =========================
+           TASK 4 - Before & After
+        ========================== */
+
+        .heading::before {
+            content: "★ ";
+            color: orange;
+        }
+
+        .heading::after {
+            content: " ✔";
+            color: green;
+        }
+
+
+        /* =========================
+           TASK 5 - Paragraph Styling
+        ========================== */
+
+        .paragraphs p::first-letter {
+            font-size: 35px;
+            font-weight: bold;
+            color: purple;
+        }
+
+        .paragraphs p::first-line {
+            color: #e67e22;
+        }
+
+        .paragraphs p::selection {
+            background-color: yellow;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>CSS Pseudo Class & Pseudo Element Practice</h1>
+
+
+    <!-- TASK 1 -->
+    <h2>Task 1 – Button Hover Effect</h2>
+
+    <div class="buttons">
+        <button>Save</button>
+        <button>Edit</button>
+        <button>Delete</button>
+        <button>Login</button>
+        <button>Register</button>
+    </div>
+
+
+    <!-- TASK 2 -->
+    <h2>Task 2 – Student Registration Form</h2>
+
+    <form class="student-form">
+        <input type="text" placeholder="Name">
+        <input type="email" placeholder="Email">
+        <input type="password" placeholder="Password">
+        <input type="tel" placeholder="Mobile Number">
+    </form>
+
+
+    <!-- TASK 3 -->
+    <h2>Task 3 – Student List</h2>
+
+    <ul class="students">
+        <li>Arun</li>
+        <li>Priya</li>
+        <li>Rahul</li>
+        <li>Divya</li>
+        <li>Karthik</li>
+        <li>Anitha</li>
+        <li>Vijay</li>
+        <li>Meena</li>
+        <li>Surya</li>
+        <li>Deepa</li>
+    </ul>
+
+
+    <!-- TASK 4 -->
+    <h2>Task 4 – Before & After</h2>
+
+    <h3 class="heading">HTML</h3>
+    <h3 class="heading">CSS</h3>
+    <h3 class="heading">JavaScript</h3>
+    <h3 class="heading">React</h3>
+    <h3 class="heading">Node.js</h3>
+
+
+    <!-- TASK 5 -->
+    <h2>Task 5 – Paragraph Styling</h2>
+
+    <div class="paragraphs">
+        <p>
+            HTML is used to create the structure of a web page.
+            It provides elements such as headings, paragraphs, images, and links.
+        </p>
+
+        <p>
+            CSS is used to style web pages.
+            It controls colors, fonts, spacing, layouts, and many other visual properties.
+        </p>
+
+        <p>
+            JavaScript adds interactivity to websites.
+            It can be used to create dynamic content and respond to user actions.
+        </p>
+    </div>
+
+</body>
+</html>

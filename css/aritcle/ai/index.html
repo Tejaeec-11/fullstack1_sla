@@ -1,0 +1,1202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TEJ Interiors</title>
+
+
+    <!-- =====================================================
+         INTERNAL CSS
+    ====================================================== -->
+
+    <style>
+
+        /* =====================================================
+           RESET
+        ====================================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Times New Roman", Times, serif;
+            background-color: #f3efe8;
+            color: #2b211c;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+
+        /* =====================================================
+           COLORS
+        ====================================================== */
+
+        :root {
+            --cream: #f3efe8;
+            --cream-light: #faf8f4;
+            --beige: #e5ded3;
+
+            --brown: #705443;
+            --brown-dark: #4a352a;
+            --espresso: #211914;
+
+            --text: #2b211c;
+            --text-light: #756b62;
+
+            --white: #fffdf8;
+            --border: #c9bfb2;
+            --accent: #a58b73;
+        }
+
+
+        /* =====================================================
+           NAVBAR
+        ====================================================== */
+
+        .hi {
+            width: 100%;
+            min-height: 70px;
+
+            background-color: rgba(33, 25, 20, 0.97);
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            padding: 0 6%;
+
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.12);
+        }
+
+
+        /* Logo */
+
+        .logo h3 {
+            color: var(--white);
+            font-size: 25px;
+            font-weight: 600;
+            letter-spacing: 2px;
+        }
+
+
+        /* Navigation */
+
+        .nav {
+            font-size: 17px;
+        }
+
+        .four {
+            display: flex;
+            align-items: center;
+            gap: 35px;
+        }
+
+        .four a {
+            color: #e9e1d6;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+
+        /* Navigation hover */
+
+        .four a::after {
+            content: "";
+
+            position: absolute;
+            left: 0;
+            bottom: -6px;
+
+            width: 0;
+            height: 2px;
+
+            background-color: var(--accent);
+
+            transition: width 0.3s ease;
+        }
+
+        .four a:hover {
+            color: var(--white);
+        }
+
+        .four a:hover::after {
+            width: 100%;
+        }
+
+
+        /* =====================================================
+           HERO / BANNER
+        ====================================================== */
+
+        .hii {
+            width: 100%;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            padding: 55px 6%;
+        }
+
+        .banner {
+            width: 100%;
+            max-width: 1250px;
+
+            background-color: var(--white);
+
+            padding: 12px;
+
+            border: 1px solid var(--border);
+
+            box-shadow:
+                0 15px 40px rgba(33, 25, 20, 0.15);
+        }
+
+        .banner img {
+            display: block;
+
+            width: 100%;
+            height: auto;
+
+            max-height: 600px;
+
+            object-fit: cover;
+        }
+
+
+        /* =====================================================
+           CUSTOM DESIGN
+        ====================================================== */
+
+        .colum {
+            display: flex;
+            flex-direction: column;
+
+            gap: 40px;
+
+            padding: 30px 6% 80px;
+        }
+
+
+        /* Section title */
+
+        .esi {
+            color: var(--espresso);
+
+            font-size: 32px;
+            font-weight: 600;
+
+            text-align: center;
+
+            letter-spacing: 2px;
+
+            margin-bottom: 15px;
+        }
+
+        .esi::after {
+            content: "";
+
+            display: block;
+
+            width: 60px;
+            height: 2px;
+
+            background-color: var(--brown);
+
+            margin: 12px auto 0;
+        }
+
+
+        /* =====================================================
+           DESIGN CARDS
+        ====================================================== */
+
+        .order {
+            width: 100%;
+
+            display: grid;
+
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+
+            gap: 35px;
+
+            max-width: 1250px;
+
+            margin: 0 auto;
+        }
+
+
+        /* Card */
+
+        .in {
+            overflow: hidden;
+
+            background-color: var(--white);
+
+            border: 1px solid var(--border);
+
+            border-radius: 4px;
+
+            box-shadow:
+                0 8px 25px rgba(33, 25, 20, 0.08);
+
+            transition:
+                transform 0.3s ease,
+                box-shadow 0.3s ease;
+        }
+
+        .in:hover {
+            transform: translateY(-8px);
+
+            box-shadow:
+                0 18px 35px rgba(33, 25, 20, 0.15);
+        }
+
+
+        /* Card image */
+
+        .in img {
+            display: block;
+
+            width: 100%;
+            height: 380px;
+
+            object-fit: cover;
+
+            transition: transform 0.5s ease;
+        }
+
+        .in:hover img {
+            transform: scale(1.03);
+        }
+
+
+        /* Price */
+
+        .in h3 {
+            color: var(--text);
+
+            font-size: 25px;
+
+            margin: 22px 25px 12px;
+        }
+
+
+        /* Card button */
+
+        .in button {
+            min-width: 110px;
+
+            padding: 11px 22px;
+
+            margin: 0 25px 25px;
+
+            border: none;
+            border-radius: 2px;
+
+            background-color: var(--brown);
+
+            color: var(--white);
+
+            font-family: inherit;
+
+            font-size: 15px;
+
+            cursor: pointer;
+
+            transition:
+                background-color 0.3s ease,
+                transform 0.3s ease;
+        }
+
+        .in button:hover {
+            background-color: var(--brown-dark);
+
+            transform: translateY(-2px);
+        }
+
+
+        /* =====================================================
+           CONTACT SECTION
+        ====================================================== */
+
+        .detial {
+            background-color: var(--beige);
+
+            padding: 70px 6%;
+        }
+
+        .detial .esi {
+            margin-bottom: 40px;
+        }
+
+
+        /* Form */
+
+        .all {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .helo {
+            width: 100%;
+            max-width: 750px;
+
+            background-color: var(--white);
+
+            padding: 40px;
+
+            border: 1px solid var(--border);
+
+            border-radius: 4px;
+
+            box-shadow:
+                0 12px 35px rgba(33, 25, 20, 0.1);
+        }
+
+        .helo ul {
+            list-style: none;
+        }
+
+
+        /* Form rows */
+
+        .name {
+            display: flex;
+            align-items: center;
+
+            margin-bottom: 20px;
+        }
+
+
+        /* Labels */
+
+        .helo label {
+            width: 150px;
+
+            color: var(--text);
+
+            font-size: 17px;
+        }
+
+
+        /* Inputs */
+
+        .helo input {
+            flex: 1;
+
+            width: 100%;
+
+            padding: 12px 14px;
+
+            border: 1px solid var(--border);
+
+            background-color: var(--cream-light);
+
+            color: var(--text);
+
+            font-family: inherit;
+
+            font-size: 16px;
+
+            outline: none;
+
+            transition:
+                border-color 0.3s ease,
+                box-shadow 0.3s ease;
+        }
+
+        .helo input:focus {
+            border-color: var(--brown);
+
+            box-shadow:
+                0 0 0 3px rgba(112, 84, 67, 0.1);
+        }
+
+
+        /* Submit button */
+
+        .helo button {
+            margin-top: 10px;
+
+            padding: 12px 30px;
+
+            border: none;
+            border-radius: 2px;
+
+            background-color: var(--brown);
+
+            color: var(--white);
+
+            font-family: inherit;
+
+            font-size: 15px;
+
+            letter-spacing: 1px;
+
+            cursor: pointer;
+
+            transition:
+                background-color 0.3s ease;
+        }
+
+        .helo button:hover {
+            background-color: var(--brown-dark);
+        }
+
+
+        /* =====================================================
+           FOOTER
+        ====================================================== */
+
+        .footer {
+            background-color: var(--espresso);
+
+            color: #edebe9;
+
+            padding: 65px 6% 25px;
+        }
+
+
+        /* Brand */
+
+        .do {
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: center;
+
+            text-align: center;
+
+            gap: 8px;
+
+            margin-bottom: 50px;
+        }
+
+        .do h3 {
+            color: var(--white);
+
+            font-size: 28px;
+
+            font-weight: 600;
+
+            letter-spacing: 3px;
+        }
+
+        .do p {
+            color: #c9bfb2;
+
+            font-size: 15px;
+        }
+
+
+        /* Footer columns */
+
+        .footer-links {
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 50px;
+
+            max-width: 1100px;
+
+            margin: 0 auto;
+
+            padding: 40px 0;
+
+            border-top: 1px solid #4a3b32;
+
+            border-bottom: 1px solid #4a3b32;
+        }
+
+        .footer-column {
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 11px;
+        }
+
+        .footer-column h3 {
+            color: var(--white);
+
+            font-size: 15px;
+
+            letter-spacing: 1.5px;
+
+            margin-bottom: 12px;
+        }
+
+        .footer-column a,
+        .footer-column p {
+            color: #c9bfb2;
+
+            font-size: 14px;
+
+            transition: color 0.3s ease;
+        }
+
+        .footer-column a:hover {
+            color: var(--accent);
+        }
+
+
+        /* Footer bottom */
+
+        .footer-bottom {
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            max-width: 1100px;
+
+            margin: 0 auto;
+
+            padding-top: 25px;
+        }
+
+        .footer-bottom p {
+            color: var(--accent);
+
+            font-size: 13px;
+        }
+
+        .footer-bottom a {
+            color: #c9bfb2;
+
+            font-size: 13px;
+
+            margin-left: 20px;
+
+            transition: color 0.3s ease;
+        }
+
+        .footer-bottom a:hover {
+            color: var(--white);
+        }
+
+
+        /* =====================================================
+           TABLET
+        ====================================================== */
+
+        @media (max-width: 900px) {
+
+            .hi {
+                padding: 0 4%;
+            }
+
+            .four {
+                gap: 20px;
+            }
+
+            .order {
+                gap: 20px;
+            }
+
+            .in img {
+                height: 300px;
+            }
+
+        }
+
+
+        /* =====================================================
+           MOBILE
+        ====================================================== */
+
+        @media (max-width: 700px) {
+
+            /* Navbar */
+
+            .hi {
+                padding: 18px 25px;
+
+                flex-direction: column;
+
+                gap: 15px;
+            }
+
+            .logo h3 {
+                font-size: 22px;
+            }
+
+            .four {
+                gap: 18px;
+
+                flex-wrap: wrap;
+
+                justify-content: center;
+            }
+
+            .nav {
+                font-size: 15px;
+            }
+
+
+            /* Hero */
+
+            .hii {
+                padding: 30px 20px;
+            }
+
+            .banner {
+                padding: 7px;
+            }
+
+
+            /* Design section */
+
+            .colum {
+                padding: 25px 20px 60px;
+            }
+
+            .esi {
+                font-size: 25px;
+            }
+
+
+            /* Cards */
+
+            .order {
+                grid-template-columns: 1fr;
+
+                gap: 25px;
+            }
+
+            .in img {
+                height: 300px;
+            }
+
+
+            /* Contact */
+
+            .detial {
+                padding: 55px 20px;
+            }
+
+            .helo {
+                padding: 25px 20px;
+            }
+
+            .name {
+                flex-direction: column;
+
+                align-items: flex-start;
+
+                gap: 7px;
+            }
+
+            .helo label {
+                width: 100%;
+            }
+
+
+            /* Footer */
+
+            .footer {
+                padding: 50px 25px 20px;
+            }
+
+            .footer-links {
+                grid-template-columns: 1fr;
+
+                gap: 35px;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+
+                gap: 15px;
+
+                text-align: center;
+            }
+
+            .footer-bottom a {
+                margin: 0 8px;
+            }
+
+        }
+
+
+        /* =====================================================
+           SMALL MOBILE
+        ====================================================== */
+
+        @media (max-width: 450px) {
+
+            .four {
+                gap: 12px;
+            }
+
+            .four a {
+                font-size: 14px;
+            }
+
+            .in img {
+                height: 250px;
+            }
+
+            .in h3 {
+                font-size: 22px;
+            }
+
+            .do h3 {
+                font-size: 23px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         NAVIGATION
+    ====================================================== -->
+
+    <header class="hi">
+
+        <div class="logo">
+            <h3>TEJ INTERIORS</h3>
+        </div>
+
+
+        <nav class="nav">
+
+            <div class="four">
+
+                <a href="#">Home</a>
+
+                <a href="#About">About</a>
+
+                <a href="#contact">Contact</a>
+
+                <a href="#help">Help</a>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         HERO
+    ====================================================== -->
+
+    <section class="hii">
+
+        <div class="banner">
+
+            <img
+                src="images/banner1.png"
+                alt="TEJ Interiors modern interior design"
+            >
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         CUSTOM DESIGN
+    ====================================================== -->
+
+    <section class="colum" id="About">
+
+
+        <div>
+
+            <h2 class="esi">
+                CUSTOM DESIGN
+            </h2>
+
+        </div>
+
+
+        <!-- DESIGN 1 & 2 -->
+
+        <section class="order">
+
+            <div class="in">
+
+                <img
+                    src="images/1.png"
+                    alt="Modern interior design"
+                >
+
+                <h3>$150,000</h3>
+
+                <button type="button">
+                    Enquiry
+                </button>
+
+            </div>
+
+
+            <div class="in">
+
+                <img
+                    src="images/2.png"
+                    alt="Luxury interior design"
+                >
+
+                <h3>$250,000</h3>
+
+                <button type="button">
+                    Enquiry
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- DESIGN 3 & 4 -->
+
+        <section class="order">
+
+            <div class="in">
+
+                <img
+                    src="images/3.png"
+                    alt="Modern living room"
+                >
+
+                <h3>$550,000</h3>
+
+                <button type="button">
+                    Enquiry
+                </button>
+
+            </div>
+
+
+            <div class="in">
+
+                <img
+                    src="images/4.png"
+                    alt="Contemporary interior"
+                >
+
+                <h3>$150,000</h3>
+
+                <button type="button">
+                    Enquiry
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- DESIGN 5 & 6 -->
+
+        <section class="order">
+
+            <div class="in">
+
+                <img
+                    src="images/5.png"
+                    alt="Luxury bedroom interior"
+                >
+
+                <h3>$650,000</h3>
+
+                <button type="button">
+                    Enquiry
+                </button>
+
+            </div>
+
+
+            <div class="in">
+
+                <img
+                    src="images/6.png"
+                    alt="Modern home interior"
+                >
+
+                <h3>$650,000</h3>
+
+                <button type="button">
+                    Enquiry
+                </button>
+
+            </div>
+
+        </section>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         CONTACT
+    ====================================================== -->
+
+    <section class="detial" id="contact">
+
+        <div class="esi">
+
+            <h2>
+                Contact Details
+            </h2>
+
+        </div>
+
+
+        <div class="all">
+
+            <form action="#" class="helo">
+
+                <ul>
+
+                    <li class="name">
+
+                        <label for="username">
+                            Name:
+                        </label>
+
+                        <input
+                            type="text"
+                            id="username"
+                            name="username"
+                            placeholder="Enter your name"
+                            required
+                        >
+
+                    </li>
+
+
+                    <li class="name">
+
+                        <label for="useremail">
+                            Email:
+                        </label>
+
+                        <input
+                            type="email"
+                            id="useremail"
+                            name="useremail"
+                            placeholder="Enter your email"
+                            required
+                        >
+
+                    </li>
+
+
+                    <li class="name">
+
+                        <label for="usernumber">
+                            Phone Number:
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="usernumber"
+                            name="usernumber"
+                            placeholder="Enter your phone number"
+                            minlength="10"
+                            maxlength="10"
+                            required
+                        >
+
+                    </li>
+
+
+                    <li>
+
+                        <button type="submit">
+                            SUBMIT
+                        </button>
+
+                    </li>
+
+                </ul>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer class="footer" id="help">
+
+
+        <div class="do">
+
+            <h3>
+                TEJ INTERIORS
+            </h3>
+
+            <p>
+                Modern spaces. Timeless comfort.
+            </p>
+
+            <p>
+                Thoughtfully designed interiors for modern living.
+            </p>
+
+        </div>
+
+
+        <div class="footer-links">
+
+
+            <!-- QUICK LINKS -->
+
+            <div class="footer-column">
+
+                <h3>
+                    QUICK LINKS
+                </h3>
+
+                <a href="#">
+                    Home
+                </a>
+
+                <a href="#About">
+                    About Us
+                </a>
+
+                <a href="#About">
+                    Projects
+                </a>
+
+                <a href="#About">
+                    Gallery
+                </a>
+
+                <a href="#contact">
+                    Contact
+                </a>
+
+            </div>
+
+
+            <!-- SERVICES -->
+
+            <div class="footer-column">
+
+                <h3>
+                    SERVICES
+                </h3>
+
+                <a href="#">
+                    Interior Design
+                </a>
+
+                <a href="#">
+                    Bedroom Design
+                </a>
+
+                <a href="#">
+                    Living Room
+                </a>
+
+                <a href="#">
+                    Kitchen Design
+                </a>
+
+                <a href="#">
+                    Custom Furniture
+                </a>
+
+            </div>
+
+
+            <!-- CONTACT -->
+
+            <div class="footer-column">
+
+                <h3>
+                    CONTACT
+                </h3>
+
+                <p>
+                    123 Design Street
+                </p>
+
+                <p>
+                    New York, NY
+                </p>
+
+                <p>
+                    +1 234 567 890
+                </p>
+
+                <p>
+                    hello@tejiinteriors.com
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 TEJ INTERIORS. All Rights Reserved.
+            </p>
+
+            <div>
+
+                <a href="#">
+                    Privacy Policy
+                </a>
+
+                <a href="#">
+                    Terms & Conditions
+                </a>
+
+            </div>
+
+        </div>
+
+
+    </footer>
+
+
+</body>
+
+</html>

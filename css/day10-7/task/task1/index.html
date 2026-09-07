@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Student Cards</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .card {
+            flex: 1 1 calc(33.333% - 20px);
+            max-width: calc(33.333% - 20px);
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .card img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+
+        .card h3 {
+            margin-bottom: 5px;
+        }
+
+        .card p {
+            margin: 5px 0;
+            color: #555;
+        }
+
+        /* Tablet */
+        @media (max-width: 768px) {
+            .card {
+                flex: 1 1 calc(50% - 20px);
+                max-width: calc(50% - 20px);
+            }
+        }
+
+        /* Mobile */
+        @media (max-width: 576px) {
+            .card {
+                flex: 1 1 100%;
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Student Cards</h1>
+    <div class="card-container">
+        <div class="card">
+            <img src="https://placeholdit.com/150x150/dddddd/999999" alt="Student">
+            <h3>Student 1</h3>
+            <p>Full Stack</p>
+            <p>+91 98765 43210</p>
+        </div>
+        <div class="card">
+            <img src="https://placeholdit.com/150x150/dddddd/999999" alt="Student">
+            <h3>Student 2</h3>
+            <p>Full Stack</p>
+            <p>+91 98765 43211</p>
+        </div>
+        <div class="card">
+            <img src="https://placeholdit.com/150x150/dddddd/999999" alt="Student">
+            <h3>Student 3</h3>
+            <p>Full Stack</p>
+            <p>+91 98765 43212</p>
+        </div>
+        <div class="card">
+            <img src="https://placeholdit.com/150x150/dddddd/999999" alt="Student">
+            <h3>Student 4</h3>
+            <p>Full Stack</p>
+            <p>+91 98765 43213</p>
+        </div>
+        <div class="card">
+            <img src="https://placeholdit.com/150x150/dddddd/999999" alt="Student">
+            <h3>Student 5</h3>
+            <p>Full Stack</p>
+            <p>+91 98765 43214</p>
+        </div>
+        <div class="card">
+            <img src="https://placeholdit.com/150x150/dddddd/999999" alt="Student">
+            <h3>Student 6</h3>
+            <p>Full Stack</p>
+            <p>+91 98765 43215</p>
+        </div>
+    </div>
+</body>
+</html>
+
+

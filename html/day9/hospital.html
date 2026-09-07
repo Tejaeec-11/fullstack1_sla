@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Patient Registration</title>
+</head>
+<body>
+
+    <h2>Hospital Patient Registration Form</h2>
+    <form method="post">
+        <label>Patient ID:</label>
+        <input type="text" name="patientid"><br><br>
+
+        <label>Patient Name:</label>
+        <input type="text" name="patientname"><br><br>
+
+        <label>Age:</label>
+        <input type="number" name="age"><br><br>
+
+        <label>Gender:</label>
+        <input type="radio" name="gender" value="male"> Male
+        <input type="radio" name="gender" value="female"> Female<br><br>
+
+        <label>Blood Group:</label>
+        <select name="bloodgroup">
+            <option value="">Select</option>
+            <option value="a+">A+</option>
+            <option value="b+">B+</option>
+            <option value="o+">O+</option>
+            <option value="ab+">AB+</option>
+        </select><br><br>
+
+        <label>Doctor:</label>
+        <input type="text" name="doctor"><br><br>
+
+        <label>Appointment Date:</label>
+        <input type="date" name="appointmentdate"><br><br>
+
+        <label>Symptoms:</label>
+        <textarea name="symptoms"></textarea><br><br>
+
+        <label>Medical Report Upload:</label>
+        <input type="file" name="medicalreport"><br><br>
+
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+    </form>
+
+    <hr>
+
+    <h2>Patient Details Table</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Patient ID</th>
+                <th>Patient Name</th>
+                <th>Doctor</th>
+                <th>Blood Group</th>
+                <th>Appointment Date</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>P001</td>
+                <td>Tejeswari J</td>
+                <td>Dr. Kumar</td>
+                <td>O+</td>
+                <td>2026-07-25</td>
+                <td>Confirmed</td>
+            </tr>
+            <tr>
+                <td>P002</td>
+                <td>Priya</td>
+                <td>Dr. Singh</td>
+                <td>A+</td>
+                <td>2026-07-26</td>
+                <td>Pending</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>

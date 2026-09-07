@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            max-width: 960px;
+            margin: auto;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            border: 2px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <h1>Image Gallery</h1>
+    <div class="gallery">
+        <img src="https://placeholdit.com/150x150/dddddd/999999" alt="Image 1">
+        <img src="https://placeholdit.com/150x150/dddddd/999999" alt="Image 2">
+        <img src="https://placeholdit.com/150x150/dddddd/999999" alt="Image 3">
+        <img src="https://placeholdit.com/150x150/dddddd/999999" alt="Image 4">
+        <img src="https://placeholdit.com/150x150/dddddd/999999" alt="Image 5">
+        <img src="https://placeholdit.com/150x150/dddddd/999999" alt="Image 6">
+        <img src="https://placeholdit.com/150x150/dddddd/999999" alt="Image 7">
+        <img src="https://placeholdit.com/150x150/dddddd/999999" alt="Image 8">
+        <img src="https://placeholdit.com/150x150/dddddd/999999" alt="Image 9">
+    </div>
+</body>
+</html>
+
+
+
+
+

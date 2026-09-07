@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Services</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: white;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .services-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .service-card {
+            flex: 1 1 calc(16.666% - 20px);
+            max-width: calc(16.666% - 20px);
+            background-color: #2c3e50;
+            color: white;
+            padding: 30px 15px;
+            border-radius: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        /* Mobile */
+        @media (max-width: 576px) {
+            body {
+                background-color: #f0f8ff;
+            }
+            h1 {
+                color: #1a237e;
+                font-size: 24px;
+            }
+            .service-card {
+                flex: 1 1 100%;
+                max-width: 100%;
+                background-color: #1a237e;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Our Services</h1>
+    <div class="services-container">
+        <div class="service-card">Web Development</div>
+        <div class="service-card">App Development</div>
+        <div class="service-card">UI/UX Design</div>
+        <div class="service-card">AI Solutions</div>
+        <div class="service-card">Cloud Services</div>
+        <div class="service-card">Digital Marketing</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Team</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        .team-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .employee-card {
+            flex: 1 1 calc(33.333% - 20px);
+            max-width: calc(33.333% - 20px);
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .employee-card img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+
+        .employee-card h3 {
+            margin-bottom: 5px;
+        }
+
+        .employee-card p {
+            margin: 5px 0;
+            color: #555;
+        }
+
+        /* Tablet */
+        @media (max-width: 768px) {
+            .employee-card {
+                flex: 1 1 calc(50% - 20px);
+                max-width: calc(50% - 20px);
+            }
+        }
+
+        /* Mobile */
+        @media (max-width: 576px) {
+            .employee-card {
+                flex: 1 1 100%;
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Our Team</h1>
+    <div class="team-container">
+        <div class="employee-card">
+            <img src="https://placeholdit.com/150x150/dddddd/999999" alt="Employee">
+            <h3>sakithi k</h3>
+            <p>IT Operations</p>
+            <p>teju@company.com</p>
+        </div>
+        <div class="employee-card">
+            <img src="https://placeholdit.com/150x150/dddddd/999999" alt="Employee">
+            <h3>Priya</h3>
+            <p>HR</p>
+            <p>priya@company.com</p>
+        </div>
+        <div class="employee-card">
+            <img src="https://placeholdit.com/150x150/dddddd/999999" alt="Employee">
+            <h3>Ravi</h3>
+            <p>Finance</p>
+            <p>ravi@company.com</p>
+        </div>
+        <div class="employee-card">
+            <img src="https://placeholdit.com/150x150/dddddd/999999" alt="Employee">
+            <h3>Anand</h3>
+            <p>Marketing</p>
+            <p>anand@company.com</p>
+        </div>
+        <div class="employee-card">
+            <img src="https://placeholdit.com/150x150/dddddd/999999" alt="Employee">
+            <h3>Kavya</h3>
+            <p>Design</p>
+            <p>kavya@company.com</p>
+        </div>
+        <div class="employee-card">
+            <img src="https://placeholdit.com/150x150/dddddd/999999" alt="Employee">
+            <h3>Vikram</h3>
+            <p>Sales</p>
+            <p>vikram@company.com</p>
+        </div>
+    </div>
+</body>
+</html>

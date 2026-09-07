@@ -1,0 +1,40 @@
+/* Universal Selector*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;
+}
+a{
+    text-decoration: none; 
+} 
+
+
+/* Element Selector */
+body {
+    background-color: #e5ebf2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+/* Class Selector */
+.profile-card {
+    background-color: #ffffff;
+    color: #333333;
+    width: 350px;
+    height: 250px;
+    text-align: center;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    border: 2px solid #0077b6;
+}

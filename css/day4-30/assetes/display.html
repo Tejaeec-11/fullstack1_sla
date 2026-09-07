@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>display props</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body> <!--inline covert to block so i can w h-->
+   <div class="box"> <!--i give to div inside i did give anything now i want to give properties to inside content -->
+    <span class="child"> box  1 </span><!--span is inline i put again div or p or span to give propesties to the inside content -->
+     <span  class="child"> box  2 </span> <!--put class becoz i want put properities to each element-->
+      <span  class="child"> box  3 </span>
+    </div> 
+     <br><br><hr><br>
+
+    <!--inline irukadu enaku inline mari venum but enaku widht , h this method -->
+    <div class="box">
+        <p class="child2">box 1</p>
+        <p class="child2">box 1</p>
+        <p class="child2">box 1</p>
+
+    </div>
+    <br><br><b></b><hr><br>
+      
+    <!--this another that convert block into inline but it not use more -->
+    <div class="boxone"> <!--i put propesties for this in css in put inline so block irutha w h take but inline so only take particular area or take nothis bcoz div is container so w h it does take bcoz we convert  block into inline -->
+        <h1>this is the inline </h1>
+    </div>
+       <br><br><br><hr> <!--this hr an ddown 34 line hr near it none means hidde the content from the screen-->
+    <!--i want to put display none in this anothe rmethod in output nothing appers because we put none there ,so now we add h2 class and propesties or normal put h2 and properties  -->
+    <div class="boxtwo">
+        <h2>this is none </h2>
+    </div>  <hr>
+     
+    <div class="boxfour"> box 4</div>
+     <div class="boxfive"> box 5</div>
+    <br><hr><br>
+
+    <!--new this is flex means we can aline in default row wise or wecan change cloumn wise vertically or hortonllay you can aling ur content use display for flex ..only affect child means content..paren tpota child work agum-->
+        
+    <div class="parent"> <!--idu tha parent div when apply something it show in child div -->
+        <div class="children">cards 1</div> <!--we need add each padding so we can get space one by one-->
+        <div class="children">cards 2</div>
+        <div class="children">cards 3</div>
+         <div class="children">cards 3</div>
+        <!--  <div class="children">cards 3</div>
+           <div class="children">cards 3</div>
+            <div class="children">cards 3</div>
+             <div class="children">cards 3</div>
+               <div class="children">cards 3</div> --> <!--athu venam na give 5 or 6 or you add flex direction column,this both we out of div so need add anothe rproperties-->
+              <div class="children">cards 3</div>
+    </div>
+    <br><br><hr><br>
+    
+    <!--in interview they tell me to build box,and they tell put content in center-->
+    <div class="parentonetwo">
+    <div class="newbox"> box
+</div>
+    </div>
+</body>
+</html>

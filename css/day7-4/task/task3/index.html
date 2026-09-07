@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Grid</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .product-card {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .product-card h3 {
+            margin: 10px 0 5px;
+        }
+
+        .product-card p {
+            font-size: 18px;
+            color: #e67e22;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Product Grid</h1>
+    <div class="product-grid">
+        <div class="product-card">
+            <img src="https://placeholdit.com/150x150/dddddd/999999" alt="Product 1">
+            <h3>Product 1</h3>
+            <p>₹499</p>
+        </div>
+        <div class="product-card">
+            <img src="https://placeholdit.com/150x150/dddddd/999999" alt="Product 2">
+            <h3>Product 2</h3>
+            <p>₹599</p>
+        </div>
+        <div class="product-card">
+            <img src="https://placeholdit.com/150x150/dddddd/999999" alt="Product 3">
+            <h3>Product 3</h3>
+            <p>₹699</p>
+        </div>
+        <div class="product-card">
+            <img src="https://placeholdit.com/150x150/dddddd/999999" alt="Product 4">
+            <h3>Product 4</h3>
+            <p>₹799</p>
+        </div>
+        <div class="product-card">
+            <img src="https://placeholdit.com/150x150/dddddd/999999" alt="Product 5">
+            <h3>Product 5</h3>
+            <p>₹899</p>
+        </div>
+        <div class="product-card">
+            <img src="https://placeholdit.com/150x150/dddddd/999999" alt="Product 6">
+            <h3>Product 6</h3>
+            <p>₹999</p>
+        </div>
+        <div class="product-card">
+            <img src="https://placeholdit.com/150x150/dddddd/999999" alt="Product 7">
+            <h3>Product 7</h3>
+            <p>₹1099</p>
+        </div>
+        <div class="product-card">
+            <img src="https://placeholdit.com/150x150/dddddd/999999" alt="Product 8">
+            <h3>Product 8</h3>
+            <p>₹1199</p>
+        </div>
+    </div>
+</body>
+</html>

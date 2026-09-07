@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABC Tech Solutions - Employee Portal</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f4f6f9;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        /* HEADER */
+        header {
+            background: linear-gradient(90deg, #002b5e, #004a8f);
+            color: white;
+            padding: 20px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header h1 {
+            font-size: 28px;
+        }
+        header p {
+            font-size: 14px;
+            opacity: 0.8;
+            font-style: italic;
+        }
+
+        /* NAV */
+        nav {
+            background: #e9edf4;
+            padding: 12px 30px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            border-bottom: 1px solid #ccc;
+        }
+        nav a {
+            text-decoration: none;
+            color: #002b5e;
+            font-weight: 600;
+            font-size: 14px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* MAIN LAYOUT */
+        .main-content {
+            display: flex;
+            padding: 25px 30px;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        /* LEFT SIDEBAR */
+        .sidebar {
+            flex: 1;
+            min-width: 220px;
+        }
+        .sidebar h3 {
+            background: #002b5e;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 6px;
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+        .sidebar ul li {
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+        }
+        .sidebar ul li a {
+            text-decoration: none;
+            color: #333;
+            font-size: 14px;
+        }
+        .sidebar ul li a:hover {
+            color: #004a8f;
+            font-weight: bold;
+        }
+
+        /* RIGHT CONTENT */
+        .right-content {
+            flex: 2.5;
+            min-width: 300px;
+        }
+
+        /* WELCOME BANNER */
+        .welcome {
+            background: linear-gradient(135deg, #004a8f, #0073e6);
+            color: white;
+            padding: 20px 25px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+        }
+        .welcome h2 {
+            font-size: 22px;
+        }
+        .welcome p {
+            margin: 8px 0 15px 0;
+            font-size: 14px;
+            opacity: 0.9;
+        }
+        .btn {
+            background: white;
+            color: #004a8f;
+            padding: 8px 20px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 13px;
+            display: inline-block;
+        }
+        .btn:hover {
+            background: #e0e0e0;
+        }
+
+        /* COMPANY INFO */
+        .company-info {
+            background: #f9fafc;
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+            border-left: 4px solid #004a8f;
+        }
+        .company-info p {
+            font-size: 13px;
+            margin: 4px 0;
+            color: #333;
+        }
+
+        /* PROFILE CARD */
+        .profile-card {
+            background: #f9fafc;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+            border: 1px solid #ddd;
+        }
+        .profile-card h3 {
+            color: #002b5e;
+            margin-bottom: 5px;
+        }
+        .profile-card .designation {
+            color: #004a8f;
+            font-weight: bold;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        .profile-card p {
+            font-size: 13px;
+            margin: 4px 0;
+            color: #333;
+        }
+        .profile-card .edit-btn {
+            display: inline-block;
+            margin-top: 10px;
+            background: #004a8f;
+            color: white;
+            padding: 6px 18px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 12px;
+        }
+        .profile-card .edit-btn:hover {
+            background: #002b5e;
+        }
+
+        /* ANNOUNCEMENTS */
+        .announcements {
+            margin-bottom: 25px;
+        }
+        .announcements h3 {
+            color: #002b5e;
+            margin-bottom: 12px;
+        }
+        .announce-item {
+            background: #f9fafc;
+            padding: 12px 15px;
+            border-radius: 6px;
+            margin-bottom: 10px;
+            border-left: 4px solid #0073e6;
+        }
+        .announce-item h4 {
+            color: #002b5e;
+            font-size: 14px;
+        }
+        .announce-item p {
+            font-size: 13px;
+            color: #555;
+            margin: 4px 0;
+        }
+        .announce-item .date {
+            font-size: 11px;
+            color: #888;
+        }
+
+        /* APPLY LEAVE */
+        .apply-leave {
+            background: #f9fafc;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+        }
+        .apply-leave h3 {
+            color: #002b5e;
+            margin-bottom: 12px;
+        }
+        .apply-leave label {
+            font-weight: bold;
+            font-size: 14px;
+            display: block;
+            margin-bottom: 5px;
+        }
+        .apply-leave select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .apply-leave button {
+            background: #004a8f;
+            color: white;
+            padding: 8px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .apply-leave button:hover {
+            background: #002b5e;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #002b5e;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            font-size: 13px;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .main-content {
+                flex-direction: column;
+            }
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <!-- HEADER -->
+    <header>
+        <div>
+            <h1>ABC TECH SOLUTIONS</h1>
+            <p>Innovate • Integrate • Succeed</p>
+        </div>
+    </header>
+
+    <!-- NAVIGATION -->
+    <nav>
+        <a href="#">Dashboard</a>
+        <a href="#">Employees</a>
+        <a href="#">Departments</a>
+        <a href="#">Leave</a>
+        <a href="#">Reports</a>
+        <a href="#">Contact</a>
+        <a href="#">Logout</a>
+    </nav>
+
+    <!-- MAIN CONTENT -->
+    <div class="main-content">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <h3>EMPLOYEE PORTAL</h3>
+            <ul>
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="#">My Profile</a></li>
+                <li><a href="#">Leave Apply</a></li>
+                <li><a href="#">My Leaves</a></li>
+                <li><a href="#">Payroll</a></li>
+                <li><a href="#">Performance</a></li>
+                <li><a href="#">Documents</a></li>
+                <li><a href="#">Announcements</a></li>
+                <li><a href="#">Settings</a></li>
+            </ul>
+        </aside>
+
+        <!-- RIGHT CONTENT -->
+        <div class="right-content">
+
+            <!-- WELCOME BANNER -->
+            <section class="welcome">
+                <h2>EMPLOYEE PORTAL</h2>
+                <p>Welcome to ABC Tech Solutions</p>
+                <p>Access your profile, manage leaves, view announcements and stay updated with company information.</p>
+                <a href="#" class="btn">View Profile</a>
+            </section>
+
+            <!-- COMPANY INFO -->
+            <div class="company-info">
+                <p><strong>ABC Tech Solutions Pvt. Ltd.</strong></p>
+                <p>123, Tech Park, Chennai - 600 001, India</p>
+                <p>+91 98765 43210 | info@abctech.com | www.abctech.com</p>
+            </div>
+
+            <!-- PROFILE CARD -->
+            <section class="profile-card">
+                <h3>Aravindhan L</h3>
+                <p class="designation">Senior NOC Engineer</p>
+                <p><strong>Email ID:</strong> EMP1025</p>
+                <p><strong>Department:</strong> IT Operations</p>
+                <p><strong>Email:</strong> aravindhan@abctech.com</p>
+                <p><strong>Phone:</strong> +91 86828 65830</p>
+                <p><strong>Location:</strong> Chennai, India</p>
+                <a href="#" class="edit-btn">Edit Profile</a>
+            </section>
+
+            <!-- ANNOUNCEMENTS -->
+            <section class="announcements">
+                <h3>ANNOUNCEMENTS</h3>
+                <div class="announce-item">
+                    <h4>Annual Day Celebration</h4>
+                    <p>Join us for the Annual Day celebration on 25th May 2025.</p>
+                    <span class="date">10 May 2025</span>
+                </div>
+                <div class="announce-item">
+                    <h4>Training Program</h4>
+                    <p>AWB Self Start training program on 18th May 2025.</p>
+                    <span class="date">08 May 2025</span>
+                </div>
+                <div class="announce-item">
+                    <h4>System Maintenance</h4>
+                    <p>System maintenance on 18th May 2025 from 11:00 PM to 2:00 AM.</p>
+                    <span class="date">07 May 2025</span>
+                </div>
+                <a href="#" style="color:#004a8f; font-size:13px;">View All Announcements →</a>
+            </section>
+
+            <!-- APPLY LEAVE -->
+            <section class="apply-leave">
+                <h3>APPLY LEAVE</h3>
+                <label for="leave-type">Leave Type</label>
+                <select id="leave-type">
+                    <option>- Select Leave Type -</option>
+                    <option>Casual Leave</option>
+                    <option>Sick Leave</option>
+                    <option>Earned Leave</option>
+                </select>
+
+                <label for="days">Number of Days</label>
+                <select id="days">
+                    <option>1 day</option>
+                    <option>2 days</option>
+                    <option>3 days</option>
+                    <option>4 days</option>
+                    <option>5 days</option>
+                </select>
+                <button>Apply Leave</button>
+            </section>
+
+        </div>
+        <!-- end right-content -->
+    </div>
+    <!-- end main-content -->
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 ABC Tech Solutions. All rights reserved.</p>
+    </footer>
+
+</div>
+<!-- end container -->
+</body>
+</html>

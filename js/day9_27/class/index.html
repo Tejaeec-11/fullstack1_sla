@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section><div></div></section>
+    <script>
+        //scope 1 (gobal scope declare any place call at any place is gobal )
+        console.log("s1-------------------------------------------------");
+        var a =10 //gobal scope var 
+        console.log(a);
+        
+        //scope 2 (functional scope)
+        console.log("s2-------------------------------------------------");
+        function add (){
+            var a = 12 //this inside the function scope so var a = 12 is function scope
+        }
+        console.log(a); // print 10 instead of 12 because gobal and we need call inside it
+         
+         //scope 2.1 (functional scope rule declare indie and call inside the function  only output see)
+        console.log("s2.1-------------------------------------------------");
+        function add (){
+            var a = 12
+            console.log(a); //functon inside all take or call panna mattu tha 12
+            }
+            add()
+            console.log(a); //out put gobal take 10 ifwe did not put a --= 10 it show error
+          
+            //scope 2
+            console.log('2-------------------------------------------');
+            function addonw(){
+                var a = 13
+                console.log(a); //ony we put this out cant see in screen
+            }
+            addonw() //to see output we need call outside
+
+            //scope 2.2
+            console.log('2.2--------------------------------------------');
+            function addrthr(){
+                var a = 40
+                console.log(a);//jion both hrlp to 49,44print= 40
+                if(true){
+                   console.log(a)//this separte not print use 49  print 40 
+                }
+            }
+            addrthr()//at end we nne dcall function then only it print the output
+
+             //scope 2.3 9ffunction scope inside block also access the 100 and outside block function seprate acess
+            console.log('2.3--------------------------------------------');
+            function addfvd (){
+                var b = 12
+                console.log(b) //it print 12
+
+                if(true){ //but this block it only work what inside and outside of block 559 ,61 only see 100
+                    var b =100
+                    console.log(b);
+                }
+                console.log(b)
+            }
+            addfvd()
+
+              //scope 3 (this is block scope let only use inside block value print)
+            console.log('3--------------------------------------------');
+            function addfvde (){
+                var c = 12
+                console.log(c) //it print 12
+
+                if(true){ //let is block scope
+                    let c =100
+                    console.log(c);//it print 100 because let
+                }
+                console.log(c)
+            }
+            addfvde()
+          
+
+            //expample movie gobal  scope diff between gobal,function,block scope scope 4 type iruku athula 3 type i know under this
+            console.log('g1-----------------------------------------');
+            var hero ="dhanush" //gobal declare panna if else for irutha kuda athu ula vena access pannala funtion vela access pannala
+            let heroone = "rajan"
+            const herotwo = "arasan"
+            function vadachennai(){
+                console.log('hero',hero);
+                console.log('heroone',heroone);
+                console.log('herotwo',herotwo);
+
+                if(true){
+                console.log('hero',hero);
+                console.log('heroone',heroone);
+                console.log('herotwo',herotwo); 
+                }
+               }
+                 console.log('hero',hero);
+                console.log('heroone',heroone);
+                console.log('herotwo',herotwo);
+
+            vadachennai()//call 1st then output see
+
+             //expample 2 function ula declare scope
+            console.log('f2-----------------------------------------');
+            function vadachennaii(){ //function ula panni iruka
+            var hero ="dhanush" //this 3 call initalstion or expression
+            let herooone = "rajan"
+            const herotwoo = "arasan"
+
+                console.log('hero',hero);
+                console.log('herooone',herooone);
+                console.log('herotwoo',herotwoo); //line 104 to 111 can we acess inside funnction but block we put so output cant see
+           //} 
+           //vadachennaii() only upto this can run and we see the output this function or normal function under this is block
+                if(true){ //block condition ..this also print if we call inside thefunction e
+                console.log('hero',hero);
+                console.log('herooone',herooone);
+                console.log('herotwoo',herotwoo); 
+                }//function inside block pink weather if for while idf else do while anything block put inside yellow function ula 
+               }//yellow normal function
+                // console.log('hero',hero); //hide this because gobal not declare we put inside funcion to initizlae or rxpression to see this 3 line outline use line 81 to 84 so we can see golbal output
+                //console.log('herooone',herooone);
+               // console.log('herotwoo',herotwoo);
+
+            vadachennaii()
+
+            //example 2 in detail this is normal function scope
+             console.log('f2.1-----------------------------------------');
+            function vadachennaiii(){ 
+            var heroo ="dhanush" 
+             let heroooone = "rajan"
+            const herotwooo = "arasan"
+
+                console.log('heroo',heroo);
+                console.log('heroooone',heroooone);
+                console.log('herotwooo',herotwooo); 
+           } 
+           vadachennaiii()
+   
+            //expample 2 function scope ula block  ula call 
+            console.log('f2.2-----------------------------------------');
+            function vadachennaiiii(){ 
+            var hero ="dhanush" 
+            let herooonee = "rajan"
+            const herottwoo = "arasan"
+                if(true){
+                console.log('hero',hero);
+                console.log('herooonee',herooonee);
+                console.log('herottwoo',herottwoo);
+              
+                }
+               }
+             vadachennaiiii()
+
+             //example 2 function scope ula block ula initalzition panna pora
+            console.log("2.3-----------------------------------------");
+            function vadacheenai(){
+            if(true){
+            var hero ="dhanush" //gobal so we outside inside or outside block
+            let hherone = "rajan" //let & const inside block they know only access inside outside cant
+            const hhherotwo = "arasan"
+            console.log('hero',hero);
+            console.log('hherone',hherone);
+            console.log('hhherotwo',hhherotwo);
+            }//everything inside if so it run soomthly inide declare and inside run
+            console.log('hero',hero);//but this outside i try to access inside the if block so this is th eproblem there
+           // console.log('hherone',hherone);
+            //console.log('hhherotwo',hhherotwo);
+            } 
+            vadacheenai()
+    
+            //hosting 1
+            console.log('h1----------------------------------------------');
+             //point 4 174 js read line by line and search for a  and it auto maticall take var a and keep in  line 173
+            console.log(z); //3 point js excution time
+              //i try to acess bfore the init line 174 2nd point
+            var z = 10//when you init a value 1st point
+            //point 5 it return undefinited value
+
+
+            //hosting useing function declare ation
+            console.log('hf2--------------------------------------------------');
+            ree() //call bfore initz in function and we can see output 
+            function ree(){  
+            console.log('running');
+            }
+
+            //arrow function 1 (multi parameters  )
+            console.log('pa1---------------------------------------------');
+            const giri = (edeva,bdbdfervevdev)=>{ //this is  parameter value
+            console.log(edeva,bdbdfervevdev);
+            } 
+            giri(10,34) //this argu value for parameter
+
+            //explusive return
+            console.log('e1---------------------------------------------------');
+            const live =(user)=>{
+                return user*2
+            }
+           console.log( live(10));
+
+            //implusive return +this original function but use barket 
+            console.log('e2---------------------------------------------------');
+            const living =(user)=>user*2
+            console.log( living(20));
+
+             // multipline 1 
+            console.log('m3---------------------------------------------------');
+            const livig =(user)=>{
+              let sum =  user+10
+              return sum +0
+            }
+            console.log( livig(10)); 
+
+            //arrow function 1
+            console.log('1----------------------------------------');
+            const svsdv =(user)=>{
+                let sum = 0
+                for(let d=0;d<=user;d++){
+                    sum += d
+                }
+                return sum
+            }
+            console.log(svsdv(10))
+           
+    </script>
+</body>
+</html>

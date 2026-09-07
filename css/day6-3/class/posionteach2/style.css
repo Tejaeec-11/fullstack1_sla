@@ -1,0 +1,79 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+body{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/*-----------------------------------------------------------------------*/
+.box{
+    background-color: rgb(66, 128, 203);
+    padding: 20px;
+    color: white;
+    text-align: center;
+    font-size:1000 ;
+}
+.box > p{
+    background-color: brown;
+    padding: 20px;
+    width:300px ; height: 300px;
+   /* position: static; it is static all elemt we can tsee we can changeinto relative or etc*/
+   /*finnd of flex instead we put relaltive propties*/
+}
+/*-----------------------------------------------------------------------*/
+.box1{
+    background-color: blue;
+    padding: 20px;
+    color: white;
+    text-align: center;
+    font-size:1000 ;
+}
+.box1 > p{
+    background-color: brown;
+    padding: 20px;/*if relative child and parent spearte agum but space ouppie pannu */
+    width:300px ; height: 300px;
+   position: relative; /*we can move elemt any where is know relativit*/
+   top: 70px;
+   left: 80%; /*calculate 100 la 30% evalo nu so 100*30/100=30*/
+}
+
+/*-----------------------------------------------------------------------*/
+.box3{
+    background-color: blue;
+    padding: 20px;
+    color: white;
+    text-align: center;
+    font-weight:1000 ;
+    position: relative ;
+    height: 50vh;
+}
+.box3 > p{
+    background-color: brown;
+    padding: 20px;
+    width:300px ;/*absolute means child parent connected  inide parent child conected but in relative parent outside childe */
+    height: 300px;
+    position: absolute; /*we can move elemt any where is know relativit*/
+    top: 50%;
+    right: 30%;
+}
+/*-----------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------*/
+.box4{
+   padding: 20px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   position: fixed; /*if we put this space and letter gone*/ /*if we stick in position and top 10% we give when use website we scroll down down down for 10% there nav stick and after reach it limit it stop on top we can see but the nav did come down.....sticky we did not use */
+   top: 10px;
+   width: 100vw;
+   height: 100px;
+}
+/*-----------------------------------------------------------------------*/

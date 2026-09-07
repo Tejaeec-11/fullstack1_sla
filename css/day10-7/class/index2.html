@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        background-color: darkolivegreen; /*always apply in last 
+        element*/
+        }
+        a{
+            text-decoration: none;
+        }
+        html{
+            scroll-behavior: smooth;
+        }
+        body{
+            font-family: 'Times New Roman', Times, serif;
+        }
+        /*---------------------------------------------------------------------*/
+        .box{
+            background-color: rgb(8, 157, 75);
+            padding: 20px;
+           
+        }
+        .container{
+             padding: 20px;
+             background-color: rgb(9, 16, 148);
+             height: 20vh;
+             display: flex;
+             justify-content: center;
+             gap: 10px;
+        }
+        .child{
+            background-color: white;
+            color: black;
+            padding: 10px;
+            width: 300px;
+        }
+         @media (max-width:768px){
+             .container{
+                background-color: black;
+                display: flex;
+                flex-direction: column;
+                height: 60vh;
+                justify-content: center;
+                align-items: center;
+             }
+
+         }
+
+        @media (max-width:578px){
+                 .container{
+                    height: 100vh ;
+                background-color: rgb(151, 9, 9);
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+             }
+             }
+             /*------------------------------------------------------------------*/
+             .containergrid{
+                background-color: blanchedalmond;
+                padding: 20px;
+                display: grid;
+                grid-template-columns: repeat(4,1fr);
+                gap: 20px;
+                place-items: center;
+             }
+            
+                 @media (max-width:768px){
+             .containergrid{
+                background-color: black;
+                display: grid;
+                height: 60vh;
+                grid-template-columns:repeat(2,1fr) ;
+                gap: 20px;
+             }
+
+         }
+
+        @media (max-width:578px){
+                  .containergrid{
+                background-color: black;
+                display: grid;
+                height: 60vh;
+                grid-template-columns:1fr ;
+                gap: 20px;
+             }
+             }
+             
+             
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="child">box 1</div>
+         <div class="child">box 1</div>
+          <div class="child">box 1</div>
+          <div class="child">box 1</div>
+    </div><br><br>
+
+     <div class="containergrid">
+        <div class="child">box 1</div>
+         <div class="child">box 1</div>
+          <div class="child">box 1</div>
+          <div class="child">box 1</div>
+    </div>
+</body>
+</html>

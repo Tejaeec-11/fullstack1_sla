@@ -1,0 +1,131 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+a{
+    text-decoration: none;
+}
+body{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/*---------------------------------------------------------*/
+.box{background-color: aqua;
+    padding: 20px;
+    color:red;
+    text-align: center;
+    font-size: 1px; /*one px means one dot size evolo vacha . atha...this is px  ..this absolute means no change example h1,strong , bold same like this pixel px*/
+/*percentage is change able it is relative it change up on parent */
+
+} /*we use px*/
+.box > p{
+    font-size: 1px ; /*content is still there so no worry it 1 px*/
+    background-color: black;
+    color: aliceblue;
+}
+
+/*---------------------------------------------------------*/
+.box1{
+    background-color: rgb(55, 137, 209);
+    padding: 20px;
+    color: black;
+    text-align: center;
+    width:100% ; /*default 100 percentage if give or not it take it as 100 so parent 100 and child 50 take in this percentage*/
+    height: 100%;
+}
+.box1 > p{
+ width: 50%; /*percentage change according to parent */ /*parent oda off percentage */
+ background-color: beige;
+ color: blue;
+ height: 100%;
+}
+
+/*---------------------------------------------------------*/
+.box2 {
+background-color: rgb(55, 137, 209);
+    padding: 20px;
+    color: black;
+    text-align: center;
+    width:20% ; /*parent more child less in this */
+    /*if paren toda 10 % and child 100% apo parent child are in smae percentage if we calculate 10*100/100=10child*/
+}
+.box2 > p{
+    width: 50%; /*parent 20% child 50% value apo 10% child and 20% parent....child valuve calculate with paren tvaluve ex..p:20 c:50 and answer 20*50/100=10 % child */
+    background-color: black;
+    color: cornsilk;
+}
+
+/*---------------------------------------------------------*/
+.box3{
+    background-color: rgb(55, 137, 209);
+    padding: 20px;
+    color: black;
+    text-align: center;
+    width:10%; /*p 40 and child is 120 and cal child is 48 child it is complete depend on paren tin percentage concept */
+
+}
+.box3 > p{
+    width:120% ; /* after calculate child is 12 % */
+    background-color: burlywood;/*responsive design always use percentage  explame phone, tab */
+    columns: white;/*fixed does not change on an screen */
+}
+
+/*---------------------------------------------------------*/
+.box4{
+    background-color: black;
+    padding: 20px;
+    color: aliceblue;
+    text-align: center;
+    width: 400px; /*in p we give % and c px give give answer is wrong error becuase percentage depend on parent */ 
+}
+.box4 > p{
+    width: 80% ; /*if px p 50 and c 90 then output child 90 big because it fixed   */
+    background-color: burlywood;/*or p 40% la c 50px evalo answer 20 or if 200px px p and 50 % c answer 100  px child*/
+    columns: white;
+}
+
+
+/*---------------------------------------------------------*/
+
+.box5{
+    background-color: black;
+    padding: 20px;
+    color: rgb(5, 69, 125);
+    text-align: center;
+    width: 400%; /* 16 *2 = p oda multiply two so 32 is child  */ 
+    font-size: 16px;
+}
+.box5 > p{
+    width: 80% ; /*and 10 is p and 5 em child so answer 20 font size only use i font size with p * 2 = answer size   */
+    background-color: burlywood;
+    columns: rgb(194, 13, 13);
+    font-size: 2em;
+
+}
+
+
+/*---------------------------------------------------------*/
+
+.box6{
+    background-color: black;
+    padding: 20px;/*root elemet we put font size as 16 px and in this we root elemet 16px and 3rem multiple =48px */
+    color: white;/*rem change according  to root elemets  */
+    text-align: center;
+    width:400px ;
+    font-size: 3rem;/*what we give root it taake it as font size but we need to 3rem to access root ex.. flex to active flex*/
+}
+
+/*---------------------------------------------------------*/
+/*---------------------------------------------------------*/
+/*---------------------------------------------------------*/
+/*---------------------------------------------------------*/
+/*---------------------------------------------------------*/
+/*---------------------------------------------------------*/
+/*---------------------------------------------------------*/
+/*---------------------------------------------------------*/
+/*---------------------------------------------------------*/
+/*---------------------------------------------------------*/

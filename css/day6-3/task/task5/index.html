@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position Comparison</title>
+    <style>
+      * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.parent {
+    position: relative;
+    height: 600px;
+    background: #f4f4f4;
+    border: 2px solid #333;
+    margin-bottom: 30px;
+}
+
+.box {
+    width: 200px;
+    height: 60px;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    margin: 10px;
+}
+
+.static {
+    background: #3498db;
+    position: static;
+}
+
+.relative {
+    background: #e67e22;
+    position: relative;
+    top: 20px;
+    left: 30px;
+}
+
+.absolute {
+    background: #e74c3c;
+    position: absolute;
+    top: 120px;
+    right: 30px;
+}
+
+.fixed {
+    background: #2ecc71;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+.sticky {
+    background: #9b59b6;
+    position: sticky;
+    top: 10px;
+}
+
+
+
+    </style>
+</head>
+<body>
+    <h1>CSS Position Comparison</h1>
+
+    <div class="parent">
+        <div class="box static">Static Position</div>
+        <div class="box relative">Relative Position</div>
+        <div class="box absolute">Absolute Position</div>
+        <div class="box fixed">Fixed Position</div>
+        <div class="box sticky">Sticky Position</div>
+    </div>
+
+    <div style="height: 1500px; padding: 20px;">
+        <h2>Scroll down to see sticky and fixed behavior</h2>
+    </div>
+</body>
+</html>

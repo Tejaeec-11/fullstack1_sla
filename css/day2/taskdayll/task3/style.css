@@ -1,0 +1,23 @@
+/* Element Selector */
+body {
+    background-color: #e6b4d6;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    padding: 30px;
+}
+
+h1 {
+    color: #2d24058f;
+}
+
+/* Class Selector (common for all) */
+.dept {
+    width: 280px;
+    height: 55px;
+    margin: 12px auto;
+    padding: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 8px;
+    color: #844f4f;
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relative Position</title>
+   <style>
+     * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 30px;
+}
+
+.box {
+    width: 200px;
+    height: 100px;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.box1 {
+    background: #3498db;
+}
+
+.box2 {
+    background: #e67e22;
+    position: relative;
+    top: 40px;
+    left: 60px;
+}
+
+.box3 {
+    background: #2ecc71;
+}
+
+
+
+   </style>
+</head>
+<body>
+    <h1>Relative Position Demo</h1>
+    <div class="box box1">Box 1 - Normal</div>
+    <div class="box box2">Box 2 - Relative (moved)</div>
+    <div class="box box3">Box 3 - Normal</div>
+</body>
+</html>

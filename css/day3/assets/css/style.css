@@ -1,0 +1,40 @@
+*{ /*we put zero bcoz every div and tag default margin , padding , margini */
+    margin: 0;
+    padding: 0;  /* in day 2 css folder copy and paste the url in google then backspace every and put 3 and enter then click box*/
+    box-sizing: border-box; /*file:///D:/frontend/css/day2/index.html change this into file:///D:/frontend/css/day3/ and click enterr */
+}
+
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Courier New', Courier, monospace;
+}
+a{
+    text-decoration: none;
+}
+/*.parent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: burlywood;
+}*/
+.box { /* box model rule is there apply this and use this  */
+    background-color: rgb(180, 95, 95);
+    color: rgb(255, 240, 249); 
+    font-size: large;
+    padding: 10px; /*content round space create agum*/
+    text-align: center;
+    border: solid 2px rgb(208, 230, 103); /*style width colour*/
+    margin: 20px; /*border space creta agum*/
+    width: 300px;
+    height: 300px;
+    overflow: hidden; /*ula hidden x asix and hidden y asix iruku athula auto hidden iruku and we can scroll ,auto*/
+
+}
+
+.box > h1{
+      font-size: small;
+
+}
+

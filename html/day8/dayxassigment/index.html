@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Forms Assignment</title>
+</head>
+<body>
+
+    <center>
+        <h1>Forms Assignment</h1>
+    </center>
+
+  
+    <section>
+        
+        <h2>1. Login Form</h2><center>
+        <form method="post">
+            <label>Enter Email</label>
+            <input type="email" name="useremail" placeholder="Enter your email" required><br><br>
+
+            <label>Enter Password</label>
+            <input type="password" name="userpassword" placeholder="Enter your password" required><br><br>
+
+            <input type="submit" value="Login">
+        </form></center>
+        <hr>
+    </section>
+
+   
+    <section>
+        <h2>2. Registration Form</h2>
+        <form method="post">
+            <label>Full Name</label>
+            <input type="text" name="username" placeholder="Enter your full name" required><br><br>
+
+            <label>Email</label>
+            <input type="email" name="useremail" placeholder="Enter your email" required><br><br>
+
+            <label>Password</label>
+            <input type="password" name="userpassword" placeholder="Create a password" required><br><br>
+
+            <label>Confirm Password</label>
+            <input type="password" name="userconfirmpassword" placeholder="Confirm your password" required><br><br>
+
+            <label>Gender</label>
+            <input type="radio" name="gender" value="male"> Male
+            <input type="radio" name="gender" value="female"> Female<br><br>
+
+            <label>Select Course</label>
+            <select name="course">
+                <option value="">Select one</option>
+                <option value="html">HTML</option>
+                <option value="css">CSS</option>
+                <option value="js">JavaScript</option>
+                <option value="react">React</option>
+            </select><br><br>
+
+            <input type="submit" value="Register">
+        </form>
+        <hr>
+    </section>
+
+   
+    <section>
+        <h2>3. Contact Form</h2>
+        <form method="post">
+            <label>Your Name</label>
+            <input type="text" name="username" placeholder="Enter your name" required><br><br>
+
+            <label>Your Email</label>
+            <input type="email" name="useremail" placeholder="Enter your email" required><br><br>
+
+            <label>Subject</label>
+            <input type="text" name="subject" placeholder="Enter subject" required><br><br>
+
+            <label>Message</label>
+            <textarea name="usermessage" rows="5" cols="30" placeholder="Write your message..."></textarea><br><br>
+
+            <input type="submit" value="Send Message">
+        </form>
+        <hr>
+    </section>
+
+   
+    <section>
+        <h2>4. Feedback Form</h2>
+        <form method="post">
+            <label>Your Name</label>
+            <input type="text" name="username" placeholder="Enter your name" required><br><br>
+
+            <label>Your Email</label>
+            <input type="email" name="useremail" placeholder="Enter your email" required><br><br>
+
+            <label>Rating</label>
+            <select name="rating">
+                <option value="">Select rating</option>
+                <option value="5">⭐ 5 - Excellent</option>
+                <option value="4">⭐ 4 - Good</option>
+                <option value="3">⭐ 3 - Average</option>
+                <option value="2">⭐ 2 - Poor</option>
+                <option value="1">⭐ 1 - Very Poor</option>
+            </select><br><br>
+
+            <label>Feedback</label>
+            <textarea name="userfeedback" rows="5" cols="30" placeholder="Write your feedback..."></textarea><br><br>
+
+            <input type="submit" value="Submit Feedback">
+        </form>
+        <hr>
+    </section>
+
+    <section>
+        <h2>5. Job Application Form</h2>
+        <form method="post">
+            <label>Full Name</label>
+            <input type="text" name="username" placeholder="Enter your full name" required><br><br>
+
+            <label>Email</label>
+            <input type="email" name="useremail" placeholder="Enter your email" required><br><br>
+
+            <label>Phone Number</label>
+            <input type="tel" name="usermobile" placeholder="Enter 10-digit number" maxlength="10" minlength="10" required><br><br>
+
+            <label>Position Applied For</label>
+            <select name="position">
+                <option value="">Select position</option>
+                <option value="frontend">Frontend Developer</option>
+                <option value="backend">Backend Developer</option>
+                <option value="fullstack">Full Stack Developer</option>
+                <option value="uiux">UI/UX Designer</option>
+            </select><br><br>
+
+            <label>Experience (in years)</label>
+            <input type="number" name="experience" min="0" max="30" placeholder="Enter experience"><br><br>
+
+            <label>Skills</label>
+            <input type="checkbox" name="skills" value="html"> HTML
+            <input type="checkbox" name="skills" value="css"> CSS
+            <input type="checkbox" name="skills" value="js"> JavaScript
+            <input type="checkbox" name="skills" value="react"> React
+            <input type="checkbox" name="skills" value="python"> Python<br><br>
+
+            <label>Why should we hire you?</label>
+            <textarea name="userreason" rows="5" cols="30" placeholder="Write your answer..."></textarea><br><br>
+
+            <input type="submit" value="Apply Now">
+        </form>
+        
+    </section>
+
+</body>
+</html>

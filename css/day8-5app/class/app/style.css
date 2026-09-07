@@ -1,0 +1,101 @@
+*{ 
+    padding: 0; 
+    margin: 0; 
+    box-sizing: border-box; 
+} 
+
+html{ 
+    scroll-behavior: smooth; 
+} 
+ 
+body{ 
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
+} 
+/*-------------------------------------------------------------------------------*/
+.navbar{ 
+    padding: 15px; 
+    display: flex; 
+    align-items: center; 
+    gap: 8px; 
+    box-shadow: 11px -19px 10px 10px; 
+} 
+
+.logo{ 
+    margin-left: 45px; 
+} 
+
+.search{ 
+    padding: 10px; 
+} 
+
+.search > input{ 
+    background-color: rgb(234, 232, 232, 0.57); 
+    width: 750px; 
+    padding: 14px; 
+    border-radius: 25px; 
+    border: none; 
+    color: black; 
+} 
+
+.link{ 
+    padding: 10px; 
+    display: flex; 
+    gap: 30px; 
+} 
+ 
+.link > a{ 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    gap: 5px; 
+    flex-direction: column; 
+    text-decoration: none; 
+    text-align: center; 
+    color: black; 
+    font-weight: 223; 
+    font-size: 16px; 
+} 
+/*-----------------------------------------------------------------------------*/
+.banner{ 
+    padding: 8px; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center;    
+} 
+
+.bannerimg{ 
+    padding: 8px; 
+} 
+
+.bannerimg > img{ 
+    width: 100%; 
+    
+    border-radius: 2px; 
+} 
+/*-------------------------------------------------------------------------------*/
+.cards{ 
+    display: flex; 
+    justify-content: center; 
+} 
+ 
+.cards > img{ 
+    width: 150px; 
+    height: 150px; 
+    margin-left: 10px; 
+    margin-right: 10px; 
+} 
+img:hover{
+    border: 2px solid white;
+    border-radius: 12px;
+}
+/*----------------------------------------------------------------------------------*/
+.ads{ 
+    padding: 20px; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+} 
+
+.ads > div > img{ 
+    width:100%; 
+}

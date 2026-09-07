@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid - Layout</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+
+        }
+        a{
+            text-decoration: none;
+        }
+        html{
+            scroll-behavior: smooth;
+        }
+        body{
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .div1{
+            display: grid; /*grid only perform column wise...grid went to column means one by one  */
+            grid-template-columns: 250px 250px 250px 250px; /*if we add this grid went into same line means in one after another*/
+             background-color: bisque;
+             padding: 20px; /*each one oupies 250 and touch each others */
+            gap: 350px; /*used for reo and column unverosal*/
+            }
+        .div2{
+            background-color: rgb(11, 11, 11);
+            color: white;
+            padding:20px ;
+            width: 300px;
+            height: 300px;
+        }
+        /*--------------------------------------------------------------------------*/
+         .div11{
+            display: grid; /*grid only perform column wise...grid went to column means one by one  */
+            grid-template-columns: repeat(3, 500px); /*each in row each repeart 3 time for 200px and move to next row */
+             background-color: bisque;
+             padding: 20px; 
+             column-gap: 350px; /*column gap between each box*/
+         }
+        .div22{
+            background-color: rgb(11, 11, 11);
+            color: white;
+            padding:20px ;
+            width: 300px;
+            height: 300px;
+        }
+        /*--------------------------------------------------------------------------*/
+         .div111{
+            display: grid; /*grid only perform column wise...grid went to column means one by one  */
+            grid-template-rows: repeat(4, 500px); /* grid-template-columns: repeat(4,1fr);....each in row each repeart 3 time for 200px and move to next row */
+             background-color: bisque;
+             padding: 20px; 
+             row-gap: 350px; /*only row gap n*/
+         }
+        .div222{
+            background-color: rgb(11, 11, 11);
+            color: white;
+            padding:20px ;
+            width: 300px;
+            height: 300px;
+        }
+        /*--------------------------------------------------------------------------*/
+         .div1111{
+            display: grid; /*grid only perform column wise...grid went to column means one by one  */
+            background-color: bisque;
+            padding: 20px; 
+            gap:30px ;/*only row gap n*/
+            height: 215vh;
+            place-items: center; /*row nd column middle center + like this plus middle */
+        }
+        .div2222{
+            display: grid;
+            place-items: center;
+            background-color: rgb(11, 11, 11);
+            color: white;
+            padding:20px ;
+            width: 300px;
+            height: 300px;
+        }
+        /*--------------------------------------------------------------------------*/
+         .div11111{
+            display: grid; /*grid only perform column wise...grid went to column means one by one  */
+            grid-template-columns: 1fr 3fr 1fr ;
+            background-color: bisque;
+            padding: 20px; 
+            gap:30px ;/*only row gap n*/
+            height: 215vh;
+         }
+        .div22222{
+            display: grid;
+            place-items: center;
+            background-color: rgb(11, 11, 11);
+            color: white;
+            padding:20px ;
+            width: 300px;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+   <div class="div1">
+    <div class="div2">box1</div>
+    <div class="div2">box2</div>
+    <div class="div2">box3</div>
+    <div class="div2">box4</div>
+   </div> <br><br><hr><br>
+     <!----------------------------------------------------------------->
+
+    <div class="div11">
+    <div class="div22">box1</div>
+    <div class="div22">box2</div>
+    <div class="div22">box3</div>
+    <div class="div22">box4</div>
+   </div>  <br><br><hr><br>
+     <!----------------------------------------------------------------->
+
+    <div class="div111">
+    <div class="div222">box1</div>
+    <div class="div222">box2</div>
+    <div class="div222">box3</div>
+    <div class="div222">box4</div>
+   </div>  <br><br><hr><br>
+     <!----------------------------------------------------------------->
+
+    <div class="div1111">
+    <div class="div2222">box1</div>
+    <div class="div2222">box2</div>
+    <div class="div2222">box3</div>
+    <div class="div2222">box4</div>
+   </div>   <br><br><hr><br>
+     <!----------------------------------------------------------------->
+
+    <div class="div11111">
+    <div class="div22222">box1fr</div>
+    <div class="div22222">box21fr+2place oupies</div>
+    <div class="div22222">box3after oupies1fr</div>
+    <div class="div22222">box4remain1frdown</div>
+   </div>  
+</body>
+</html>

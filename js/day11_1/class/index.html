@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>callbaack function</h1>
+    <script>
+       //ccallback 1
+       console.log('1---------------------------------------------');
+          const add = (cb)=>{//of add
+            console.log('running main function');//1st it print 
+            cb()//this invoke becaz we name under 18 line only call name in prara invoke
+          }
+          const newfuncton =()=>{
+            console.log('login the process');//second this print we need call cb is para this agru for that we cn like or direct give to cb(inside this )
+            
+          }
+          add(newfuncton)//argu of add in line 18 
+          //calling add and new function argu pass panra
+
+            //again  fn in call add ula
+          console.log('2---------------------------------------------');
+          const adde = (bc)=>{
+            console.log('running main function');
+            bc()
+          }
+           add(()=>console.log('running')) //no nmae but it bc invoke agidhum 
+
+           //colsure 
+            console.log('3---------------------------------------------');
+              const datas = 1+3//call outisde 
+            const dda =()=>{
+              console.log(datas);
+                
+            }
+            dda()//invoke panna answer 4
+
+            
+             console.log('3.1---------------------------------------------');
+            const datass = 1+3//call outisde 
+            const ddaa =()=>{
+              console.log(datass);
+                
+            }
+            ddaa()
+           // datass += 3
+            console.log(datass);
+
+            
+            //call outisde 
+             console.log('3.2---------------------------------------------');
+            let ddaaa =()=>{
+             let datasss = 1+3   
+                console.log(datasss);
+              console.log(datasss+2);  
+            }
+            ddaaa()
+
+            //inner and outer 
+            console.log('3.3--------------------------------------------');
+            const outer =()=>{//this outer 
+                let a=10
+            const inner =()=>{
+                console.log(a);
+                
+            } //this outer inside inner function
+            inner()
+            }
+            outer()
+
+
+             //inner and outer 
+            console.log('3.3--------------------------------------------');
+            const outerr =()=>{//this outer 
+                let b=10
+            const innerr =()=>{
+                console.log(b);
+                b++//only we incremet its not work if we put incremet we need to put agaian log and a-z use in ++ 
+                console.log(b);
+                
+            } //this outer inside inner function
+            innerr()
+            }
+            outerr()
+
+
+
+             //inner and outer 
+            console.log('3.4--------------------------------------------');
+            const outerrr =()=>{//this outer 
+               let c = 10
+            const innerrr =()=>{
+               
+                c++//only we incremet its not work if we put incremet we need to put agaian log and a-z use in ++ 
+                console.log(c);
+                
+            } //this outer inside inner function
+            return innerrr
+            }
+            const result = outerrr();
+            //calling outer
+            result()
+            result()
+            result()
+
+            //colose this code is open call let d = 10 any body ur process reassign panni change ur value easy aa outside so change panna kudhu nala tha so for that privacy we put inside  
+             console.log('3.5--------------------------------------------');
+             let d = 10
+             const outerrrr =()=>{//this outer 
+              
+            const innerrrr =()=>{
+               
+                d++//only we incremet its not work if we put incremet we need to put agaian log and a-z use in ++ 
+                console.log(d);
+                
+            } //this outer inside inner function
+            return innerrrr
+            }
+            const resultt = outerrrr();
+            //calling outer
+            resultt()
+            resultt()
+            resultt()
+
+            //loop new we need add something
+            console.log('4--------------------------------------------');
+            const teashop = ['tea','milk','boost']
+            const resulttt = []//push value in result
+            for(let z=0;z<teashop.length;z++){//- for reverse for add +
+               //teashop[i]//what reult?
+             //  console.log(teashop[i])//for see we need put like this but still we cant see
+            console.log(teashop[z]) //what now the result is this is correct
+           resulttt[resulttt.length] =teashop[z] //we put like waht show 
+        }
+        console.log(resulttt);
+           
+          //push
+           console.log('4.1--------------------------------------------');
+            const teashopp = ['tea','milk','boost']
+            const resultttt = []//push value in result
+            for(let z=0;z<teashopp.length;z++){//- for reverse for add +
+               //teashop[i]//what reult?
+             //  console.log(teashop[i])//for see we need put like this but still we cant see
+            console.log(teashopp[z]) //what now the result is this is correct
+           resultttt[resultttt.length] =78//we put like waht show 
+        }
+        console.log(resultttt);
+    
+        //push understand
+        //push
+           console.log('4.2--------------------------------------------');
+            const tteashop = ['tea','milk','boost']
+            const ressult = []//push value in result
+            for(let z=0;z<tteashop.length;z++){//- for reverse for add +
+               //teashop[i]//what reult?
+             //  console.log(teashop[i])//for see we need put like this but still we cant see
+            console.log(tteashop[z]) //what now the result is this is correct
+           //we put like waht show 
+        }
+        console.log(ressult);
+
+         //push
+           console.log('4.3--------------------------------------------');
+            const teaShop = ['tea','milk','boost']
+            const reSult = []//push value in result
+            for(let z=0;z< teaShop.length;z++){//- for reverse for add +
+               //teashop[i]//what reult?
+             //  console.log(teashop[i])//for see we need put like this but still we cant see
+            console.log( teaShop[z]) //what now the result is this is correct
+           reSult[0] = 20
+            //we put like waht show 
+        }
+        console.log(reSult);
+
+
+        //push
+           console.log('4.4--------------------------------------------');
+            const TEAshop = ['tea','milk','boost']
+            const Result = []//push value in result
+            for(let z=0;z< TEAshop.length;z++){//- for reverse for add +
+               //teashop[i]//what reult?
+             //  console.log(teashop[i])//for see we need put like this but still we cant see
+            console.log( TEAshop[z]) //what now the result is this is correct
+           Result[1] = TEAshop[1]
+            //we put like waht show 
+        }
+        console.log(Result);
+           
+        //push
+           console.log('4.5--------------------------------------------');
+            const teaSHOP = ['tea','milk','boost']
+             teaSHOP[0] = 78
+            console.log(teaSHOP);
+
+             
+          //push
+           console.log('4.6--------------------------------------------');
+            const teashoP = ['tea','milk','boost']
+            const resulT = []//push value in result
+            for(let z=0;z<teashoP.length;z++){//- for reverse for add +
+             resulT[resulT.length] = teashoP[z]
+                //teashop[i]//what reult?
+             //  console.log(teashop[i])//for see we need put like this but still we cant see
+            console.log(teashoP[z]) //what now the result is this is correct
+          //we put like waht show 
+        }
+         resulT[resulT.length] ='coffee' //if we put in 208 this line same will show tes coffee tea milk 
+        console.log(resulT);
+      //this all this old model  this logicla  use for loop
+      
+      
+      //push this is new-buildin bussnies logical company use bussiness logical but company they ask program like logical
+      //push add element in last eveery thing array online
+      console.log('p1----------------------------------------------');
+      const teashope1 = ['tea','milk','boost']
+        teashope1.push("bisket")
+        console.log(teashope1);
+        
+
+        //pop -remove last element
+        teashope1.pop()
+        console.log(teashope1);
+
+        //unshift-to add 1st elemt 
+        teashope1.unshift("react")
+        console.log(teashope1);
+        
+        //shift - remove 1st element
+        teashope1.shift()
+        console.log(teashope1);
+
+        //length
+       // teashope1.length() like this 
+        //console.log(teashope1);
+ 
+        //concat
+         const first =[1,2,3,4]
+         const second = [12,3,4]
+
+         const rEsult = first.concat(second)
+        
+        console.log(rEsult);
+
+
+        //
+         const first1 =[1,2,3,4]
+         const second1 = [12,3,4]
+        const getrEsult2 = [...first1,...second1]
+         const rEsult2 = first1.concat(second1)
+         // const rEsult2 =first1.concat(second)
+        console.log(rEsult2);
+        
+        // we are giving two  parameter there  start end
+        const house =["room","kitchen","TV","AC"]
+        const showing=  house.slice(1,3)
+       console.log(showing); //copy and extract ing this is 
+      
+       // for it give full lenght but it print last front value
+        const house1 =["room","kitchen","TV","AC","room2","room3","room4"]
+       //const showing1=  house1.slice(2,6)
+      //splice - add pannu remove pannu replace pannu
+      //const splices = house.splice(1,3,"67")//now i this what is result now
+          // const splices = house.splice(1,3,"bnhgt")//change now what is result now
+      //const splices = house.splice(1,3,"bnhgt","^&6576")//again chage now result?
+          // //const splices = house.splice(1,3,"bnhgt","^&6576",3) //change now i again add this 
+      //const splices = house.splice(3,2,"56") //why 56 not show  what is the result
+      const splices = house.splice(0,5,"ac")   //the out put for this 
+      console.log(splices); 
+   console.log(house);//now it show all
+
+   //inculde
+   const re = house.includes('tv')
+   console.log(re);
+   
+   //reverse
+   const reve= house.reverse()
+   console.log(reve);
+   
+       
+ </script>
+
+</body>
+</html>

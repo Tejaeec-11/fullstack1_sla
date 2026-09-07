@@ -1,0 +1,22 @@
+* {  /*we put that there is no width and hieight in screen all colour oupies full screen*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{ 
+    scroll-behavior: smooth;
+}
+
+body{  
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+a{ /*in nav we use # an dout put when we see line under word so it shop this */
+     text-decoration: none;
+}
+.hide > p{
+
+    background-color: black;
+    color: beige;
+}

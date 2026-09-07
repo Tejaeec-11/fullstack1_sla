@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: white;
+            text-align: center;
+        }
+
+        /* Header */
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            background-color: #34495e;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 15px 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Hero */
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+            padding: 30px;
+            background-color: #ecf0f1;
+            border-radius: 10px;
+            margin: 15px 0;
+        }
+
+        .hero img {
+            width: 300px;
+            height: 200px;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+
+        .hero-text {
+            text-align: left;
+        }
+
+        .hero-text h2 {
+            font-size: 28px;
+        }
+
+        /* Sections */
+        section {
+            padding: 20px;
+            margin: 15px 0;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+        }
+
+        .skills-list {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .skills-list span {
+            background-color: #2c3e50;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 20px;
+        }
+
+        .project-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .project-card {
+            flex: 1 1 200px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 15px;
+        }
+
+        /* Tablet */
+        @media (max-width: 768px) {
+            body {
+                background-color: #f0f8ff;
+            }
+            .hero {
+                flex-direction: column;
+                text-align: center;
+            }
+            .hero-text {
+                text-align: center;
+            }
+        }
+
+        /* Mobile */
+        @media (max-width: 576px) {
+            body {
+                background-color: #e8f5e9;
+            }
+            nav {
+                flex-direction: column;
+                align-items: center;
+            }
+            .hero img {
+                width: 100%;
+                height: auto;
+            }
+            .project-grid {
+                flex-direction: column;
+                align-items: center;
+            }
+            .project-card {
+                flex: 1 1 100%;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My Portfolio</h1>
+    </header>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Skills</a>
+        <a href="#">Projects</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <section class="hero">
+        <img src="https://placeholdit.com/150x150/dddddd/999999" alt="Hero Image">
+        <div class="hero-text">
+            <h2>Welcome to My Portfolio</h2>
+            <p>I'm a passionate web developer building amazing projects.</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>Skills</h2>
+        <div class="skills-list">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+            <span>Python</span>
+        </div>
+    </section>
+
+    <section>
+        <h2>Projects</h2>
+        <div class="project-grid">
+            <div class="project-card">Project 1</div>
+            <div class="project-card">Project 2</div>
+            <div class="project-card">Project 3</div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 My Portfolio. All rights reserved.</p>
+    </footer>
+</body>
+</html>

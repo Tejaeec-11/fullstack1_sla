@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section>
+        <div><h2>function</h2>
+            <h3>1.function declaration</h3>
+            <p>syntax</p>
+        <pre>
+           function fn() {
+
+           }
+           function - function key must return
+           fn    - fuction name ,any name give
+           function fn - decalaration like var name its function fn
+           ()  - defenition
+           {}  - defenition
+           fn() - call or in ow
+           hosting method - means you cant write code under and call it 1 line ..this method code under only call becz fn() call at anywhere.
+        </pre><br>
+    <h3>2.arugment parameters</h3>
+    <h4>parameters - list like varaiable</h4>
+        <pre>
+           (){
+
+           }  this is call definition
+
+           (a,b,c,d){
+
+           } this is call denition inside parameters
+
+           <p>syntax</p>
+             const add =(a,b,c,d)=>{ //this parameter inside definition
+            consol.log(a,b,c,d)
+           }
+           add(1,2,3,4) //this arugment set vlue to pant a=1 like this 
+        </pre>
+        <h5>explaination</h5>
+        <p>(a,b,c,d) this paramter inside defiotion <br>
+            add(1,2,3,4) this is arug inside the retun <br>
+            output it match excat value like a=1,b=2,c=3,d=4 <br>
+            we can give separate like to value and name
+        </p>
+        <h5>rule </h5>
+        <p>only parameter give and not value give error came so p give means a also give </p>
+    </div>
+    </section>
+
+    <script>
+           //function 1 (not hosting method orfunction declaration, normal funtion,)
+           console.log("fn1");
+           fn()
+           function fn(){
+           console.log('running');
+           }
+           
+            //function 2 (annoynos method only call underof code)
+           console.log("fn2");
+           let add = function() //anomys varaiable irukum let add mari
+           { //inside this is deninstion
+           console.log('running');
+           }  
+           add() //always outside block call
+
+             //important ony use this function 3 (arrow function annoynos method )
+           console.log("fn3");
+          // let add1 = function () user bad feels to put function name so use arrow function 
+          let add1 = ()=>
+           { 
+           console.log('running');
+           }  
+           add1() 
+           
+           //function 4 (different for retrun and conlog.log)
+           console.log("fn4"); 
+           const addtwo =()=>{
+           console.log("this is arrow function");
+           return 1+2 //after return we cant see anything under this in output, return always put in last
+           console.log("this is arrow function"); 
+           } 
+           //addtwo()  //or
+           console.log(addtwo())  //if we put bracket insid ebraket it print return value 
+           
+            //function 5 (single line without  braket arrow function)
+           console.log("fn5"); 
+           const add3 =()=>console.log('running');
+           add3()
+           console.log(add3) //it print whole 64 line
+
+            //function 5.1 (single line without  braket arrow function)
+           console.log("fn5.1"); 
+           const add31 =()=>console.log('running');
+           add3() // print only running
+
+            //function 4.1 (single line without  braket arrow function)
+           console.log("fn4.1"); 
+           const addtwoo =()=>1+3
+           console.log(addtwoo());
+         
+           //paramters arugment 11
+           console.log('pa1')
+           const any =(a,b,c,d)=>{ //paramter inside defintion
+            console.log(a,b,c,d) //its assign to see we use consol.log
+           }
+           any(1,2,3,4) //argument inside call function
+
+            //paramters arugment 12
+           console.log('pa2')
+           const any1 =(a,b,c,d)=>{ //paramter inside defintion
+            console.log(a-b+c*d) //its assign to see we use consol.log
+           }
+           any1(1,2,3,4)
+           
+           
+           </script>
+</body>
+</html>

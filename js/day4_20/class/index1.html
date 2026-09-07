@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My First Webpage</title>
+    <!-- Link the external CSS file -->
+    <style>
+        /* Reset default margins and set a clean background font */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Style the central container card */
+.card {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 350px;
+}
+
+h1 {
+    color: #333333;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+p {
+    color: #666666;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Style the button with a hover effect */
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background-color 0.2s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <h1 id="main-heading">Hello, World!</h1>
+        <p>This is a simple interactive webpage built with HTML, CSS, and JavaScript.</p>
+        <button id="action-btn">Click Me!</button>
+    </div>
+
+    <!-- Link the external JavaScript file before the closing body tag -->
+    <script >
+        // Select the HTML elements using their unique IDs
+const actionButton = document.getElementById('action-btn');
+const mainHeading = document.getElementById('main-heading');
+
+// Add a click event listener to the button
+actionButton.addEventListener('click', () => {
+    // Change the heading text
+    mainHeading.textContent = "You Clicked It! 🎉";
+    
+    // Dynamically change the heading color
+    mainHeading.style.color = "#28a745";
+    
+    // Optional: Log a message to the browser console
+    console.log("The button was clicked successfully.");
+});
+
+    </script>
+</body>
+</html>

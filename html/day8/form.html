@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>Document</title>
+</head>
+<body><button>button</button>
+  1  <input/><br/> <!--type any thing there--> <!--type= text ,name="" ,local id="" gobal -->
+    <input type="text"><br/>
+    <input type="name"><br/>
+    <input type="number"><br/>
+    <input type="date"><br/>
+    <input type="email" ><br/>
+    <input type="password"><br/><!--box create inside type based on type-->
+<hr/>
+    2<input type="password" name="username"  ><br/>
+     <input type="password"  name="userpassword" ><br/>
+      <input type="password" name="useremail"  ><br/> <!--type give a unique name it -->
+
+<hr/>
+      3 <input type="text"  name="username" value="this is the data"><br/>
+        <input type="text"  name="username"  placeholder="enter the name "><br/>
+        <hr/>
+
+        4 <input type="text"  name="username" placeholder="enter your name" required> <br/>
+         <input type="text"  name="username " placeholder="enter yor name" readonly ><br/>
+         <input type="text"  name="username " placeholder="enter yor name" disabled><br/>
+        <!--hidden tag hidden only developer see --><input type="text" name="username" placeholder="enter your name " 
+        hidden><!--input control read,req,pla,dis-->
+        <hr/>
+        
+        5<input type="radio" name="gender" />male      <!--1combo or 2.radio box 1.choose any one ,2.many seelect-->
+        <input type="radio" name="gender"/>female  <br/>
+        <input type="checkbox" name="skills" >html 
+         <input type="checkbox" name="skills" >css
+          <input type="checkbox" name="skills" >bs
+           <input type="checkbox" name="skills" >tw
+           <br/>
+           <hr/>
+        6 <label>enter the mobile</label>
+        <input type="tel" maxlength="10" minlength="10">
+        <br/><hr/>
+
+        7 <input type="submit" value="register"> <!--button only used in from they used plain every only used in form-->
+        <br><hr>
+
+        8 <input type="tel" maxlength="10" minlength="10"><br> <hr><!--inside form we sumbit it and sumbit they say-->
+            
+        9     <form method="post">
+             <input type="number"  min="18" max="60"> age<br>
+             <input type="submit" value="register"><br> </form>
+            <hr/>
+         
+        10  <select>
+            <option value="">select one</option>
+            <option value="html">html</option>
+            <option value="css">css</option>
+            <option value="react">react</option>
+        </select>
+        <hr>
+    
+        11 <select multiple required>
+            <option value="" disabled selected>select one</option>
+            <option value="html">html</option>
+            <option value="css">css</option>
+            <option value="react">react</option>
+        </select>
+        <hr>
+
+        12 <textarea cols="10" rows="10">write paraga</textarea>
+        <textarea >paragrpa</textarea><br> <!--deault if row column not give  user type to infinty-->
+        <hr>
+
+        13 <main>
+            <div>
+                <form action="datashow.html"></form> <!--action nav one to another to show date in another example data shows-->
+                <input type="text">
+                <input type="submit">
+            </div><br><hr>
+
+        14 <form action="" method="get"> <!--method kula post and get ,default get method ,1.type and sumbit panna 
+            url last a to z mudium 2. if get method typr and sumbit panna url last la ? mudium..name kudhu tha data athu pogum 
+             or ?..get is not seruce becoz url detial show backend we read how to hide , 3.change to post panna unlimte data past agum
+              securce past agum when type and subit url la theriyathu -->
+        <input type="text" name="username" id=""> <!--action,get,post,in method ..try get and post
+         in method it is important -->
+        <input type="submit"></form>
+        <br><hr>
+
+
+        15 <div>
+            <form method="post" action="submit.php" enctype="multipart/form-data" autocomplete="on">
+                <label>enter the name</label>
+                <input type="text" placeholder="enter the value" name="username" required> <br><!--
+                for um and id um same irukanum apo tha connected aa irukum -->
+                <label>enter the phonenumber</label>
+                <input type="tel" placeholder="enter 10 digit " name="usermobile" required><br> <!--
+                 tell placeholder letter showld be captial and letter should be small only number place holder tell-->
+                <label>enter the email</label>
+                <input type="text" placeholder="enter the value" name="useremail" required><br>
+                <label for="userage">enter the age</label> <!--for use place when click 
+                any anything it straight when to age type bar diifert from other --> <!--for 
+                use panna id podanum for use pannala na id poda venam -->
+                <input type="text" id="userage" placeholder="enter the value" name="userage" required><br>
+                <label>choose the gender</label>
+                 <input type="radio" name="gender" required> male<br>
+                 <input type="radio" name="gender" required> female<br>
+
+                 <label>select course</label>
+                 <select name="course">
+                 <option value="">select one </option> <!--1st one always empty-->
+                  <option value="1">html</option>
+                  <option value="2">css</option>
+                  </select>
+                  <br>
+
+                  <label for="userskill">skills</label>
+                  <input type="checkbox" name="userskill" id="userskill">html
+                   <input type="checkbox" name="userskill" id="userskill">css
+                    <input type="checkbox" name="userskill" id="userskill">ml
+                     <input type="checkbox" name="userskill" id="userskill">js
+                     <br>
+
+                     <label for="">usernotes</label>
+                     <textarea name="usernotes" id=""></textarea>
+                     <input type="submit">
+                    </form></div>
+          <br>
+          <hr>
+
+
+          16 <section>
+            <form> 
+            <label for="userimage">select image</label>
+            <input type="file" id="userimage"> </form>
+          </section>
+
+          <hr>
+
+         17 <section>
+             <table border="1" cellpadding="20" cellspacing="10" width="600" table height="600" table align="center" table bgcolor="pink">
+     
+                <thead>
+                <th>Sno</th>
+                <th>Name</th>
+                <th>email address</th>
+                <th>phone number</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>sam</td>
+                        <td>wffwibh@.com</td>
+                        <td>32852585</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>jon</td>
+                        <td>sdggj@.com</td>
+                        <td>2557589825</td>
+                    </tr>
+
+                    <tr>
+                       <td>3</td>
+                       <td></td>
+                       <td></td>
+                       <td></td>
+
+                    </tr>
+                    <tr>
+                        <td>
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </section><br><hr>
+
+        18
+        <!--default that why we use method post for not to show data in up and use -->
+          <form method="post" enctype="multipart/form-data"></form><!--use encpty to use only file file upload only  if not use enctype backend poguthu for backend we use  -->
+          <br><hr>
+          </b>
+
+          19 <center>
+          <form>register <center><table>
+             <tr><td>
+                <label>enter your name </label>
+            <input type="text"></td> </tr>
+            <tr>
+            <td><label>enter your email</label>
+            <input type="email"></td></tr>
+            <tr>
+            <td><label>enter your mobile</label>
+            <input type="tel"></td></tr>
+            <tr>
+            <td><label>enter your age</label>
+            <input type="text"></td>
+            </tr>
+          </table></center></form></center>
+
+        
+    
+    
+    </main>
+
+
+
+
+</body>
+</html>

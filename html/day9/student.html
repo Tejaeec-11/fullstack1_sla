@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Registration</title>
+</head>
+<body>
+
+    <h2>Student Registration Form</h2>
+    <form method="post">
+        <label>Student Name:</label>
+        <input type="text" name="studentname" required><br><br>
+
+        <label>Email:</label>
+        <input type="email" name="email" required><br><br>
+
+        <label>Password:</label>
+        <input type="password" name="password" required><br><br>
+
+        <label>Mobile Number:</label>
+        <input type="tel" name="mobile" required><br><br>
+
+        <label>Age:</label>
+        <input type="number" name="age" required><br><br>
+
+        <label >Gender:</label>
+        <input type="radio" name="gender" value="male" > Male
+        <input type="radio" name="gender" value="female"> Female<br><br>
+
+        <label>Skills:</label>
+        <input type="checkbox" name="skills" value="html"> HTML
+        <input type="checkbox" name="skills" value="css"> CSS
+        <input type="checkbox" name="skills" value="js"> JavaScript<br><br>
+
+        <label>Course Selection:</label>
+        <select name="course" required>
+            <option value="">Select</option>
+            <option value="bsc">B.Sc</option>
+            <option value="bca">BCA</option>
+            <option value="be">B.E</option>
+        </select><br><br>
+
+        <label>Address:</label>
+        <textarea name="address" required></textarea><br><br>
+
+        <label>Profile Image:</label>
+        <input type="file" name="profileimage" required><br><br>
+
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+    </form>
+
+    <hr>
+
+    <h2>Student Details Table</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>SLA ID</th>
+                <th>Student Name</th>
+                <th>Course</th>
+                <th>Email</th>
+                <th>Mobile Number</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>SLA001</td>
+                <td>Tejeswari J</td>
+                <td>B.E</td>
+                <td>teju@mail.com</td>
+                <td>9840028928</td>
+                <td>Active</td>
+            </tr>
+            <tr>
+                <td>SLA002</td>
+                <td>Priya</td>
+                <td>BCA</td>
+                <td>priya@mail.com</td>
+                <td>9876543210</td>
+                <td>Active</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>

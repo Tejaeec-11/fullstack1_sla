@@ -1,0 +1,2087 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Developer Learning Hub</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg: #070b14;
+            --surface: #0d1320;
+            --surface-2: #111827;
+            --card: rgba(17, 24, 39, .78);
+
+            --border: rgba(255,255,255,.08);
+            --border-hover: rgba(255,255,255,.18);
+
+            --white: #f8fafc;
+            --text: #cbd5e1;
+            --muted: #64748b;
+
+            --html: #f97316;
+            --css: #38bdf8;
+            --bootstrap: #a855f7;
+            --js: #facc15;
+            --extra: #22c55e;
+
+            --shadow: 0 20px 60px rgba(0,0,0,.35);
+            --transition: .3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            min-height: 100vh;
+            color: var(--white);
+            font-family: Inter, sans-serif;
+            background:
+                radial-gradient(circle at 10% 10%, rgba(168,85,247,.12), transparent 32%),
+                radial-gradient(circle at 90% 20%, rgba(56,189,248,.10), transparent 30%),
+                radial-gradient(circle at 50% 100%, rgba(34,197,94,.06), transparent 30%),
+                var(--bg);
+        }
+
+        ::selection {
+            background: #8b5cf6;
+            color: white;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--bg);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #334155;
+            border-radius: 20px;
+        }
+
+        .container {
+            width: min(1450px, calc(100% - 40px));
+            margin: auto;
+            padding: 45px 0;
+        }
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        header {
+            text-align: center;
+            margin-bottom: 55px;
+        }
+
+        .status {
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+            padding: 8px 15px;
+            border: 1px solid var(--border);
+            background: rgba(255,255,255,.035);
+            border-radius: 50px;
+            color: #94a3b8;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: .08em;
+            text-transform: uppercase;
+            backdrop-filter: blur(15px);
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #22c55e;
+            box-shadow: 0 0 12px #22c55e;
+        }
+
+        h1 {
+            margin-top: 20px;
+            font-family: "Space Grotesk", sans-serif;
+            font-size: clamp(2.5rem, 6vw, 4.4rem);
+            line-height: 1;
+            letter-spacing: -.05em;
+
+            background: linear-gradient(
+                120deg,
+                #ffffff,
+                #c4b5fd 45%,
+                #67e8f9
+            );
+
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-text {
+            max-width: 720px;
+            margin: 20px auto 30px;
+            color: var(--text);
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+        /* =========================
+           NAVIGATION
+        ========================= */
+
+        .navigation {
+            display: inline-flex;
+            gap: 6px;
+            padding: 6px;
+            background: rgba(15,23,42,.75);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            backdrop-filter: blur(20px);
+        }
+
+        .navigation a {
+            text-decoration: none;
+            color: #94a3b8;
+            font-size: 13px;
+            font-weight: 700;
+            padding: 10px 15px;
+            border-radius: 10px;
+            transition: var(--transition);
+        }
+
+        .navigation a:hover {
+            color: white;
+            background: rgba(255,255,255,.07);
+        }
+
+        .navigation a:nth-child(1):hover {
+            color: var(--html);
+        }
+
+        .navigation a:nth-child(2):hover {
+            color: var(--css);
+        }
+
+        .navigation a:nth-child(3):hover {
+            color: var(--bootstrap);
+        }
+
+        .navigation a:nth-child(4):hover {
+            color: var(--js);
+        }
+
+        /* =========================
+           SEARCH
+        ========================= */
+
+        .search-box {
+            max-width: 520px;
+            margin: 22px auto 0;
+            position: relative;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 15px 18px 15px 48px;
+
+            color: white;
+            background: rgba(15,23,42,.85);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+
+            outline: none;
+            font-family: inherit;
+            font-size: 14px;
+
+            transition: var(--transition);
+        }
+
+        .search-box input:focus {
+            border-color: rgba(139,92,246,.55);
+            box-shadow: 0 0 25px rgba(139,92,246,.12);
+        }
+
+        .search-box span {
+            position: absolute;
+            left: 17px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #64748b;
+            font-size: 18px;
+        }
+
+        /* =========================
+           MAIN GRID
+        ========================= */
+
+        .subjects {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 22px;
+        }
+
+        .subject {
+            position: relative;
+            padding: 22px;
+            border-radius: 22px;
+
+            background: var(--card);
+            border: 1px solid var(--border);
+
+            box-shadow: var(--shadow);
+            backdrop-filter: blur(20px);
+
+            overflow: hidden;
+            transition: var(--transition);
+        }
+
+        .subject:hover {
+            transform: translateY(-6px);
+            border-color: var(--border-hover);
+        }
+
+        .subject::before {
+            content: "";
+            position: absolute;
+            inset: 0 0 auto 0;
+            height: 3px;
+            background: var(--accent);
+        }
+
+        .subject::after {
+            content: "";
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            right: -70px;
+            top: -70px;
+
+            background: var(--accent);
+            opacity: .05;
+            border-radius: 50%;
+            filter: blur(20px);
+        }
+
+        .html {
+            --accent: var(--html);
+        }
+
+        .css {
+            --accent: var(--css);
+        }
+
+        .bootstrap {
+            --accent: var(--bootstrap);
+        }
+
+        .javascript {
+            --accent: var(--js);
+        }
+
+        /* =========================
+           SUBJECT HEADER
+        ========================= */
+
+        .subject-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 22px;
+        }
+
+        .subject-icon {
+            width: 48px;
+            height: 48px;
+
+            display: grid;
+            place-items: center;
+
+            border-radius: 14px;
+
+            color: var(--accent);
+            background: color-mix(
+                in srgb,
+                var(--accent) 12%,
+                transparent
+            );
+
+            border: 1px solid color-mix(
+                in srgb,
+                var(--accent) 25%,
+                transparent
+            );
+
+            font-size: 21px;
+            font-weight: 800;
+        }
+
+        .progress {
+            width: 45px;
+            height: 45px;
+            position: relative;
+        }
+
+        .progress svg {
+            width: 45px;
+            height: 45px;
+            transform: rotate(-90deg);
+        }
+
+        .progress circle {
+            fill: none;
+            stroke-width: 4;
+        }
+
+        .progress .background {
+            stroke: rgba(255,255,255,.07);
+        }
+
+        .progress .value {
+            stroke: var(--accent);
+            stroke-linecap: round;
+            stroke-dasharray: 113;
+            stroke-dashoffset: 113;
+            transition: 1s ease;
+        }
+
+        .progress span {
+            position: absolute;
+            inset: 0;
+            display: grid;
+            place-items: center;
+            font-size: 9px;
+            font-weight: 800;
+        }
+
+        .subject h2 {
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 25px;
+            margin-bottom: 5px;
+        }
+
+        .description {
+            color: var(--muted);
+            font-size: 12px;
+            line-height: 1.7;
+            min-height: 42px;
+            margin-bottom: 20px;
+        }
+
+        /* =========================
+           TASKS
+        ========================= */
+
+        .tasks {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .task {
+            border: 1px solid var(--border);
+            background: rgba(15,23,42,.38);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: var(--transition);
+        }
+
+        .task:hover {
+            border-color: color-mix(
+                in srgb,
+                var(--accent) 35%,
+                transparent
+            );
+        }
+
+        .task-header {
+            min-height: 48px;
+            padding: 10px 12px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            cursor: pointer;
+        }
+
+        .task-left {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            min-width: 0;
+        }
+
+        .check {
+            width: 18px;
+            height: 18px;
+            flex-shrink: 0;
+
+            border-radius: 50%;
+            border: 2px solid #475569;
+
+            display: grid;
+            place-items: center;
+
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .check::after {
+            content: "✓";
+            font-size: 10px;
+            color: #020617;
+            display: none;
+            font-weight: 900;
+        }
+
+        .task.completed .check {
+            background: var(--accent);
+            border-color: var(--accent);
+            box-shadow: 0 0 12px color-mix(
+                in srgb,
+                var(--accent) 35%,
+                transparent
+            );
+        }
+
+        .task.completed .check::after {
+            display: block;
+        }
+
+        .task.completed .task-title {
+            text-decoration: line-through;
+            color: #64748b;
+        }
+
+        .task-title {
+            font-size: 13px;
+            font-weight: 700;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .task-count {
+            color: #64748b;
+            font-size: 11px;
+            white-space: nowrap;
+        }
+
+        .arrow {
+            color: #64748b;
+            font-size: 15px;
+            transition: .3s ease;
+        }
+
+        .task.open .arrow {
+            transform: rotate(180deg);
+            color: var(--accent);
+        }
+
+        .subtasks {
+            display: grid;
+            grid-template-rows: 0fr;
+            transition: .3s ease;
+        }
+
+        .task.open .subtasks {
+            grid-template-rows: 1fr;
+        }
+
+        .subtask-inner {
+            overflow: hidden;
+        }
+
+        .subtask-list {
+            padding: 5px 10px 10px 40px;
+            border-top: 1px solid var(--border);
+        }
+
+        .subtask-list a {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 8px 9px;
+
+            text-decoration: none;
+            color: #94a3b8;
+
+            font-size: 11px;
+            border-radius: 7px;
+
+            transition: var(--transition);
+        }
+
+        .subtask-list a:hover {
+            color: white;
+            background: rgba(255,255,255,.045);
+        }
+
+        .subtask-list a span::before {
+            content: "•";
+            color: var(--accent);
+            margin-right: 7px;
+        }
+
+        /* =========================
+           LOCKED TASK
+        ========================= */
+
+        .locked {
+            opacity: .38;
+            border-style: dashed;
+        }
+
+        .locked .task-header {
+            cursor: not-allowed;
+        }
+
+        /* =========================
+           BONUS SECTION
+        ========================= */
+
+        .bonus {
+            margin-top: 65px;
+        }
+
+        .bonus-title {
+            text-align: center;
+            margin-bottom: 25px;
+
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 28px;
+
+            background: linear-gradient(
+                90deg,
+                white,
+                #86efac
+            );
+
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .bonus-grid {
+            max-width: 900px;
+            margin: auto;
+
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .bonus-card {
+            padding: 22px;
+            border-radius: 20px;
+
+            background: var(--card);
+            border: 1px solid var(--border);
+
+            transition: var(--transition);
+        }
+
+        .bonus-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(34,197,94,.3);
+        }
+
+        .bonus-card h3 {
+            font-family: "Space Grotesk", sans-serif;
+            margin-bottom: 8px;
+        }
+
+        .bonus-card p {
+            color: var(--muted);
+            font-size: 12px;
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+
+        .bonus-links {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 8px;
+        }
+
+        .bonus-links a {
+            padding: 10px;
+            border-radius: 9px;
+
+            color: #cbd5e1;
+            background: rgba(15,23,42,.6);
+            border: 1px solid var(--border);
+
+            text-decoration: none;
+            font-size: 11px;
+            font-weight: 700;
+
+            transition: var(--transition);
+        }
+
+        .bonus-links a:hover {
+            color: #4ade80;
+            border-color: rgba(34,197,94,.35);
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            margin-top: 70px;
+            padding: 30px 0;
+
+            text-align: center;
+            border-top: 1px solid var(--border);
+
+            color: #475569;
+            font-size: 12px;
+        }
+
+        footer strong {
+            color: #94a3b8;
+        }
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 1200px) {
+            .subjects {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 700px) {
+            .container {
+                width: min(100% - 24px, 600px);
+                padding: 25px 0;
+            }
+
+            .subjects {
+                grid-template-columns: 1fr;
+            }
+
+            .navigation {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                border-radius: 14px;
+            }
+
+            .navigation a {
+                flex: 1;
+            }
+
+            .bonus-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .bonus-links {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 450px) {
+            h1 {
+                font-size: 2.4rem;
+            }
+
+            .hero-text {
+                font-size: 13px;
+            }
+
+            .navigation a {
+                font-size: 11px;
+                padding: 9px 7px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- HEADER -->
+    <header>
+
+        <div class="status">
+            <span class="status-dot"></span>
+            Learning Progress System
+        </div>
+
+        <h1>Developer Learning Hub</h1>
+
+        <p class="hero-text">
+            A structured learning dashboard for tracking your web development
+            journey through HTML, CSS, Bootstrap and JavaScript.
+            Complete each module, explore the exercises and build your skills step by step.
+        </p>
+
+        <nav class="navigation">
+            <a href="#html">HTML</a>
+            <a href="#css">CSS</a>
+            <a href="#bootstrap">Bootstrap</a>
+            <a href="#javascript">JavaScript</a>
+        </nav>
+
+        <div class="search-box">
+            <span>⌕</span>
+            <input
+                type="text"
+                id="search"
+                placeholder="Search lessons, forms, tables, layouts..."
+            >
+        </div>
+
+    </header>
+
+
+    <!-- SUBJECTS -->
+    <main class="subjects">
+
+        <!-- ================= HTML ================= -->
+
+        <section class="subject html" id="html">
+
+            <div class="subject-top">
+
+                <div class="subject-icon">&lt;/&gt;</div>
+
+                <div class="progress">
+                    <svg viewBox="0 0 40 40">
+                        <circle
+                            class="background"
+                            cx="20"
+                            cy="20"
+                            r="18">
+                        </circle>
+
+                        <circle
+                            class="value"
+                            cx="20"
+                            cy="20"
+                            r="18">
+                        </circle>
+                    </svg>
+
+                    <span>0%</span>
+                </div>
+
+            </div>
+
+            <h2>HTML</h2>
+
+            <p class="description">
+                Learn webpage structure, semantic elements,
+                forms, tables and multimedia.
+            </p>
+
+            <div class="tasks">
+
+                <div class="task expandable" data-task="html-1">
+
+                    <div class="task-header">
+
+                        <div class="task-left">
+
+                            <div class="check"></div>
+
+                            <span class="task-title">
+                                Day 01 — HTML Foundations
+                            </span>
+
+                        </div>
+
+                        <span class="task-count">6 Tasks</span>
+
+                        <span class="arrow">⌄</span>
+
+                    </div>
+
+                    <div class="subtasks">
+                        <div class="subtask-inner">
+
+                            <div class="subtask-list">
+
+                                <a href="HTML/day1/task1.html" target="_blank">
+                                    Basic HTML Tags <span>→</span>
+                                </a>
+
+                                <a href="HTML/day1/task2.html" target="_blank">
+                                    Text Formatting <span>→</span>
+                                </a>
+
+                                <a href="HTML/day1/task3.html" target="_blank">
+                                    Hyperlinks <span>→</span>
+                                </a>
+
+                                <a href="HTML/day1/task4.html" target="_blank">
+                                    Basic Tables <span>→</span>
+                                </a>
+
+                                <a href="HTML/day1/task5.html" target="_blank">
+                                    Basic Forms <span>→</span>
+                                </a>
+
+                                <a href="HTML/day1/fav.html" target="_blank">
+                                    Favorite Foods List <span>→</span>
+                                </a>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="task expandable" data-task="html-2">
+
+                    <div class="task-header">
+
+                        <div class="task-left">
+
+                            <div class="check"></div>
+
+                            <span class="task-title">
+                                Day 02 — Semantic HTML
+                            </span>
+
+                        </div>
+
+                        <span class="task-count">5 Tasks</span>
+                        <span class="arrow">⌄</span>
+
+                    </div>
+
+                    <div class="subtasks">
+                        <div class="subtask-inner">
+
+                            <div class="subtask-list">
+
+                                <a href="HTML/day2/task1.html" target="_blank">
+                                    Semantic Structure <span>→</span>
+                                </a>
+
+                                <a href="HTML/day2/task2.html" target="_blank">
+                                    Layout Elements <span>→</span>
+                                </a>
+
+                                <a href="HTML/day2/task3.html" target="_blank">
+                                    Navigation Bar <span>→</span>
+                                </a>
+
+                                <a href="HTML/day2/task4.html" target="_blank">
+                                    Main Page Layout <span>→</span>
+                                </a>
+
+                                <a href="HTML/day2/task5.html" target="_blank">
+                                    Footer Information <span>→</span>
+                                </a>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="task expandable" data-task="html-3">
+
+                    <div class="task-header">
+
+                        <div class="task-left">
+
+                            <div class="check"></div>
+
+                            <span class="task-title">
+                                Day 03 — Images & Attributes
+                            </span>
+
+                        </div>
+
+                        <span class="task-count">3 Tasks</span>
+                        <span class="arrow">⌄</span>
+
+                    </div>
+
+                    <div class="subtasks">
+                        <div class="subtask-inner">
+
+                            <div class="subtask-list">
+
+                                <a href="HTML/day3/attribute.html" target="_blank">
+                                    Tag Attributes <span>→</span>
+                                </a>
+
+                                <a href="HTML/day3/image.html" target="_blank">
+                                    Images & Anchors <span>→</span>
+                                </a>
+
+                                <a href="HTML/day3/nearbyhome.html" target="_blank">
+                                    Nearby Home Map <span>→</span>
+                                </a>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="task expandable" data-task="html-5">
+
+                    <div class="task-header">
+
+                        <div class="task-left">
+
+                            <div class="check"></div>
+
+                            <span class="task-title">
+                                Day 05 — Forms Workshop
+                            </span>
+
+                        </div>
+
+                        <span class="task-count">5 Tasks</span>
+                        <span class="arrow">⌄</span>
+
+                    </div>
+
+                    <div class="subtasks">
+                        <div class="subtask-inner">
+
+                            <div class="subtask-list">
+
+                                <a href="HTML/day5/registration.html" target="_blank">
+                                    Registration Form <span>→</span>
+                                </a>
+
+                                <a href="HTML/day5/login.html" target="_blank">
+                                    Login Form <span>→</span>
+                                </a>
+
+                                <a href="HTML/day5/contact.html" target="_blank">
+                                    Contact Form <span>→</span>
+                                </a>
+
+                                <a href="HTML/day5/feedback.html" target="_blank">
+                                    Feedback Form <span>→</span>
+                                </a>
+
+                                <a href="HTML/day5/job.html" target="_blank">
+                                    Job Application <span>→</span>
+                                </a>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="task locked">
+
+                    <div class="task-header">
+
+                        <div class="task-left">
+
+                            <div class="check"></div>
+
+                            <span class="task-title">
+                                Day 06 — Coming Soon
+                            </span>
+
+                        </div>
+
+                        <span>🔒</span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="task expandable" data-task="html-8">
+
+                    <div class="task-header">
+
+                        <div class="task-left">
+
+                            <div class="check"></div>
+
+                            <span class="task-title">
+                                Day 08 — Advanced Tables
+                            </span>
+
+                        </div>
+
+                        <span class="task-count">5 Tasks</span>
+                        <span class="arrow">⌄</span>
+
+                    </div>
+
+                    <div class="subtasks">
+                        <div class="subtask-inner">
+
+                            <div class="subtask-list">
+
+                                <a href="HTML/day8/college.html" target="_blank">
+                                    College Admission <span>→</span>
+                                </a>
+
+                                <a href="HTML/day8/company.html" target="_blank">
+                                    Company Invoice <span>→</span>
+                                </a>
+
+                                <a href="HTML/day8/document.html" target="_blank">
+                                    Document Matrix <span>→</span>
+                                </a>
+
+                                <a href="HTML/day8/portfolio.html" target="_blank">
+                                    Portfolio Overview <span>→</span>
+                                </a>
+
+                                <a href="HTML/day8/travel.html" target="_blank">
+                                    Travel Itinerary <span>→</span>
+                                </a>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="task expandable" data-task="html-10">
+
+                    <div class="task-header">
+
+                        <div class="task-left">
+
+                            <div class="check"></div>
+
+                            <span class="task-title">
+                                Day 10 — Tables & Forms
+                            </span>
+
+                        </div>
+
+                        <span class="task-count">7 Tasks</span>
+                        <span class="arrow">⌄</span>
+
+                    </div>
+
+                    <div class="subtasks">
+                        <div class="subtask-inner">
+
+                            <div class="subtask-list">
+
+                                <a href="HTML/day10/form.html" target="_blank">
+                                    Form Table <span>→</span>
+                                </a>
+
+                                <a href="HTML/day10/table.html" target="_blank">
+                                    Data Display Table <span>→</span>
+                                </a>
+
+                                <a href="HTML/day10/task1/student.html" target="_blank">
+                                    Student Register <span>→</span>
+                                </a>
+
+                                <a href="HTML/day10/task1/employee.html" target="_blank">
+                                    Employee Log <span>→</span>
+                                </a>
+
+                                <a href="HTML/day10/task1/product.html" target="_blank">
+                                    Product Registry <span>→</span>
+                                </a>
+
+                                <a href="HTML/day10/task1/patient.html" target="_blank">
+                                    Patient Profile <span>→</span>
+                                </a>
+
+                                <a href="HTML/day10/task1/admission.html" target="_blank">
+                                    Admission Registry <span>→</span>
+                                </a>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="task">
+
+                    <div class="task-header">
+
+                        <div class="task-left">
+
+                            <div class="check"></div>
+
+                            <span class="task-title">
+                                Day 11 — Audio Player
+                            </span>
+
+                        </div>
+
+                        <a
+                            href="HTML/day11/audio.html"
+                            target="_blank"
+                            style="color:#64748b;text-decoration:none;"
+                        >→</a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="task expandable" data-task="html-12">
+
+                    <div class="task-header">
+
+                        <div class="task-left">
+
+                            <div class="check"></div>
+
+                            <span class="task-title">
+                                Day 12 — Multimedia
+                            </span>
+
+                        </div>
+
+                        <span class="task-count">5 Tasks</span>
+                        <span class="arrow">⌄</span>
+
+                    </div>
+
+                    <div class="subtasks">
+                        <div class="subtask-inner">
+
+                            <div class="subtask-list">
+
+                                <a href="HTML/day12/task1/index.html" target="_blank">
+                                    Multimedia Hub <span>→</span>
+                                </a>
+
+                                <a href="HTML/day12/task1/audio.html" target="_blank">
+                                    Audio Player <span>→</span>
+                                </a>
+
+                                <a href="HTML/day12/task1/video.html" target="_blank">
+                                    Local Video Player <span>→</span>
+                                </a>
+
+                                <a href="HTML/day12/task1/youtube.html" target="_blank">
+                                    YouTube Embed <span>→</span>
+                                </a>
+
+                                <a href="HTML/day12/task1/image.html" target="_blank">
+                                    Image Showcase <span>→</span>
+                                </a>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CSS ================= -->
+
+        <section class="subject css" id="css">
+
+            <div class="subject-top">
+
+                <div class="subject-icon">CSS</div>
+
+                <div class="progress">
+                    <svg viewBox="0 0 40 40">
+                        <circle class="background" cx="20" cy="20" r="18"></circle>
+                        <circle class="value" cx="20" cy="20" r="18"></circle>
+                    </svg>
+
+                    <span>0%</span>
+                </div>
+
+            </div>
+
+            <h2>CSS</h2>
+
+            <p class="description">
+                Build beautiful interfaces using selectors,
+                box model, layouts, flexbox and positioning.
+            </p>
+
+            <div class="tasks">
+
+                <div class="task expandable">
+
+                    <div class="task-header">
+
+                        <div class="task-left">
+
+                            <div class="check"></div>
+
+                            <span class="task-title">
+                                Day 01 — CSS Essentials
+                            </span>
+
+                        </div>
+
+                        <span class="task-count">7 Tasks</span>
+                        <span class="arrow">⌄</span>
+
+                    </div>
+
+                    <div class="subtasks">
+                        <div class="subtask-inner">
+
+                            <div class="subtask-list">
+
+                                <a href="CSS/day1/index.html" target="_blank">
+                                    CSS Fundamentals <span>→</span>
+                                </a>
+
+                                <a href="CSS/css1/profile.html" target="_blank">
+                                    Profile Card <span>→</span>
+                                </a>
+
+                                <a href="CSS/css1/student.html" target="_blank">
+                                    Student Report <span>→</span>
+                                </a>
+
+                                <a href="CSS/css1/college.html" target="_blank">
+                                    College Page <span>→</span>
+                                </a>
+
+                                <a href="CSS/css1/company.html" target="_blank">
+                                    Company Details <span>→</span>
+                                </a>
+
+                                <a href="CSS/css1/fav.html" target="_blank">
+                                    Favorite Foods <span>→</span>
+                                </a>
+
+                                <a href="CSS/css1/colour.html" target="_blank">
+                                    Color Schemes <span>→</span>
+                                </a>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="task expandable">
+
+                    <div class="task-header">
+
+                        <div class="task-left">
+
+                            <div class="check"></div>
+
+                            <span class="task-title">
+                                Day 02 — Selectors
+                            </span>
+
+                        </div>
+
+                        <span class="task-count">7 Tasks</span>
+                        <span class="arrow">⌄</span>
+
+                    </div>
+
+                    <div class="subtasks">
+                        <div class="subtask-inner">
+
+                            <div class="subtask-list">
+
+                                <a href="CSS/day2/index.html" target="_blank">
+                                    CSS Selectors <span>→</span>
+                                </a>
+
+                                <a href="CSS/css2/index.html" target="_blank">
+                                    State Information Portal <span>→</span>
+                                </a>
+
+                                <a href="CSS/css2/chennai.html" target="_blank">
+                                    Chennai Profile <span>→</span>
+                                </a>
+
+                                <a href="CSS/css2/movie.html" target="_blank">
+                                    Movie Spotlight <span>→</span>
+                                </a>
+
+                                <a href="CSS/css2/hospital.html" target="_blank">
+                                    Hospital Information <span>→</span>
+                                </a>
+
+                                <a href="CSS/css2/department.html" target="_blank">
+                                    Department Directory <span>→</span>
+                                </a>
+
+                                <a href="CSS/css2/company.html" target="_blank">
+                                    Company Profile <span>→</span>
+                                </a>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="task expandable">
+
+                    <div class="task-header">
+
+                        <div class="task-left">
+
+                            <div class="check"></div>
+
+                            <span class="task-title">
+                                Day 03 — Layout Design
+                            </span>
+
+                        </div>
+
+                        <span class="task-count">6 Tasks</span>
+                        <span class="arrow">⌄</span>
+
+                    </div>
+
+                    <div class="subtasks">
+                        <div class="subtask-inner">
+
+                            <div class="subtask-list">
+
+                                <a href="CSS/day3/student.html" target="_blank">
+                                    Student Dashboard <span>→</span>
+                                </a>
+
+                                <a href="CSS/day3/employee.html" target="_blank">
+                                    Employee Directory <span>→</span>
+                                </a>
+
+                                <a href="CSS/day3/product.html" target="_blank">
+                                    Product Grid <span>→</span>
+                                </a>
+
+                                <a href="CSS/day3/card.html" target="_blank">
+                                    Flex Cards <span>→</span>
+                                </a>
+
+                                <a href="CSS/day3/box.html" target="_blank">
+                                    Box Model <span>→</span>
+                                </a>
+
+                                <a href="CSS/day3/article.html" target="_blank">
+                                    Article Typography <span>→</span>
+                                </a>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="task expandable">
+
+                    <div class="task-header">
+
+                        <div class="task-left">
+
+                            <div class="check"></div>
+
+                            <span class="task-title">
+                                Day 04 — Positioning & Layout
+                            </span>
+
+                        </div>
+
+                        <span class="task-count">5 Tasks</span>
+                        <span class="arrow">⌄</span>
+
+                    </div>
+
+                    <div class="subtasks">
+                        <div class="subtask-inner">
+
+                            <div class="subtask-list">
+
+                                <a href="CSS/day4/task1.html" target="_blank">
+                                    Navigation Layout <span>→</span>
+                                </a>
+
+                                <a href="CSS/day4/task2.html" target="_blank">
+                                    Layout Alignment <span>→</span>
+                                </a>
+
+                                <a href="CSS/day4/task3.html" target="_blank">
+                                    Position Practice <span>→</span>
+                                </a>
+
+                                <a href="CSS/day4/task4.html" target="_blank">
+                                    Flexbox Layout <span>→</span>
+                                </a>
+
+                                <a href="CSS/day4/task5.html" target="_blank">
+                                    Advanced Layout <span>→</span>
+                                </a>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= BOOTSTRAP ================= -->
+
+        <section class="subject bootstrap" id="bootstrap">
+
+            <div class="subject-top">
+
+                <div class="subject-icon">B</div>
+
+                <div class="progress">
+                    <svg viewBox="0 0 40 40">
+                        <circle class="background" cx="20" cy="20" r="18"></circle>
+                        <circle class="value" cx="20" cy="20" r="18"></circle>
+                    </svg>
+
+                    <span>0%</span>
+                </div>
+
+            </div>
+
+            <h2>Bootstrap</h2>
+
+            <p class="description">
+                Create responsive interfaces using grids,
+                components, utilities and modern UI patterns.
+            </p>
+
+            <div class="tasks">
+
+                <div class="task expandable">
+
+                    <div class="task-header">
+
+                        <div class="task-left">
+
+                            <div class="check"></div>
+
+                            <span class="task-title">
+                                Module 01 — Bootstrap Basics
+                            </span>
+
+                        </div>
+
+                        <span class="task-count">Tasks</span>
+                        <span class="arrow">⌄</span>
+
+                    </div>
+
+                    <div class="subtasks">
+                        <div class="subtask-inner">
+
+                            <div class="subtask-list">
+
+                                <a href="#" target="_blank">
+                                    Bootstrap Introduction <span>→</span>
+                                </a>
+
+                                <a href="#" target="_blank">
+                                    Container & Grid <span>→</span>
+                                </a>
+
+                                <a href="#" target="_blank">
+                                    Buttons & Cards <span>→</span>
+                                </a>
+
+                                <a href="#" target="_blank">
+                                    Navbar Components <span>→</span>
+                                </a>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="task expandable">
+
+                    <div class="task-header">
+
+                        <div class="task-left">
+
+                            <div class="check"></div>
+
+                            <span class="task-title">
+                                Module 02 — Responsive UI
+                            </span>
+
+                        </div>
+
+                        <span class="task-count">Tasks</span>
+                        <span class="arrow">⌄</span>
+
+                    </div>
+
+                    <div class="subtasks">
+                        <div class="subtask-inner">
+
+                            <div class="subtask-list">
+
+                                <a href="#" target="_blank">
+                                    Responsive Grid <span>→</span>
+                                </a>
+
+                                <a href="#" target="_blank">
+                                    Forms <span>→</span>
+                                </a>
+
+                                <a href="#" target="_blank">
+                                    Alerts & Modals <span>→</span>
+                                </a>
+
+                                <a href="#" target="_blank">
+                                    Responsive Dashboard <span>→</span>
+                                </a>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="task locked">
+
+                    <div class="task-header">
+
+                        <div class="task-left">
+
+                            <div class="check"></div>
+
+                            <span class="task-title">
+                                Module 03 — Coming Soon
+                            </span>
+
+                        </div>
+
+                        <span>🔒</span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="task locked">
+
+                    <div class="task-header">
+
+                        <div class="task-left">
+
+                            <div class="check"></div>
+
+                            <span class="task-title">
+                                Module 04 — Coming Soon
+                            </span>
+
+                        </div>
+
+                        <span>🔒</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= JAVASCRIPT ================= -->
+
+        <section class="subject javascript" id="javascript">
+
+            <div class="subject-top">
+
+                <div class="subject-icon">JS</div>
+
+                <div class="progress">
+                    <svg viewBox="0 0 40 40">
+                        <circle class="background" cx="20" cy="20" r="18"></circle>
+                        <circle class="value" cx="20" cy="20" r="18"></circle>
+                    </svg>
+
+                    <span>0%</span>
+                </div>
+
+            </div>
+
+            <h2>JavaScript</h2>
+
+            <p class="description">
+                Master programming fundamentals, DOM manipulation,
+                events, functions and interactive web applications.
+            </p>
+
+            <div class="tasks">
+
+                <div class="task expandable">
+
+                    <div class="task-header">
+
+                        <div class="task-left">
+
+                            <div class="check"></div>
+
+                            <span class="task-title">
+                                Module 01 — JavaScript Core
+                            </span>
+
+                        </div>
+
+                        <span class="task-count">Tasks</span>
+                        <span class="arrow">⌄</span>
+
+                    </div>
+
+                    <div class="subtasks">
+
+                        <div class="subtask-inner">
+
+                            <div class="subtask-list">
+
+                                <a href="#" target="_blank">
+                                    Variables & Data Types <span>→</span>
+                                </a>
+
+                                <a href="#" target="_blank">
+                                    Operators <span>→</span>
+                                </a>
+
+                                <a href="#" target="_blank">
+                                    Conditions <span>→</span>
+                                </a>
+
+                                <a href="#" target="_blank">
+                                    Loops <span>→</span>
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="task expandable">
+
+                    <div class="task-header">
+
+                        <div class="task-left">
+
+                            <div class="check"></div>
+
+                            <span class="task-title">
+                                Module 02 — Functions
+                            </span>
+
+                        </div>
+
+                        <span class="task-count">Tasks</span>
+                        <span class="arrow">⌄</span>
+
+                    </div>
+
+                    <div class="subtasks">
+
+                        <div class="subtask-inner">
+
+                            <div class="subtask-list">
+
+                                <a href="#" target="_blank">
+                                    Functions <span>→</span>
+                                </a>
+
+                                <a href="#" target="_blank">
+                                    Parameters <span>→</span>
+                                </a>
+
+                                <a href="#" target="_blank">
+                                    Return Values <span>→</span>
+                                </a>
+
+                                <a href="#" target="_blank">
+                                    Arrow Functions <span>→</span>
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="task locked">
+
+                    <div class="task-header">
+
+                        <div class="task-left">
+
+                            <div class="check"></div>
+
+                            <span class="task-title">
+                                Module 03 — DOM & Events
+                            </span>
+
+                        </div>
+
+                        <span>🔒</span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="task locked">
+
+                    <div class="task-header">
+
+                        <div class="task-left">
+
+                            <div class="check"></div>
+
+                            <span class="task-title">
+                                Module 04 — Projects
+                            </span>
+
+                        </div>
+
+                        <span>🔒</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- BONUS -->
+    <section class="bonus" id="extras">
+
+        <h2 class="bonus-title">
+            Additional Learning Modules
+        </h2>
+
+        <div class="bonus-grid">
+
+            <div class="bonus-card">
+
+                <h3>Git & GitHub</h3>
+
+                <p>
+                    Learn version control, repositories, branches,
+                    commits and professional collaboration workflows.
+                </p>
+
+                <div class="bonus-links">
+                    <a href="#">Git Basics →</a>
+                    <a href="#">GitHub →</a>
+                    <a href="#">Branches →</a>
+                    <a href="#">Projects →</a>
+                </div>
+
+            </div>
+
+
+            <div class="bonus-card">
+
+                <h3>Developer Skills</h3>
+
+                <p>
+                    Explore additional skills that help you become
+                    a confident and professional web developer.
+                </p>
+
+                <div class="bonus-links">
+                    <a href="#">Responsive Design →</a>
+                    <a href="#">Accessibility →</a>
+                    <a href="#">SEO Basics →</a>
+                    <a href="#">Portfolio →</a>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <footer>
+
+        <p>
+            <strong>Developer Learning Hub</strong>
+            &nbsp; • &nbsp;
+            Structured Web Development Roadmap
+        </p>
+
+        <p>
+            Keep learning. Keep building. Keep improving.
+        </p>
+
+    </footer>
+
+</div>
+
+
+<script>
+
+    /* ==================================
+       ACCORDION
+    ================================== */
+
+    document.querySelectorAll(".task.expandable").forEach(task => {
+
+        const header = task.querySelector(".task-header");
+
+        header.addEventListener("click", function(e) {
+
+            if (e.target.classList.contains("check")) {
+                return;
+            }
+
+            task.classList.toggle("open");
+
+        });
+
+    });
+
+
+    /* ==================================
+       TASK CHECKBOX
+    ================================== */
+
+    document.querySelectorAll(".check").forEach(check => {
+
+        check.addEventListener("click", function(e) {
+
+            e.stopPropagation();
+
+            const task = this.closest(".task");
+
+            if (!task || task.classList.contains("locked")) {
+                return;
+            }
+
+            task.classList.toggle("completed");
+
+            saveProgress();
+
+            updateProgress();
+
+        });
+
+    });
+
+
+    /* ==================================
+       SAVE PROGRESS
+    ================================== */
+
+    function saveProgress() {
+
+        const completed = [];
+
+        document.querySelectorAll(".task").forEach((task, index) => {
+
+            if (task.classList.contains("completed")) {
+                completed.push(index);
+            }
+
+        });
+
+        localStorage.setItem(
+            "developerHubProgress",
+            JSON.stringify(completed)
+        );
+
+    }
+
+
+    /* ==================================
+       LOAD PROGRESS
+    ================================== */
+
+    function loadProgress() {
+
+        const saved = localStorage.getItem(
+            "developerHubProgress"
+        );
+
+        if (!saved) return;
+
+        const completed = JSON.parse(saved);
+
+        const tasks = document.querySelectorAll(".task");
+
+        completed.forEach(index => {
+
+            if (tasks[index]) {
+                tasks[index].classList.add("completed");
+            }
+
+        });
+
+    }
+
+
+    /* ==================================
+       PROGRESS RINGS
+    ================================== */
+
+    function updateProgress() {
+
+        document.querySelectorAll(".subject").forEach(subject => {
+
+            const tasks = subject.querySelectorAll(
+                ".task:not(.locked)"
+            );
+
+            const completed = subject.querySelectorAll(
+                ".task.completed"
+            );
+
+            const percent = tasks.length
+                ? Math.round(
+                    (completed.length / tasks.length) * 100
+                )
+                : 0;
+
+            const progress = subject.querySelector(".progress");
+
+            if (!progress) return;
+
+            const circle = progress.querySelector(".value");
+            const text = progress.querySelector("span");
+
+            const circumference = 113;
+
+            circle.style.strokeDashoffset =
+                circumference -
+                (percent / 100) * circumference;
+
+            text.textContent = percent + "%";
+
+        });
+
+    }
+
+
+    /* ==================================
+       SEARCH
+    ================================== */
+
+    const search = document.getElementById("search");
+
+    search.addEventListener("input", function() {
+
+        const query = this.value.toLowerCase().trim();
+
+        document.querySelectorAll(".subject").forEach(subject => {
+
+            let found = false;
+
+            subject.querySelectorAll(".task").forEach(task => {
+
+                const text = task.textContent.toLowerCase();
+
+                if (!query || text.includes(query)) {
+
+                    task.style.display = "";
+
+                    if (query && text.includes(query)) {
+                        found = true;
+                    }
+
+                } else {
+
+                    task.style.display = "none";
+
+                }
+
+            });
+
+            subject.style.display =
+                !query || found
+                    ? ""
+                    : "none";
+
+        });
+
+    });
+
+
+    /* ==================================
+       START APPLICATION
+    ================================== */
+
+    loadProgress();
+    updateProgress();
+
+</script>
+
+</body>
+</html>

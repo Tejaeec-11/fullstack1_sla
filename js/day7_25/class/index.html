@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section>
+        <div>
+            <h2>array</h2>
+        </div>
+    </section>
+
+    <script>
+        //array 1 this is create
+        //use var because of read simple but use const
+       console.log("1.")
+       var arr =[1,2,3,4,5,6,7,8,9,0] //arrays declare sybnatx 
+       console.log(arr); //print arr
+        
+       //array 2 this is access
+        console.log("2.")
+       var arr =[1,2,3,4,5,6,7,8,9,0] //arrays decalare code
+       console.log(arr[3]);  //specific access value
+        
+      //array 3 
+      console.log("3.")
+      var arrProduct =["React","Node","Python","Java","dotnet"]
+      console.log(arrProduct)
+
+      //array 4
+      console.log("4.")
+      var arrProduct =["React","Node","Python","Java","dotnet"]
+      console.log(arrProduct[0])
+
+       //array 5
+      console.log("4.")
+      var arrProduct =["React","Node","Python","Java","dotnet"]
+      console.log(typeof arrProduct[0]) //typeof print string tell waht data type we use type of
+    
+      //object
+       console.log("5.1")
+       var obj ={name:"react",subject:"Node",salary:19000}
+       console.log(obj);
+
+        //object
+       console.log("5.2")
+       var obj ={name:"react",subject:"Node",salary:19000}
+       console.log(obj);
+
+        console.log(obj.name);
+      
+        //arrobject
+         console.log("5.3")
+       var arrobj =[{name:"react",subject:"Node",salary:19000},{name:"reat",subject:"Nde",salary:1900},{name:"ret",subject:"de",salary:1000}]
+       console.log(arrobj);
+
+        //object
+         console.log("5.3")
+       var arrobj =[{name:"react",subject:"Node",salary:19000},{name:"reat",subject:"Nde",salary:1900},{name:"ret",subject:"de",salary:1000}]
+       console.log(arrobj[1]);
+
+        //object
+         console.log("5.4")
+       var arrobj =[{name:"react",subject:"Node",salary:19000},{name:"reat",subject:"Nde",salary:1900},{name:"ret",subject:"de",salary:1000}]
+       console.log(arrobj[1].name);
+
+       //assignmet1
+       console.log('aa1')
+       let arrq = [1,2,3,4,5]
+       for (let m = 0;m <= arrq.length; m++){
+        console.log(m)
+         }
+
+          //assignmet1.1
+       console.log('aa1.1')
+       let arrqq = [1,2,3,4,5]
+       for (let m = 0;m <= arrqq.length-1; m++){
+        console.log(m)
+         }
+
+          //or assignmet1.1
+       console.log('aa1.1')
+       let arrqqq = [1,2,3,4,5]
+       for (let v = 0;v <= arrqqq.length; v++){ //we can also put < only this
+        console.log(arrqqq[v]); //this not work because it is varable v or we put arrqqq.v both retrun undefined
+         }
+
+    </script> 
+</body>
+</html>

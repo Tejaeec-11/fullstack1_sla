@@ -1,0 +1,118 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Courier New', Courier, monospace;
+}
+a{
+    text-decoration: none;
+}
+.box{   /*i only give propesties to div inside content i did not give */
+    background-color: black;
+    color: aliceblue;
+    height: 300px;
+    padding: 20px;
+
+}
+.child{ /*i want to context proesties it is inline i want make it block*/
+      background-color: brown; /*evalo width avaolo athuku bg color*/
+      padding: 10px;
+      color: rgb(177, 222, 234);
+      width: 300px;
+      height: 100px;
+      display: block; /*1 time W,H give but not work now i put it work i convert inline into block*/
+}
+.child2{
+    background-color: darkgreen;
+    padding: 10px;
+      color: rgb(177, 222, 234);
+      width: 300px;
+      height: 100px;
+      display: inline-block; /*it tell we want inline block elemet enaku athu inline irukanum but na w,h add pannanum so we use inline-block*/
+}
+.boxone{
+    background-color: burlywood;
+    padding: 20;
+    text-align: center;
+    font-size: larger;
+    /*display: inline; or*/ display: inline-block; /*we always use flex and grid nut only know about inline block*/
+    width: 20px;
+}
+.boxtwo{
+    background-color: burlywood;
+    padding: 20;
+    text-align: center;
+    font-size: larger;
+    display: none; /*we always use flex and grid nut only know about inline block*/
+    width: 20px;
+}
+h2{
+    display: inline ;
+}
+.boxfour{
+    background-color: darkorange;
+    padding: 20px;
+    border: 1px solid blue;
+  /*display: none; or....noe pota hide agum place take another but hidden wecant see but place is there */  visibility: hidden;
+
+}
+.boxfive{
+    background-color: bisque;
+    padding: 20px;
+      border: 3px solid rgb(70, 198, 7);
+
+}
+.parent{  /*bg only apply to parnent,colour apply to child */
+    background-color: rgba(127, 172, 130, 0.358);
+    color: rgb(17, 13, 13);
+    padding: 20px; /*content round space is padding...it not apply on parent or div its only apply on content round  */
+   /* border: 3px solid rgb(138, 202, 201); */             /*it only apply one border not in content */ 
+    /*margin: 20px;*/                            /*border round margini varum or whole content round*/
+    display: flex;  /*when you put this every thing automatically apply to child*/
+    justify-content:center ; /*try every thing in justify content space-around ,space-between,or */ /* flex-direction: column; or */  /* center* or come text in center /                           /*flex upper give panna mattu tha flex direction varum 1st flex give*/
+     gap: 30px;  
+     /*flex-wrap: wrap; 
+     flex-direction: column;*/
+       align-items: center; /*parent oda iteam poruthu centre agum athu align iteam */
+     height: 500px; /*when u not put align iteam it normal certre of center of screen but only put height it align in center of top */ 
+}
+
+
+.children{
+    background-color: rgb(248, 164, 231);
+     color: rgb(13, 2, 2);
+     width: 200px;
+     height: 200px;
+     text-align: center; /*text align center yaruku venam podalam athu block level but justy content only flex pota tha varum so this items based and text align is text base */
+     padding: 20px;
+}
+
+.parentonetwo{
+    background-color: cornflowerblue;
+    height: 500px; /*this both we give the box give center and horizontal*/ /*if you did not give hieght .. same hieght take for parent and childer...if we give margin zero it en iteam ceter agum verticall mattu agum */
+   /*display: flex; */   /*this is align the box into center*/
+   /* justify-content: center ;
+   align-items: center; */ /*align give and we height is this madontory... align iteam center horzinotall*/
+}
+
+.newbox{
+    background-color: rgb(12, 2, 1);
+    color: white ;
+    padding: 20px; /*margini and border we can add or our wish*/
+    width: 300px;
+    height: 300px; /*height not give means we can tsee if it center or not*/
+   /* display: flex; */ /*height over to crete box...the box create now we display flex for text in center*/
+   /* margin: auto; */   /*flex we use this for center to place box this do center and horiztonal  aa*/
+   display: flex; /*flex kuda pota tha irukum*/
+   justify-content: center; /*either use 110,111 or use 112,113,114*/
+   align-items: center;
+  /* margin: auto; */ /*we can put to child or we can put this parent margini only vertically center but we use flex we vertically or horizontally center */
+}
+
+/*work css day4 59:53 ku time video paru ceter box and put use flex for horizontal and vertically  */ 

@@ -1,0 +1,255 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+a{
+    text-decoration: none;
+  color: #fffbfa;
+   
+}
+body{
+    font-family: 'Times New Roman', Times, serif;
+    background-color:   #0c0c0b; ;
+}
+/*------------------------------------------------*/
+.hi{
+  
+background-color: #291f0f9d;  
+  
+    display: flex;
+   justify-content: space-between;
+  
+    
+}
+.logo{
+    color: #f0e6e1;
+    font-size: 25px;
+    font-weight: 50px;
+    padding: 5px;
+    margin-left: 20px;
+}
+.nav{
+     
+    font-size: 25px;
+    font-weight: 50px;
+    padding: 5px;
+    margin-right: 20px;
+ 
+   
+}
+
+.four{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/*----------------------------------------------------------------*/
+.hii{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    
+}
+.banner{
+   
+    padding: 25px;
+    border: 2px solid rgb(233, 222, 208);
+    box-shadow: 7px 7px 7px 7px ;
+}
+.banner > img{
+     width: 950px;
+    height: 300px;
+}
+
+/*---------------------------------------------------------------*/
+.colum{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+
+
+.order{
+    display: flex;
+    justify-content:space-evenly;
+    gap: 10px;
+}
+.in{
+     border: 1px solid #080807;
+     border-radius: 12px;
+     background-color: #fcf8f5;
+     
+}
+
+
+.in > img {
+     width: 600px;
+     height: 400px;
+     padding: 20px;
+    align-items: center;
+}
+
+.in > h3 {
+     margin-left: 250px;
+    font-size: 30px;
+    color:#211A16;
+}
+.in > button{
+    width: 100px;
+    height: 30px;
+    padding: 2px;
+     margin: 10px;
+    border: 1px solid #070706 ;
+    background-color: #eb674f;
+    color:#070707;
+    margin-left: 250px;
+    border-radius: 12px;
+    
+}
+button:hover{
+    background-color: #c78b13;
+}
+.esi{
+    color: #fcf8f5;
+    font-size: xx-large;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*-------------------------------------------*/
+.all{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+
+
+.helo{
+    width: 1600px;
+    height: 220px;
+    background-color: #ddcb97;
+    padding: 25px;
+    margin: 20px;
+    border: 2px solid #2c3e50;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+label{
+    margin: 5px;
+}
+input{
+    margin: 5px;
+}
+input:hover{
+    background-color: #c78b13;
+}
+/*-------------------------*/
+.footer {
+    background-color: #211914;
+    color: #edebe9;
+    padding: 50px 80px 25px;
+}
+
+/* Brand section */
+.do {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 8px;
+    margin-bottom: 45px;
+}
+
+.do h3 {
+    color: #fffdf8;
+    font-size: 28px;
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+.do p {
+    color: #c9bfb2;
+    font-size: 15px;
+    margin: 0;
+}
+
+/* Three footer columns */
+.footer-links {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 35px 0;
+    border-top: 1px solid #4a3b32;
+    border-bottom: 1px solid #4a3b32;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    min-width: 200px;
+}
+
+.footer-column h3 {
+    color: #fffdf8;
+    font-size: 15px;
+    letter-spacing: 1.5px;
+    margin: 0 0 10px;
+}
+
+.footer-column a,
+.footer-column p {
+    color: #c9bfb2;
+    text-decoration: none;
+    font-size: 14px;
+    margin: 0;
+}
+
+.footer-column a:hover {
+    color: #a58b73;
+}
+
+/* Bottom section */
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-top: 25px;
+}
+
+.footer-bottom p {
+    color: #a58b73;
+    font-size: 13px;
+    margin: 0;
+}
+
+.footer-bottom a {
+    color: #c9bfb2;
+    text-decoration: none;
+    font-size: 13px;
+    margin-left: 20px;
+}
+
+.footer-bottom a:hover {
+    color: #fffdf8;
+}
+
+

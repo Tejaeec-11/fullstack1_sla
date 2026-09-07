@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section>
+        <div>
+            <h2>loops</h2>
+            <h3>while - not use </h3>
+            <p>when i do know how much of time it will loop,bussiness only used </p>
+            <pre>
+                while(condition){
+                    //statement
+                    //a++ 
+                    //or
+                    //a--
+                }
+            </pre>
+           <h3>do while - atleast one time run</h3> 
+        </div>
+    </section>
+
+    <script>
+        // even  no
+        console.log("1.")
+        for(let a=10; a<=20;a++){
+             if(a%2===0){
+                console.log("even no",a)
+             }
+        }
+
+        // while example
+         console.log("2.")
+         let b = 5 //same as (let a=10; a>50; a++) okay..output start from 5,6,7,8,9 till contion 10
+         while (b<10){
+         console.log(b)
+           b++
+         }
+        
+          //loop
+          console.log("3.")
+         let c = 1 //output start from 0,1,2,3,4,5,6,7,8,9 till contion 10
+         while(c<10){
+            console.log(c)
+         c++
+        }
+         
+          //loop
+          console.log("4.")
+        let d = 1 //soutput start from 0,1,2,3,4,5,6,7,8,9 till contion <=10
+         while(d<=10){
+            console.log(d)
+         d++
+         }
+
+
+         //for loop again
+           console.log("5.")
+         for(let create=0;create <= 1; create++) {
+          //  console.log(create);
+          console.log('this is type',typeof create)
+          console.log(typeof Number("10"))
+
+            if(create === Number("10")){ //data diff but === same
+            console.log('yes this is data types also same')
+         }else{
+            console.log("no its value same")
+          }
+        }
+
+        //target variable or target number
+           console.log("6.")
+          // let target =75 //init a=0 start n0 , conditi 100 end number , target inbetween no print ask we use target
+           for(let a=0;a<=100;a++){ 
+          //  if(a==target){
+                console.log(a)
+                break
+            }
+          // }
+
+            //for loop again
+           console.log("7.")
+          // let target = 0
+          // console.log('target top', target);
+         //  for(let p=1;p<=10;p++){
+         //   target +=p
+            //target = 1+2
+         //  }
+         //  console.log('bottom',target);
+
+         //try correct 
+         let hi="dvbhdvik"
+         let target="v"
+         for(let letter=0;letter < hi.length; letter++){
+                if(hi[letter]===target){
+                  console.log(target);//or"found'"+ target+"'index:"+letter
+                  
+                }
+         }
+
+            //for loop again
+           console.log("8.")
+         //  hero[4]
+        //   let hero = "india" //this word or inintizlation
+         //  let target = "d"//need d in output use target
+          // console.log(hero.length);
+          // for(let letter=0;letter<=hero.length;letters++){
+          //     if (hero[letters] === target)
+           //    console.log()
+         //  }
+
+    </script>
+</body>
+</html>

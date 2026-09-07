@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h3>prototy making build in (),like puah,pop...etc</h3>
+        <h1>1.arry method </h1><h2>mutable,nonmutable</h2>
+        <pre>
+            <h4>mutable</h4> 
+            //mutabel-onu iruku processela statement we wrtie panna
+        //athula store pamnama or retrun panna write panna but it affect the original
+       <h4>non mutable</h4>
+        //non mutable statement  potha result cant able to see in screen because it not affect original if need to see put consolelog or varaibale expression ppannanum
+       //after update aprm kuda namba namba print panna orginal varum it does nt affect after cut thhe particular array       
+    </pre>
+    </div>
+    <pre>
+    <b><i>array expression or statement handle</i> 
+    study different they ask and concat when use and alertnate for concat we need use sperate operator and rest operator not tell rest only process in () parameter rest symbol ... no potha and n number of argu give it store like array </b>
+       <h3>mutable </h3> 
+       *push,*pop,shift,unshift,*splice,short ,reverse,fill,**concat
+       <h3>non mutable</h3>
+       *slice,**concat,*map,*filter,*find,includs,indexof,reduce,sameveery,joinflat*,flatmap
+        
+    </pre>
+    <h1>2.normal array method</h1>
+    <h2>statement-iruthu conlog direct give or varaible vechi  expression panna both give same result</h2>
+
+    <h1>3.higher order arry method -HOAM</h1>
+    <pre>
+        we have  2 .ho()-
+        2.1map()-loop to the array,
+        2.2foreach()-ho(),hoam,it run the each () for each value it is loop not return means expression handle panna muditha only statement   ,
+        i) it accept another () as argument 
+        ii) anf retrun another ()
+    </pre>
+    <script>
+        // mutable 
+        //expression,statement in
+        console.log("m1---------------------------------------------------------------");
+        
+        const arr =[1,2,3,4,5]
+        console.log('original array',arr);
+        arr.push(10)//or(30) //plain put like this is statement or consolelog direct poda mudium varaibae illa give statement 
+        //statement potha in output 1,2,3,4,5,10,10 eodi varum 
+        //dtatAdd = expression epdi poda length ahh varum total 7 show in output new length after add 10
+        const dataAdd = arr.push(10)//or(40) //idu expression varaibale always have value...all line is statement but value we can pass expression
+        console.log('dataAdd',dataAdd)
+        console.log('after the edit',arr);
+        //same rule pop,shift,unshift expression,statement
+        
+        //pop
+        console.log("m1.1----------------------------------------------------------");
+       arr.pop()
+        console.log(arr.pop())//if we put like this it show after remove length 6 but original is 7 output is after update 6
+       //line37,40
+        console.log(arr);//line 31 remove last
+        //if we ut like this output shwow thw remove value 1,2,3,4,5,10
+        
+        //unshift
+        console.log("s----------------------------------------------------");
+        arr.unshift(34)
+        const i=arr.unshift(22)
+        console.log(i);
+        console.log(arr);
+
+
+        //slice-extract
+        console.log("s1----------------------------------------------------------");
+        
+        arr.slice(2,3)
+            console.log(arr);//in output it print full but 0-2 that index no not print in screen it see this we applied non mutable rule
+        
+        //splice -staterun panna affect original -splice copy
+        arr.splice(0,2)// or const copy = arr.splice(0,2)
+        console.log(arr);//or log(copy)
+        
+        //include
+        console.log("I--------------------------------------------------------");
+        
+        arr.includes("3")//it does not affect anything only return original when the value iis there in out it show 12345 but not only 3
+        console.log(arr.includes("3"));//it return false because i told to check ("3") string 3 so it false
+         console.log(arr.includes(3));//now it show true because 3 is there and no string 
+        console.log(arr);//line 44,45
+        
+       
+        //unmutable - hiher order ella nonmutable
+        //slice-extract copy-we cut 1,3 so after in29 then in 30 line its affect the original
+        console.log("1--------------------------------------------------")
+        
+        arr.slice(1,3) //start value or end value in line 12
+        //this is statement
+        //this is expression varaibale value give
+        console.log("before update",arr)
+        const copy = arr.slice(1,3)//or(0,1) //arr.slice(1,3) this is only statement slice is unmatable or epdi potha work agadhu
+        console.log('after',copy) 
+        console.log('original',arr)
+
+
+        //foreach
+
+        console.log("1-----------------------------------------------");
+       // forEach(()=>{     //ila call back function mari call pannu like this 
+       //inside wee need 3 parameter elemet, index,new array
+       // }) 
+                    //this 1 st for foreach inside callback 
+       arr.forEach((e,i)=>{ //1,2,3,45,this each value and new value- index
+       // console.log(e);
+      // console.log(e*3);   //try one by one
+         console.log(e%2==0);//console.log(e%2==0?"even":"odd");
+})//up is statmment and down is now return console or variable stor panradhu 
+        const run =  arr.forEach((e,i)=>{ 
+            console.log(e%2==0?"even":"odd");
+        })
+        console.log(run)
+
+        //map -e,i or i,e
+        
+        console.log("m1----------------------------------------------------");
+        arr.map((i,e)=>{
+           // console.log(i)
+           console.log(i*e);
+           
+        })
+
+        //expression
+        console.log("m1----------------------------------------------------");
+       
+        const newarr = 
+         arr.map((i,e)=>{
+           // console.log(i)
+           console.log(e%2==0);
+           return i//if we did not put this is output undefinited
+        })
+        console.log(newarr);
+
+        //foreach ,map-statement
+        const arrs = [12,3,4,5,6]
+        //foreach
+        console.log('fs,ms-------------------------------------');
+         arrs.forEach((e,i)=>{//e=element,i=index only use e,i
+            //retrun we cant use but log usee
+            console.log(e*i);//0*12,1*3,2*4,3*5,4*6
+        })
+        //map -statement
+        arrs.map((e,i)=>{//e=element,i=index only use e,i
+           console.log(e*i);
+        })
+
+        //map,foreach in expression
+        //foreach
+          console.log('fe,me-------------------------------------');
+        arrs.forEach((e,i)=>{
+            console.log(e);
+        })
+        //map
+        const newsarrs = arrs.map((e,i)=>{
+            return e*i
+          //  console.log(e*i); //log irutha it show undefined
+            })
+        console.log(newsarrs);
+        
+        //new2 -this is in foreach we cant retrun but in map we put change foreach into map we able to see the output 
+        console.log('1---------------------------------')
+        let fdgt =""//<=waste of timing this
+          const newdsr =  arrs.forEach((e,i)=>{
+          const tdgt = e + i 
+          fdgt += tdgt
+        })
+         console.log(fdgt);//<=waste of timing this
+       
+
+    </script>
+</body>
+</html>
+
