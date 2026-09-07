@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 2 - Button Click Event</title>
+
+    <style>
+
+        .newStyle {
+            color: blue;
+            font-size: 35px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <h1 id="heading">Original Heading</h1>
+
+    <button id="button">Click Me</button>
+
+    <script>
+
+        let heading = document.getElementById("heading");
+        let button = document.getElementById("button");
+
+        button.addEventListener("click", function() {
+
+            // Change heading text
+            heading.textContent = "Heading Changed!";
+
+            // Change heading color
+            heading.style.color = "red";
+
+            // Add CSS class
+            heading.classList.add("newStyle");
+
+        });
+
+    </script>
+
+</body>
+</html>

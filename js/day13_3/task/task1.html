@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 1 - DOM Selectors</title>
+</head>
+<body>
+
+    <h1 id="heading">Original Heading</h1>
+
+    <p class="message">Original Paragraph 1</p>
+    <p class="message">Original Paragraph 2</p>
+    <p class="message">Original Paragraph 3</p>
+
+    <script>
+
+        // Select h1 using getElementById()
+        let heading = document.getElementById("heading");
+
+        // Change h1 text
+        heading.textContent = "Welcome to JavaScript DOM";
+
+
+        // Select all paragraphs using querySelectorAll()
+        let paragraphs = document.querySelectorAll(".message");
+
+        // Change text of each paragraph
+        paragraphs.forEach(function(paragraph, index) {
+            paragraph.textContent = "This is Paragraph " + (index + 1);
+        });
+
+    </script>
+
+</body>
+</html>

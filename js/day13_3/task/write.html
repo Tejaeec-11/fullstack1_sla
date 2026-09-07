@@ -1,0 +1,115 @@
+<pre>
+DOM Questions & Answers
+1. What is DOM in JavaScript? Why do we need DOM?
+DOM (Document Object Model) is a programming representation of an HTML document.
+
+JavaScript uses the DOM to:
+
+Select HTML elements
+Change text
+Change styles
+Add or remove elements
+Handle events such as button clicks
+Example:
+
+document.getElementById("heading").textContent = "Hello JavaScript";
+<br>
+2. What is the difference between HTML and DOM?
+HTML is the markup/code used to create the webpage.
+
+DOM is the browser's object-based representation of that HTML.
+
+For example:
+
+<h1>Hello</h1>
+
+The browser converts this HTML into a DOM structure that JavaScript can access and modify.
+<br>
+3. What is the document object in JavaScript?
+The document object represents the current HTML document loaded in the browser.
+
+It provides methods to access and modify HTML elements.
+
+Example:
+
+document.getElementById("heading");
+
+Here, document is used to access the HTML page.
+<br>
+4. What are DOM selectors? Name the important DOM selector methods.
+DOM selectors are methods used to find HTML elements from the DOM.
+
+Important methods are:
+
+document.getElementById()
+document.getElementsByClassName()
+document.getElementsByTagName()
+document.querySelector()
+document.querySelectorAll()
+<br>
+5. Difference between getElementById() and querySelector()
+getElementById() selects an element using its id.
+
+document.getElementById("heading");
+
+querySelector() selects the first element that matches a CSS selector.
+
+document.querySelector(".message");
+<br>
+6. Difference between querySelector() and querySelectorAll()
+querySelector() returns the first matching element.
+
+document.querySelector(".message");
+
+querySelectorAll() returns all matching elements.
+
+document.querySelectorAll(".message");
+<br>
+7. Difference between textContent, innerText, and innerHTML
+textContent
+
+Gets or changes all text content.
+
+element.textContent = "Hello";
+
+innerText
+
+Gets or changes the visible text of an element.
+
+element.innerText = "Hello";
+
+innerHTML
+
+Gets or changes HTML content inside an element.
+
+element.innerHTML = "<b>Hello</b>";
+
+Example:
+
+element.textContent = "<b>Hello</b>";
+
+Displays:
+
+<b>Hello</b>
+
+Whereas:
+
+element.innerHTML = "<b>Hello</b>";
+
+Displays Hello in bold.
+
+<br>
+8. How can we change the CSS style of an HTML element using JavaScript?
+We can use the style property.
+
+let heading = document.getElementById("heading");
+
+heading.style.color = "red";
+heading.style.backgroundColor = "yellow";
+heading.style.fontSize = "30px";
+
+We can also add a CSS class using classList.add():
+
+heading.classList.add("newStyle");
+
+This is useful when several CSS properties need to be applied together.</pre>
