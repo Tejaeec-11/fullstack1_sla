@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 3 - shift() and unshift()</title>
+</head>
+<body>
+
+<h1>Task 3 — shift() & unshift()</h1>
+
+<script>
+
+    let cities = [
+        "Chennai",
+        "Bangalore",
+        "Mumbai",
+        "Delhi",
+        "Hyderabad"
+    ];
+
+    let removedCity = cities.shift();
+
+    cities.unshift("Coimbatore");
+
+    document.write("Removed City: " + removedCity + "<br>");
+    document.write("Final Array: [" + cities.join(", ") + "]");
+
+</script>
+
+</body>
+</html>
