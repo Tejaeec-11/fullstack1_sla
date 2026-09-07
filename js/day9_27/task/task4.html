@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 4 - Scope</title>
+</head>
+<body>
+
+<h1>Scope</h1>
+<pre>
+    Scope Explanation
+var globalVar → Global scope
+var functionVar → Function scope
+let blockLet → Block scope
+const blockConst → Block scope
+let and const are block-scoped, while var is function-scoped.
+</pre>
+<script>
+var globalVar = "Global Variable";
+
+function showScope() {
+
+    var functionVar = "Function Scope - var";
+
+    document.write(globalVar + "<br>");
+    document.write(functionVar + "<br>");
+
+    if (true) {
+        let blockLet = "Block Scope - let";
+        const blockConst = "Block Scope - const";
+
+        document.write(blockLet + "<br>");
+        document.write(blockConst + "<br>");
+    }
+}
+
+showScope();
+</script>
+
+</body>
+</html>

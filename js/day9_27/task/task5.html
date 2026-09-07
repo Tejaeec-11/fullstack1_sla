@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 5 - Hoisting</title>
+</head>
+<body>
+
+<h1>Hoisting</h1>
+<pre>
+    Hoisting — Key Difference
+var → Declaration is hoisted, so accessing it before assignment gives undefined.
+let → Hoisted but remains in the Temporal Dead Zone (TDZ) until initialized.
+const → Same TDZ behavior as let.
+Function declaration → The function can be called before its declaration.
+</pre>
+<script>
+
+// var
+document.write("var: " + number + "<br>");
+var number = 10;
+
+
+// let
+try {
+    document.write("let: " + age + "<br>");
+} catch (error) {
+    document.write("let: Cannot access before initialization<br>");
+}
+
+let age = 20;
+
+
+// const
+try {
+    document.write("const: " + course + "<br>");
+} catch (error) {
+    document.write("const: Cannot access before initialization<br>");
+}
+
+const course = "JavaScript";
+
+
+// Function Declaration
+greet();
+
+function greet() {
+    document.write("Function: Hello!<br>");
+}
+
+</script>
+
+</body>
+</html>
