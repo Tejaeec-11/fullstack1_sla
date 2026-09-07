@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 10 - ES5 to ES6+</title>
+</head>
+<body>
+
+<h1>Task 10 - ES5 to ES6+</h1>
+
+<script>
+    const name = "Ravi";
+    const age = 25;
+
+    // Object shorthand
+    const student = {
+        name,
+        age
+    };
+
+    // Arrow function + template literal
+    const greet = (name) => {
+        return `Hello ${name}`;
+    };
+
+    document.write(greet(name) + "<br><br>");
+
+    document.write("Name: " + student.name + "<br>");
+    document.write("Age: " + student.age);
+</script>
+
+</body>
+</html>

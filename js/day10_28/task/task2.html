@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 2 - Arrow Functions</title>
+</head>
+<body>
+
+<h1>Task 2 - Arrow Functions</h1>
+
+<script>
+    // Explicit return
+    const addExplicit = (a, b) => {
+        return a + b;
+    };
+
+    const squareExplicit = (n) => {
+        return n * n;
+    };
+
+
+    // Implicit return
+    const addImplicit = (a, b) => a + b;
+
+    const squareImplicit = n => n * n;
+
+
+    document.write("Explicit Add: " + addExplicit(10, 20) + "<br>");
+    document.write("Explicit Square: " + squareExplicit(5) + "<br>");
+    document.write("Implicit Add: " + addImplicit(10, 20) + "<br>");
+    document.write("Implicit Square: " + squareImplicit(5));
+</script>
+
+</body>
+</html>

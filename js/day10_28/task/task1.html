@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 1 - var let const</title>
+</head>
+<body>
+
+<h1>Task 1 - var, let and const</h1>
+
+<div id="output"></div>
+
+<script>
+    // var
+    var a = 10;
+    var a = 20;       // Redeclaration allowed
+    a = 30;           // Reassignment allowed
+
+    // let
+    let b = 10;
+    b = 20;           // Reassignment allowed
+    // let b = 30;    // Redeclaration not allowed
+
+    // const
+    const c = 10;
+    // c = 20;        // Reassignment not allowed
+    // const c = 30;  // Redeclaration not allowed
+
+
+    // Scope
+    var globalVar = "Global Scope";
+
+    function testScope() {
+        var functionVar = "Function Scope";
+
+        if (true) {
+            let blockLet = "Block Scope";
+            const blockConst = "Block Scope";
+
+            document.write(blockLet + "<br>");
+            document.write(blockConst + "<br>");
+        }
+
+        document.write(functionVar + "<br>");
+    }
+
+    document.write(globalVar + "<br>");
+    document.write("var: " + a + "<br>");
+    document.write("let: " + b + "<br>");
+    document.write("const: " + c + "<br>");
+
+    testScope();
+
+
+    // Hoisting
+    document.write("Hoisted var: " + hoistedVar + "<br>");
+    var hoistedVar = 100;
+
+
+    // TDZ demonstration
+    try {
+        document.write(hoistedLet);
+    } catch (error) {
+        document.write("let: Cannot access before initialization<br>");
+    }
+
+    let hoistedLet = 200;
+</script>
+
+</body>
+</html>

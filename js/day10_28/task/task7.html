@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 7 - Promise</title>
+</head>
+<body>
+
+<h1>Task 7 - Promise</h1>
+
+<script>
+    const dataPromise = new Promise((resolve) => {
+
+        setTimeout(() => {
+            resolve("Data Loaded");
+        }, 2000);
+
+    });
+
+
+    // Using .then()
+    dataPromise.then((result) => {
+        document.write(".then(): " + result + "<br>");
+    });
+
+
+    // Using async/await
+    async function getData() {
+        const result = await dataPromise;
+
+        document.write("async/await: " + result);
+    }
+
+    getData();
+</script>
+
+</body>
+</html>

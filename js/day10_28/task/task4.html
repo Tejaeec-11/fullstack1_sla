@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 4 - Rest and Spread</title>
+</head>
+<body>
+
+<h1>Task 4 - Rest Parameter and Spread Syntax</h1>
+
+<script>
+    // Rest Parameter
+    function addNumbers(...numbers) {
+        let sum = 0;
+
+        for (let number of numbers) {
+            sum += number;
+        }
+
+        return sum;
+    }
+
+    document.write("Rest Result: " + addNumbers(10, 20, 30) + "<br><br>");
+
+
+    // Spread Syntax
+    const numbers = [10, 20, 30];
+
+    const newNumbers = [...numbers, 40, 50];
+
+    document.write("Spread Result: " + newNumbers);
+</script>
+
+</body>
+</html>

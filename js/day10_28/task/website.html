@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JavaScript Logical Examples</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f1f1f1;
+        }
+
+        /* Navbar */
+
+        .navbar {
+            background-color: #282a35;
+        }
+
+        .navbar-brand {
+            color: #04aa6d !important;
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .navbar a {
+            color: white;
+        }
+
+        /* Hero */
+
+        .hero {
+            background-color: #04aa6d;
+            color: white;
+            padding: 55px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 45px;
+            font-weight: bold;
+        }
+
+        /* Sidebar */
+
+        .sidebar {
+            background-color: white;
+            min-height: 100vh;
+            padding: 20px;
+            position: sticky;
+            top: 0;
+        }
+
+        .sidebar h5 {
+            color: #04aa6d;
+            font-weight: bold;
+        }
+
+        .sidebar a {
+            display: block;
+            text-decoration: none;
+            color: #333;
+            padding: 8px;
+            border-radius: 5px;
+        }
+
+        .sidebar a:hover {
+            background-color: #04aa6d;
+            color: white;
+        }
+
+        /* Main Content */
+
+        .content {
+            padding: 30px;
+        }
+
+        .section {
+            background-color: white;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        .section h2 {
+            color: #04aa6d;
+            font-weight: bold;
+        }
+
+        .section h3 {
+            color: #333;
+        }
+
+        /* Code */
+
+        pre {
+            background-color: #282a35;
+            color: #f8f8f2;
+            padding: 20px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+
+        .keyword {
+            color: #ff79c6;
+        }
+
+        /* Output */
+
+        .output {
+            background-color: #e7f8ef;
+            border-left: 5px solid #04aa6d;
+            padding: 15px;
+            margin-top: 15px;
+        }
+
+        /* Topic Cards */
+
+        .topic-card {
+            border: none;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        .topic-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+        }
+
+        .topic-number {
+            color: #04aa6d;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        /* Footer */
+
+        footer {
+            background-color: #282a35;
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+    </style>
+</head>
+
+<body>
+
+
+<!-- NAVBAR -->
+
+<nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+
+        <a class="navbar-brand" href="#">
+            JS Learning
+        </a>
+
+        <div>
+            <a class="btn btn-success me-2" href="#logical">
+                Logical
+            </a>
+
+            <a class="btn btn-light me-2" href="#primitive">
+                Primitive
+            </a>
+
+            <a class="btn btn-warning" href="#topics">
+                Topics
+            </a>
+        </div>
+
+    </div>
+</nav>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <h1>JavaScript</h1>
+
+    <p class="lead">
+        Logical Examples, Primitive Data Types & Important Topics
+    </p>
+
+    <p>
+        Learn JavaScript with simple examples
+    </p>
+
+</section>
+
+
+<div class="container-fluid">
+
+    <div class="row">
+
+
+        <!-- SIDEBAR -->
+
+        <div class="col-md-3 col-lg-2 sidebar">
+
+            <h5>JavaScript</h5>
+
+            <a href="#introduction">Introduction</a>
+
+            <a href="#logical">Logical Examples</a>
+
+            <a href="#primitive">Primitive Data Types</a>
+
+            <a href="#string">String</a>
+
+            <a href="#number">Number</a>
+
+            <a href="#boolean">Boolean</a>
+
+            <a href="#undefined">Undefined</a>
+
+            <a href="#null">Null</a>
+
+            <a href="#topics">10 Topics</a>
+
+        </div>
+
+
+        <!-- MAIN CONTENT -->
+
+        <div class="col-md-9 col-lg-10 content">
+
+
+            <!-- INTRODUCTION -->
+
+            <div class="section" id="introduction">
+
+                <h2>JavaScript Introduction</h2>
+
+                <p>
+                    JavaScript is a programming language used to make
+                    websites interactive and dynamic.
+                </p>
+
+                <p>
+                    JavaScript can be used for calculations, conditions,
+                    loops, functions, objects, arrays and many other
+                    programming tasks.
+                </p>
+
+            </div>
+
+
+            <!-- LOGICAL EXAMPLES -->
+
+            <div class="section" id="logical">
+
+                <h2>JavaScript Logical Examples</h2>
+
+                <p>
+                    Logical programming helps us solve real-world
+                    programming problems using conditions, loops,
+                    operators and functions.
+                </p>
+
+            </div>
+
+
+            <!-- LOGIC 1 -->
+
+            <div class="section">
+
+                <h2>Logical Example 1 — Even or Odd</h2>
+
+                <p>
+                    Check whether a number is even or odd.
+                </p>
+
+<pre>
+<code>
+let number = 10;
+
+if (number % 2 === 0) {
+    console.log("Even Number");
+} else {
+    console.log("Odd Number");
+}
+</code>
+</pre>
+
+                <div class="output">
+                    Output: Even Number
+                </div>
+
+            </div>
+
+
+            <!-- LOGIC 2 -->
+
+            <div class="section">
+
+                <h2>Logical Example 2 — Positive or Negative</h2>
+
+<pre>
+<code>
+let number = -5;
+
+if (number >= 0) {
+    console.log("Positive Number");
+} else {
+    console.log("Negative Number");
+}
+</code>
+</pre>
+
+                <div class="output">
+                    Output: Negative Number
+                </div>
+
+            </div>
+
+
+            <!-- LOGIC 3 -->
+
+            <div class="section">
+
+                <h2>Logical Example 3 — Find Largest Number</h2>
+
+<pre>
+<code>
+let a = 20;
+let b = 35;
+
+if (a > b) {
+    console.log(a);
+} else {
+    console.log(b);
+}
+</code>
+</pre>
+
+                <div class="output">
+                    Output: 35
+                </div>
+
+            </div>
+
+
+            <!-- LOGIC 4 -->
+
+            <div class="section">
+
+                <h2>Logical Example 4 — Voting Eligibility</h2>
+
+<pre>
+<code>
+let age = 20;
+
+if (age >= 18) {
+    console.log("Eligible to Vote");
+} else {
+    console.log("Not Eligible");
+}
+</code>
+</pre>
+
+                <div class="output">
+                    Output: Eligible to Vote
+                </div>
+
+            </div>
+
+
+            <!-- LOGIC 5 -->
+
+            <div class="section">
+
+                <h2>Logical Example 5 — Pass or Fail</h2>
+
+<pre>
+<code>
+let mark = 75;
+
+if (mark >= 40) {
+    console.log("Pass");
+} else {
+    console.log("Fail");
+}
+</code>
+</pre>
+
+                <div class="output">
+                    Output: Pass
+                </div>
+
+            </div>
+
+
+            <!-- LOGIC 6 -->
+
+            <div class="section">
+
+                <h2>Logical Example 6 — Grade</h2>
+
+<pre>
+<code>
+let mark = 85;
+
+if (mark >= 90) {
+    console.log("A+");
+} else if (mark >= 80) {
+    console.log("A");
+} else if (mark >= 70) {
+    console.log("B");
+} else {
+    console.log("C");
+}
+</code>
+</pre>
+
+                <div class="output">
+                    Output: A
+                </div>
+
+            </div>
+
+
+            <!-- LOGIC 7 -->
+
+            <div class="section">
+
+                <h2>Logical Example 7 — Sum of Numbers</h2>
+
+<pre>
+<code>
+let sum = 0;
+
+for (let i = 1; i <= 10; i++) {
+    sum = sum + i;
+}
+
+console.log(sum);
+</code>
+</pre>
+
+                <div class="output">
+                    Output: 55
+                </div>
+
+            </div>
+
+
+            <!-- LOGIC 8 -->
+
+            <div class="section">
+
+                <h2>Logical Example 8 — Find Even Numbers</h2>
+
+<pre>
+<code>
+for (let i = 1; i <= 10; i++) {
+
+    if (i % 2 === 0) {
+        console.log(i);
+    }
+
+}
+</code>
+</pre>
+
+                <div class="output">
+                    Output: 2, 4, 6, 8, 10
+                </div>
+
+            </div>
+
+
+            <!-- LOGIC 9 -->
+
+            <div class="section">
+
+                <h2>Logical Example 9 — Find a Number</h2>
+
+<pre>
+<code>
+for (let i = 1; i <= 100; i++) {
+
+    if (i === 50) {
+        console.log("Found: " + i);
+        break;
+    }
+
+}
+</code>
+</pre>
+
+                <div class="output">
+                    Output: Found: 50
+                </div>
+
+            </div>
+
+
+            <!-- LOGIC 10 -->
+
+            <div class="section">
+
+                <h2>Logical Example 10 — Student Mark</h2>
+
+<pre>
+<code>
+let student = {
+    name: "Ravi",
+    mark: 85
+};
+
+if (student.mark >= 80) {
+    console.log(student.name + " scored above 80");
+}
+</code>
+</pre>
+
+                <div class="output">
+                    Output: Ravi scored above 80
+                </div>
+
+            </div>
+
+
+            <!-- PRIMITIVE -->
+
+            <div class="section" id="primitive">
+
+                <h2>Primitive Data Types</h2>
+
+                <p>
+                    Primitive data types store single values.
+                    The important primitive types covered here are:
+                </p>
+
+                <ul>
+                    <li>String</li>
+                    <li>Number</li>
+                    <li>Boolean</li>
+                    <li>Undefined</li>
+                    <li>Null</li>
+                </ul>
+
+            </div>
+
+
+            <!-- STRING -->
+
+            <div class="section" id="string">
+
+                <h2>1. String</h2>
+
+                <p>
+                    A String is used to store text or characters.
+                </p>
+
+<pre>
+<code>
+let name = "Ravi";
+
+console.log(name);
+console.log(typeof name);
+</code>
+</pre>
+
+                <div class="output">
+                    Output:<br>
+                    Ravi<br>
+                    string
+                </div>
+
+            </div>
+
+
+            <!-- NUMBER -->
+
+            <div class="section" id="number">
+
+                <h2>2. Number</h2>
+
+                <p>
+                    Number is used to store integer and decimal values.
+                </p>
+
+<pre>
+<code>
+let age = 25;
+let price = 99.50;
+
+console.log(age);
+console.log(price);
+console.log(typeof age);
+</code>
+</pre>
+
+                <div class="output">
+                    Output:<br>
+                    25<br>
+                    99.5<br>
+                    number
+                </div>
+
+            </div>
+
+
+            <!-- BOOLEAN -->
+
+            <div class="section" id="boolean">
+
+                <h2>3. Boolean</h2>
+
+                <p>
+                    Boolean has only two values:
+                    <strong>true</strong> or <strong>false</strong>.
+                </p>
+
+<pre>
+<code>
+let isStudent = true;
+
+console.log(isStudent);
+console.log(typeof isStudent);
+</code>
+</pre>
+
+                <div class="output">
+                    Output:<br>
+                    true<br>
+                    boolean
+                </div>
+
+            </div>
+
+
+            <!-- UNDEFINED -->
+
+            <div class="section" id="undefined">
+
+                <h2>4. Undefined</h2>
+
+                <p>
+                    A variable has the value undefined when it has been
+                    declared but no value has been assigned.
+                </p>
+
+<pre>
+<code>
+let result;
+
+console.log(result);
+console.log(typeof result);
+</code>
+</pre>
+
+                <div class="output">
+                    Output:<br>
+                    undefined<br>
+                    undefined
+                </div>
+
+            </div>
+
+
+            <!-- NULL -->
+
+            <div class="section" id="null">
+
+                <h2>5. Null</h2>
+
+                <p>
+                    Null represents an intentional empty value.
+                </p>
+
+<pre>
+<code>
+let data = null;
+
+console.log(data);
+console.log(typeof data);
+</code>
+</pre>
+
+                <div class="output">
+                    Output:<br>
+                    null<br>
+                    object
+                </div>
+
+                <p class="mt-3">
+                    Note: <code>typeof null</code> returns
+                    <code>"object"</code>. This is a historical behavior
+                    of JavaScript.
+                </p>
+
+            </div>
+
+
+            <!-- 10 TOPICS -->
+
+            <div class="section" id="topics">
+
+                <h2>10 Important JavaScript Topics</h2>
+
+                <div class="row g-4">
+
+
+                    <div class="col-md-6">
+                        <div class="card topic-card p-4">
+                            <div class="topic-number">01</div>
+                            <h3>Variables</h3>
+                            <p>
+                                Learn var, let and const for storing data.
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-6">
+                        <div class="card topic-card p-4">
+                            <div class="topic-number">02</div>
+                            <h3>Data Types</h3>
+                            <p>
+                                Learn primitive and non-primitive data types.
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-6">
+                        <div class="card topic-card p-4">
+                            <div class="topic-number">03</div>
+                            <h3>Operators</h3>
+                            <p>
+                                Arithmetic, comparison and logical operators.
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-6">
+                        <div class="card topic-card p-4">
+                            <div class="topic-number">04</div>
+                            <h3>Conditions</h3>
+                            <p>
+                                Use if, else if and else for decision making.
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-6">
+                        <div class="card topic-card p-4">
+                            <div class="topic-number">05</div>
+                            <h3>Loops</h3>
+                            <p>
+                                Use for, while and do while loops.
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-6">
+                        <div class="card topic-card p-4">
+                            <div class="topic-number">06</div>
+                            <h3>Functions</h3>
+                            <p>
+                                Create reusable blocks of JavaScript code.
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-6">
+                        <div class="card topic-card p-4">
+                            <div class="topic-number">07</div>
+                            <h3>Arrays</h3>
+                            <p>
+                                Store and manipulate multiple values.
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-6">
+                        <div class="card topic-card p-4">
+                            <div class="topic-number">08</div>
+                            <h3>Objects</h3>
+                            <p>
+                                Store related data using properties and values.
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-6">
+                        <div class="card topic-card p-4">
+                            <div class="topic-number">09</div>
+                            <h3>ES6+</h3>
+                            <p>
+                                Learn modern JavaScript features and syntax.
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-6">
+                        <div class="card topic-card p-4">
+                            <div class="topic-number">10</div>
+                            <h3>DOM</h3>
+                            <p>
+                                Use JavaScript to interact with HTML elements.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- SUMMARY -->
+
+            <div class="section">
+
+                <h2>JavaScript Summary</h2>
+
+                <p>
+                    JavaScript allows us to store data, perform calculations,
+                    make decisions, repeat operations and create interactive
+                    web applications.
+                </p>
+
+                <p>
+                    The basic learning path is:
+                </p>
+
+                <div class="alert alert-success">
+
+                    <strong>
+                        JavaScript
+                        → Logical Programming
+                        → Primitive Data Types
+                        → Variables
+                        → Conditions
+                        → Loops
+                        → Functions
+                        → Arrays
+                        → Objects
+                        → ES6+
+                        → DOM
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <h4>JavaScript Learning Website</h4>
+
+    <p>
+        Learn JavaScript with simple logical examples.
+    </p>
+
+    <p>
+        © 2026 JavaScript Learning
+    </p>
+
+</footer>
+
+
+<!-- INTERNAL JAVASCRIPT -->
+
+<script>
+
+    // Simple JavaScript for website
+
+    console.log("JavaScript Learning Website Loaded");
+
+    // Logical Example
+    let number = 10;
+
+    if (number % 2 === 0) {
+        console.log("Even Number");
+    }
+
+</script>
+
+
+</body>
+</html>
