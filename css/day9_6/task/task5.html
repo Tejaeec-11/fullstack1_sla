@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Profile Card</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            text-align: center;
+            padding: 30px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .students {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .student-card {
+            width: 250px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+
+            transition: 0.5s;
+        }
+
+        .student-card:hover {
+            transform: scale(1.05) translateY(-8px);
+        }
+
+        .student-card img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .student-card h2 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .student-card p {
+            color: #666;
+            font-size: 16px;
+        }
+
+        .mobile {
+            color: #3498db !important;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Student Profile Cards</h1>
+
+    <div class="students">
+
+        <div class="student-card">
+            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Student 1">
+
+            <h2>Arun Kumar</h2>
+
+            <p>Course: BCA</p>
+
+            <p class="mobile">Mobile: 9876543210</p>
+        </div>
+
+
+        <div class="student-card">
+            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Student 2">
+
+            <h2>Priya Sharma</h2>
+
+            <p>Course: B.Sc Computer Science</p>
+
+            <p class="mobile">Mobile: 9876501234</p>
+        </div>
+
+
+        <div class="student-card">
+            <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Student 3">
+
+            <h2>Rahul Raj</h2>
+
+            <p>Course: B.Tech IT</p>
+
+            <p class="mobile">Mobile: 9123456780</p>
+        </div>
+
+    </div>
+
+</body>
+</html>

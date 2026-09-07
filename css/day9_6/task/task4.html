@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Logo Rotation</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 50px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .logos {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .logo {
+            width: 130px;
+            height: 130px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background-color: white;
+            border-radius: 50%;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+
+            font-size: 20px;
+            font-weight: bold;
+            color: #333;
+
+            transition: 1s;
+        }
+
+        .logo:hover {
+            transform: rotate(360deg);
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Company Logo Rotation</h1>
+
+    <div class="logos">
+
+        <div class="logo">Google</div>
+
+        <div class="logo">Microsoft</div>
+
+        <div class="logo">Apple</div>
+
+        <div class="logo">Amazon</div>
+
+        <div class="logo">Tesla</div>
+
+    </div>
+
+</body>
+</html>

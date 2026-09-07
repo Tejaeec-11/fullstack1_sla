@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        when using dom to change the code 
+    </pre>
+     <!--2--> 
+     <h1 id="titless">DOMIA</h1>
+     <p>this is the process for dom</p>
+    <div><h1 class="titlesee">this is the process</h1></div>
+
+    <script>  //2- 
+          // we just  h1,in dom
+        const titless = document.getElementById("titless")
+        titless.innerText = "DOM is easy"
+        const paragraph = document.getElementsByTagName("p")[0]
+        paragraph.innerText = "We can change HTML using DOM"</script>
+</body>
+</html>
