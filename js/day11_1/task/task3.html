@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Task 3 - Push and Pop</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff8e7;
+            padding: 30px;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px #ccc;
+        }
+
+        h1 {
+            color: #d97706;
+        }
+
+        .output {
+            background-color: #fff3cd;
+            padding: 20px;
+            border-left: 5px solid #d97706;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Task 3 - Push and Pop</h1>
+
+    <div class="output" id="output"></div>
+
+</div>
+
+<script>
+
+    let fruits = ["Apple", "Mango", "Orange", "Banana", "Grapes"];
+
+    fruits.push("Pineapple");
+    fruits.push("Watermelon");
+
+    fruits.pop();
+
+    document.getElementById("output").innerHTML =
+        "Final Array: " + fruits;
+
+</script>
+
+</body>
+</html>

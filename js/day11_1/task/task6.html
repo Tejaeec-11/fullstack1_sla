@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Task 6 - Array Methods</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f1f5f9;
+            padding: 30px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px #ccc;
+        }
+
+        h1 {
+            color: #2563eb;
+        }
+
+        .output {
+            background-color: #e0ecff;
+            padding: 20px;
+            border-left: 5px solid #2563eb;
+            margin-top: 20px;
+            line-height: 2;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Task 6 - Array Methods Until concat()</h1>
+
+    <div class="output" id="output"></div>
+
+</div>
+
+<script>
+
+    const fruits = ["Apple", "Mango", "Orange"];
+    const vegetables = ["Carrot", "Potato"];
+
+
+    // Add Banana at the end
+    fruits.push("Banana");
+
+
+    // Remove the last element
+    fruits.pop();
+
+
+    // Add Grapes at the beginning
+    fruits.unshift("Grapes");
+
+
+    // Remove the first element
+    fruits.shift();
+
+
+    // Check total length
+    const totalLength = fruits.length;
+
+
+    // Combine both arrays
+    const finalResult = fruits.concat(vegetables);
+
+
+    document.getElementById("output").innerHTML = `
+        <strong>Fruits:</strong> ${fruits.join(", ")}<br>
+
+        <strong>Total Length:</strong> ${totalLength}<br>
+
+        <strong>Final Result:</strong> ${finalResult.join(", ")}
+    `;
+
+</script>
+
+</body>
+</html>

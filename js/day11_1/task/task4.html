@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Task 4 - Shift and Unshift</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f0ff;
+            padding: 30px;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px #ccc;
+        }
+
+        h1 {
+            color: #7c3aed;
+        }
+
+        .output {
+            background-color: #f3e8ff;
+            padding: 20px;
+            border-left: 5px solid #7c3aed;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Task 4 - Shift and Unshift</h1>
+
+    <div class="output" id="output"></div>
+
+</div>
+
+<script>
+
+    let fruits = ["Apple", "Mango", "Orange"];
+
+    fruits.unshift("Banana");
+
+    fruits.shift();
+
+    document.getElementById("output").innerHTML =
+        "Final Array: " + fruits;
+
+</script>
+
+</body>
+</html>
