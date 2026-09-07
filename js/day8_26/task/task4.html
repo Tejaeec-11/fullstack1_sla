@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 4 - Student Marks</title>
+</head>
+<body>
+<h1>student scoring more than 80</h1>
+<script>
+let students = [
+    {
+        name: "Arun",
+        mark: 75
+    },
+    {
+        name: "Priya",
+        mark: 90
+    },
+    {
+        name: "Kumar",
+        mark: 85
+    },
+    {
+        name: "Divya",
+        mark: 70
+    },
+    {
+        name: "Rahul",
+        mark: 95
+    }
+];
+
+for (let i = 0; i < students.length; i++) {
+    if (students[i].mark > 80) {
+        document.write(students[i].name + "<br>");
+    }
+}
+</script>
+
+</body>
+</html>
