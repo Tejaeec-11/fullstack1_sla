@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div><!--1-->
+        <h1 id="title">This id the process</h1>
+        <button id="btn">click me</button>
+       
+       
+    </div>
+
+    <script>
+        const titleData = document.getElementById("title")
+        const btnData = document.getElementById("btn")
+        
+        btnData.addEventListener("click",()=>{ 
+    
+        if(titleData==="0"){
+             titleData.innerText = "this is the dynamic data"
+        }else{
+               titleData.style.color = "blue"   
+        }
+    })
+    </script>
+</body>
+</html>

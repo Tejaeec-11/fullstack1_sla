@@ -27,12 +27,18 @@
         //The main idea is: DOM lets JavaScript find and change HTML elements.
         //1
         console.log(document);
+        //print dom tree entire html element 
+        //call html connect to js using dom keyword document is html
         const title = document.getElementById("title")
+        //getelementbyid we call bcoz we put id in attribute and attrtitbue name 
        console.log(title);
+       //we call after expresiion put 
        document.getElementsByClassName("titles")
+       //and we use class in attribute so getelemtclass use 
         console.log(document.getElementsByTagName("p"));
-        document.querySelector("#title")
-        document.querySelectorAll(".titles")
+        //we are calling p tag by getelemnettagname becoz p is elemnt  
+       // document.querySelector("#title") just know this 
+        //document.querySelectorAll(".titles") just know this 
     </script>
 </body>
 </html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Color Toggle</title>
+    <style>
+        #box {
+            width: 200px;
+            height: 100px;
+            background-color: red;
+        }
+
+        #box.green {
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="box"></div>
+    <button onclick="toggleColor()">Toggle Color</button>
+
+    <script>
+        function toggleColor() {
+            document.getElementById("box").classList.toggle("green");
+        }
+    </script>
+
+</body>
+</html>

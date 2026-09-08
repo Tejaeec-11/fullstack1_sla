@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom img </title>
+</head>
+<body>
+  
+     <!--0-->
+    <button id="btn">click Adding</button>
+    <h1 id="title"></h1>
+    <!--1merhod-->
+    <img src="" id="imgs">
+    <!--2method-->
+    <a id="link">click to going anotehr page</a>
+
+    <script> 
+        //0
+        const title = document.getElementById("title")
+        const btn = document.getElementById("btn")
+        //img 1
+        const imgs = document.getElementById("imgs")
+        //2
+        const link = document.getElementById("link")
+         //0
+         btn.addEventListener("click",()=>{
+            title.textContent = "this is the text"
+        //img1
+            imgs.src = "../class/asestes_img/spot3.jpeg"
+           
+            //link2.1
+            link.href = "https://github.com/Tejaeec-11/fullstack1_sla"
+            //2.2 onther method direct emthod
+            //when click button it straight went to href
+           // window.location.href = "https://github.com/Tejaeec-11/fullstack1_sla"
+       
+        })        
+     
+      
+    </script>
+</body>
+</html>

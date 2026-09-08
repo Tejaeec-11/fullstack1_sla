@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Direct button call </title>
+</head>
+<body>
+    <pre>this method important not direct</pre>
+    <!--but put on click so textlistner venam dierct click-->
+    <button id="btn">click Adding</button>
+    <h1 id="title"></h1>
+    
+    <script> 
+   
+        const title = document.getElementById("title")
+        const btn = document.getElementById("btn")
+
+         btn.addEventListener("click",()=>{
+            title.textContent = "this is the text"
+         })        
+     
+      
+    </script>
+</body>
+</html>

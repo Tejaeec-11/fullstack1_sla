@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div><!--1-->
+        <h1 id="title">This id the process</h1>
+        <button id="btn">click me</button>
+        <!--11.1, <img src="" />-->
+       
+    </div>
+
+    <script>
+        const titleData = document.getElementById("title")
+        const btnData = document.getElementById("btn")
+        //11.1,1
+       // const link = document.getElementsByTagName(img)
+        //1
+                                                    //eventlister is()
+       // btnData.addEventListener(click,()=>{
+        
+                                                     //2//try this it show error so use "" for everything
+       btnData.addEventListener("click",()=>{
+        //2                                                //btn for change when click
+         titleData.innerHTML = "<i>this is the dynamic data</i>"//we can tag in inner html this is choice
+        
+        //2.1
+         //titleData.innerHTML += "this is the dynamic data" //try this hide 22 line 
+        //or3
+         // titleData.textContent = "<i>this is the dynamic data</i>"        //it only dyanmic data this is not chnage becasue it already in tag and we mention here so only daynamic change 
+         titleData.style.color = "blue"                                            //add style in css          //text contecnt we cant add i tag
+        //4
+        // titleData.innerText = "this is the dynamic data"    //we cant add ement //text contect any vara words mattu change same word not replace but innerText same irutha kuda ella change agum
+      
+      
+        //11.1,1
+       //link.src  = "button.html"
+    
+    })
+    </script>
+</body>
+</html>

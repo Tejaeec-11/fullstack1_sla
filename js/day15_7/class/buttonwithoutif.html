@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hide and show using true or flase-toggle process </title>
+    <style>
+       #box{
+        background-color: black;
+        color: white;
+        padding: 10px;
+      
+       } 
+    </style>
+</head>
+<body>
+    <button id="showbtn" >hide</button>
+    <div id="box">this is box</div>
+    
+    
+    <script>
+        const showbtn = document.getElementById("showbtn")
+         const box = document.getElementById("box")
+         
+          showbtn.addEventListener("click",()=>{
+            console.log(box);
+
+            if(box.style.display === "none"){
+                box.style.display = "block"
+                
+            }else{
+                box.style.display = "none"
+
+
+            }
+          })
+
+        
+    </script>
+</body>
+</html>

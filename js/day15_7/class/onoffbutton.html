@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hide and show using true or flase</title>
+    <style>
+       #box{
+        background-color: black;
+        color: white;
+        padding: 10px;
+       } 
+    </style>
+</head>
+<body>
+    <button id="showbtn">hide</button>
+    <div id="box">this is box</div>
+    
+    
+    <script>
+        const showbtn = document.getElementById("showbtn")
+         const box = document.getElementById("box")
+         
+        //1 let ison = false //it fasle 1st 
+         
+         let ison = false //is false when put 30 line ! it become true 
+        showbtn.addEventListener("click",()=>{ //when click btn
+
+           //1 ison = true //it become true
+            ison = !ison 
+          
+            if(ison){
+             box.style.display ="none"
+            showbtn.textContent ="show"
+          
+          
+            }else {
+            box.style.display ="block"
+            showbtn.textContent ="hide"
+              box.style.backgroundColor = "blue"  
+            }
+          //1   ison = false
+          //it only time use every time refrese use ! for better
+         })
+
+
+         //queryselector for class 
+         //id mostly used 
+         //if class we need query to direct class attribute
+    </script>
+</body>
+</html>

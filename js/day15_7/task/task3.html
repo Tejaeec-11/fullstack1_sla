@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Smooth Card Toggle</title>
+    <style>
+        .card {
+            width: 300px;
+            padding: 15px;
+            border: 1px solid #ccc;
+        }
+
+        .details {
+            max-height: 0;
+            overflow: hidden;
+            opacity: 0;
+            transition: max-height 0.5s, opacity 0.5s;
+        }
+
+        .card.show .details {
+            max-height: 200px;
+            opacity: 1;
+        }
+
+        img {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card" id="card">
+        <img src="https://via.placeholder.com/300x150" alt="Card Image">
+        <h2>Card Heading</h2>
+
+        <div class="details">
+            <p>This is the card paragraph.</p>
+        </div>
+
+        <button onclick="toggleDetails()">Show Details</button>
+    </div>
+
+    <script>
+        function toggleDetails() {
+            document.getElementById("card").classList.toggle("show");
+        }
+    </script>
+
+</body>
+</html>

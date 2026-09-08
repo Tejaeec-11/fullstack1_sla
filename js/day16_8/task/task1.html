@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 1</title>
+
+    <style>
+        .box {
+            width: 200px;
+            height: 100px;
+            background-color: lightgray;
+            color: black;
+            padding: 20px;
+            margin-bottom: 10px;
+        }
+
+        .active {
+            background-color: blue;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="box" id="box">Hello World</div>
+
+    <button id="btn">Add Active Class</button>
+
+    <script>
+        const box = document.getElementById("box");
+        const btn = document.getElementById("btn");
+
+        btn.addEventListener("click", function () {
+            box.classList.add("active");
+        });
+    </script>
+
+</body>
+</html>

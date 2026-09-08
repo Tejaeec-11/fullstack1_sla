@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hide and show using true or false-toggle process</title>
+    <style>
+       #box1 {
+        background-color: black;
+        color: white;
+        padding: 10px;
+        transition: 1s ease-in;
+        opacity: 0;
+       }
+
+       .show {
+        opacity: 1;
+        transform: rotate(20deg);
+       }
+    </style>
+</head>
+<body>
+
+    <button id="showbtn">show</button>
+    <div id="box1" class="show">this is box</div>
+
+    <script>
+        const showbtn = document.getElementById("showbtn")
+        const box = document.getElementById("box1")
+
+        showbtn.addEventListener("click", () => {
+            box.classList.toggle("show")
+        })
+    </script>
+</body>
+</html>
