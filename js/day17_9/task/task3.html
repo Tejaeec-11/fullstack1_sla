@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Product Details</title>
+</head>
+<body>
+
+    <h2>Product Details</h2>
+
+    <form id="productForm">
+        <input type="text" id="productName" placeholder="Product Name" required>
+        <input type="number" id="price" placeholder="Price" required>
+        <input type="text" id="category" placeholder="Category" required>
+        <button type="submit">Add Product</button>
+    </form>
+
+    <div id="productList"></div>
+
+    <script>
+        let products = [];
+
+        document.getElementById("productForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            let productName = document.getElementById("productName").value;
+            let price = document.getElementById("price").value;
+            let category = document.getElementById("category").value;
+
+            let product = {
+                productName: productName,
+                price: price,
+                category: category
+            };
+
+            products.push(product);
+
+            let productList = document.getElementById("productList");
+            productList.innerHTML = "";
+
+            products.forEach(function(product) {
+                let div = document.createElement("div");
+
+                div.innerHTML = `
+                    <h3>${product.productName}</h3>
+                    Price: ${product.price}<br>
+                    Category: ${product.category}
+                `;
+
+                productList.appendChild(div);
+            });
+
+            document.getElementById("productForm").reset();
+        });
+    </script>
+
+</body>
+</html>
