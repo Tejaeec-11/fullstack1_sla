@@ -1,0 +1,27 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>query box hide and show-not use </title>
+</head>
+<body>
+    <!--querall   -->
+    <div class="box">
+        <h1 class="title">this is the text 1</h1>  
+        <h1 class="title">this is the text 2</h1>
+       <h1 class="title" >this is the text 3</h1>
+       <button class="btn">click</button> 
+       
+    </div>
+
+    <script>
+       
+       const heading =document.querySelector(".title")
+       const btn = document.querySelector(".btn")
+       //click is th eevent and ()this is call back funcation  and =>{} is arrow function
+       btn.addEventListener("click",()=>{
+          heading.textContent = "this is selector"
+       })
+      
+ </script>
+</body>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>query selector & form</title>
+</head>
+<body>
+    <!--plain class pota ella bring but query selector class 
+    pota only bring 1 st value an dname and blance not returnn it act as id -->
+    <div class="box">
+        <h1 class="title">this is the text</h1>  <!--in output it show 1st match element balance 2 title not show-->
+        <h1 class="title">this is the text</h1>
+        <h1 class="title">this is the text</h1>
+        <!--id only use one give name same name not use for many-->
+         <h1 class="title" id="box1">this is the text</h1>
+    </div>
+
+    <script>
+        //class use query and .
+       const heading =document.querySelector(".title")
+       console.log(heading)
+        //id normal #
+         const headingd =document.querySelector("#box1")
+         console.log(headingd)
+
+    </script>
+</body>
+</html>

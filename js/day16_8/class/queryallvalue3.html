@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>query selector 2nd type (all)-not use </title>
+</head>
+<body>
+    <!--querall it come as array i need to content of all 3 
+    there in output so we use for loop we cNNOT put console.log 3 time   -->
+    <div class="box">
+        <h1 class="title">this is the text 1</h1>  
+        <h1 class="title">this is the text 2</h1>
+       <h1 class="title" >this is the text 3</h1>
+        
+       
+    </div>
+
+    <script>
+       
+       const heading =document.querySelectorAll(".title")
+       console.log(heading[0].textContent)
+             //a<3;a++ so it print all three
+       for(a=0;a<heading.length;a++){
+        console.log(heading[a].textContent);
+        }
+ </script>
+</body>

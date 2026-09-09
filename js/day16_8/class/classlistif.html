@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>class list using if</title>
+    <style>
+        .active{
+          background-color: aqua;
+          color: white ; 
+          padding: 20px;
+        }
+    </style>
+</head>
+<body>
+   <div class="box"> 
+          <h1 class="title">this is text 1</h1>
+            <h1 class="title">this is text 1</h1>
+            <button class="btn">click</button>
+    </div>
+    <script> 
+         const box =  document.querySelector(".box")
+         const btn = document.querySelector(".btn")
+
+         btn.addEventListener("click",()=>{
+          const value=  box.classList.add("active") 
+         //1 try this 
+          //console.log(value);
+          //log potu chekc pann ait return undefined value
+
+          //2
+          if(value){
+            box.classList.add("active") 
+          }else{
+            //2
+           // box.classList.remove("active") 
+            //it false so undefined no click panna onu agathu becoz it false
+          //3
+          box.classList.add("active") 
+        }
+            
+         })
+    </script>
+</body>
+</html>

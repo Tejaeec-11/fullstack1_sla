@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>query selector 2nd type (all)-not use</title>
+</head>
+<body>
+    <!--1.Queery all output bring as array or all match elemntS -->
+    <div class="box">
+        <h1 class="title">this is the text 1</h1>  
+        <h1 class="title">this is the text 2</h1>
+       <h1 class="title" >this is the text 3</h1>
+        
+        <!--2.if you want to see vaklue use this -->
+        <h1 class="titles" >this is the text4</h1>
+    </div>
+
+    <script>
+        //1.class use queryall and .
+       const heading =document.querySelectorAll(".title")
+       console.log(heading)
+
+       //2.for value
+        const headingd =document.querySelectorAll(".titles")
+       console.log(headingd[0].textContent)
+       
+
+    </script>
+</body>
