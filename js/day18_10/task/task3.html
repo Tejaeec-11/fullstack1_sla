@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DashBoard</title>
+</head>
+<body>
+    <h1>Dashboard</h1>
+    <div id="showing">
+    </div>
+
+    <button id="btnlogout">Logout</button>
+
+    <script>
+        const logout = document.getElementById("btnlogout")
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const checkValid = JSON.parse(localStorage.getItem("isActive"))
+
+            if (!checkValid) {
+                alert("You're Not a Valid User please login")
+                window.location.href = "login.html"
+                return
+            }
+
+            const showing = document.querySelector("#showing")
+            const users = JSON.parse(localStorage.getItem("isActive"))
+
+            showing.innerHTML = `<h2>Welcome ${users.name}</h2>
+<p>Email: ${users.email}</p>`
+        })
+
+        logout.addEventListener("click", () => {
+            localStorage.removeItem("isActive")
+            window.location.href = "login.html"
+        })
+    </script>
+</body>
+</html>

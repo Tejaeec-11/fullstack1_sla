@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+</head>
+<body>
+    <section>
+        <h1>Register</h1>
+        <div>
+            <form id="myform">
+                <input type="text" id="username" placeholder="Enter the Name" />
+                <input type="email" id="useremail" placeholder="Enter the Email" />
+                <input type="password" id="userpassword" placeholder="Enter the Password" />
+                <button id="registerbtn">Register</button>
+            </form>
+            <p>If you Already have Account? <a href="login.html">Login</a></p>
+        </div>
+    </section>
+
+    <section>
+        <table border="1" cellpadding="10" cellspacing="3">
+            <thead>
+                <tr>
+                    <th>UserId</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody id="showingdata">
+            </tbody>
+        </table>
+    </section>
+
+    <script>
+        const registerBtn = document.querySelector("#registerbtn")
+        const userName = document.querySelector("#username")
+        const userEmail = document.querySelector("#useremail")
+        const userPassword = document.querySelector("#userpassword")
+        const myform = document.getElementById("myform")
+        const mydatasshow = document.querySelector("#showingdata")
+
+        mydatasshow.innerHTML = ""
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const getLocalData = JSON.parse(localStorage.getItem("mydatas")) || []
+
+            getLocalData.forEach((e) => {
+                mydatasshow.innerHTML += `<tr><td>${e.userid}</td><td>${e.name}</td><td>${e.email}</td></tr>`
+            })
+        })
+
+        registerBtn.addEventListener("click", (e) => {
+            e.preventDefault()
+
+            const name = userName.value
+            const email = userEmail.value
+            const password = userPassword.value
+
+            const formDatas = { userid: Date.now(), name, email, password }
+            const getLocalData = JSON.parse(localStorage.getItem("mydatas")) || []
+
+            const emailcheck = getLocalData.find((e) => e.email == email)
+
+            console.log(emailcheck);
+
+            if (emailcheck) {
+                alert("Email Already use")
+                return
+            }
+
+            getLocalData.push(formDatas)
+
+            localStorage.setItem("mydatas", JSON.stringify(getLocalData))
+
+            alert("Successfully Register")
+            window.location.reload()
+            myform.reset()
+
+            setInterval(() => {
+                window.location.href = "login.html"
+            }, 2000)
+        })
+    </script>
+</body>
+</html>
+
+

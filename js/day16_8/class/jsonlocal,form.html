@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>*array of object,locla storage push</title>
+</head>
+<body>
+   <pre>
+    json 
+    1. light weightdata
+    2. double "" notation use to called 
+    3. text obejct  podanum
+    4. local only accept json
+    1.array-
+
+    2.local storage - 
+    *no need backene donly front end use local strog it only for front end
+    *it only accepet text ,mimimual data base use pannala
+    *object use json 
+    3.1 text {
+        "userId":1, this called ""object not string so put ""notation jon array of object
+        "id":1, all this caled json data,js iruka json
+        "title":"delectus"
+        "completed":false
+    }
+    userID is object and "userID" pota it change as string but not string,this is called array of abject suign json{
+        "userId":1, 
+        "id":1,
+        "title":"delectus"
+        "completed":false
+    }  
+    2kb oru object ,100 data = 1mb,iduvey json string 1kp = 0.01 kb ,100 data = no mb , but 1L data = 1mb but localstorng only 10 mb tha storg cabable but 10 mela pona data close for user data store store object more mb for each user so json less mb now dson 
+    3. vs  object ? object direct use ,but multiply object use panna mudiyathu,or nested object 
+    4. en object,en array of object, en text? why array of object means -for that array for multipy data and object to call that why array of object or multiply object
+    5.why prmint not use ? becasue sinlge line, but non primit array multile line collect of dtata,em multiply user
+     data ex) name,age,email,password it coloect why object not name
+     =>array we name and value we give name to get data or index use but loop aganum
+       
+     collect of data show panna iin html 
+     1. tabke
+     2. liat -ul il
+     3. div
+     for single data use 
+     1.h1
+     2.p
+
+     we know acces array buy for loop index but use panna n no user for loop load increas brower not work
+     they use higher order arra method 5-tis for bussines logic
+     1. for each 
+     2. map 
+     3. find
+     4. filter
+     5.reduce
+    </pre> 
+    <hr>
+     <div>
+       <form id="reset" >
+        <table cellpadding="5"> <!--cellspace one by one we give-->
+            <tr>
+                <td><label for="">Enter the name </label></td>
+                <td><input type="text" id="inputName" placeholder="Enter the name"></td>
+            </tr>
+            <tr>
+                <td><label for="">Enter the Mobile </label></td>
+                <td><input type="text" id="inputMobile" placeholder="Enter the Mobile "></td>
+            </tr>
+            <tr>
+             <td><label for="">Enter the age </label></td>
+             <td><input type="text" id="inputAge" placeholder="Enter the Age"></td>
+            </tr>
+            <tr>
+                <td><input type="submit" id="submit" value="Register"></td>
+                <!--we can add reset for next data no need to refresh or give id  -->
+            </tr>
+          <!--  //use this alosm  <tr><td><input type="reset"></td></tr> -->
+        </table>
+       </form>
+    </div>
+
+
+    <script>
+        //1
+        const submit = document.getElementById("submit")
+       
+
+         //2-array now the out is different 
+        const result = []
+        //1
+        submit.addEventListener("click",(e)=>{
+        e.preventDefault()
+      
+        const userName = document.getElementById("inputName").value
+        const userMobile = document.getElementById("inputMobile").value
+        const userAge = document.getElementById("inputAge").value
+        
+        const userDatas ={userName,userMobile,userAge}
+        console.log(userDatas)
+        //4
+        localStorage.getItem("registerdata") //now it js can acess local stroag e
+        // **but it in string fromat mate so we need convert into array of object convert use 
+        const result = JSON.parse(localStorage.getItem("registerdata")) || []//of not put ths ||[] thi sis empty array
+         //new data podu register it stoe anfain referesh new data podu refresh
+          //2
+        result.push(userDatas)
+        
+        console.log(result); 
+        //4 js to convert  local strong we ued stringfiy 
+        console.log(JSON.stringify(result));//used to convert js object into string object
+         localStorage.setItem("registerdata",JSON.stringify(result))//or else use as expression
+        alert("successfully register")
+        //but output 1st time what put same again if new user put but same happenand again until refresh we add new and old is already there but new data we need to refresh 
+        //4 when page refresh from empty but onsol,pplicationn already previous data store but now again page refresh application json alreay store dat but js dont have straight acess to json in application or local iruku json theriyathu
+        //we need to tell js that previous data store in local strogae line 98 syntax for js connect to loca stroage
+        //3 try this
+       // localStorage.setItem("registerdata",JSON.stringify(result))//or else use as expression
+        //json.stringfy nly
+        //arary stroe pannna refresh panna all data earse 
+        // but local store age doe snot erase any data in local storg age 
+
+
+        //set iteam-means insert
+        //get item 
+        //remove iteam tatal 3 type in locl storgae
+
+       //reset id 2nd method -js dom not use not use beacuse deprecate
+      //const formData= document.getElementById("reset")
+      //fromData.reset()
+    
+      //3rd method reset 
+      window.location.reload()
+    }) 
+     </script>
+</body>
+</html>

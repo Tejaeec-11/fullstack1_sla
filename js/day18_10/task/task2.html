@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    <section>
+        <h1>Login</h1>
+        <div>
+            <form id="myform">
+                <input type="email" id="useremail" placeholder="Enter the Email" />
+                <input type="password" id="userpassword" placeholder="Enter the Password" />
+                <button id="loginbtn">Login</button>
+            </form>
+            <p>Don't have a Account Please Register? <a href="register.html">Register</a></p>
+        </div>
+    </section>
+
+    <script>
+        const loginBtn = document.querySelector("#loginbtn")
+        const userEmail = document.querySelector("#useremail")
+        const userPassword = document.querySelector("#userpassword")
+        const myform = document.getElementById("myform")
+
+        loginBtn.addEventListener("click", (e) => {
+            e.preventDefault()
+
+            const email = userEmail.value
+            const password = userPassword.value
+
+            const getLocalData = JSON.parse(localStorage.getItem("mydatas"))
+
+            const users = getLocalData.find((e) => e.email == email && e.password == password)
+
+            console.log(users);
+
+            if (users) {
+                localStorage.setItem("isActive", JSON.stringify(users))
+                myform.reset()
+
+                setInterval(() => {
+                    window.location.href = "index.html"
+                }, 1000)
+            } else {
+                alert("Invalid Password & Email")
+            }
+        })
+    </script>
+</body>
+</html>

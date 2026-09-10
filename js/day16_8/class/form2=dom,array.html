@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>from-Dom</title>
+</head>
+<body>
+    <pre>
+        from core of Dom every project has login and logout so Dom this important 
+    </pre>
+    <hr>
+    <div>
+       <form>
+        <table cellpadding="5"> <!--cellspace one by one we give-->
+            <tr>
+                <td><label for="">Enter the name </label></td>
+                <td><input type="text" id="inputName" placeholder="Enter the name"></td>
+            </tr>
+            <tr>
+                <td><label for="">Enter the Mobile </label></td>
+                <td><input type="text" id="inputMobile" placeholder="Enter the Mobile "></td>
+            </tr>
+            <tr>
+             <td><label for="">Enter the age </label></td>
+             <td><input type="text" id="inputAge" placeholder="Enter the Age"></td>
+            </tr>
+            <tr>
+                <td><input type="submit" id="submit" value="Register"></td>
+            </tr>
+        </table>
+       </form>
+    </div>
+
+
+    <script>
+        //1
+        const submit = document.getElementById("submit")
+        
+
+         //2-array now the out is different 
+        const result = []
+        //1
+        submit.addEventListener("click",(e)=>{
+        e.preventDefault()
+      
+        const userName = document.getElementById("inputName").value
+        const userMobile = document.getElementById("inputMobile").value
+        const userAge = document.getElementById("inputAge").value
+        
+        const userDatas ={userName,userMobile,userAge}
+        console.log(userDatas)
+        
+        
+       
+          //2
+        result.push(userDatas)
+        
+        console.log(result);
+        }) 
+       //try thiis
+       //console.log(result);
+           
+    </script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>from-Dom</title>
+</head>
+<body>
+    <pre>
+        from core of Dom every project has login and logout so Dom this important 
+    </pre>
+    <hr>
+    <div>
+       <form>
+        <table cellpadding="5"> <!--cellspace one by one we give-->
+            <tr>
+                <td><label for="">Enter the name </label></td>
+                <td><input type="text" id="inputName" placeholder="Enter the name"></td>
+            </tr>
+            <tr>
+                <td><label for="">Enter the Mobile </label></td>
+                <td><input type="text" id="inputMobile" placeholder="Enter the Mobile "></td>
+            </tr>
+            <tr>
+             <td><label for="">Enter the age </label></td>
+             <td><input type="text" id="inputAge" placeholder="Enter the Age"></td>
+            </tr>
+            <tr>
+                <td><input type="submit" id="submit" value="Register"></td>
+            </tr>
+        </table>
+       </form>
+    </div>
+
+
+    <script>
+        //1
+        const submit = document.getElementById("submit")
+
+        submit.addEventListener("click",(e)=>{//add e becuz to stop reload when submit,e means event
+         //e or i anything it take as e 
+        e.preventDefault()//default prevent pannnu iidu *
+        //default when button use inside form it reload default in html to protect it we use prevent default to stop reloD
+       
+        const userName = document.getElementById("inputName").value
+        const userMobile = document.getElementById("inputMobile").value
+        const userAge = document.getElementById("inputAge").value
+        
+        const userDatas ={userName,userMobile,userAge}//this enhandes object means username is key in const same and inputname is value like for 3
+        
+        console.log(userDatas)
+        //it output is object down 
+        //now it all store in object but we need to push in array  when user nenter details   
+        
+        //2-array now the out is different 
+        // push input in array 
+        //there RE 3 TYPE ONE 
+        //1.ARRAY 1ST method 
+        //2. local storage - no need refresh,reload,page refresh only i can delete
+        //3. section storage 
+        //4. cookie storage 
+        // total 3 storage es6+ and html 5 give 
+        const result = []//array in refrebnce cost let no probmlem but primit data type const use panna maradhu
+       
+        result.push(userDatas)
+        console.log(result);
+        
+        }) 
+        //in output
+        //after register it reset for new data or new user info 
+        //two method 1.reload  2.input empty value 3. form reload  only not webpage  
+           
+    </script>
+</body>
+</html>
