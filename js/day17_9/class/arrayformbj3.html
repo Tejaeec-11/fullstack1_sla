@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form + object+validation </title>
+</head>
+<body>
+    <pre>give valied like name in name ,age means age adn number means number</pre><br><hr>
+   <section>
+    <form>
+        <input type="text" placeholder="enter the name" id="username">
+        <input type="text" placeholder="enter the age" id="userage">
+        <input type="text" placeholder="enter the mobile" id="usermobile">
+        <button id="btn" >Register</button> <!--button or input our wish-->
+    </form>
+    <div id="result" ></div>
+   </section>
+   
+   <script>
+         const btn = document.getElementById("btn")
+
+
+         const newArray = []
+
+         btn.addEventListener("click",(e)=>{
+            e.preventDefault()
+ 
+            const username = document.getElementById("username").value
+            const userage = document.getElementById("userage").value
+            const usermobile = document.getElementById("usermobile").value
+             //this valid
+            let result = document.getElementById("result")
+             if(username == ""  || userage == "" || usermobile == ""){
+              //  alert("fill the form")
+              //  result.textcontent = "fill the form"
+              //  result.style.color = "red"
+                return
+            }
+           
+           
+           
+            const obj = {userid:Date.now(),username,userage,usermobile}
+         
+            newArray.push(obj)
+
+             console.log(newArray);
+             
+
+            result =" "
+          //use foreach,map to take obj from array of object
+            newArray.forEach((e)=>{
+             
+                result.innerHTML += `<div> <h3> this is the data for the usernsme ${obj.username} </h3> 
+            <p>this is the age: ${obj.userage}</p>
+            <p> this is mobile: ${obj.usermobile}</p> </div>`
+           
+            })
+
+         // console.log(obj)
+           
+        
+          })
+   </script>
+</body>
+</html>

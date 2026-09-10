@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js form handling using */-+</title>
+</head>
+<body>
+    <section>
+         <div>
+            <form>
+                <input type="text" id="username" placeholder="Enter the Name">
+                <input type="text" id="num" placeholder="Enter the Name">
+                <button onclick="handlechange(event)">Add +</button>
+                 <button onclick="handlesub(event)">sub -</button>
+            </form>
+            <p id="result"></p>
+         </div>
+  </section>
+
+    <script>
+        //for add 2
+        //add event listener apdi pann avenam but prevent deafaut evemt 
+        const handlechange = (event)=>{
+            event.preventDefault()//used for not refresh 
+
+        const username = document.getElementById("username").value
+         const num = document.getElementById("num").value
+        const result = document.getElementById("result")
+         //1
+        //we can +-*/ user name give 2 digit and num we need to give 2 digit
+       // const showing = username + num
+
+
+       //2
+         const showing = Number(username) + Number(num)
+        //console.log(username)  
+
+        result.textContent = showing
+    }
+     //for sub 2
+     const handlesub =(event)=>{
+         event.preventDefault()//used for not refresh 
+
+        const username = document.getElementById("username").value
+         const num = document.getElementById("num").value
+        const result = document.getElementById("result")
+
+         const showing = Number(username) - Number(num)
+         
+        result.textContent = showing
+    }
+     
+    
+
+     
+    </script>
+</body>

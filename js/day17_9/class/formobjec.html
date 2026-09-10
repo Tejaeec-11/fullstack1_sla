@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form + object</title>
+</head>
+<body>
+   <section>
+    <form>
+        <input type="text" placeholder="enter the name" id="username">
+        <input type="text" placeholder="enter the age" id="userage">
+        <input type="text" placeholder="enter the mobile" id="usermobile">
+        <button id="btn" >Register</button> <!--button or input our wish-->
+    </form>
+    <div id="result" ></div>
+   </section>
+   
+   <script>
+         const btn = document.getElementById("btn")
+
+
+
+
+         btn.addEventListener("click",(e)=>{
+            e.preventDefault()
+ 
+            const username = document.getElementById("username").value
+            const userage = document.getElementById("userage").value
+            const usermobile = document.getElementById("usermobile").value
+            const result = document.getElementById("result")
+            const obj = {userid:Date.now(),userage,usermobile}
+         
+        
+         
+         
+          console.log(obj)
+            result.innerHTML += ` <h3> this is the data for the usernsme ${obj.username} </h3> 
+            <p>this is the age: ${obj.userage}</p>
+            <p> this is mobile: ${obj.usermobile}</p>`
+          //  1 window.location.reload() it reload imetialy so not use this instead use reset in html
+            
+          //so try this it also refresh soon 2
+          //setTimeout(()=>{
+           //     window.location.reload()
+          //  },3000) //3 sec reload s we change 10 or 5
+          })
+   </script>
+</body>
+</html>
