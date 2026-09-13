@@ -1,0 +1,166 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>register</title>
+</head>
+<body>
+    <section>
+        <h1>Register</h1>
+        <div>
+            <form id="myform">
+                <input type="text" id="username" placeholder="Enter the Name" />
+                <input type="email" id="useremail" placeholder="Enter the Email" />
+                <input type="password" id="userpassword" placeholder="Enter the Password" />
+                <button id="registerbtn">Register</button>
+            </form>
+            <p>If your Already have Account? <a href="login.html">Login</a></p>
+        </div>
+    </section>
+
+    <section>
+        <table border="1" cellpadding="10" cellspacing="3">
+            <thead>
+                <th>UserId</th>
+                <th>Name</th>
+                <th>Email</th>
+            </thead>
+            <tbody id="showingdata">
+                
+            </tbody>
+        </table>
+    </section>
+    <script>
+        const registerBtn = document.querySelector("#registerbtn")
+const userName = document.querySelector("#username")
+const userEmail = document.querySelector("#useremail")
+const userPassword = document.querySelector("#userpassword")
+const myform = document.getElementById("myform")
+
+const mydatasshow = document.querySelector("#showingdata")
+
+mydatasshow.innerHTML = ""
+document.addEventListener("DOMContentLoaded",()=>{
+
+
+
+    const getLocalData = JSON.parse(localStorage.getItem("mydatas")) || []
+
+     getLocalData.forEach((e)=>{
+
+        mydatasshow.innerHTML += `<tr><td>${e.userid}</td><td>${e.name}</td><td>${e.email}</td></tr>`
+
+     })
+
+     
+
+
+})
+
+
+registerBtn.addEventListener("click",(e)=>{
+
+    e.preventDefault()
+    const name = userName.value
+    const email = userEmail.value
+    const password = userPassword.value
+    
+    const formDatas = {userid:Date.now(),name,email,password}
+    const getLocalData = JSON.parse(localStorage.getItem("mydatas")) || []
+      
+    const  emailcheck = getLocalData.find((e)=>e.email==email)
+     
+    console.log(emailcheck);
+    
+
+    if(emailcheck){
+        alert("Email Already use")
+        return
+    }
+
+    getLocalData.push(formDatas)
+     
+    
+
+    localStorage.setItem("mydatas",JSON.stringify(getLocalData))
+
+    alert("Successfully Register") 
+    window.location.reload()
+    myform.reset()
+
+    setInterval(()=>{
+
+        window.location.href = "login.html"
+
+    },2000)
+    
+
+})//regsiter data same put in login ooage if not put same it define dundefine if u put same data in login page console it show array or undefined 
+    </script>
+</body>
+</html>
+
+
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>   reg.html,index.js
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+</head>
+<body>
+    <section>
+        <h1>Register</h1>
+        <div>
+            <form id="myform">
+                <input type="text" id="username" placeholder="enter your name">
+                <input type="email" id="useremail" placeholder="enter your email">
+                <input type="password" id="userpassword" placeholder="enter your password">
+                <button id="registerbtn">Register</button>
+            </form>
+            <p>if your already have account? <a href="login.html">login</a> </p>
+        </div>
+    </section>
+    
+
+    <script>
+        const registerBtn = document.querySelector('registerbtn')
+        const userName = document.querySelector('username')
+        const userEmail = document.querySelector('useremail')
+        const userPassword = document.querySelector('userpassword')
+        const myform = document.getElementById("myform")
+           //this step for take data when click button enter name ,email,password
+           registerbtn.addEventListener("click",(e)=>{  //button click 
+             e.preventDefault()//from default reload
+            const name = userName.value
+             const email = userEmail.value
+              const password = userPassword.value
+             
+              //after 17 line we need to stroge user datain local storage after clickc user enter dtiail we need to stroge this 
+            const formDatas = {userid:Date.now(),name,email,password} //crete a table in local stroge this is the syntax |name|email|paswrod down million of data 
+                            //{this is fo runquie id }
+              const getLocalData = JSON.parse(localStorage.getItem('mydatas')) || []
+          
+              getLocalData.push(formDatas)
+              
+              
+              
+            localStorage.setItem("mydatas",JSON.stringify(getLocalData))
+           
+            alert("Sucessfully Register")
+            window.location.reload()
+            myform.reset()
+           //this 24 to 28 and 30 to 33 and 36,28,40,44,45,46,48 this is basic for form 
+           //after register wne tto login in 2sec 49 under line
+           //this isbuildin ( an dtwo argu ass one call back and anoteh rtime
+           setInterval(()=>{
+            window.location.href = "login.html"
+           },2000)//after two login page go after register 
+        
+        
+        })
+    </script>
+</body>
+</html> this is explain this down sir code --> 

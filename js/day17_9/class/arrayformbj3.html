@@ -3,15 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>form + object+validation </title>
+    <title>****form + object+validation map,foreach both try</title>
 </head>
 <body>
-    <pre>give valied like name in name ,age means age adn number means number</pre><br><hr>
+    <pre>give valied like name in name ,age means age adn number means number,
+        1.foreach -retrun panna is statement for loop alrenate that for each to lloop array but it never return e6+ for oda alternate foreach
+        2. map -map return new array return pannu tranfrom pannu
+        33 if foreach varala na map us epannala 
+        4.add alert mean sfill the form 
+        5. them add age below 18 thenn alert for that too 
+        6. the add mobli no condition and alert for that 
+        7.reset
+    </pre><br><hr>
    <section>
-    <form>
-        <input type="text" placeholder="enter the name" id="username">
-        <input type="text" placeholder="enter the age" id="userage">
-        <input type="text" placeholder="enter the mobile" id="usermobile">
+    <form id="myform">
+        <input type="text" placeholder="enter the name"  id="username">
+        <input type="text" placeholder="enter the age"  id="userage">
+        <input type="text" placeholder="enter the mobile"  id="usermobile">
         <button id="btn" >Register</button> <!--button or input our wish-->
     </form>
     <div id="result" ></div>
@@ -29,36 +37,61 @@
             const username = document.getElementById("username").value
             const userage = document.getElementById("userage").value
             const usermobile = document.getElementById("usermobile").value
-             //this valid
-            let result = document.getElementById("result")
-             if(username == ""  || userage == "" || usermobile == ""){
+             
+            
+            // we give this because username or age or moblie if any one not filll alert message come in screen tell user to fill  the formm full 
+            //this valid try this last 
+          let result = document.getElementById("result")
+            if(username == "" || userage == "" || usermobile == ""){
+               alert("fill the form")
+                //line 40,41,44,45 for alert message 
+            // and this line for show in screen 44 add 40
+            result.textContent = "fill the form "
+         //   result.style.color = "red"   //choice for alert 
+                return 
+            }
+          
+          //reule for age // we can write valid only in if condition
+          if(userage < 18) {
+             alert("You cant access")
+            return
+            }
+                 // usermobile < 10 if we put like this we cant add 10 digit 
+                 // we only put 10 mela iruka number only for only 10 number we need to add length
+              if(usermobile.length > 10 || usermobile.length < 10 ) {
+             alert("please add 10 digit")
+            return
+            }//for only 10 digit dont use < instwad use == not give <=
+          
+           //  let result = document.getElementById("result")
+             //if(username == ""  || userage == "" || usermobile == ""){
               //  alert("fill the form")
               //  result.textcontent = "fill the form"
               //  result.style.color = "red"
-                return
-            }
-           
-           
-           
-            const obj = {userid:Date.now(),username,userage,usermobile}
+               // return
+            //}
+           const obj = {userid:Date.now(),username,userage,usermobile}
          
             newArray.push(obj)
 
-             console.log(newArray);
+              console.log(newArray); 
+              // it empty it 19,20,21 for empty for register previes data not show in name,age,number that wgy
+              document.getElementById("myform").reset()//this line for empty
+            
              
-
-            result =" "
+           //we 79mput this so pervious data not come that why before referesh data we put this 79 we put or not put our chose
+            result.innerHTML =" " //try ths 1st with result with outresult give same output
           //use foreach,map to take obj from array of object
-            newArray.forEach((e)=>{
+            newArray.forEach((e)=>{ //them put map here newarray.map
              
-                result.innerHTML += `<div> <h3> this is the data for the usernsme ${obj.username} </h3> 
-            <p>this is the age: ${obj.userage}</p>
-            <p> this is mobile: ${obj.usermobile}</p> </div>`
+                result.innerHTML += `<div><h3> this is the data for the usernsme ${e.username} </h3> 
+            <p>this is the age: ${e.userage}</p>
+            <p> this is mobile: ${e.usermobile}</p></div> `
            
             })
 
          // console.log(obj)
-           
+         
         
           })
    </script>
