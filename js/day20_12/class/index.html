@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>url-fetch</title>
+</head>
+<body>
+    <pre>https://dummyjson.com/products we going to show this oon screen </pre> <br>
+    <div id="showingdata"></div>
+    <script>
+        const arrobj = [
+        {name:"react",course:"Node"},
+        {name:"Node",course:"JS"},
+        {name:"Next",course:"Node"},
+     {name:"Next",course:"Node"},
+     {name:"Next",course:"Node"},
+    , {name:"Next",course:"Node"}]
+        const show = document.querySelector("#showingdata")
+        show.innerHTML = " "
+        document.addEventListener("DOMContentLoaded",()=>{
+        arrobj.forEach((e)=>{
+            show.innerHTML += `<p>${e.name}</p>
+            <p>${e.course}</p>`
+        })
+      
+    
+    
+    
+    })
+    </script>
+</body>
+</html>
