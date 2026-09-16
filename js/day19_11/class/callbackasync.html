@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre><h2>asunchorecs solution </h2>
+    1. callback 
+    2. promise
+    3. saync 
+    asynchornlus ah syncronus run panna veka tha we using 3 method </pre>
+    <script>
+
+        //concept 1
+        console.log("1-------------------------------------");
+        
+        const add = ()=>{
+          console.log('running');
+          
+        }
+        const newadd = add
+        newadd()
+        
+        //callback 2 type 1.anomonoys-arrow() 2.syncronoumus 3.ayncnocronus
+        //not used just know 
+        //this is suncronous call () - oru ( ) inuoru () ku argu pass pannaradhu
+        console.log("2-------------------------------------");
+        const callbackfn =(a,b,cb)=>{
+         let result = a+b//suma this line 
+            console.log(result); // this line also we jsut */-+ two parameters a,b
+            cb()//this main we callling cb 
+        } 
+        //line 29,30,31,32 is call back example
+        const sendFn = ()=>{ //we create new fucntion under for pass argu
+          console.log('i am the data');
+        }//cb  ku vera () pass panra two ()
+        callbackfn(10,30,sendFn) //where a,b ,10,20 direct value but cb is under another () value
+       
+        //2.callback injection 
+        // - not nesscary just know 
+         // cb(10) in line 32 we add value in ()
+         //  console.log('i am the data',a); line 36 add value
+          
+         //3.anomunous callback  or arrow () callback
+         // we ar esuing anomonous and asynchornus callback
+         //anomunous callback la line 36,to 39 poda  venam  just 30 to 34 line irutha podum  past argu in callback
+         //const callbackfn =(a,b,cb)=>{
+       //let result = a+b
+          //  console.log(result); 
+           // cb(10,30,(a)=>{ //this is line is * we put => or callbackfn(10,30,function(a){})
+            // console.log("this is dat a",a);
+              // })
+     
+
+              //callback -vera () ku inu oru () argu pass panradhu
+              //callback is syncro one  time line run it move to next and easynorevies line so we callback again so after excute the line is still ther e
+             //addEventListener("click",()=>{ ex1 for call 
+             //})
+             //setTimeout(()=>{ })
+             //callback ex|| ()=>{  } || this is callbakc and we put inside a function (()=>{  })
+             
+
+
+             //4.asynchronomus  this is does not wait fo r line 70 to excute it out is different 
+             //2 type setinterval,settime both * this buildin ()
+             console.log("3-----------------------------------------");
+             console.log("start");
+              setTimeout(()=>{
+                console.log('wait i am coming');
+             },1000)
+              console.log("stop");
+              //nested we put they csll it callback hell
+              //for this thye go for promieses
+              //to avoid hell thye used promiese
+
+            //5.promises - not this method
+            //we need constructor has keyword "new"
+            //3 stage iruku
+           //   const mypromise = new promise((resolve,reject)=>{
+            //         operation
+            //  })
+            //this is syntax 
+            console.log("4------------------------------------------------------------");
+            const myPromise = new Promise((resolve,reject)=>{
+              //  console.log(resolve); now we need to pass for resolev
+              if(true){ //true mmwans running false means error
+                resolve("Running") //now value passing 
+              }
+                reject("error")
+              
+                
+            })
+            console.log(myPromise);
+
+
+            //5.1 use *.then this is method we use 
+            //const myPromise = new Promise((resolve,reject)=>{
+             //if(true){ 
+              //  resolve("Running"
+           //   }
+             //   reject("error")
+            //   })
+           // myPromise.then((result)=>{
+           //console.log(reult) or // return result * 2
+           //}) 
+          
+           //5.2 nested *
+           //we can put n no .theen we use n no they calle dit promises chaining
+           //like this 107 ex
+           //}).then((data)=>{ console.log(data) })
+           
+
+           //5.3 catch *
+           //line112 we put catch to take errors
+           //.catch((error)=>{
+           //})
+
+           //5.4 fiannly
+           //line 118
+           //.finally(()=>{
+           //})
+
+
+           //6
+           //finall promise example 
+           //const  dio = new Promise((resolve,reject)=>{
+           //const datas = true
+           //if(datas){
+           //resolve('running')
+           //}else{
+           //reject("my error")
+           //}
+           //})  //this is basic ybntax if we need use this put 136 line it lin=ke calback but us e.then
+           //dio.then((result)=>{
+           //console.log(result)
+           //}).catch(()=>{
+           // console.log(error)
+           //})
+
+           //this old promiese method there some mehtod now ther eusuign there in backend 
+
+           //7 async &away
+           //using keywoed async and await keyword
+           // const add = async()=>{
+         //  const resulrt = await 2*2 //  <=this is now use                        //return 2*2     //this is normal                                                            
+           //return await data                                                         //}
+           //}                                                                    //add().then((result)=>{
+          //console.log(add())                                                                 //console.log(result)
+                                                                                            //})
+            //8vaync other nam esynthic sugar 
+            //const add = async ()=>{
+            //const data = 2*2
+            //await console.log(data)s
+            //}
+            //console.log(add())
+
+            //fatch now using synatax
+            //fetch("link",{data},{headers info})
+            //post  method url theriyathu
+            //get method user data show in url 
+            //foot and patch
+
+             //7
+             //closer () used in react *******************this is not use not safe 
+             let addd = 10
+             const a = ()=>{
+                addd++ 
+                console.log('Inner addd',addd);
+             }
+           // addd +=1000 //line 186 we can trun direct we need to stroe in variable then we run const result = a, result() 
+             //console.log(addd);
+              console.log('Outer addd',addd)
+             a() 
+             //ourpur is 10 an d11 after inner done 11 come then code is asyncor it easy it move to gogbale it see a=10 so 10 ,11 is output
+             
+             //this is use now 8
+             const b =()=>{//otuer ()
+               let dda =10
+                const adddnew =()=>{ //ineer () this si closer
+                    dda++
+                    console.log(dda);
+             } }
+            // return adddnew //************add new hihger order () is it take a function as argument or retrun anothe r()
+            //callback ,hihger are same but call back only as argu ment that not retun anything  but higher order () means we can retrun inu our ()  like () ula iruka inu oru () return panna mudium or else oru () it go as argument  this is higher order () in line add+=1000
+           //out ( ) variable inner () acess panna mudium idu peru letseegurl scope means letseegurl + close join panna  we get complete closer ()
+           //letseegurl - out() varaiable inner () access panna mudium it does not matter wher edecalare it matter wher eyou call you  call inside () ther eis no issuse out() varaiable inner () acces panna muidum,and  out() varaibl e value a inner () remeber panni vechi iruku  even out() excution contact mudija aprm um 
+         
+           //12 line 187 line oda example tha  this is final  close concept ***
+           const outerfunction = () =>{
+            let t =10
+            const innerfunction = ()=>{
+                console.log(t+1); // or t++,console.log(t)
+                }
+            return innerfunction()    
+           }
+           const result = outerfunction//or()
+           result()
+            result()
+
+             result()
+
+              result()
+ 
+ </script>
+</body>
+</html>
