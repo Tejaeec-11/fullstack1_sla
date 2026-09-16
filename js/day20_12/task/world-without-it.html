@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A World Without IT | Mission Report</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <canvas id="starfield"></canvas>
+
+  <header class="topbar">
+    <nav class="nav-wrap">
+      <div class="brand">MISSION<span>·</span>2030</div>
+      <ul class="nav-links">
+        <li><a href="index.html">IT in 2030</a></li>
+        <li><a href="world-without-it.html">World Without IT</a></li>
+        <li><a href="my-solution.html">My Solution</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ---------- Hero ---------- -->
+  <div class="container">
+    <section class="hero">
+      <div>
+        <span class="mission-tag">Report 02 of 03</span>
+        <h1>If developers had no jobs, who else would fall with them?</h1>
+        <p>
+          This is the part most people get wrong. They think if IT jobs go, only IT
+          people suffer. But a developer's salary does not stay in the developer's
+          pocket. It moves through the whole city. Follow the money and you find out
+          that the mall, the cinema, the auto driver and the tea shop are all standing
+          on the same floor.
+        </p>
+        <div class="btn-row">
+          <a href="#chain" class="btn">Follow the chain</a>
+          <a href="my-solution.html" class="btn btn-ghost">Skip to solutions</a>
+        </div>
+      </div>
+      <div class="orbit-box">
+        <div class="ring"></div>
+        <div class="planet"></div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ---------- Chain reaction ---------- -->
+  <div class="container">
+    <section id="chain" class="reveal">
+      <div class="section-head">
+        <h2>The chain reaction</h2>
+        <p>
+          Press the button and watch what happens step by step when development work
+          stops.
+        </p>
+      </div>
+
+      <div class="chain-box">
+        <button class="btn" id="chainBtn">Run the chain</button>
+
+        <div class="chain-steps">
+          <div class="chain-step">
+            <span class="num">1</span>
+            <div>
+              <strong>Development work stops</strong>
+              <p>No new software is built. Companies stop hiring developers, testers, designers and support staff.</p>
+            </div>
+          </div>
+          <div class="chain-step">
+            <span class="num">2</span>
+            <div>
+              <strong>Salaries disappear from the city</strong>
+              <p>In Chennai alone, lakhs of people working in OMR, Sholinganallur and Guindy stop earning. That is a huge amount of money that used to circulate every month.</p>
+            </div>
+          </div>
+          <div class="chain-step">
+            <span class="num">3</span>
+            <div>
+              <strong>Spending drops immediately</strong>
+              <p>People stop going to malls, restaurants and cinemas. Not because they do not want to — because they are saving whatever is left.</p>
+            </div>
+          </div>
+          <div class="chain-step">
+            <span class="num">4</span>
+            <div>
+              <strong>Businesses lose their customers</strong>
+              <p>The shop owner in the mall did not lose an IT job. He lost the people who used to walk into his shop. His sales fall even though he did nothing wrong.</p>
+            </div>
+          </div>
+          <div class="chain-step">
+            <span class="num">5</span>
+            <div>
+              <strong>Non-IT jobs start disappearing too</strong>
+              <p>Shops close, so salespeople, security guards, housekeeping staff, cooks, delivery riders and auto drivers lose work. This is the part people forget.</p>
+            </div>
+          </div>
+          <div class="chain-step">
+            <span class="num">6</span>
+            <div>
+              <strong>Rent, property and everything else follows</strong>
+              <p>Flats near IT corridors empty out. Landlords who took loans cannot repay. PG owners, tiffin centres and hostels shut down.</p>
+            </div>
+          </div>
+          <div class="chain-step">
+            <span class="num">7</span>
+            <div>
+              <strong>Savings run out</strong>
+              <p>Most people can survive two or three years on their own money if they are careful. After that the question becomes serious: where do you go to earn, when the jobs that supported the other jobs are gone?</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ---------- Numbers ---------- -->
+  <div class="container">
+    <section class="reveal">
+      <div class="section-head">
+        <h2>Why one job is never just one job</h2>
+        <p>
+          These are rough figures I am using to make the point, not official statistics.
+        </p>
+      </div>
+
+      <div class="stat-row">
+        <div class="stat">
+          <span class="stat-num" data-count="3" data-suffix="+">0</span>
+          <span class="stat-label">Non-IT jobs that depend on roughly every one IT job — transport, food, security, housekeeping, retail</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num" data-count="2" data-suffix="-3 yrs">0</span>
+          <span class="stat-label">How long an average family can survive on savings before it becomes a crisis</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num" data-count="100" data-suffix="%">0</span>
+          <span class="stat-label">Of a salary that leaves the household every month and becomes someone else's income</span>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ---------- Chennai accordion ---------- -->
+  <div class="container">
+    <section class="reveal">
+      <div class="section-head">
+        <h2>What this looks like in Chennai</h2>
+        <p>Click each one to open it.</p>
+      </div>
+
+      <div class="acc-item">
+        <button class="acc-btn">
+          <span>OMR and the IT corridor</span>
+          <span class="sign">+</span>
+        </button>
+        <div class="acc-panel">
+          <p>
+            The whole stretch from Perungudi to Siruseri was built around software
+            companies. Remove the companies and you are left with glass buildings,
+            empty parking and roads nobody needs. The tea shops and mess outside every
+            gate close within weeks, because their entire customer base was the people
+            walking out at lunch time.
+          </p>
+        </div>
+      </div>
+
+      <div class="acc-item">
+        <button class="acc-btn">
+          <span>Malls, cinemas and weekend spending</span>
+          <span class="sign">+</span>
+        </button>
+        <div class="acc-panel">
+          <p>
+            Weekend crowds at malls are mostly salaried people. The shop owner inside
+            pays heavy rent expecting that crowd. When the crowd stops, he cannot pay
+            rent, and his staff — who were never in IT — lose their jobs. Cinema
+            tickets, parking attendants, food courts, all of it runs on the same
+            assumption that people have spare money on a Saturday.
+          </p>
+        </div>
+      </div>
+
+      <div class="acc-item">
+        <button class="acc-btn">
+          <span>Auto drivers, delivery riders and daily earners</span>
+          <span class="sign">+</span>
+        </button>
+        <div class="acc-panel">
+          <p>
+            These are the people with the least cushion. A driver on the OMR route or a
+            rider delivering food to an office block is earning directly from IT
+            salaries without ever writing a line of code. When offices empty out, their
+            income does not reduce slowly — it stops.
+          </p>
+        </div>
+      </div>
+
+      <div class="acc-item">
+        <button class="acc-btn">
+          <span>Rent, PGs and hostels</span>
+          <span class="sign">+</span>
+        </button>
+        <div class="acc-panel">
+          <p>
+            Thousands of people move to Chennai from other districts and states for IT
+            work. They pay rent, they eat outside, they buy things. If they go back to
+            their hometowns, the landlord with a housing loan and the PG owner with a
+            mess contract are both stuck with bills and nobody to pay them.
+          </p>
+        </div>
+      </div>
+
+      <div class="acc-item">
+        <button class="acc-btn">
+          <span>Students and colleges</span>
+          <span class="sign">+</span>
+        </button>
+        <div class="acc-panel">
+          <p>
+            Engineering colleges exist partly because placement exists. If campus
+            drives stop, admissions drop, and colleges cut staff. Coaching centres and
+            training institutes that sell "100% placement" have nothing left to sell.
+            That affects lecturers and trainers who were never in a software company at
+            all.
+          </p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ---------- Article ---------- -->
+  <div class="container">
+    <section class="article reveal">
+      <div class="section-head">
+        <h2>The point I am trying to make</h2>
+      </div>
+      <p>
+        Business people think they are independent of developers. A shop owner in a mall
+        would say his work has nothing to do with software. But his customers are the
+        developers. If developers have no income, the entrepreneur has no buyer, and
+        both of them are out of work at the same time.
+      </p>
+      <p>
+        That is the real answer to "what if there is no IT". It is not that IT people
+        suffer. It is that IT salaries are the fuel for a very large number of non-IT
+        jobs in a city like Chennai, and when you remove the fuel, the non-IT jobs go
+        out too. One group cannot survive without the other.
+      </p>
+
+      <blockquote class="quote">
+        A developer losing a job is one problem. A city losing the money that developer
+        used to spend is a much bigger one.
+      </blockquote>
+
+      <h3>So does this mean IT will never end?</h3>
+      <p>
+        No. It means we should not build a country where one industry holds up
+        everything else. If everything depends on one pillar, one crack brings the
+        whole building down. The safer answer is more pillars — manufacturing, energy,
+        agriculture technology, defence, healthcare, space. That is what the last page
+        is about.
+      </p>
+    </section>
+  </div>
+
+  <div class="container">
+    <section class="reveal">
+      <div class="cta-band">
+        <h2>What would I actually do about it?</h2>
+        <p>
+          The final report is my own plan — the field I want to go into and why I think
+          it holds up even if software work shrinks.
+        </p>
+        <div class="btn-row">
+          <a href="my-solution.html" class="btn">Read report 03</a>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <div class="container foot-wrap">
+      <span>Mission 2030 — a three-part article project</span>
+      <span>B.E. EEE · Full-stack learner · Chennai</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

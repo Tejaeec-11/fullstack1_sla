@@ -1,0 +1,533 @@
+/* ============================================
+   SPACE THEME - Main Stylesheet
+   Uses CSS Grid + Flexbox
+   ============================================ */
+
+:root {
+  --space-deep: #070B1A;
+  --space-panel: #0F1630;
+  --space-line: #232D4F;
+  --starlight: #E8ECF8;
+  --muted: #98A2C0;
+  --rocket: #FF8A3D;
+  --signal: #5BD1E0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--space-deep);
+  color: var(--starlight);
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, .brand {
+  font-family: "Space Grotesk", "Inter", sans-serif;
+  line-height: 1.2;
+  font-weight: 600;
+}
+
+a {
+  color: var(--signal);
+  text-decoration: none;
+}
+
+/* ---------- Starfield canvas background ---------- */
+#starfield {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+/* ---------- Navigation bar (Flexbox) ---------- */
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(7, 11, 26, 0.85);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--space-line);
+}
+
+.nav-wrap {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.brand {
+  font-size: 1.15rem;
+  color: var(--starlight);
+  letter-spacing: 0.5px;
+}
+
+.brand span {
+  color: var(--rocket);
+}
+
+.nav-links {
+  display: flex;
+  gap: 8px;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  display: block;
+  padding: 8px 16px;
+  border-radius: 999px;
+  color: var(--muted);
+  font-size: 0.93rem;
+  border: 1px solid transparent;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.nav-links a:hover,
+.nav-links a:focus-visible {
+  color: var(--starlight);
+  border-color: var(--space-line);
+}
+
+.nav-links a.active {
+  color: var(--space-deep);
+  background: var(--rocket);
+  font-weight: 600;
+}
+
+/* ---------- Layout container ---------- */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+section {
+  padding: 64px 0;
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  padding: 96px 0 72px;
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.mission-tag {
+  display: inline-block;
+  font-size: 0.8rem;
+  color: var(--rocket);
+  border: 1px solid var(--rocket);
+  padding: 4px 14px;
+  border-radius: 999px;
+  margin-bottom: 20px;
+}
+
+.hero h1 {
+  font-size: clamp(2.1rem, 5vw, 3.4rem);
+  margin-bottom: 20px;
+}
+
+.hero p {
+  color: var(--muted);
+  font-size: 1.05rem;
+  max-width: 60ch;
+  margin-bottom: 28px;
+}
+
+/* Rocket / planet visual made with pure CSS */
+.orbit-box {
+  position: relative;
+  height: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.planet {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 32% 30%, #3C4E8F, #131A33 70%);
+  box-shadow: 0 0 60px rgba(91, 209, 224, 0.18);
+}
+
+.ring {
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  border: 1px solid var(--space-line);
+  border-radius: 50%;
+  animation: spin 18s linear infinite;
+}
+
+.ring::after {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--rocket);
+  box-shadow: 0 0 14px var(--rocket);
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* ---------- Buttons ---------- */
+.btn-row {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 26px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  border: 1px solid var(--rocket);
+  background: var(--rocket);
+  color: var(--space-deep);
+  font-family: inherit;
+  transition: opacity 0.2s;
+}
+
+.btn:hover { opacity: 0.85; }
+
+.btn-ghost {
+  background: transparent;
+  color: var(--starlight);
+  border-color: var(--space-line);
+}
+
+/* ---------- Section headings ---------- */
+.section-head {
+  margin-bottom: 36px;
+  max-width: 70ch;
+}
+
+.section-head h2 {
+  font-size: clamp(1.6rem, 3.5vw, 2.3rem);
+  margin-bottom: 12px;
+}
+
+.section-head p {
+  color: var(--muted);
+}
+
+/* ---------- Card grid (CSS Grid) ---------- */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: var(--space-panel);
+  border: 1px solid var(--space-line);
+  border-radius: 12px;
+  padding: 26px;
+}
+
+.card h3 {
+  font-size: 1.15rem;
+  margin-bottom: 10px;
+  color: var(--starlight);
+}
+
+.card p {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.card .icon {
+  font-size: 1.7rem;
+  margin-bottom: 14px;
+  display: block;
+}
+
+/* ---------- Timeline (Grid) ---------- */
+.timeline {
+  display: grid;
+  gap: 0;
+  border-left: 2px solid var(--space-line);
+  padding-left: 0;
+  margin-left: 12px;
+}
+
+.t-item {
+  position: relative;
+  padding: 0 0 36px 32px;
+}
+
+.t-item::before {
+  content: "";
+  position: absolute;
+  left: -7px;
+  top: 6px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--rocket);
+}
+
+.t-year {
+  font-family: "Space Grotesk", sans-serif;
+  color: var(--rocket);
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.t-item h3 {
+  font-size: 1.1rem;
+  margin: 4px 0 8px;
+}
+
+.t-item p {
+  color: var(--muted);
+  font-size: 0.95rem;
+  max-width: 65ch;
+}
+
+/* ---------- Counter stats (Flexbox) ---------- */
+.stat-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.stat {
+  flex: 1 1 200px;
+  background: var(--space-panel);
+  border: 1px solid var(--space-line);
+  border-radius: 12px;
+  padding: 26px;
+}
+
+.stat-num {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--signal);
+  display: block;
+}
+
+.stat-label {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+/* ---------- Chain reaction interactive section ---------- */
+.chain-box {
+  background: var(--space-panel);
+  border: 1px solid var(--space-line);
+  border-radius: 14px;
+  padding: 32px;
+}
+
+.chain-steps {
+  display: grid;
+  gap: 14px;
+  margin-top: 24px;
+}
+
+.chain-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 16px 18px;
+  border: 1px solid var(--space-line);
+  border-radius: 10px;
+  opacity: 0.25;
+  transition: opacity 0.4s, border-color 0.4s, background 0.4s;
+}
+
+.chain-step.lit {
+  opacity: 1;
+  border-color: var(--rocket);
+  background: rgba(255, 138, 61, 0.07);
+}
+
+.chain-step .num {
+  font-family: "Space Grotesk", sans-serif;
+  color: var(--rocket);
+  font-weight: 700;
+  min-width: 26px;
+}
+
+.chain-step strong { display: block; margin-bottom: 4px; }
+.chain-step p { color: var(--muted); font-size: 0.92rem; margin: 0; }
+
+/* ---------- Accordion (Chennai impact) ---------- */
+.acc-item {
+  border: 1px solid var(--space-line);
+  border-radius: 10px;
+  margin-bottom: 12px;
+  overflow: hidden;
+  background: var(--space-panel);
+}
+
+.acc-btn {
+  width: 100%;
+  text-align: left;
+  background: transparent;
+  border: none;
+  color: var(--starlight);
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.02rem;
+  font-weight: 600;
+  padding: 18px 22px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.acc-btn .sign {
+  color: var(--rocket);
+  font-size: 1.3rem;
+  flex-shrink: 0;
+}
+
+.acc-panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease;
+}
+
+.acc-panel p {
+  padding: 0 22px 20px;
+  color: var(--muted);
+  font-size: 0.95rem;
+  max-width: 75ch;
+}
+
+/* ---------- Article text blocks ---------- */
+.article p {
+  color: var(--muted);
+  max-width: 72ch;
+  margin-bottom: 18px;
+}
+
+.article h3 {
+  font-size: 1.25rem;
+  margin: 32px 0 12px;
+  color: var(--starlight);
+}
+
+.quote {
+  border-left: 3px solid var(--rocket);
+  padding: 8px 0 8px 22px;
+  margin: 28px 0;
+  font-size: 1.1rem;
+  color: var(--starlight);
+  max-width: 62ch;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+/* ---------- Roadmap (my plan) ---------- */
+.roadmap {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+}
+
+.stage {
+  background: var(--space-panel);
+  border: 1px solid var(--space-line);
+  border-top: 3px solid var(--signal);
+  border-radius: 12px;
+  padding: 24px;
+}
+
+.stage-step {
+  color: var(--signal);
+  font-size: 0.82rem;
+  margin-bottom: 8px;
+}
+
+.stage h3 { font-size: 1.05rem; margin-bottom: 8px; }
+.stage p { color: var(--muted); font-size: 0.92rem; }
+
+/* ---------- CTA band ---------- */
+.cta-band {
+  background: linear-gradient(135deg, #131C3C, #0B1122);
+  border: 1px solid var(--space-line);
+  border-radius: 16px;
+  padding: 44px;
+  text-align: center;
+}
+
+.cta-band h2 { margin-bottom: 12px; }
+.cta-band p { color: var(--muted); max-width: 60ch; margin: 0 auto 26px; }
+.cta-band .btn-row { justify-content: center; }
+
+/* ---------- Footer ---------- */
+footer {
+  border-top: 1px solid var(--space-line);
+  padding: 32px 0;
+  margin-top: 40px;
+}
+
+.foot-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+/* ---------- Scroll reveal ---------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 820px) {
+  .hero {
+    grid-template-columns: 1fr;
+    padding-top: 56px;
+  }
+  .orbit-box { height: 220px; order: -1; }
+  .planet { width: 110px; height: 110px; }
+  .ring { width: 190px; height: 190px; }
+  section { padding: 48px 0; }
+  .cta-band { padding: 30px 22px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+  .reveal { opacity: 1; transform: none; }
+}

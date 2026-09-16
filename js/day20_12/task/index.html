@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IT in 2030 | Mission Report</title>
+
+  <!-- Bootstrap (used for a few layout helpers) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- My own stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Animated star background drawn with JavaScript -->
+  <canvas id="starfield"></canvas>
+
+  <!-- ---------- Navigation ---------- -->
+  <header class="topbar">
+    <nav class="nav-wrap">
+      <div class="brand">MISSION<span>·</span>2030</div>
+      <ul class="nav-links">
+        <li><a href="index.html">IT in 2030</a></li>
+        <li><a href="world-without-it.html">World Without IT</a></li>
+        <li><a href="my-solution.html">My Solution</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ---------- Hero ---------- -->
+  <div class="container">
+    <section class="hero">
+      <div>
+        <span class="mission-tag">Report 01 of 03</span>
+        <h1>Where will IT be three years from now?</h1>
+        <p>
+          Everyone keeps asking whether IT is finished. I do not think it is finished.
+          I think it is changing shape. The work that used to take ten people is
+          starting to take three, and the three who stay are the ones who understand
+          more than just the code in front of them. This page is my honest guess about
+          what 2030 looks like from where I am standing in 2026.
+        </p>
+        <div class="btn-row">
+          <a href="#shift" class="btn">Read the report</a>
+          <a href="world-without-it.html" class="btn btn-ghost">Next report</a>
+        </div>
+      </div>
+      <div class="orbit-box">
+        <div class="ring"></div>
+        <div class="planet"></div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ---------- The shift ---------- -->
+  <div class="container">
+    <section id="shift" class="reveal">
+      <div class="section-head">
+        <h2>What is actually changing</h2>
+        <p>
+          Three things are moving at the same time: the tools, the team size, and what
+          a company is willing to pay for.
+        </p>
+      </div>
+
+      <div class="card-grid">
+        <article class="card">
+          <span class="icon">🤖</span>
+          <h3>Tools write the easy code</h3>
+          <p>
+            Login pages, CRUD forms, basic dashboards — these are already half
+            generated today. By 2030 a fresher who can only do this will have very
+            little to sell.
+          </p>
+        </article>
+        <article class="card">
+          <span class="icon">🧩</span>
+          <h3>Teams get smaller, roles get wider</h3>
+          <p>
+            Instead of separate frontend, backend, testing and deployment people,
+            companies want one person who can move across all of it and still know
+            what they are doing.
+          </p>
+        </article>
+        <article class="card">
+          <span class="icon">🔐</span>
+          <h3>Judgement becomes the product</h3>
+          <p>
+            A machine can produce code. It cannot take responsibility when money is
+            lost, data leaks, or a hospital system goes down. That responsibility is
+            what a real engineer is paid for.
+          </p>
+        </article>
+        <article class="card">
+          <span class="icon">🛰️</span>
+          <h3>IT stops being its own island</h3>
+          <p>
+            Software moves into energy, agriculture, defence, health and space. The
+            person who knows one of those fields <em>and</em> can build software will
+            be worth far more than someone who only knows frameworks.
+          </p>
+        </article>
+      </div>
+    </section>
+  </div>
+
+  <!-- ---------- Interactive year slider ---------- -->
+  <div class="container">
+    <section class="reveal">
+      <div class="section-head">
+        <h2>Move the slider, see the year</h2>
+        <p>My prediction for each year between now and 2030.</p>
+      </div>
+
+      <div class="chain-box">
+        <div class="d-flex align-items-center gap-3 flex-wrap mb-3">
+          <span class="stat-num" id="yearOutput">2026</span>
+          <input type="range" id="yearSlider" class="form-range flex-grow-1"
+                 min="2026" max="2030" step="1" value="2026" style="max-width: 420px;">
+        </div>
+        <p id="yearText" style="color: var(--muted); max-width: 70ch;">
+          Developers still write most of the code by hand. AI tools help, but a human
+          decides the logic.
+        </p>
+      </div>
+    </section>
+  </div>
+
+  <!-- ---------- Timeline ---------- -->
+  <div class="container">
+    <section class="reveal">
+      <div class="section-head">
+        <h2>How I think the road runs</h2>
+        <p>Not a prediction from a report. Just what I can see happening around me.</p>
+      </div>
+
+      <div class="timeline">
+        <div class="t-item">
+          <span class="t-year">2026</span>
+          <h3>The tools get good enough to notice</h3>
+          <p>
+            Every student is already using AI to finish assignments. The gap between
+            someone who understands their code and someone who pasted it starts to
+            show in interviews.
+          </p>
+        </div>
+        <div class="t-item">
+          <span class="t-year">2027</span>
+          <h3>Fresher hiring gets stricter</h3>
+          <p>
+            Companies still hire, but they test differently. Less "write a for loop",
+            more "here is broken code, find the mistake and explain why it broke".
+          </p>
+        </div>
+        <div class="t-item">
+          <span class="t-year">2028</span>
+          <h3>One developer does the work of three</h3>
+          <p>
+            Deployment, database, API and frontend all handled by the same person with
+            AI assistance. Cloud knowledge stops being optional.
+          </p>
+        </div>
+        <div class="t-item">
+          <span class="t-year">2029</span>
+          <h3>The value moves to hard problems</h3>
+          <p>
+            Security, embedded systems, data pipelines, hardware-software integration.
+            Things where a wrong answer costs real money or real lives, so a human has
+            to sign off.
+          </p>
+        </div>
+        <div class="t-item">
+          <span class="t-year">2030</span>
+          <h3>IT becomes a layer under everything else</h3>
+          <p>
+            Space, power grids, electric vehicles, medical devices. Software is no
+            longer the destination — it is the tool other industries use. Which is
+            exactly why I am not planning to stop at web development.
+          </p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ---------- My take ---------- -->
+  <div class="container">
+    <section class="article reveal">
+      <div class="section-head">
+        <h2>My own opinion on this</h2>
+      </div>
+      <p>
+        People in my college keep saying IT is over and there is no point learning to
+        code. I disagree, but not completely. What is over is the idea that you can
+        learn one framework, get placed, and coast for ten years. That door is closing.
+      </p>
+      <p>
+        What is opening is different. If software is going to sit inside satellites,
+        power systems and medical machines, then someone has to understand both sides —
+        the hardware and the code. I studied Electrical and Electronics Engineering,
+        and I am learning full-stack development on my own. Three years ago I would have
+        thought those two things had nothing to do with each other. Now I think that
+        combination is the point.
+      </p>
+
+      <blockquote class="quote">
+        The question is not whether IT survives. It is whether you are still useful
+        when the easy half of the job disappears.
+      </blockquote>
+
+      <p>
+        So my plan is not to run away from IT. It is to stand where IT meets something
+        physical — and for me that something is space technology. The next two pages
+        explain what happens if I am wrong and IT collapses completely, and what I would
+        do about it.
+      </p>
+    </section>
+  </div>
+
+  <!-- ---------- CTA ---------- -->
+  <div class="container">
+    <section class="reveal">
+      <div class="cta-band">
+        <h2>Now imagine the opposite</h2>
+        <p>
+          What if development does not shrink, but disappears altogether? Page two
+          follows that chain all the way down to the shops on a Chennai street.
+        </p>
+        <div class="btn-row">
+          <a href="world-without-it.html" class="btn">Read report 02</a>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ---------- Footer ---------- -->
+  <footer>
+    <div class="container foot-wrap">
+      <span>Mission 2030 — a three-part article project</span>
+      <span>B.E. EEE · Full-stack learner · Chennai</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
