@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DashBoard</title>
+</head>
+<body>
+    <h1>Fetch</h1>
+    
+    <table border="2" cellpadding="2" cellspacing="3">
+        <thead>
+           <th> S.no</th>
+           <th>First Name</th>
+           <th>Last Name</th>
+           <th>Images</th>
+        </thead>
+        <tbody id="showingdata"></tbody>
+    </table>
+
+   
+    <script>
+  
+      const show = document.getElementById("showingdata")
+      console.log(show);
+
+          show.innerHTML = ""
+           document.addEventListener("DOMContentLoaded",()=>{
+          const getData = async ()=>{
+          const getfromApi = await fetch("https://dummyjson.com/users")
+
+              //console.log(getfromApi);
+              
+          const dataChange = await getfromApi.json()
+              
+               //console.log(dataChange.users);
+
+           const result = dataChange.users
+
+                console.log(result);
+              
+           result.map((e)=>{
+           show.innerHTML += `<tr>
+           <td>${e.id}</td>             
+           <td>${e.firstName}</td>
+           <td>${e.lastName}</td>
+           <td><img src=${e.image} /></td>
+            </tr>` })
+ }
+         getData()
+         })
+</script>
+</body>
+</html>

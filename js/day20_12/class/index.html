@@ -8,26 +8,35 @@
 <body>
     <pre>https://dummyjson.com/products we going to show this oon screen </pre> <br>
     <div id="showingdata"></div>
-    <script>
+   
+   <script>
+        //normal method
         const arrobj = [
         {name:"react",course:"Node"},
         {name:"Node",course:"JS"},
         {name:"Next",course:"Node"},
-     {name:"Next",course:"Node"},
-     {name:"Next",course:"Node"},
-    , {name:"Next",course:"Node"}]
+        ]
         const show = document.querySelector("#showingdata")
-        show.innerHTML = " "
+       show.innerHTML = " "
         document.addEventListener("DOMContentLoaded",()=>{
-        arrobj.forEach((e)=>{
-            show.innerHTML += `<p>${e.name}</p>
-            <p>${e.course}</p>`
-        })
-      
-    
-    
-    
+       arrobj.forEach((e)=>{
+        show.innerHTML += `<p>${e.name}</p> 
+        <p>${e.course}</p>`
+       })
     })
+      
+        
+         
+      //domdontentloaded screen vara () trigger panna 
+     //  const getData = async ()=>{
+        //agai another () but as async () podanum becoz after call it erase preview line 
+        //then wait for wait for pervious lline output then once output came it erase the previous line 
+       //use json because there is rext we need chaange it has string we need to change it has object 
+       //feetch ula json  parse give  apdi kudhuka kana vela ena pannu mo ath avela ida fetch ula irukum
+      //json parese panna ma data athuka mudiathu
+      //map return pannu foreach return pannadhu
+      //conole near netwoek we see spee 92 milliesecnd 1000 enga iruku 92 eng iruku 1 sec kela 0 
+      //await not put means it excute one line and it move to next withoyt show output for 1st line 
     </script>
 </body>
 </html>

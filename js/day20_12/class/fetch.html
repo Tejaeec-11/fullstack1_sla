@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>url-fetch</title>
+</head>
+<body>
+    <pre>https://dummyjson.com/products we going to show this oon screen </pre> <br> br <hr>
+    <div id="showingdata"></div> <hr>
+</pre>
+    <script>
+        const arrobj = [
+  {name:"react",course:"Node"},
+  {name:"Node",course:"JS"},
+  {name:"Next",course:"Node"} ]
+    const show = document.querySelector("#showingdata")
+      //console.log(show);
+      show.innerHTML = ""
+      document.addEventListener("DOMContentLoaded",()=>{
+       const getData = async ()=>{
+        const getfromApi = await fetch("https://dummyjson.com/users")
+            // 1 console.log(getfromApi);
+             const dataChange =  await getfromApi.json()
+           //2  console.log(dataChange);
+           const result = dataChange.users
+            console.log(result);//3
+       }  
+       getData()
+       arrobj.forEach((e)=>{
+        show.innerHTML += `<p>${e.name}</p> 
+        <p>${e.course}</p>`
+       })
+    }) //1  afer we write code we get this in this output  
+    // 2 add new line 82   ,83  remove line 81 ..output like type normal when clcik user it show detail users, total, show  
+      //3 add new line again 84 ,85 remove 83  ..  it show 30 array in output  
+    </script>
+
+</body>
+</html>
