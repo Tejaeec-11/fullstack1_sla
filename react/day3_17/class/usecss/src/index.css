@@ -1,0 +1,35 @@
+a{
+    text-decoration: none;
+    color: black;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: antiquewhite;
+    padding:10px;
+}
+.imgs{
+    border-radius: 20px;
+}
+.link{
+    display: flex;
+    gap: 20px;
+}
+.banner{
+    padding: 20px;
+    background-color: aquamarine;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+}
+
