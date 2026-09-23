@@ -1,0 +1,542 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>nonprimitiverendering</title>
+  </head>
+  <body>
+    
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+    <pre>
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+      here there is class codde 1 by one by run in app.jsx 
+--------------------------------------------------
+      1.const App = () => {
+ 
+ const isActive =  false// trueor false line 11
+ 
+ 
+    return (
+   <>
+    <div className="bg-blue-200 text-black flex justify-around items-cente h-30">
+     {isActive?<p className="bg-green-400">This is True</p>:<p className="bg-red-300">This is false</p>}
+     </div>
+   </>
+  )
+}
+
+export default App
+---------------------------------------------------------
+2.
+const App = () => {
+ 
+ const isActive =  true// trueor false line 11
+ 
+ 
+    return (
+   <>
+   <h1>output run 1 by one </h1>
+    <div className={isActive?"bg-amber-600 p-3":"bg-blue-400 p-3"}>
+     {isActive?<p className="bg-green-400">This is True</p>:<p className="bg-red-300">This is false</p>}
+     </div>
+   </>
+  )
+}
+
+export default App
+---------------------------------------------------------------
+3.
+
+const App = () => {
+ 
+ const isActive =  false// trueor false(or number give means false) line 11
+ 
+ 
+    return (
+   <>
+   <h1>output run 1 by one </h1>
+    <div className={isActive?"bg-amber-600 p-3":"bg-blue-400 p-3"}>
+     {isActive?<p className="bg-green-400">This is True</p>:<p className="bg-red-300">This is false</p>}
+     </div>
+     <button className={isActive?"bg-green-400 p-1 w-50 text-center":"bg-red-400 p-1 w-50 text-center"}>{isActive?"Hide":"Show"}</button>
+   </>
+  )
+}
+
+export default App
+---------------------------------------------------------------
+4.
+
+const App = () => {
+ 
+ const isActive =  0//give 0 is blue if give 1 it green and red
+ 
+ 
+    return (
+   <>
+   
+    <div className={isActive?"bg-amber-600 p-3":"bg-blue-400 p-3"}>
+     {isActive && <p className="bg-green-400">This is True</p>}
+     </div>
+     <button className={isActive?"bg-green-400 p-1 w-50 text-center":"bg-red-400 p-1 w-50 text-center"}>{isActive?"Hide":"Show"}</button>
+   </>
+  )
+}
+
+export default App
+//&& (optional)
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+5.const App = () => {
+ 
+ const isActive = undefined  //null or undefined or 53
+ //1 to 100 athu iruthalum show agum or null give p tag show pannu  
+ 
+    return (
+   <>
+   
+    <div className={isActive?"bg-amber-600 p-3":"bg-blue-400 p-3"}>
+     {isActive ?? <p className="bg-green-400">This is True</p>}
+     </div>
+     <button className={isActive?"bg-green-400 p-1 w-50 text-center":"bg-red-400 p-1 w-50 text-center"}>{isActive?"Hide":"Show"}</button>
+   </>
+  )
+}
+
+export default App
+//?? (nulliscollsition)
+//react mostly this teritary use panni null or undefined
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+6. const App = () => {
+ 
+    const arr = [1,2,3,4,5,6,7,8,9,0]
+ 
+    return (
+   <>
+   <div className="bg-blue-600 text-white flex justify-center items-center p-3 h-100">
+
+     <p className="bg-amber-300 w-50 text-black text-center p-2 rounded-3xl">{arr}</p>
+   </div>
+   
+   </>
+  )
+}
+
+export default App
+//show value without ,
+---------------------------------------------------------------
+7. 
+
+const App = () => {
+ 
+    const arr = [1,2,3,4,5,6,7,8,9,0]
+     
+    const newarr = arr.join("--")
+
+    return (
+   <>
+   <div className="bg-blue-600 text-white flex justify-center items-center p-3 h-100">
+
+     <p className="bg-amber-300 w-50 text-black text-center p-2 rounded-3xl">{newarr}</p>
+   </div>
+   
+   </>
+  )
+}
+
+export default App
+//show value with ,
+//{} this is object barket
+//() this normal 
+//[] this is array barket
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+8. const App = () => {
+ 
+    const arr = [1,2,3,4,5,6,7,8,9,0]
+     
+    
+
+    return (
+   <>
+   <div className="bg-blue-600 text-white flex justify-center items-center p-3 h-100">
+
+     <p className="bg-amber-300 w-50 text-black text-center p-2 rounded-3xl">{arr[1]}</p>
+   </div>
+   
+   </>
+  )
+}
+
+export default App
+//use index value to print arr[1] you change no
+---------------------------------------------------------------------------------------------------------
+9.
+const App = () => {
+ 
+    const arr = [1,2,3,4,5,6,7,8,9,0]
+     
+    
+
+    return (
+   <>
+   <div className="bg-blue-600 text-white flex justify-center items-center p-3 h-100">
+
+    {
+    arr.map(()=>(
+      <p className="bg-amber-300 w-50 text-black text-center p-2 rounded-3xl">{arr}</p>
+    ))
+    
+    }
+   </div>
+   
+   </>
+  )
+}
+
+export default App
+//=>())} if object this barket use 
+//=>{})}mutiline mean sthis barket 
+//{arr[1]} or give {arr}
+//using map 
+---------------------------------------------------------------------------------------------------------
+10.
+
+const App = () => {
+ 
+    const arr = [1,2,3,4,5,6,7,8,9,0]
+     
+    
+
+    return (
+   <>
+   <div className="bg-blue-600 text-white flex justify-center items-center p-3 h-100">
+
+    {
+    arr.map((e)=>(
+      <p className="bg-amber-300 w-50 text-black text-center p-2 rounded-3xl">{e}</p>
+    ))
+    
+    }
+   </div>
+   
+   </>
+  )
+}
+
+export default App
+//perves we got all of output but now we only want any one so we e,i
+//[arr} all no in every box but e we use one no one box
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+11.const App = () => {
+ 
+    const arr = [1,2,3,4,5,6,7,8,9,0]
+     
+    
+
+    return (
+   <>
+   <div className="bg-blue-600 text-white flex gap-3  justify-center items-center p-3 h-100">
+
+    {
+    arr.map((e)=>(
+      <p className="bg-amber-300 w-50 text-black text-center p-2 rounded-3xl">{e}</p>
+    ))
+    
+    }
+   </div>
+   
+   </>
+  )
+}
+
+export default App
+//want every thing one by one 
+//<div className="bg-blue-600 text-white flex gap-3  justify-center items-center p-3 h-100">
+//or
+//<div className="bg-blue-600 text-white">
+---------------------------------------------------------------------------------------------------------
+12.  
+
+const App = () => {
+ 
+    const arr = [1,2,3,4,5,6,7,8,9,0]
+     
+    
+
+    return (
+   <>
+   <div className="bg-blue-600 text-white flex gap-3  justify-center items-center p-3 h-100">
+
+    {
+    arr.map((e,i)=>(
+      <p className="bg-amber-300 w-50 text-black text-center p-2 rounded-3xl">{i}</p>
+    ))
+    
+    }
+   </div>
+   
+   </>
+  )
+}
+
+export default App
+//e,i means show index value 
+---------------------------------------------------------------------------------------------------------
+13.
+
+const App = () => {
+ 
+    const arr = [1,2,3,4,5,6,7,8,9,0]
+     
+    
+
+    return (
+   <>
+   <div className="bg-blue-600 text-white flex gap-3  justify-center items-center p-3 h-100">
+
+    {
+    arr.map((e)=>(
+      <p className="bg-amber-300 w-50 text-black text-center p-2 rounded-3xl">{e}</p>
+    ))
+    
+    }
+   </div>
+   
+   </>
+  )
+}
+
+export default App
+//show number 1,2,3,4,5,67,89,
+---------------------------------------------------------------------------------------------------------
+14.
+
+const App = () => {
+ 
+    const arr = [1,2,3,4,5,6,7,8,9,0]
+     
+    
+
+    return (
+   <>
+   <div className="bg-blue-600 text-white flex gap-3  justify-center items-center p-3 h-100">
+
+    {
+    arr.map((e,i)=>(
+      <p className="bg-amber-300 w-50 text-black text-center p-2 rounded-3xl" key={i+1}>{e}</p>
+    ))
+    
+    }
+   </div>
+   
+   </>
+  )
+}
+
+export default App
+//show number 1,2,3,4,5,67,89,
+//index always unqie 0,1,2,3,not 00,22,11
+//so key ula i tha give because 0,1,2,3,4 one e have one index it is unqiue 
+//but we cant give elemt it change able to infinity
+//so key={i}
+//give rule 
+//map use panna key use panna react la 
+---------------------------------------------------------------------------------------------------------
+15.
+
+const App = () => {
+ 
+    const arr = [1,2,3,4,5,6,7,8,9,0]
+     
+     const findnew = arr.find((e)=>e/2==0)
+
+    return (
+   <>
+   <div className="bg-blue-600 text-white flex gap-3  justify-center items-center p-3 h-100">
+
+    {
+
+      <p className="bg-pink-400 text-black w-9 text-center">{findnew}</p>
+
+    
+    
+    }
+   </div>
+   
+   </>
+  )
+}
+
+export default App
+//find only one emlemt at the time which stafied the condition
+//object menas object arr means arr no means number it only get one elemt
+---------------------------------------------------------------------------------------------------------
+16.
+
+const App = () => {
+ 
+    const arr = [1,2,3,4,5,6,7,8,9,0]
+     
+     const findnew = arr.filter((e)=>e/2==0)
+
+    return (
+   <>
+   <div className="bg-blue-600 text-white flex gap-3  justify-center items-center p-3 h-100">
+
+    {
+
+
+    findnew.map((e,i)=>(
+      <p className="bg-amber-300 w-50 text-black text-center p-2 rounded-3xl" key={i+1}>{e}</p>
+    ))
+    
+    }
+   </div>
+   
+   </>
+  )
+}
+
+export default App
+//it return the new arr 
+//map  work on arr 
+//this is arr rendering
+---------------------------------------------------------------------------------------------------------
+17. OBJECT
+
+
+
+const App = () => {
+ 
+   const obj = {name:"react",node:"2016",isActive:"NewArray"}
+
+    return (
+   <>
+   <div className="bg-blue-600 text-white flex gap-3  justify-center items-center p-3 h-100">
+
+    <p>{obj.name}</p>
+    <p>{obj.node}</p>
+    <p>{obj.isActive}</p>
+    
+   </div>
+   
+   </>
+  )
+}
+
+export default App
+//object
+//object not iteratable
+//sinle aa podanum  e.name ,e.node
+//array ,object therja array of object easy
+---------------------------------------------------------------------------------------------------------
+18..const App = () => {
+ 
+   const obj = {name:"react",node:"2016",isActive:"NewArray"}
+    
+   const arrobj = [
+     
+     {name:"react",node:"2016",isActive:"NewArray"},
+     {name:"JS",node:"2020",isActive:"tere"},
+     {name:"JSS",node:"2021",isActive:"rayya"},
+     {name:"react",node:"2026",isActive:"ngst"}
+  
+
+    
+
+   ]
+
+    return (
+   <>
+   <div className="bg-blue-600 text-white flex gap-3  justify-center items-center p-3 h-100">
+
+    <p>{arrobj[2].name}</p>
+   
+    
+   </div>
+   
+   </>
+  )
+}
+
+export default App
+---------------------------------------------------------------------------------------------------------
+19.const App = () => {
+ 
+   const obj = {name:"react",node:"2016",isActive:"NewArray"}
+    const arrobj = [
+     {name:"react",node:"2016",isActive:"NewArray"},
+     {name:"JS",node:"2020",isActive:"tere"},
+     {name:"JSS",node:"2021",isActive:"rayya"},
+     {name:"react",node:"2026",isActive:"ngst"}
+  ]
+ return (
+   <>
+   <div className="bg-blue-600 text-white flex gap-3  justify-center items-center p-3 h-screen">
+    {arrobj.map((e,i)=>(
+      <div className="bg-white text-black p-3 w-300 h-30" key={i+1} >
+        <p>{e.name}</p>
+         <p>{e.node}</p>
+         <p>{e.isActive}</p>
+      </div>
+    ))}
+   </div>
+  </>
+  )
+}
+
+export default App
+//arr method already parent dv
+//ula again oru div
+//cards ***** 
+//cards important
+//object find panna epdi key name panradhu therum e.name 
+---------------------------------------------------------------------------------------------------------
+20.
+const App = () => {
+ 
+   const obj = {name:"react",node:"2016",isActive:"NewArray"}
+    const arrobj = [
+     {name:"react",node:"2016",isActive:"NewArray"},
+     {name:"JS",node:"2020",isActive:"tere"},
+     {name:"JSS",node:"2021",isActive:"rayya"},
+     {name:"react",node:"2026",isActive:"ngst"}
+  ]
+  const newindiavalue = arrobj.map((e,i)=>`$(i)+1 -- $(e)`)
+  console.log(newindiavalue);
+  
+  
+ return (
+   <>
+   <div className="bg-blue-600 text-white flex gap-3  justify-center items-center p-3 h-screen">
+    {arrobj.map((e,i)=>(
+      <div className="bg-white text-black p-3 w-300 h-30" key={i} >
+        <p>{e.name}</p>
+         <p>{e.node}</p>
+         <p>{e.isActive}</p>
+      </div>
+    ))}
+   </div>
+  </>
+  )
+}
+
+export default App
+//1
+//see in console
+//2
+//((e,i)=>i+1) 
+//or
+//((e,i)=>`$(i)+1 -- $(e)`)
+//3
+//   <div className="bg-white text-black p-3 w-300 h-30" key={i+1} >
+//not try this
+//   <div className="bg-white text-black p-3 w-300 h-30" key={i} >
+//try only thios
+---------------------------------------------------------------------------------------------------------
+21. nav.jxs
+    </pre>
+  </body>
+</html>
