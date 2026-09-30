@@ -10,210 +10,192 @@
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
     <pre>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-      ----------------------------------------------------------------------------------------------------------
-      1.
-const App = () => {
-  const studentData = [
-    { name: "tej", age: 20, email: "tej@gmail.com", course: "css" },
-    { name: "tej", age: 20, email: "tej@gmail.com", course: "css" },
-    { name: "tej", age: 20, email: "tej@gmail.com", course: "css" },
-    { name: "tej", age: 20, email: "tej@gmail.com", course: "css" },
-  ];
 
-  return (
-    <>
-      <div className="bg-blue-400 min-h-screen flex justify-between p-5 gap-5">
-        {studentData.map((e, i) => (
-          <div
-            key={i}
-            className="bg-white p-5 w-64 h-60 rounded-lg"
-          >
-            <h2>Name: {e.name}</h2>
-            <h2>Age: {e.age}</h2>
-            <h2>Email: {e.email}</h2>
-            <h2>Course: {e.course}</h2>
-
-            <button className="bg-black text-white p-2 mt-4 rounded">
-              View
-            </button>
-          </div>
-        ))}
-      </div>
-    </>
-  );
-};
-
-export default App;
------------------------------------------------------------------------------------------------------------------------------------------
-2.const App = () => {
-  const studentData = [
-    { name: "tej", age: 20, email: "tej@gmail.com", course: "css" },
-    { name: "tej", age: 20, email: "tej@gmail.com", course: "css" },
-    { name: "tej", age: 20, email: "tej@gmail.com", course: "css" },
-    { name: "tej", age: 20, email: "tej@gmail.com", course: "css" },
-     { name: "tej", age: 20, email: "tej@gmail.com", course: "css" },
-      { name: "tej", age: 20, email: "tej@gmail.com", course: "css" },
-       { name: "tej", age: 20, email: "tej@gmail.com", course: "css" },
-        { name: "tej", age: 20, email: "tej@gmail.com", course: "css" },
-         { name: "tej", age: 20, email: "tej@gmail.com", course: "css" }
-  ];
-
-  const copydata =  [...studentsData]
-
-  return (
-    <>
-      <div className="bg-blue-400  flex justify-between items-center flex-wrap gap-5 p-5 ">
-        {copydata.map((e, i) => (
-          <div
-            key={i}
-            className="bg-white p-5 w-100 h-60 rounded-3xl"
-          >
-            <h2>Name: {e.name}</h2>
-            <h2>Age: {e.age}</h2>
-            <h2>Email: {e.email}</h2>
-            <h2>Course: {e.course}</h2>
-
-            <button className="bg-black text-white p-2 mt-4 rounded">
-              View
-            </button>
-          </div>
-        ))}
-      </div>
-    </>
-  );
-};
-
-export default App;
-//now we use sperate operatoe 
 ----------------------------------------------------------------------------------------------------------
-const App = () => {
-  
-  console.log('component rerender');
+1.const App = () => {
+  const studentsData = [
+    { stuName: "tej", stuAge: 20, stuEmail: "tej@gmail.com", stuCourse: "css" },
+    { stuName: "tej", stuAge: 20, stuEmail: "tej@gmail.com", stuCourse: "css" },
+    { stuName: "tej", stuAge: 20, stuEmail: "tej@gmail.com", stuCourse: "css" },
+    { stuName: "tej", stuAge: 20, stuEmail: "tej@gmail.com", stuCourse: "css" },
+     { stuName: "tej", stuAge: 20, stuEmail: "tej@gmail.com", stuCourse: "css" },
+      { stuName: "tej", stuAge: 20, stuEmail: "tej@gmail.com", stuCourse: "css" },
+       { stuName: "tej", stuAge: 20, stuEmail: "tej@gmail.com", stuCourse: "css" },
+        { stuName: "tej", stuAge: 20, stuEmail: "tej@gmail.com", stuCourse: "css" },
+        { stuName: "tej", stuAge: 20, stuEmail: "tej@gmail.com", stuCourse: "css" },
+  ];
 
-  const[countNumber, set CpuntNumber] = useState(0)
-   const handleclick = () =>{
-    setCountNumber (countNumber+1)
-   }
-   const handleclick = ()=>{
-    setCpuntNumber(countNumber+1)
-   }
-   h
-  
-  
   return (
-    
-    <div>
+    <>
+      <div className="bg-blue-400 p-10">
+        {studentsData.map((e, i) => (
+          <div key={i}>
+            <h2>{e.stuName}</h2>
+            <p>{e.stuAge}</p>
+            <p>{e.stuEmail}</p>
+            <p>{e.stuCourse}</p>
+            
+          </div>
+        ))}
+        </div>
+      </>
+  )
+}
+  export default App
+//this is print object of array in using map (e,i)
+//key
+//we csant use for each , for loop so we react in map 
 
-      <button onclick="">click me</button>
-    </div>
+----------------------------------------------------------------------------------------------------------
+2.   const App = () => {
+  const studentsData = [
+    { stuName: "1tej", stuAge: 20, stuEmail: "tej@gmail.com", stuCourse: "css" },
+    { stuName: "2tej", stuAge: 20, stuEmail: "tej@gmail.com", stuCourse: "css" },
+    { stuName: "3tej", stuAge: 20, stuEmail: "tej@gmail.com", stuCourse: "css" },
+    { stuName: "4tej", stuAge: 20, stuEmail: "tej@gmail.com", stuCourse: "css" },
+     { stuName: "5tej", stuAge: 20, stuEmail: "tej@gmail.com", stuCourse: "css" },
+      { stuName: "6tej", stuAge: 20, stuEmail: "tej@gmail.com", stuCourse: "css" },
+       { stuName: "7tej", stuAge: 20, stuEmail: "tej@gmail.com", stuCourse: "css" },
+        { stuName: "8tej", stuAge: 20, stuEmail: "tej@gmail.com", stuCourse: "css" },
+        { stuName: "9tej", stuAge: 20, stuEmail: "tej@gmail.com", stuCourse: "css" },
+  ];
+
+  return (
+    <>
+      <div className="bg-blue-400 flex justify-between items-center gap-5 p-10">
+        {studentsData.map((e, i) => (
+          <div key={i} className="bg-white p-3 w-100 h-50 rounded-2xl">
+            <h2>{e.stuName}</h2>
+            <p>{e.stuAge}</p>
+            <p>{e.stuEmail}</p>
+            <p>{e.stuCourse}</p>
+            
+          </div>
+        ))}
+        </div>
+      </>
+  )
+}
+  export default App
+//add tailwind in it
+----------------------------------------------------------------------------------------------------------
+3.const App = () => {
+  const studentsData = [
+    { stuName: "1tej", stuAge: 20, stuEmail: "tej@gmail.com", stuCourse: "css" },
+    { stuName: "2tej", stuAge: 20, stuEmail: "tej@gmail.com", stuCourse: "css" },
+    { stuName: "3tej", stuAge: 20, stuEmail: "tej@gmail.com", stuCourse: "css" },
+    { stuName: "4tej", stuAge: 20, stuEmail: "tej@gmail.com", stuCourse: "css" },
+     { stuName: "5tej", stuAge: 20, stuEmail: "tej@gmail.com", stuCourse: "css" },
+      { stuName: "6tej", stuAge: 20, stuEmail: "tej@gmail.com", stuCourse: "css" },
+       { stuName: "7tej", stuAge: 20, stuEmail: "tej@gmail.com", stuCourse: "css" },
+        { stuName: "8tej", stuAge: 20, stuEmail: "tej@gmail.com", stuCourse: "css" },
+        { stuName: "9tej", stuAge: 20, stuEmail: "tej@gmail.com", stuCourse: "css" },
+  ];
+
+  return (
+    <>
+      <div className="bg-blue-400 flex justify-between items-center flex-wrap gap-5 p-10">
+        {studentsData.map((e, i) => (
+          <div key={i} className="bg-white p-3 w-100 h-50 rounded-2xl">
+            <h2>{e.stuName}</h2>
+            <p>{e.stuAge}</p>
+            <p>{e.stuEmail}</p>
+            <p>{e.stuCourse}</p>
+             <button className="bg-black text-white p-1 w-60 text-center rounded-2xl">view course</button>
+          </div>
+        ))}
+        </div>
+      </>
   )
 }
 
-export default App 
-//this is yesterday teach
+  export default App
+//button
+//product rel time array of onbjec ttha 
+---------------------------------------------------------------------------------
+4.const App = () => {
+  const studentsData = [
+    { stuName: "1tej", stuAge: 20, stuEmail: "tej@gmail.com", stuCourse: "css" },
+    { stuName: "2tej", stuAge: 20, stuEmail: "tej@gmail.com", stuCourse: "css" },
+    { stuName: "3tej", stuAge: 20, stuEmail: "tej@gmail.com", stuCourse: "css" },
+    { stuName: "4tej", stuAge: 20, stuEmail: "tej@gmail.com", stuCourse: "css" },
+     { stuName: "5tej", stuAge: 20, stuEmail: "tej@gmail.com", stuCourse: "css" },
+      { stuName: "6tej", stuAge: 20, stuEmail: "tej@gmail.com", stuCourse: "css" },
+       { stuName: "7tej", stuAge: 20, stuEmail: "tej@gmail.com", stuCourse: "css" },
+        { stuName: "8tej", stuAge: 20, stuEmail: "tej@gmail.com", stuCourse: "css" },
+        { stuName: "9tej", stuAge: 20, stuEmail: "tej@gmail.com", stuCourse: "css" },
+  ];
+
+  
+  const copydata = [...studentsData]
+
+  
+
+  return (
+    <>
+      <div className="bg-blue-400 flex justify-between items-center flex-wrap gap-5 p-10">
+        {copydata.map((e, i) => (
+          <div key={i} className="bg-white p-3 w-100 h-50 rounded-2xl">
+            <h2>{e.stuName}</h2>
+            <p>{e.stuAge}</p>
+            <p>{e.stuEmail}</p>
+            <p>{e.stuCourse}</p>
+             <button className="bg-black text-white p-1 w-60 text-center rounded-2xl">view course</button>
+          </div>
+        ))}
+        </div>
+      </>
+  )
+}
+
+  export default App
+//spread operator  for copy
+//... this is notation
+----------------------------------------------------------------------------------------------------------
+5.const App = () => {
+  let studentsData = [
+    { stuName: "1 tej", stuAge: 19, stuEmail: "tej@gmail.com", stuCourse: "css" },
+    { stuName: "2 tej", stuAge: 20, stuEmail: "tej@gmail.com", stuCourse: "css" },
+    { stuName: "3 tej", stuAge: 30, stuEmail: "tej@gmail.com", stuCourse: "css" },
+    { stuName: "4 tej", stuAge: 26, stuEmail: "tej@gmail.com", stuCourse: "css" },
+    { stuName: "5 tej", stuAge: 23, stuEmail: "tej@gmail.com", stuCourse: "css" },
+    { stuName: "6 tej", stuAge: 27, stuEmail: "tej@gmail.com", stuCourse: "css" },
+    { stuName: "7 tej", stuAge: 18, stuEmail: "tej@gmail.com", stuCourse: "css" },
+    { stuName: "8 tej", stuAge: 25, stuEmail: "tej@gmail.com", stuCourse: "css" },
+    { stuName: "9 tej", stuAge: 21, stuEmail: "tej@gmail.com", stuCourse: "css" },
+  ];
+
+  
+  let copydata_1 = [...studentsData]
+  
+  
+  let copydata = copydata_1.filter((e)=>e.stuAge>20)
+   
+  console.log(copydata);
+  
+  return (
+    <>
+      <div className="bg-blue-400 flex justify-between items-center flex-wrap gap-5 p-10">
+        {copydata.map((e, i) => (
+          <div key={i} className="bg-white p-3 w-100 h-50 rounded-2xl">
+            <h2>{e.stuName}</h2>
+            <p>{e.stuAge}</p>
+            <p>{e.stuEmail}</p>
+            <p>{e.stuCourse}</p>
+             <button className="bg-black text-white p-1 w-60 text-center rounded-2xl">view course</button>
+          </div>
+        ))}
+        </div>
+      </>
+  )
+}
+
+  export default App
+//filter with age from whole data fwe fliter 
+//just know not now
+----------------------------------------------------------------------------------------------------------
+
+
     </pre>
   </body>
 </html>

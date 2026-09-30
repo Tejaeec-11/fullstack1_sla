@@ -1,4 +1,4 @@
-
+import Navbar from "./components/Navbar";
 
 const App = () => {
  
@@ -9,8 +9,13 @@ const App = () => {
      {name:"JSS",node:"2021",isActive:"rayya"},
      {name:"react",node:"2026",isActive:"ngst"}
   ]
-  const newindiavalue = arrobj.map((e,i)=>`$(i)+1 -- $(e)`)
-  console.log(newindiavalue);
+ const newindiavalue = arrobj.map(
+  (e, i) => `${i + 1} -- ${e.name}`
+  
+
+);
+console.log(newindiavalue);
+
   
   
  return (
@@ -45,3 +50,17 @@ export default App
 //3
 // <Navbar datavaanupuren = {obj} newdatasend={"React"}/>
 //one obj and onu string send to navbar 
+
+//4
+//const newindiavalue = arrobj.map(
+  //(e,i) => `${i}+1 -- ${e}`
+//);
+//it show in output but in console only 
+
+//5
+//const newindiavalue = arrobj.map(
+ // (e, i) => `${i + 1} -- ${e.name}`
+//);
+//console.log(newindiavalue);
+//this is show only in screen blue red
+

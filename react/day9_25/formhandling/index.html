@@ -1,0 +1,555 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>formhandling</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+    <pre>
+      ------------------------------------------------------------------------
+      1.const App = () => {
+
+
+    const handleChange = (e)=>{
+    
+      console.log(e);
+      
+   
+    }return (
+    <>
+    <div>
+      <input type="text" onChange={handleChange} className="/>w-full rounded-xl border border-gray-200 bg-gray-50 px-4 py-3 text-sm text-gray-900 placeholder-gray-400 shadow-sm transition focus:border-blue-500 focus:bg-white focus:ring-4 focus:ring-blue-100 focus:outline-none"/>
+    </div>
+    </>
+  )
+}
+
+export default App
+
+//in console see output and time
+-------------------------------------------------------------------------------------
+2.const App = () => {
+
+ //  const e ={target:{value:"1"}}
+    const handleChange = (e)=>{
+    
+      console.log(e.target.value);
+      
+   
+    }
+
+
+
+ return (
+    <>
+    <div>
+      <input type="text" onChange={handleChange} className="/>w-full rounded-xl border border-gray-200 bg-gray-50 px-4 py-3 text-sm text-gray-900 placeholder-gray-400 shadow-sm transition focus:border-blue-500 focus:bg-white focus:ring-4 focus:ring-blue-100 focus:outline-none"/>
+    </div>
+    </>
+  )
+}
+
+export default App
+//type in output and in console you see the out and 
+// and backspace in in ui and it auto matcially backspace in ui
+------------------------------------------------------------------------------------------------------------
+3.import { useState } from "react";
+
+const App = () => {
+
+
+  const [username,setUserName] =  useState("")
+  const [showData,setShowData] = useState("")
+ //  const e ={target:{value:"1"}}
+    const handleChange = (e)=>{
+
+  //  console.log(e.target.value);
+      
+    setUserName(event.target.value)
+
+    }
+
+      const handleclick = ()=>{
+      
+        setShowData(username)
+
+      }
+
+
+ return (
+    <>
+    <div>
+      <input type="text" onChange={handleChange} className="/>w-full rounded-xl border border-gray-200 bg-gray-50 px-4 py-3 text-sm text-gray-900 placeholder-gray-400 shadow-sm transition focus:border-blue-500 focus:bg-white focus:ring-4 focus:ring-blue-100 focus:outline-none"/>
+      <button onClick={handleclick}
+      className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+        Submit</button>
+      <p>{username}</p>
+      <p>{showData}</p>
+    
+    </div>
+    </>
+  )
+}
+
+export default App
+//when we type and submit it show in screen and subit again show in screen
+-------------------------------------------------------------------------------------
+4.import { useState } from "react";
+
+const App = () => {
+
+
+  const [username,setUserName] =  useState("")
+  const [showData,setShowData] = useState("")
+ //  const e ={target:{value:"1"}}
+    const handleChange = (e)=>{
+
+  //  console.log(e.target.value);
+      
+    setUserName(event.target.value)
+
+    }
+
+      const handleclick = ()=>{
+      
+        setShowData(username)
+
+      }
+
+
+ return (
+    <>
+    <div>
+      <input type="text" onChange={handleChange} className="/>w-full rounded-xl border border-gray-200 bg-gray-50 px-4 py-3 text-sm text-gray-900 placeholder-gray-400 shadow-sm transition focus:border-blue-500 focus:bg-white focus:ring-4 focus:ring-blue-100 focus:outline-none"/>
+      <button onClick={handleclick}
+      className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+        Submit</button>
+      <p>{username}</p>
+      <p>{showData}</p>
+    
+    </div>
+    </>
+  )
+}
+
+export default App
+//when we type and submit it show in screen and subit again show in screen
+----------------------------------------------------------------------------------------
+5.import { useState } from "react";
+
+const App = () => {
+
+
+  const [username,setUserName] =  useState("")
+  const [showData,setShowData] = useState("")
+ //  const e ={target:{value:"1"}}
+    const handleChange = (e)=>{
+
+  //  console.log(e.target.value);
+      
+    setUserName(event.target.value)
+} 
+const handleclick = ()=>{
+      
+        setShowData(username)
+ }
+ return (
+    <>
+    <div>
+      <input type="text" onChange={handleChange} className="/>w-full rounded-xl border border-gray-200 bg-gray-50 px-4 py-3 text-sm text-gray-900 placeholder-gray-400 shadow-sm transition focus:border-blue-500 focus:bg-white focus:ring-4 focus:ring-blue-100 focus:outline-none"/>
+      <button onClick={handleclick}
+      className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+        Submit</button>
+      <p>{username}</p>
+      <p>{showData}</p>
+    
+    </div>
+    </>
+  )
+}
+
+export default App
+//when we type and submit it show in screen and subit again show in screen
+----------------------------------------------------------------------------------------
+6.import { useState } from "react";
+
+const App = () => {
+  const [username, setUserName] = useState("");
+  const [userage, setUserAge] = useState("");
+
+  const handleChange = (e) => {
+    setUserName(e.target.value);
+     setUserAge(e.target.value);
+  };
+
+  
+
+  return (
+    <>
+      <div>
+        <input
+          className="border px-3 py-2 rounded"
+          type="text"
+          onChange={handleChange}
+          placeholder="Enter the Name"
+        />
+
+        <input
+          className="border px-3 py-2 rounded"
+          type="number"
+          onChange={handleChange}
+          placeholder="Enter the Age"
+        />
+      </div>
+
+      <div>
+        <p>{username}</p>
+        <p>{userage}</p>
+      </div>
+    </>
+  );
+};
+
+export default App;
+
+  
+   
+//one
+------------------------------------------------------------------------------------
+7.import { useState } from "react";
+
+const App = () => {
+  const [username, setUserName] = useState("");
+  const [userage, setUserAge] = useState("");
+
+  const handleNameChange = (e) => {
+    setUserName(e.target.value);
+  };
+
+  const handleAgeChange = (e) => {
+    setUserAge(e.target.value);
+  };
+
+  return (
+    <>
+      <div>
+        <input
+          className="border px-3 py-2 rounded"
+          type="text"
+          onChange={handleNameChange}
+          placeholder="Enter the Name"
+        />
+
+        <input
+          className="border px-3 py-2 rounded"
+          type="number"
+          onChange={handleAgeChange}
+          placeholder="Enter the Age"
+        />
+      </div>
+
+      <div>
+        <p>{username}</p>
+        <p>{userage}</p>
+      </div>
+    </>
+  );
+};
+
+export default App;
+//2
+------------------------------------------------------------------------------------
+8.import { useState } from "react";
+
+const App = () => {
+  const [username, setUserName] = useState("");
+  const [userage, setUserAge] = useState("");
+  const [showData,setShowData] = useState("")
+
+  const handleChange = (e) => {
+    setUserName(e.target.value);
+     setUserAge(e.target.value);
+  };
+
+  const handleClick = ()=>{
+     setShowData(username,userage)
+  }
+
+  
+
+  return (
+    <>
+      <div>
+        <input
+          className="border px-3 py-2 rounded"
+          type="text"
+          onChange={handleChange}
+          placeholder="Enter the Name"
+        />
+
+        <input
+          className="border px-3 py-2 rounded"
+          type="number"
+          onChange={handleChange}
+          placeholder="Enter the Age"
+        />
+
+        <button  className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600"  onClick={handleClick}>
+          Click
+        </button>
+      </div>
+
+     
+
+      <p>{showData}</p>
+    </>
+  );
+};
+
+export default App;
+//3
+------------------------------------------------------------------------
+9.import { useState } from "react";
+
+const App = () => {
+  const [username, setUserName] = useState("");
+  const [userage, setUserAge] = useState("");
+  const [showData,setShowData] = useState("")
+
+const handleNameChange = (e) => {
+  setUserName(e.target.value);
+};
+
+const handleAgeChange = (e) => {
+  setUserAge(e.target.value);
+};
+
+
+  const handleClick = ()=>{
+      
+    const obj = {username:username,userage:userage}
+     
+     setShowData(obj)
+  }
+
+  
+
+  return (
+    <>
+      <div>
+        <input
+          className="border px-3 py-2 rounded"
+          type="text"
+          onChange={handleNameChange}
+          placeholder="Enter the Name"
+        />
+
+        <input
+          className="border px-3 py-2 rounded"
+          type="number"
+          onChange={handleAgeChange}
+          placeholder="Enter the Age"
+        />
+
+        <button  className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600"  onClick={handleClick}>
+          Click
+        </button>
+      </div>
+
+     
+
+      <p>{showData.username}</p>
+       <p>{showData.userage}</p>
+    </>
+  );
+};
+
+export default App;
+//toshwo in output  p tag
+// <p>{showData.username}</p>
+------------------------------------------------------------------------------------------------------------
+10.import { useState } from "react";
+
+const App = () => {
+  const [username, setUserName] = useState("");
+  const [userage, setUserAge] = useState("");
+  const [showData,setShowData] = useState([])
+
+const handleNameChange = (e) => {
+  setUserName(e.target.value);
+};
+
+const handleAgeChange = (e) => {
+  setUserAge(e.target.value);
+};
+
+
+  const handleClick = ()=>{
+      
+    const obj = {id:Date.now(),username:username,userage:userage}
+
+    const copy = [...showData]
+
+    
+    copy.push(obj)
+  
+     
+     setShowData(copy)
+  }
+
+ return (
+    <>
+      <div>
+        <input
+          className="border px-3 py-2 rounded"
+          type="text"
+          onChange={handleNameChange}
+          placeholder="Enter the Name"
+        />
+
+        <input
+          className="border px-3 py-2 rounded"
+          type="number"
+          onChange={handleAgeChange}
+          placeholder="Enter the Age"
+        />
+
+        <button  className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600"  onClick={handleClick}>
+          Click
+        </button>
+      </div>
+       
+     
+     
+
+      <p>{showData.username}</p>
+       <p>{showData.userage}</p>
+
+        <table>
+  <thead>
+    <tr>
+      <th>UserName</th>
+      <th>UserAge</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    {showData.map((e) => {
+      return (
+        <tr key={e.id}>
+          <td>{e.username}</td>
+          <td>{e.userage}</td>
+        </tr>
+      );
+    })}
+  </tbody>
+</table>
+
+    </>
+  );
+};
+
+export default App;
+//toshwo in output  p tag
+// <p>{showData.username}</p>
+//last code 
+------------------------------------------------------------------------------------
+11.import { useState } from "react";
+
+const App = () => {
+  const [username, setUserName] = useState("");
+  const [userage, setUserAge] = useState("");
+  const [showData,setShowData] = useState([])
+
+const handleNameChange = (e) => {
+  setUserName(e.target.value);
+};
+
+const handleAgeChange = (e) => {
+  setUserAge(e.target.value);
+};
+
+
+  const handleClick = ()=>{
+      
+    const obj = {id:Date.now(),username:username,userage:userage}
+
+    const copy = [...showData]
+
+    
+    copy.push(obj)
+  
+     
+     setShowData(copy)
+  }
+
+ return (
+    <>
+      <div>
+        <input
+          className="border px-3 py-2 rounded"
+          type="text"
+          onChange={handleNameChange}
+          placeholder="Enter the Name"
+        />
+
+        <input
+          className="border px-3 py-2 rounded"
+          type="number"
+          onChange={handleAgeChange}
+          placeholder="Enter the Age"
+        />
+
+        <button  className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600"  onClick={handleClick}>
+          Click
+        </button>
+      </div>
+       
+     
+     
+
+      <p>{showData.username}</p>
+       <p>{showData.userage}</p>
+
+       <table className="w-auto border-collapse border border-gray-300 text-sm">
+
+  <thead>
+    <tr>
+      <th>S.no</th>
+      <th>UserName</th>
+      <th>UserAge</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    {showData.map((e) => {
+      return (
+        <tr key={e.id}>
+          <td>{e.id}</td>
+          <td>{e.username}</td>
+          <td>{e.userage}</td>
+        </tr>
+      );
+    })}
+  </tbody>
+</table>
+
+    
+
+    </>
+  );
+};
+
+export default App;
+//toshwo in output  p tag
+// <p>{showData.username}</p>
+// final
+------------------------------------------------------------------------------------
+11.//2time
+    </pre>
+  </body>
+</html>

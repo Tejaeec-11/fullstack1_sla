@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>state-set</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+    <pre>
+ -------------------------------------------------------------------
+      1.const App = () => {
+
+let data = 10
+
+ const handleClick =()=>{
+  data++
+ }
+ console.log(data);
+ 
+  return (<>
+    <div>App
+      <p>{data}</p>
+    <button onClick={handleClick}>click now</button>
+    </div>
+</>  )
+}
+
+export default App
+---------------------------------------------------------------------------
+2.const App = () => {
+
+let data = 10
+
+ const handleClick =()=>{
+  data++
+  console.log(data);
+  
+ }
+ 
+ 
+  return (<>
+    <div>App
+      <p>{data}</p>
+    <button onClick={handleClick}>click now</button>
+    </div>
+</>  )
+}
+
+export default App
+-----------------------------------------------------------------------------------
+3.import { useState } from "react";
+
+
+const App = () => {
+  const [title,setTitle] = useState("this is react")
+  const changetext = ()=>{
+
+    setTitle("this is node")
+  }
+  return (
+  
+  <>
+         
+         <h3>{title}</h3>
+    <button onClick={changetext}>
+      click to change
+    </button>
+ 
+  </> 
+ )
+}
+
+export default App
+//string  ula process
+-------------------------------------------------------------------
+4.import { useState } from "react";
+
+
+const App = () => {
+  const [title,setTitle] = useState("this is react")
+
+  const [isActive,setIsActive] = useState(true)
+
+  const changetext = ()=>{
+
+    setTitle("this is node")
+  }
+
+  const SHowText =()=>{
+
+    setIsActive(false)
+  } 
+  return (
+  
+  <>
+         
+         <h3>{title}</h3>
+    <button onClick={changetext}>
+      click to change
+    </button>
+
+     {isActive?<p>This is React</p>:<p>This is js</p>}
+    <button onClick={SHowText}>Show</button>
+ 
+  </> 
+ )
+}
+
+export default App
+-------------------------------------------------------------------
+5.import { useState } from "react";
+
+
+const App = () => {
+  const [title,setTitle] = useState("this is react")
+
+  const [isActive,setIsActive] = useState(true)
+
+  const changetext = ()=>{
+
+    setTitle("this is node")
+  }
+
+  const SHowText =()=>{
+
+    setIsActive(!isActive)
+  } 
+  return (
+  
+  <>
+         
+         <h3>{title}</h3>
+    <button onClick={changetext}>
+      click to change
+    </button>
+
+     {isActive?<p>This is React</p>:<p>This is js</p>}
+    <button onClick={SHowText}>Show</button>
+ 
+  </> 
+ )
+}
+
+export default App
+-------------------------------------------------------------------
+6.import { useState } from "react";
+
+
+const App = () => {
+  const [title,setTitle] = useState("this is react")
+
+  const [isActive,setIsActive] = useState(true)
+
+  const changetext = ()=>{
+
+    setTitle("this is node")
+  }
+
+  const SHowText =()=>{
+
+    setIsActive(!isActive)
+  } 
+  return (
+  
+  <>
+         
+         <h3>{title}</h3>
+    <button onClick={changetext}>
+      click to change
+    </button>
+
+     {isActive&&<p>This is React</p>}
+    <button onClick={SHowText}>Show</button>
+ 
+  </> 
+ )
+}
+
+export default App
+-------------------------------------------------------------------
+7.import { useState } from "react";
+
+ const App = () => {
+  const [title,setTitle] = useState("this is react")
+
+  const [isActive,setIsActive] = useState(true)
+
+  const changetext = ()=>{
+
+    setTitle("this is node")
+  }
+
+  const SHowText =()=>{
+
+    setIsActive(!isActive)
+  } 
+  return (
+  
+  <>
+    <h3>{title}</h3>
+    <button onClick={changetext}>click to change </button>
+
+     {isActive&&<p>This is React</p>}
+    <button onClick={SHowText}>{isActive?"Show":"Hide"}</button>
+ 
+  </> 
+ )
+}
+
+export default App
+-----------------------------------------------------------------------------------
+8.
+    </pre>
+  </body>
+</html>
