@@ -1,0 +1,467 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>fromhandling</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+    <pre>
+      ------------------------------
+      1.
+
+const App = (e) => {
+     
+  const [saveDatas,setSaveDatas] = useState({username:"",usernumber:"",useremail:""})//orey object 
+     
+
+
+    const handleChange =(e)=>{  //e to stop reload 
+        console.log(e.target.name);
+        console.log(e.target.value);
+        
+        
+    }
+    const handleClick = () =>{
+
+    }
+
+
+
+
+
+  return (
+    <>
+    <form>
+      <input type="text" name="username" onChange={handleChange}/>
+      <input type="number"  name="usernumber" onChange={handleChange}/>
+      <input type="email"  name="useremail" onChange={handleChange}/>
+      <button onclick={handleClick}></button>
+    </form>
+    </>
+  )
+}
+
+export default App
+
+
+//<input type="text" onChange={handleChange}/>
+//day 9 we use different ( ) for each but all in one function
+
+//type="sumbit" if use submint use in form in from we need to give <form onsubmit=>
+  //or else we give <button onclick={handleclick}> this is easy method 
+    ---------------------------------------
+    2.
+
+const App = (e) => {
+     
+  const [saveDatas,setSaveDatas] = useState({username:"",usernumber:"",useremail:""})//orey object 
+     
+
+
+    const handleChange =(e)=>{
+    
+    const copy = {...saveDatas,username:"React"}
+     
+        console.log(copy);
+        
+    }
+    const handleClick = () =>{
+
+    }
+
+
+
+
+
+  return (
+    <>
+    <form>
+      <input type="text" name="username" onChange={handleChange}/>
+      <input type="number"  name="usernumber" onChange={handleChange}/>
+      <input type="email"  name="useremail" onChange={handleChange}/>
+      <button onclick={handleClick}></button>
+    </form>
+    </>
+  )
+}
+
+export default App
+//update object
+//js method   saveDatas.username="React" 
+//react copy 
+// 1.  const copy = {...saveDatas,username:"React"} this for single value update like username, number or emial or all value we need object
+//2.   const copy = {...saveDatas,[e.target.name]:e.target.value} in 3.
+---------------------------------------------
+3.
+
+const App = (e) => {
+     
+  const [saveDatas,setSaveDatas] = useState({username:"",usernumber:"",useremail:""})//orey object 
+     
+
+
+    const handleChange =(e)=>{
+    
+    
+      
+       setSaveDatas({...saveDatas,[e.target.name]:e.target.value})
+        
+    }
+    const handleClick = (e) =>{
+  
+       e.preventDefault()
+      console.log(saveDatas);
+      
+    }
+
+
+
+
+
+  return (
+    <>
+    <form>
+      <input type="text" name="username" onChange={handleChange}/>
+      <input type="number"  name="usernumber" onChange={handleChange}/>
+      <input type="email"  name="useremail" onChange={handleChange}/>
+      <button onclick={handleClick}></button>
+    </form>
+    </>
+  )
+}
+
+export default App
+---------------------------------------
+4.const App = (e) => {
+     
+  const [saveDatas,setSaveDatas] = useState({username:"",usernumber:"",useremail:""})//orey object 
+     
+
+
+    const handleChange =(e)=>{
+    
+    
+      
+       setSaveDatas({...saveDatas,[e.target.name]:e.target.value})
+        
+    }
+    const handleClick = (e) =>{
+  
+       e.preventDefault()
+     
+       if(saveDatas.username === "" ||  saveDatas.usernumber === ""  || saveDatas.useremail === "" )
+        alert("Fill the Form")
+       return
+      
+   
+      const datas = JSON.parse( localStorage.getItem("datas")) || []
+
+      datas.push(saveDatas )
+
+      localStorage.setItem("datas",JSON.stringify(datas))
+    
+      alert("successfully done")
+
+      setSaveDatas({username:"",usernumber:"",useremail:""})
+   
+   
+   
+      }
+
+
+
+
+
+  return (
+    <>
+    <form>
+      <input type="text" name="username" value={saveDatas.username} onChange={handleChange}/>
+      <input type="number"  name="usernumber" value={saveDatas.usernumber} onChange={handleChange}/>
+      <input type="email"  name="useremail" value={saveDatas.useremail} onChange={handleChange}/>
+      <button onclick={handleClick}></button>
+    </form>
+    </>
+  )
+}
+
+export default App
+//local storge save dTat
+------------------------------------------------
+5.
+
+
+
+const App = () => {
+   
+  const datas =()=>{
+    console.log('running');
+    }
+    datas()
+ 
+ 
+ 
+ 
+  return (
+    <>
+    
+    </>
+  )
+}
+
+export default App
+===============================================
+6.
+
+
+
+const App = () => {
+   
+  let datasCount = 0
+  const datas =()=>{
+    console.log('running');
+
+    datasCount++
+    console.log(datasCount);
+    
+    }
+    datas()
+ 
+ 
+ 
+ 
+  return (
+    <>
+    
+    </>
+  )
+}
+
+export default App
+//varaiable maintain
+============================================
+7.const App = () => {
+   
+  let [datasCount,setDataCount] = useState(0)
+  
+  const datas =()=>{
+    
+    console.log('running');
+
+    datasCount++
+    setDataCount(datasCount);
+    
+    }
+    datas()
+  return (
+    <>
+    
+    </>
+  )
+}
+
+export default App
+//state maintain
+//console.log(datasCount) error
+// setDataCount(datasCount);
+---------------------------------------------------------------------
+8.const App = () => {
+   
+  let [datasCount,setDataCount] = useState(0)
+  
+  const datas =()=>{
+    
+    console.log('running');
+
+    datasCount++
+    setDataCount(datasCount);
+    
+    }
+   
+    useEffect(()=>{
+      console.log('use effect running ');
+      
+        datas()
+    })
+
+  return (
+    <>
+    
+    </>
+  )
+}
+
+export default App
+//useeffect-it hook
+===================================================
+9.
+
+
+
+const App = () => {
+
+  console.log('compont ru nning');
+  
+   
+  let [datasCount,setDataCount] = useState(0)
+  
+  const datas =()=>{
+    
+    console.log('running');
+
+    datasCount++
+    setDataCount(datasCount);
+    
+    }
+   
+    useEffect(()=>{
+      console.log('use effect running ');
+      
+        datas()
+    },[])
+
+  return (
+    <>
+    
+    </>
+  )
+}
+
+export default App
+//useeffect-it hook
+//strict remove from main
+//with dependency ,without depency,empty depency
+============================================================
+10.
+
+
+
+const App = () => {
+
+  console.log('compont ru nning');
+  
+   
+  let [datasCount,setDataCount] = useState(0)
+  
+  const datas =()=>{
+    
+    console.log('running');
+
+    datasCount++
+    setDataCount(datasCount);
+    
+    }
+   
+    useEffect(()=>{
+      console.log('use effect running ');
+      
+        datas()
+    },[datasCount])
+
+  return (
+    <>
+    
+    </>
+  )
+}
+
+export default App
+//without depency-every state update if the useeffect run
+//if coponet update data trigger
+//},[])
+//loop render
+
+
+//empty depency
+//mon sommthing
+
+//with
+// },[datasCount])
+//use effect
+=======================================================
+11.const App = (e) => {
+     
+  const [saveDatas,setSaveDatas] = useState({username:"",usernumber:"",useremail:""})//orey object 
+     
+
+
+    const handleChange =(e)=>{
+    
+    
+      
+       setSaveDatas({...saveDatas,[e.target.name]:e.target.value})
+       
+       const [showDatas, setShowDatas] = useState([]) 
+       const fetchData = ()=>{
+         const getDatas = JSON.parse(localStorage.getItem("datas"))
+      
+         setShowDatas(getDatas)
+      
+      
+        }
+        useEffect(()=>{
+          fetchDatas()
+        },[])
+       
+
+
+
+    }
+    const handleClick = (e) =>{
+  
+       e.preventDefault()
+     
+       if(saveDatas.username === "" ||  saveDatas.usernumber === ""  || saveDatas.useremail === "" )
+        alert("Fill the Form")
+       return
+      
+   
+      const datas = JSON.parse( localStorage.getItem("datas")) || []
+
+      datas.push(saveDatas )
+
+      localStorage.setItem("datas",JSON.stringify(datas))
+    
+      alert("successfully done")
+
+      setSaveDatas({username:"",usernumber:"",useremail:""})
+   
+   
+       fetchDatas()
+      }
+
+
+
+
+
+  return (
+    <>
+    <form>
+      <input type="text" name="username" value={saveDatas.username} onChange={handleChange}/>
+      <input type="number"  name="usernumber" value={saveDatas.usernumber} onChange={handleChange}/>
+      <input type="email"  name="useremail" value={saveDatas.useremail} onChange={handleChange}/>
+      <button onclick={handleClick}></button>
+    </form>
+
+    <div>
+      {showDatas.map((e,i)=>{
+        <div key={i}>
+          <p>{e.username}</p>
+          <p>{e.usernumber}</p>
+          <p>{e.useremail}</p>
+        </div>
+      })}
+    </div>
+    </>
+  )
+}
+
+export default App
+============================================================================
+
+    </pre>
+  </body>
+</html>
