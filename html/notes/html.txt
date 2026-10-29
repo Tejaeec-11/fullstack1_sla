@@ -1,0 +1,3206 @@
+html 
+
+day1
+HTML - Day 1 Notes
+
+What is HTML?
+HTML stands for HyperText Markup Language.
+
+HTML is the standard markup language used to create web pages. It provides the structure of a website and tells the browser how content should be displayed.
+
+Why Do We Use HTML?
+To create web pages.
+
+To display text, images, videos, tables, and forms.
+
+To organize content in a structured way.
+
+To build the foundation of every website.
+
+Real World Examples
+Google Search Page
+
+YouTube
+
+Amazon
+
+Facebook
+
+Instagram
+
+All websites use HTML as their basic structure.
+
+How Does HTML Work?
+HTML File
+    ↓
+Browser Reads HTML
+    ↓
+Creates DOM Structure
+    ↓
+Displays Content
+Example:
+
+<h1>Hello World</h1>
+Output:
+
+Hello World
+Basic HTML Structure
+Every HTML document follows a standard structure.
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My First Page</title>
+</head>
+<body>
+    <h1>Welcome to HTML</h1>
+</body>
+</html>
+Understanding the Structure
+1.
+<!DOCTYPE html>
+Purpose:
+
+Tells the browser that this document uses HTML5.
+
+Must be the first line of every HTML document.
+
+2. Root Element
+<html>
+</html>
+The <html> tag is called the Root Element.
+
+Why?
+
+Because every other HTML element is placed inside it.
+
+Example:
+
+<html>
+    ...
+</html>
+3. Head Section
+<head>
+</head>
+The head section contains information about the webpage.
+
+Examples:
+
+Title
+
+Meta Tags
+
+CSS Links
+
+Favicon
+
+Example:
+
+<head>
+    <title>HTML Class</title>
+</head>
+4. Title Tag
+<title>HTML Class</title>
+The title appears in the browser tab.
+
+Output:
+
+HTML Class
+(Shown on the browser tab)
+
+5. Body Section
+<body>
+</body>
+The body contains all visible content displayed on the webpage.
+
+Example:
+
+<body>
+    <h1>Hello</h1>
+    <p>Welcome</p>
+</body>
+Root Element
+Definition:
+
+The top-most element of an HTML document.
+
+Example:
+
+<html>
+    <head></head>
+    <body></body>
+</html>
+Here:
+
+html
+is the Root Element.
+
+Parent Element
+Definition:
+
+An element that contains another element.
+
+Example:
+
+<body>
+    <h1>Hello</h1>
+</body>
+Here:
+
+body
+is the Parent Element.
+
+Child Element
+Definition:
+
+An element placed inside another element.
+
+Example:
+
+<body>
+    <h1>Hello</h1>
+</body>
+Here:
+
+h1
+is the Child Element of body.
+
+Parent and Child Relationship
+Example:
+
+<html>
+    <body>
+        <h1>Hello</h1>
+    </body>
+</html>
+Structure:
+
+html
+ └── body
+      └── h1
+html → Parent of body
+
+body → Child of html
+
+body → Parent of h1
+
+h1 → Child of body
+
+Container Elements
+Definition:
+
+Elements that can contain other elements inside them.
+
+Examples:
+
+<div>
+    <h1>Heading</h1>
+    <p>Paragraph</p>
+</div>
+Container Elements:
+
+html
+head
+body
+div
+section
+article
+nav
+header
+footer
+These tags can hold other tags.
+
+Non-Container Elements
+Definition:
+
+Elements that do not contain child elements.
+
+Examples:
+
+<img>
+<br>
+<hr>
+<input>
+These elements are usually self-closing or do not wrap other content.
+
+Nested Elements
+Definition:
+
+Elements placed inside another element.
+
+Example:
+
+<div>
+    <section>
+        <h1>HTML</h1>
+    </section>
+</div>
+Structure:
+
+div
+ └── section
+      └── h1
+This is called Nesting.
+
+HTML Document Tree
+Example:
+
+<html>
+    <head>
+        <title>HTML</title>
+    </head>
+
+    <body>
+        <h1>Welcome</h1>
+        <p>HTML Class</p>
+    </body>
+</html>
+Tree Structure:
+
+html
+├── head
+│    └── title
+│
+└── body
+     ├── h1
+     └── p
+The browser converts HTML into this tree structure called DOM (Document Object Model).
+
+Key Points
+HTML stands for HyperText Markup Language.
+
+HTML provides the structure of a webpage.
+
+<html> is the Root Element.
+
+<head> stores page information.
+
+<body> stores visible content.
+
+Parent elements contain child elements.
+
+Child elements exist inside parent elements.
+
+Container elements can contain other elements.
+
+Nested elements create a tree structure.
+
+Browser converts HTML into a DOM Tree.
+
+day2
+
+Block Level Elements, Inline Elements, Formatting Tags, Interactive Tags
+
+What are HTML Elements?
+HTML elements are used to structure and display content on a webpage.
+
+Elements are mainly divided into:
+
+1. Block Level Elements
+2. Inline Elements
+3. Formatting Elements
+4. Interactive Elements
+1. Block Level Elements
+Definition
+A block-level element always starts on a new line and occupies the full available width.
+
+Characteristics
+Starts on a new line.
+
+Takes full width by default.
+
+Can contain other block and inline elements.
+
+Used for page layout and content structure.
+
+Example
+<h1>HTML</h1>
+<p>Welcome to HTML</p>
+<div>Learning HTML</div>
+Output
+HTML
+
+Welcome to HTML
+
+Learning HTML
+Each element appears on a separate line.
+
+Common Block Level Elements
+<div>
+<p>
+<h1> to <h6>
+<section>
+<article>
+<header>
+<footer>
+<nav>
+<main>
+<aside>
+<form>
+Example
+<div>
+   <h1>Frontend Development</h1>
+   <p>HTML CSS JavaScript</p>
+</div>
+Why Use Block Elements?
+Creating sections
+
+Building layouts
+
+Grouping content
+
+Structuring webpages
+
+2. Inline Elements
+Definition
+Inline elements do not start on a new line.
+
+They occupy only the required width.
+
+Characteristics
+Stays in the same line.
+
+Takes only required space.
+
+Used inside text content.
+
+Example
+<p>
+   Welcome to <span>HTML</span> Training
+</p>
+Output
+Welcome to HTML Training
+Everything remains on the same line.
+
+Common Inline Elements
+<span>
+<a>
+<img>
+<strong>
+<b>
+<i>
+<em>
+<mark>
+<small>
+<sup>
+<sub>
+<label>
+Example
+<p>
+  Learn <strong>HTML</strong> and <em>CSS</em>
+</p>
+Block vs Inline
+Block Level
+
+Inline
+
+New Line
+
+Same Line
+
+Full Width
+
+Required Width
+
+Layout Structure
+
+Text Styling
+
+div, p, h1
+
+span, a, strong
+
+Example
+Block
+<h1>HTML</h1>
+<p>Paragraph</p>
+Output
+
+HTML
+
+Paragraph
+Inline
+<span>HTML</span>
+<span>CSS</span>
+<span>JS</span>
+Output
+
+HTML CSS JS
+3. Formatting Tags
+Formatting tags are used to style or emphasize text.
+
+b Tag
+Makes text bold.
+
+<b>HTML</b>
+Output:
+
+HTML
+(Bold)
+
+strong Tag
+Indicates important text.
+
+<strong>Important</strong>
+Output:
+
+Important
+(Bold + Semantic Meaning)
+
+i Tag
+Italic text.
+
+<i>HTML</i>
+em Tag
+Emphasized text.
+
+<em>HTML</em>
+mark Tag
+Highlights text.
+
+<mark>HTML</mark>
+small Tag
+Displays smaller text.
+
+<small>HTML</small>
+del Tag
+Deleted text.
+
+<del>500</del>
+Output:
+
+~~500~~
+ins Tag
+Inserted text.
+
+<ins>450</ins>
+Output:
+
+450
+(Underlined)
+
+sub Tag
+Subscript text.
+
+H<sub>2</sub>O
+Output:
+
+H₂O
+sup Tag
+Superscript text.
+
+x<sup>2</sup>
+Output:
+
+x²
+Formatting Tags Summary
+<b>
+<strong>
+<i>
+<em>
+<mark>
+<small>
+<del>
+<ins>
+<sub>
+<sup>
+4. Interactive Tags
+Interactive elements allow users to interact with the webpage.
+
+Anchor Tag
+Used for navigation.
+
+<a href="https://google.com">
+   Google
+</a>
+Button Tag
+Used to perform actions.
+
+<button>Click Me</button>
+Input Tag
+Used to collect user input.
+
+<input type="text">
+Select Tag
+Dropdown menu.
+
+<select>
+   <option>HTML</option>
+   <option>CSS</option>
+</select>
+Textarea Tag
+Multi-line input.
+
+<textarea></textarea>
+Details Tag
+Expandable content.
+
+<details>
+   <summary>Read More</summary>
+   HTML is a markup language.
+</details>
+Audio Tag
+Audio player.
+
+<audio controls>
+</audio>
+Video Tag
+Video player.
+
+<video controls>
+</video>
+Common Interactive Tags
+<a>
+<button>
+<input>
+<select>
+<option>
+<textarea>
+<details>
+<summary>
+<audio>
+<video>
+<form>
+Interview Questions
+1. What is a Block Level Element?
+A block-level element starts on a new line and occupies the full width available.
+
+2. Name Five Block Level Elements.
+div
+p
+h1
+section
+article
+3. What is an Inline Element?
+An inline element does not start on a new line and occupies only the required width.
+
+4. Name Five Inline Elements.
+span
+a
+img
+strong
+em
+5. Difference Between Block and Inline Elements?
+Block → New Line + Full Width
+
+Inline → Same Line + Required Width
+6. What is the Difference Between b and strong?
+b → Visual Bold
+
+strong → Important Text + Semantic Meaning
+7. What is the Difference Between i and em?
+i → Italic Text
+
+em → Emphasized Text with Meaning
+8. What is the Purpose of mark Tag?
+Used to highlight text.
+
+9. What is an Interactive Element?
+Elements that allow users to interact with a webpage.
+
+10. Name Five Interactive Elements.
+a
+button
+input
+select
+textarea
+
+day3
+HTML Semantic Tags and Non-Semantic Tags
+
+What is a Semantic Tag?
+The word Semantic means "Meaning".
+
+Semantic tags clearly describe the purpose of the content inside them.
+
+When developers, browsers, search engines, and screen readers see a semantic tag, they can easily understand what kind of content it contains.
+
+Why Do We Use Semantic Tags?
+Before HTML5
+Developers mostly used:
+
+<div>
+<div>
+<div>
+<div>
+Everything was built using div tags.
+
+Problem:
+
+Difficult to understand the structure.
+
+Poor readability.
+
+Less SEO friendly.
+
+Accessibility issues.
+
+After HTML5
+Semantic tags were introduced.
+
+Example:
+
+<header>
+<nav></nav>
+</header>
+
+<main>
+    <section>
+        <article></article>
+    </section>
+</main>
+
+<footer></footer>
+Now the structure itself explains the content.
+
+Benefits of Semantic Tags
+1. Better Readability
+Developers can easily understand the code.
+
+2. Better SEO
+Search engines understand the webpage structure better.
+
+3. Better Accessibility
+Screen readers can identify page sections correctly.
+
+4. Easier Maintenance
+Large projects become easier to manage.
+
+Common Semantic Tags
+1. header
+Represents introductory content of a page or section.
+
+Example:
+
+<header>
+    <h1>SLA Institute</h1>
+</header>
+Uses:
+
+Logo
+
+Website Name
+
+Search Bar
+
+Navigation
+
+2. nav
+Represents navigation links.
+
+Example:
+
+<nav>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Courses</a>
+</nav>
+Uses:
+
+Menus
+
+Navigation Links
+
+3. main
+Represents the primary content of the webpage.
+
+Example:
+
+<main>
+    <h1>React Training</h1>
+</main>
+Rules:
+
+Only one main tag per page.
+
+4. section
+Represents a logical section of content.
+
+Example:
+
+<section>
+    <h2>About Us</h2>
+    <p>We provide training.</p>
+</section>
+Uses:
+
+About Section
+
+Services Section
+
+Contact Section
+
+5. article
+Represents independent content.
+
+Example:
+
+<article>
+    <h2>React Tutorial</h2>
+    <p>Learn React Basics.</p>
+</article>
+Uses:
+
+Blog Posts
+
+News Articles
+
+Product Cards
+
+6. aside
+Represents related content.
+
+Example:
+
+<aside>
+    Advertisement
+</aside>
+Uses:
+
+Ads
+
+Sidebars
+
+Related Links
+
+7. footer
+Represents footer content.
+
+Example:
+
+<footer>
+    Copyright © 2026
+</footer>
+Uses:
+
+Copyright
+
+Contact Information
+
+Social Media Links
+
+8. figure
+Represents media content.
+
+Example:
+
+<figure>
+    <img src="image.jpg">
+</figure>
+9. figcaption
+Represents caption for media.
+
+Example:
+
+<figure>
+    <img src="image.jpg">
+    <figcaption>React Course</figcaption>
+</figure>
+Semantic Layout Example
+<header>
+    Logo
+</header>
+
+<nav>
+    Menu
+</nav>
+
+<main>
+
+    <section>
+
+        <article>
+            Blog Content
+        </article>
+
+    </section>
+
+    <aside>
+        Advertisement
+    </aside>
+
+</main>
+
+<footer>
+    Copyright
+</footer>
+Visual Structure
+header
+   │
+nav
+   │
+main
+ ┌─┴─────────┐
+ │           │
+section    aside
+ │
+article
+ │
+footer
+What is a Non-Semantic Tag?
+Non-semantic tags do not provide any meaning about the content.
+
+They are mainly used for layout and grouping purposes.
+
+Common Non-Semantic Tags
+div
+Most commonly used container element.
+
+Example:
+
+<div>
+    Welcome
+</div>
+Browser knows:
+
+Container
+Browser does NOT know:
+
+Header?
+Footer?
+Article?
+Navigation?
+span
+Inline container element.
+
+Example:
+
+<p>
+    Learn <span>HTML</span>
+</p>
+Browser only knows:
+
+Inline Container
+No meaning is provided.
+
+Semantic vs Non-Semantic
+Semantic
+
+Non-Semantic
+
+Meaningful
+
+No Meaning
+
+Better SEO
+
+Less SEO
+
+Better Accessibility
+
+Less Accessibility
+
+Easier to Read
+
+Harder to Understand
+
+header, nav, section
+
+div, span
+
+Example Without Semantic Tags
+<div>
+
+    <div>
+        Logo
+    </div>
+
+    <div>
+        Home About Contact
+    </div>
+
+    <div>
+
+        <div>
+            Blog Post
+        </div>
+
+        <div>
+            Advertisement
+        </div>
+
+    </div>
+
+    <div>
+        Footer
+    </div>
+
+</div>
+Problem:
+
+Difficult to understand.
+
+Example Using Semantic Tags
+<header>
+    Logo
+</header>
+
+<nav>
+    Home About Contact
+</nav>
+
+<main>
+
+    <article>
+        Blog Post
+    </article>
+
+    <aside>
+        Advertisement
+    </aside>
+
+</main>
+
+<footer>
+    Footer
+</footer>
+Easy to understand.
+
+Paragraph Tag
+What is Paragraph Tag?
+The paragraph tag is used to define textual content.
+
+Syntax:
+
+<p>
+    Content
+</p>
+Why Use Paragraph Tag?
+Used to:
+
+Display text.
+
+Group sentences.
+
+Improve readability.
+
+Example
+<p>
+    HTML is the standard markup language used to create webpages.
+</p>
+Multiple Paragraphs
+<p>
+    HTML provides structure.
+</p>
+
+<p>
+    CSS provides styling.
+</p>
+
+<p>
+    JavaScript provides functionality.
+</p>
+Each paragraph appears on a separate line.
+
+Paragraph is a Block-Level Element
+Example:
+
+<p>Paragraph One</p>
+<p>Paragraph Two</p>
+Output:
+
+Paragraph One
+
+Paragraph Two
+Paragraph with Formatting Tags
+<p>
+    Learn <strong>HTML</strong> and <em>CSS</em>.
+</p>
+Paragraph with Inline Tags
+<p>
+    Welcome to
+    <span>SLA Institute</span>
+</p>
+Paragraph Best Practices
+Good
+<p>
+    HTML is the foundation of web development.
+</p>
+Bad
+<p>
+<div>
+Content
+</div>
+</p>
+Do not place block-level elements inside paragraphs.
+
+day4
+
+HTML Attributes - Detailed Notes
+
+What is an Attribute?
+An Attribute provides additional information about an HTML element.
+
+Attributes are always written inside the opening tag.
+
+Syntax
+<tagname attribute="value">
+    Content
+</tagname>
+Example
+<a href="https://google.com">
+    Google
+</a>
+Here:
+
+href = Attribute Name
+
+https://google.com = Attribute Value
+Structure of an Attribute
+<img src="image.jpg" alt="Student Image">
+Breakdown:
+
+src          → Attribute Name
+
+image.jpg    → Attribute Value
+
+alt          → Attribute Name
+
+Student Image → Attribute Value
+Why Do We Use Attributes?
+Attributes provide extra information to HTML elements.
+
+Without Attributes:
+
+<img>
+Browser doesn't know:
+
+Which image?
+Where is the image?
+With Attributes:
+
+<img src="student.jpg">
+Browser knows which image to display.
+
+Types of Attributes
+HTML Attributes are mainly divided into:
+
+1. Global Attributes
+2. Local (Element Specific) Attributes
+1. Global Attributes
+Global Attributes can be used on almost every HTML element.
+
+Example
+<h1 id="heading" class="title">
+    HTML
+</h1>
+Important Global Attributes
+id Attribute
+Used to uniquely identify an element.
+
+<h1 id="main-heading">
+    Welcome
+</h1>
+Rules
+Must be unique.
+
+One page should not contain duplicate ids.
+
+class Attribute
+Used to group multiple elements.
+
+<p class="content">
+    HTML
+</p>
+
+<p class="content">
+    CSS
+</p>
+Purpose:
+
+CSS Styling
+
+JavaScript Selection
+
+title Attribute
+Displays tooltip information.
+
+<p title="Hyper Text Markup Language">
+    HTML
+</p>
+When user hovers over HTML, tooltip appears.
+
+style Attribute
+Used for inline CSS.
+
+<h1 style="color:red;">
+    HTML
+</h1>
+hidden Attribute
+Hides an element.
+
+<p hidden>
+    Secret Content
+</p>
+draggable Attribute
+Allows dragging.
+
+<img src="html.png" draggable="true">
+lang Attribute
+Specifies document language.
+
+<html lang="en">
+Local Attributes
+Local Attributes work only on specific elements.
+
+Anchor Tag Attributes
+href
+Specifies destination URL.
+
+<a href="https://google.com">
+    Google
+</a>
+target
+Specifies where to open the link.
+
+<a href="https://google.com"
+   target="_blank">
+   Google
+</a>
+Output:
+
+Opens in a new tab
+download
+Downloads the file.
+
+<a href="resume.pdf" download>
+    Download Resume
+</a>
+Image Tag Attributes
+src
+Specifies image location.
+
+<img src="student.jpg">
+alt
+Alternative text.
+
+<img src="student.jpg"
+     alt="Student Photo">
+width
+Sets image width.
+
+<img src="student.jpg"
+     width="300">
+height
+Sets image height.
+
+<img src="student.jpg"
+     height="200">
+Input Tag Attributes
+type
+Specifies input type.
+
+<input type="text">
+Examples:
+
+<input type="email">
+<input type="password">
+<input type="number">
+<input type="date">
+<input type="file">
+placeholder
+Displays hint text.
+
+<input
+type="text"
+placeholder="Enter Name">
+required
+Makes field mandatory.
+
+<input
+type="email"
+required>
+value
+Provides default value.
+
+<input
+type="text"
+value="Sudhan">
+readonly
+User cannot edit value.
+
+<input
+type="text"
+value="HTML"
+readonly>
+disabled
+Disables input field.
+
+<input
+type="text"
+disabled>
+Form Tag Attributes
+action
+Specifies where form data goes.
+
+<form action="register.php">
+</form>
+method
+Specifies HTTP method.
+
+<form method="post">
+</form>
+Values:
+
+GET
+POST
+Table Attributes
+border
+Adds border.
+
+<table border="1">
+</table>
+cellpadding
+Space inside cells.
+
+<table cellpadding="10">
+</table>
+cellspacing
+Space between cells.
+
+<table cellspacing="5">
+</table>
+Most Important Beginner Attributes
+id
+class
+title
+style
+href
+target
+src
+alt
+width
+height
+type
+placeholder
+required
+value
+readonly
+disabled
+action
+method
+Example Using Multiple Attributes
+<a
+href="https://google.com"
+target="_blank"
+title="Open Google">
+Google
+</a>
+<img
+src="student.jpg"
+alt="Student Photo"
+width="300"
+height="200">
+<input
+type="text"
+placeholder="Enter Name"
+required>
+Difference Between Global and Local Attributes
+Global Attributes
+
+Local Attributes
+
+Work on almost all elements
+
+Work on specific elements
+
+id
+
+href
+
+class
+
+src
+
+style
+
+alt
+
+title
+
+target
+
+hidden
+
+type
+
+day5
+Semantic Tags
+✅ Block Level Elements
+✅ Inline Elements
+✅ Anchor Tags
+✅ Image Tags
+✅ Ordered Lists
+✅ Unordered Lists
+
+day6
+HTML Forms - Complete Notes
+
+What is a Form?
+An HTML Form is used to collect user information and send it to a server.
+
+Examples:
+
+Login Form
+
+Registration Form
+
+Contact Form
+
+Feedback Form
+
+Job Application Form
+
+Payment Form
+
+Why Do We Use Forms?
+Forms allow users to enter data such as:
+
+Name
+
+Email
+
+Password
+
+Phone Number
+
+Address
+
+Date of Birth
+
+Resume Upload
+
+Feedback
+
+Basic Form Syntax
+<form action="" method="">
+
+</form>
+Form Attributes
+action
+Specifies where the form data should be sent.
+
+<form action="register.php">
+method
+Specifies how the data is sent.
+
+<form method="get">
+or
+
+<form method="post">
+GET
+Data visible in URL
+
+Used for search
+
+POST
+Data hidden
+
+Used for Login, Registration, Payment
+
+autocomplete
+Turns browser suggestions ON or OFF.
+
+<form autocomplete="on">
+<form autocomplete="off">
+enctype
+Used while uploading files.
+
+<form enctype="multipart/form-data">
+novalidate
+Disables HTML validation.
+
+<form novalidate>
+Form Elements
+1. input
+Most commonly used form element.
+
+Syntax
+
+<input type="">
+Input Types
+text
+<input type="text">
+Used for:
+
+Name
+
+City
+
+College
+
+password
+<input type="password">
+email
+<input type="email">
+number
+<input type="number">
+tel
+<input type="tel">
+url
+<input type="url">
+search
+<input type="search">
+date
+<input type="date">
+datetime-local
+<input type="datetime-local">
+time
+<input type="time">
+month
+<input type="month">
+week
+<input type="week">
+color
+<input type="color">
+range
+<input type="range">
+checkbox
+<input type="checkbox">
+Multiple selections allowed.
+
+radio
+<input type="radio">
+Single selection.
+
+file
+<input type="file">
+image
+<input type="image">
+hidden
+<input type="hidden">
+submit
+<input type="submit">
+reset
+<input type="reset">
+button
+<input type="button">
+Input Attributes
+id
+Unique identification.
+
+<input id="username">
+name
+Used to send data to server.
+
+<input name="username">
+value
+Default value.
+
+<input value="Sudhan">
+placeholder
+Hint text.
+
+<input placeholder="Enter Name">
+required
+Mandatory field.
+
+<input required>
+readonly
+Cannot edit.
+
+<input readonly>
+disabled
+Disabled field.
+
+<input disabled>
+maxlength
+Maximum characters.
+
+<input maxlength="20">
+minlength
+Minimum characters.
+
+<input minlength="5">
+min
+Minimum number.
+
+<input min="1">
+max
+Maximum number.
+
+<input max="100">
+step
+Number increment.
+
+<input step="5">
+checked
+Default selected.
+
+<input type="checkbox" checked>
+multiple
+Multiple file selection.
+
+<input type="file" multiple>
+accept
+Accept specific files.
+
+<input type="file" accept=".pdf">
+autofocus
+Focus automatically.
+
+<input autofocus>
+pattern
+Validation using Regular Expression.
+
+<input pattern="[A-Za-z]+">
+label
+Used to label input fields.
+
+<label>Name</label>
+textarea
+Multi-line input.
+
+<textarea></textarea>
+Attributes
+
+rows
+cols
+placeholder
+readonly
+disabled
+maxlength
+Example
+
+<textarea rows="5" cols="30"></textarea>
+select
+Dropdown.
+
+<select>
+
+</select>
+option
+Dropdown items.
+
+<select>
+
+<option>HTML</option>
+
+<option>CSS</option>
+
+<option>React</option>
+
+</select>
+optgroup
+Groups options.
+
+<select>
+
+<optgroup label="Frontend">
+
+<option>HTML</option>
+
+<option>CSS</option>
+
+</optgroup>
+
+</select>
+Select Attributes
+multiple
+required
+disabled
+size
+Example
+
+<select multiple>
+
+</select>
+button
+<button>Click</button>
+Types
+
+<button type="submit">
+<button type="reset">
+<button type="button">
+fieldset
+Groups form controls.
+
+<fieldset>
+
+</fieldset>
+legend
+Title for fieldset.
+
+<legend>Student Details</legend>
+datalist
+Auto suggestions.
+
+<input list="courses">
+
+<datalist id="courses">
+
+<option value="HTML">
+
+<option value="React">
+
+</datalist>
+output
+Displays calculated result.
+
+<output></output>
+meter
+Displays measurement.
+
+<meter value="70" min="0" max="100"></meter>
+progress
+Progress bar.
+
+<progress value="60" max="100"></progress>
+Important Form Elements
+form
+input
+label
+textarea
+select
+option
+optgroup
+button
+fieldset
+legend
+datalist
+output
+meter
+progress
+Most Important Input Types
+text
+password
+email
+number
+tel
+url
+search
+date
+time
+datetime-local
+month
+week
+radio
+checkbox
+file
+submit
+reset
+button
+hidden
+range
+color
+Most Important Attributes
+Global Attributes
+id
+class
+style
+title
+hidden
+lang
+dir
+tabindex
+draggable
+Form Attributes
+action
+method
+autocomplete
+enctype
+novalidate
+Input Attributes
+type
+name
+value
+placeholder
+required
+readonly
+disabled
+maxlength
+minlength
+min
+max
+step
+checked
+multiple
+accept
+autofocus
+pattern
+Select Attributes
+multiple
+required
+disabled
+size
+Textarea Attributes
+rows
+cols
+placeholder
+maxlength
+readonly
+disabled
+Interview Questions
+What is a Form?
+A Form is used to collect user data and send it to the server.
+
+Difference Between GET and POST?
+GET
+
+Data visible in URL.
+
+Less secure.
+
+POST
+
+Data hidden.
+
+More secure.
+
+What is Placeholder?
+Displays hint text inside an input field.
+
+Difference Between readonly and disabled?
+readonly
+
+Value visible.
+
+Can be submitted.
+
+Cannot edit.
+
+disabled
+
+Value visible.
+
+Cannot edit.
+
+Not submitted.
+
+Difference Between Radio and Checkbox?
+Radio
+
+Single selection.
+
+Checkbox
+
+Multiple selections.
+
+Difference Between Button and Submit?
+Button
+
+Performs custom actions.
+
+Submit
+
+Sends form data to the server.
+
+Difference Between Select and Datalist?
+Select
+
+Fixed dropdown options.
+
+Datalist
+
+User can type or choose suggestions.
+
+Difference Between Meter and Progress?
+Meter
+
+Displays a measured value.
+
+Progress
+
+Displays task completion progress.
+
+day7
+
+HTML Forms & Tables - Complete Notes
+
+HTML Table
+What is a Table?
+An HTML Table is used to display data in rows and columns.
+
+Tables are commonly used for:
+
+Student Details
+
+Employee Records
+
+Product Lists
+
+Marksheets
+
+Attendance Reports
+
+Invoice Data
+
+Reports
+
+Banking Transactions
+
+Why Do We Use Tables?
+Tables organize data in a structured format, making it easy for users to read, compare, and understand information.
+
+Example:
+
+Student ID | Name | Course | Marks
+Instead of displaying information randomly, tables arrange the data neatly into rows and columns.
+
+Basic Table Syntax
+<table>
+
+</table>
+Everything related to the table should be placed inside the <table> tag.
+
+HTML Table Structure
+<table>
+
+    <thead>
+
+    </thead>
+
+    <tbody>
+
+    </tbody>
+
+    <tfoot>
+
+    </tfoot>
+
+</table>
+Table Elements
+table
+Defines the complete table.
+
+<table>
+
+</table>
+thead
+Represents the table header.
+
+Purpose:
+
+Stores column headings.
+
+Example:
+
+<thead>
+
+</thead>
+tbody
+Represents the table body.
+
+Purpose:
+
+Stores actual records.
+
+Example:
+
+<tbody>
+
+</tbody>
+tfoot
+Represents the table footer.
+
+Purpose:
+
+Stores totals, summaries, or footer information.
+
+Example:
+
+<tfoot>
+
+</tfoot>
+tr
+Represents a table row.
+
+Example
+
+<tr>
+
+</tr>
+Every row in a table is created using <tr>.
+
+th
+Represents a table heading.
+
+Example
+
+<th>Student Name</th>
+Characteristics:
+
+Bold Text
+
+Center Aligned
+
+Used inside <thead>
+
+td
+Represents table data.
+
+Example
+
+<td>Rahul</td>
+Stores actual values.
+
+Table Structure Example
+table
+│
+├── thead
+│      └── tr
+│            ├── th
+│            ├── th
+│            └── th
+│
+├── tbody
+│      ├── tr
+│      │      ├── td
+│      │      ├── td
+│      │      └── td
+│      │
+│      └── tr
+│
+└── tfoot
+Table Attributes
+border
+Adds border around the table.
+
+<table border="1">
+cellpadding
+Adds space inside each table cell.
+
+<table cellpadding="10">
+cellspacing
+Adds space between cells.
+
+<table cellspacing="5">
+width
+Sets table width.
+
+<table width="800">
+or
+
+<table width="100%">
+height
+Sets table height.
+
+<table height="300">
+align
+Aligns the table.
+
+<table align="center">
+bgcolor (Deprecated)
+Changes table background color.
+
+<table bgcolor="lightblue">
+td Attributes
+colspan
+Merges multiple columns.
+
+<td colspan="3">
+rowspan
+Merges multiple rows.
+
+<td rowspan="2">
+align
+Aligns text.
+
+<td align="center">
+valign
+Vertical alignment.
+
+<td valign="middle">
+Form
+What is a Form?
+A Form is used to collect information from users and send it to the server.
+
+Examples
+
+Login
+
+Registration
+
+Contact Form
+
+Feedback
+
+Job Application
+
+Admission Form
+
+Basic Form Syntax
+<form>
+
+</form>
+Form Attributes
+action
+Specifies where form data is sent.
+
+<form action="register.php">
+method
+Specifies how data is sent.
+
+<form method="post">
+Values
+
+GET
+POST
+enctype
+Used while uploading files.
+
+<form enctype="multipart/form-data">
+autocomplete
+Turns browser suggestions ON/OFF.
+
+autocomplete="on"
+
+autocomplete="off"
+novalidate
+Disables HTML validation.
+
+<form novalidate>
+Form Elements
+label
+Displays label for input.
+
+<label>Name</label>
+input
+Used to receive user input.
+
+<input type="text">
+textarea
+Multi-line input.
+
+<textarea></textarea>
+select
+Dropdown menu.
+
+<select>
+
+</select>
+option
+Dropdown options.
+
+<option>HTML</option>
+button
+Button element.
+
+<button>Save</button>
+Input Types Used
+text
+
+email
+
+password
+
+tel
+
+number
+
+radio
+
+checkbox
+
+file
+
+submit
+Input Attributes Used
+id
+Unique identification.
+
+id="username"
+name
+Used to send data to server.
+
+name="username"
+placeholder
+Displays hint.
+
+placeholder="Enter Name"
+required
+Mandatory field.
+
+required
+minlength
+Minimum characters.
+
+minlength="10"
+maxlength
+Maximum characters.
+
+maxlength="10"
+value
+Default value.
+
+value="HTML"
+Radio Button
+Allows only one selection.
+
+Example
+
+<input type="radio" name="gender">
+All radio buttons should have the same name.
+
+Checkbox
+Allows multiple selections.
+
+Example
+
+<input type="checkbox">
+Select Dropdown
+<select>
+
+<option>Select One</option>
+
+<option>HTML</option>
+
+<option>CSS</option>
+
+</select>
+Textarea
+Used for large text.
+
+Example
+
+<textarea rows="5" cols="30">
+
+</textarea>
+File Upload
+<input type="file">
+Requires
+
+enctype="multipart/form-data"
+Submit Button
+<input type="submit">
+or
+
+<button type="submit">
+
+Submit
+
+</button>
+Form Structure
+form
+│
+├── label
+├── input
+├── label
+├── input
+├── radio
+├── checkbox
+├── select
+│      └── option
+├── textarea
+├── file
+└── submit
+Difference Between Table and Form
+Table
+
+Form
+
+Displays Data
+
+Collects Data
+
+Rows & Columns
+
+Input Fields
+
+Used for Reports
+
+Used for Registration
+
+Read Only
+
+User Interaction
+
+<table>
+
+<form>
+
+Real-Time Uses
+Tables
+Employee List
+
+Student Attendance
+
+Marksheet
+
+Salary Report
+
+Product List
+
+Invoice
+
+Forms
+Login Page
+
+Registration Page
+
+Contact Form
+
+Feedback Form
+
+Online Payment
+
+Online Admission
+
+Interview Questions
+What is a Table?
+A table is used to display data in rows and columns.
+
+What is the Difference Between th and td?
+th → Table Heading
+
+td → Table Data
+What is the Purpose of thead?
+Stores column headings.
+
+What is tbody?
+Stores actual table records.
+
+What is colspan?
+Used to merge multiple columns.
+
+What is rowspan?
+Used to merge multiple rows.
+
+What is cellpadding?
+Space inside table cells.
+
+What is cellspacing?
+Space between table cells.
+
+What is a Form?
+A form is used to collect user information.
+
+Difference Between GET and POST?
+GET
+
+Data visible in URL
+
+POST
+
+Data hidden
+
+Difference Between Radio and Checkbox?
+Radio
+
+Single selection
+
+Checkbox
+
+Multiple selections
+
+Why is enctype="multipart/form-data" used?
+It is used when uploading files using the <input type="file"> element.
+
+ChatGPT Image Jul 21, 2026, 09_18_01 AM
+Click here
+
+day8
+HTML Document Setup – DOCTYPE, HTML5, lang, Meta Tags, UTF-8 Complete Notes
+
+Introduction
+Every HTML page starts with a basic document structure.
+
+Example:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+</head>
+<body>
+
+</body>
+</html>
+Every line has a specific purpose. Let's understand each one in detail.
+
+1. What is ?
+Definition
+<!DOCTYPE html> is called the Document Type Declaration.
+
+It tells the browser that the document is written using HTML5.
+
+Why Do We Need DOCTYPE?
+Before HTML5, browsers used different rendering modes.
+
+Without DOCTYPE:
+
+Browser may enter Quirks Mode
+
+Old browser behavior is used
+
+CSS may not work correctly
+
+Layout may break
+
+With DOCTYPE:
+
+Browser enters Standards Mode
+
+HTML5 and CSS behave correctly
+
+Same output across modern browsers
+
+Syntax
+<!DOCTYPE html>
+Why is it not a Tag?
+DOCTYPE is not an HTML tag.
+
+It is a declaration that is read before the HTML document begins.
+
+History of DOCTYPE
+HTML 4.01
+DOCTYPE was very long.
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+HTML5
+Simplified to:
+
+<!DOCTYPE html>
+Interview Question
+Why do we use DOCTYPE?
+DOCTYPE tells the browser to render the page using HTML5 standards.
+
+2. What is HTML?
+Full Form
+HTML = HyperText Markup Language
+HyperText
+HyperText means text connected using hyperlinks.
+
+Example
+
+Google → YouTube → Gmail
+One page connects to another page.
+
+Markup
+Markup means adding tags to describe content.
+
+Example
+
+<h1>Welcome</h1>
+<h1> is a markup tag.
+
+Language
+HTML is called a language because it follows predefined rules and syntax to describe webpage structure.
+
+Why HTML?
+HTML provides structure for webpages.
+
+It defines:
+
+Headings
+
+Paragraphs
+
+Images
+
+Links
+
+Forms
+
+Tables
+
+Videos
+
+What is HTML5?
+HTML5 is the fifth version of HTML.
+
+Released to support modern web applications.
+
+Features of HTML5
+Semantic Tags
+
+Audio Tag
+
+Video Tag
+
+Canvas
+
+SVG
+
+Local Storage
+
+Session Storage
+
+Geolocation
+
+Drag and Drop
+
+New Form Controls
+
+Difference Between HTML and HTML5
+HTML
+
+HTML5
+
+Older Version
+
+Latest Version
+
+Less Semantic
+
+Semantic Tags
+
+No Audio
+
+Audio Supported
+
+No Video
+
+Video Supported
+
+No Canvas
+
+Canvas Supported
+
+Less Form Controls
+
+More Input Types
+
+3. What is lang Attribute?
+Example
+
+<html lang="en">
+Purpose
+Specifies the language of the webpage.
+
+Why Use lang?
+Benefits
+
+Accessibility
+
+SEO
+
+Screen Readers
+
+Search Engines
+
+Examples
+English
+
+<html lang="en">
+Tamil
+
+<html lang="ta">
+Hindi
+
+<html lang="hi">
+French
+
+<html lang="fr">
+4. Meta Tag
+What is Meta?
+Meta means information about information.
+
+Meta tags provide information about the webpage.
+
+Users cannot see Meta tags.
+
+Browsers and search engines read them.
+
+Syntax
+<meta>
+Why Meta Tags?
+Meta tags help:
+
+Browser
+
+Google
+
+Bing
+
+Facebook
+
+LinkedIn
+
+Twitter
+
+Screen Readers
+
+understand your webpage.
+
+Common Meta Tags
+charset
+<meta charset="UTF-8">
+Purpose
+
+Defines character encoding.
+
+What is UTF?
+Full Form
+
+Unicode Transformation Format
+What is Unicode?
+Unicode is a worldwide standard that assigns a unique number to every character.
+
+Examples
+
+A
+B
+தமிழ்
+日本語
+😊
+€
+₹
+Why UTF-8?
+UTF-8 supports almost every language.
+
+Without UTF-8
+
+தமிழ்
+may appear as
+
+    
+Why "8" in UTF-8?
+The number 8 refers to an 8-bit unit (1 byte).
+
+UTF-8 stores characters using 1 to 4 bytes.
+
+English letters usually use 1 byte (8 bits).
+
+Other languages and emojis may use 2, 3, or 4 bytes.
+
+What is a Bit?
+A Bit is the smallest unit of data.
+
+0
+1
+Only two values.
+
+8 Bits
+8 Bits = 1 Byte
+Example
+
+01000001
+Represents
+
+A
+What is 64-bit?
+64-bit refers to the processor or operating system architecture.
+
+64 Bits = 8 Bytes
+A 64-bit CPU can process more data at once and access much more memory than a 32-bit CPU.
+
+This is different from UTF-8. The "8" in UTF-8 refers to bytes used for encoding text, while "64-bit" refers to CPU architecture.
+
+Meta Charset
+<meta charset="UTF-8">
+Must be placed near the top of the <head> section.
+
+viewport
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0">
+Purpose
+
+Makes webpages responsive.
+
+width=device-width
+Uses the full width of the current device.
+
+initial-scale=1.0
+Initial zoom level is 100%.
+
+description
+<meta
+name="description"
+content="HTML Complete Tutorial">
+Used by search engines.
+
+keywords
+<meta
+name="keywords"
+content="HTML,CSS,JavaScript">
+Historically used for SEO. Modern search engines give it little or no ranking value.
+
+author
+<meta
+name="author"
+content="Sudhan">
+Specifies page author.
+
+robots
+<meta
+name="robots"
+content="index,follow">
+Common Values
+
+index
+
+noindex
+
+follow
+
+nofollow
+refresh
+<meta
+http-equiv="refresh"
+content="5">
+Refreshes page after 5 seconds.
+
+Redirect example
+
+<meta
+http-equiv="refresh"
+content="5;url=https://google.com">
+http-equiv
+Simulates HTTP response headers.
+
+Example
+
+<meta
+http-equiv="X-UA-Compatible"
+content="IE=edge">
+Historically used for older versions of Internet Explorer.
+
+Open Graph (OG)
+What is OG?
+OG stands for
+
+Open Graph
+Created by Facebook.
+
+It controls how your webpage looks when shared on social media.
+
+og:title
+<meta
+property="og:title"
+content="HTML Course">
+og:description
+<meta
+property="og:description"
+content="Complete HTML Tutorial">
+og:image
+<meta
+property="og:image"
+content="banner.jpg">
+og:url
+<meta
+property="og:url"
+content="https://example.com">
+og:type
+<meta
+property="og:type"
+content="website">
+Common Values
+
+website
+
+article
+
+video.movie
+
+profile
+Twitter Card Meta Tags
+<meta
+name="twitter:card"
+content="summary_large_image">
+
+<meta
+name="twitter:title"
+content="HTML Tutorial">
+
+<meta
+name="twitter:description"
+content="Learn HTML">
+
+<meta
+name="twitter:image"
+content="banner.jpg">
+These control how a page appears when shared on X (Twitter).
+
+Meta Tag Attributes
+charset
+Character encoding.
+
+name
+Used for metadata such as:
+
+description
+
+keywords
+
+author
+
+viewport
+
+robots
+
+twitter:card
+content
+Stores the value.
+
+Example
+
+content="HTML Tutorial"
+property
+Used mainly for Open Graph metadata.
+
+Example
+
+property="og:title"
+http-equiv
+Represents HTTP response information.
+
+Complete Head Example
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<meta
+name="description"
+content="Complete HTML Notes">
+
+<meta
+name="keywords"
+content="HTML,CSS,JavaScript">
+
+<meta
+name="author"
+content="Sudhan">
+
+<meta
+name="robots"
+content="index,follow">
+
+<meta
+property="og:title"
+content="HTML Course">
+
+<meta
+property="og:description"
+content="Learn HTML">
+
+<meta
+property="og:image"
+content="banner.jpg">
+
+<meta
+property="og:url"
+content="https://example.com">
+
+<title>HTML Notes</title>
+
+</head>
+Interview Questions
+What is DOCTYPE?
+DOCTYPE tells the browser to use HTML5 standards while rendering the webpage.
+
+What is HTML?
+HTML stands for HyperText Markup Language and provides the structure of webpages.
+
+What is HTML5?
+HTML5 is the latest major version of HTML that supports semantic elements, multimedia, and modern web features.
+
+What is lang?
+The lang attribute specifies the language of the webpage.
+
+What is a Meta Tag?
+Meta tags provide information about the webpage for browsers, search engines, and social media platforms.
+
+What is UTF-8?
+UTF-8 (Unicode Transformation Format - 8-bit) is a character encoding standard that supports almost every language and symbol.
+
+What is Open Graph?
+Open Graph is a metadata protocol that controls how webpages appear when shared on social media.
+
+Name Important Meta Tags.
+charset
+viewport
+description
+keywords
+author
+robots
+refresh
+http-equiv
+og:title
+og:description
+og:image
+og:url
+twitter:card
+ChatGPT Image Jul 22, 2026, 08_37_43 AM
+Click here
+
+day9
+
+HTML Media Elements - Complete Notes
+
+What are Media Elements?
+Media elements are HTML tags used to display multimedia content such as:
+
+Images
+
+Audio
+
+Video
+
+YouTube Videos
+
+Google Maps
+
+PDF Files
+
+External Websites
+
+HTML5 introduced built-in media support, so no plugins like Flash are required.
+
+Types of HTML Media Elements
+<img>
+<audio>
+<video>
+<source>
+<track>
+<iframe>
+<embed>
+<object>
+<picture>
+1. Image Tag
+Used to display images.
+
+Syntax
+<img src="image.jpg" alt="Nature Image">
+Important Attributes
+src
+
+alt
+
+width
+
+height
+
+loading
+
+title
+
+Example
+
+<img
+src="nature.jpg"
+alt="Nature"
+width="400"
+height="250">
+2. Audio Tag
+Used to play audio files.
+
+Syntax
+<audio controls>
+
+</audio>
+Using Source Tag
+<audio controls>
+
+<source src="music.mp3" type="audio/mpeg">
+
+Your browser does not support audio.
+
+</audio>
+Audio Attributes
+controls
+
+autoplay
+
+loop
+
+muted
+
+preload
+Example
+
+<audio controls loop>
+
+<source src="music.mp3" type="audio/mpeg">
+
+</audio>
+3. Video Tag
+Used to play videos.
+
+Syntax
+<video controls>
+
+</video>
+Using Source
+<video controls width="500">
+
+<source src="movie.mp4" type="video/mp4">
+
+Your browser does not support video.
+
+</video>
+Video Attributes
+controls
+
+autoplay
+
+loop
+
+muted
+
+poster
+
+width
+
+height
+
+preload
+Poster Example
+<video controls poster="thumbnail.jpg">
+
+<source src="movie.mp4">
+
+</video>
+Poster is displayed before the video starts.
+
+4. Source Tag
+The <source> tag specifies multiple media sources.
+
+Example
+
+<video controls>
+
+<source src="movie.mp4" type="video/mp4">
+
+<source src="movie.webm" type="video/webm">
+
+</video>
+Browser automatically selects the supported format.
+
+5. Track Tag
+Used for subtitles.
+
+Example
+
+<video controls>
+
+<source src="movie.mp4">
+
+<track
+src="subtitle.vtt"
+kind="subtitles"
+srclang="en"
+label="English">
+
+</video>
+6. Iframe
+Used to embed another webpage inside your webpage.
+
+Example
+
+<iframe
+src="https://example.com"
+width="600"
+height="400">
+
+</iframe>
+Common Uses of iframe
+YouTube Videos
+
+Google Maps
+
+PDF Files
+
+Websites
+
+Power BI Reports
+
+Embedding YouTube Videos
+Step 1
+Open YouTube.
+
+Step 2
+Open any video.
+
+Step 3
+Click
+
+Share
+↓
+
+Embed
+↓
+
+Copy the iframe code.
+
+Example
+
+<iframe
+width="560"
+height="315"
+src="https://www.youtube.com/embed/VIDEO_ID"
+title="YouTube video player"
+allowfullscreen>
+
+</iframe>
+Replace
+
+VIDEO_ID
+with the actual YouTube video ID.
+
+Example
+
+https://www.youtube.com/watch?v=abcd1234
+Video ID:
+
+abcd1234
+Embed URL:
+
+https://www.youtube.com/embed/abcd1234
+Embedding Google Maps
+Step 1
+Open Google Maps.
+
+Step 2
+Search your location.
+
+Example
+
+SLA Institute Chennai
+Step 3
+Click
+
+Share
+↓
+
+Embed a map
+↓
+
+Copy HTML.
+
+Example
+
+<iframe
+src="https://www.google.com/maps/embed?... "
+width="600"
+height="450"
+loading="lazy">
+
+</iframe>
+Embedding PDF
+<iframe
+src="resume.pdf"
+width="700"
+height="500">
+
+</iframe>
+Object Tag
+Displays PDF or multimedia.
+
+<object
+data="resume.pdf"
+width="600"
+height="500">
+
+</object>
+Embed Tag
+Embeds multimedia.
+
+<embed
+src="movie.mp4"
+width="500"
+height="300">
+Picture Tag
+Responsive images.
+
+<picture>
+
+<source media="(min-width:800px)" srcset="large.jpg">
+
+<source media="(min-width:400px)" srcset="medium.jpg">
+
+<img src="small.jpg" alt="Image">
+
+</picture>
+Difference Between img and picture
+img
+
+picture
+
+One Image
+
+Responsive Images
+
+Fixed
+
+Multiple Sources
+
+Media Attributes
+Image
+src
+
+alt
+
+width
+
+height
+
+loading
+
+title
+Audio
+controls
+
+autoplay
+
+loop
+
+muted
+
+preload
+Video
+controls
+
+autoplay
+
+loop
+
+muted
+
+poster
+
+width
+
+height
+
+preload
+iframe
+src
+
+width
+
+height
+
+loading
+
+allowfullscreen
+
+title
+Interview Questions
+What is HTML Media?
+Media refers to multimedia content like images, audio, video, maps, and embedded webpages.
+
+What is the purpose of the source tag?
+The <source> tag provides multiple media files for browsers to choose from.
+
+What is poster in video?
+Poster displays an image before the video starts playing.
+
+Difference between audio and video?
+Audio plays sound only.
+
+Video plays both audio and visuals.
+
+What is iframe?
+The <iframe> tag is used to embed another webpage, video, map, or document inside the current webpage.
+
+How do you embed a YouTube video?
+Open YouTube → Share → Embed → Copy the iframe code and paste it into your HTML page.
+
+How do you embed Google Maps?
+Open Google Maps → Share → Embed a Map → Copy the iframe code and paste it into your HTML page.
+
+Name five HTML Media Elements.
+img
+audio
+video
+source
+iframe
+

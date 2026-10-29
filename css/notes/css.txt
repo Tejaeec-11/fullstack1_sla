@@ -1,0 +1,6795 @@
+css
+
+day1
+CSS - Day 1 Complete Notes
+
+CSS Basics: Introduction, Properties, Values, Selectors, Specificity
+What is CSS?
+Full Form
+CSS = Cascading Style Sheets
+CSS is a stylesheet language used to control the appearance and layout of HTML elements.
+
+HTML creates the structure of a webpage, while CSS makes the webpage beautiful, responsive, and visually attractive.
+
+Why Do We Use CSS?
+Without CSS, webpages look plain.
+
+CSS helps us to:
+
+Change Colors
+
+Change Fonts
+
+Add Backgrounds
+
+Create Layouts
+
+Add Animations
+
+Make Responsive Websites
+
+Improve User Experience (UI/UX)
+
+Example Without CSS
+<h1>Welcome to CSS</h1>
+
+<p>Learning CSS Basics</p>
+Output
+
+Black text
+White background
+Default browser styles
+Example With CSS
+<h1>Welcome to CSS</h1>
+h1{
+    color:red;
+    font-size:40px;
+}
+Output
+
+Large Red Heading
+What is Cascading?
+"Cascading" means flowing down according to priority.
+
+When multiple CSS rules target the same element, the browser decides which rule should be applied based on the CSS Cascade Rules.
+
+Example
+
+h1{
+    color:red;
+}
+
+h1{
+    color:blue;
+}
+Output
+
+Blue
+Because the last rule overrides the first one.
+
+Why is it Called Cascading Style Sheets?
+Breakdown
+
+Cascading
+Rules are applied based on priority.
+
+Style
+Used to style HTML elements.
+
+Sheets
+CSS rules are written inside style sheets (.css files).
+
+What is a Stylesheet?
+A stylesheet is a file that contains CSS rules.
+
+Example
+
+style.css
+Example
+
+h1{
+    color:red;
+}
+
+p{
+    color:green;
+}
+What is a CSS Rule?
+A CSS Rule consists of
+
+Selector
+
+Property
+
+Value
+Example
+
+h1{
+
+color:red;
+
+}
+Breakdown
+
+h1      → Selector
+
+color   → Property
+
+red     → Value
+CSS Syntax
+selector{
+
+property:value;
+
+}
+Example
+
+h1{
+
+color:blue;
+
+font-size:40px;
+
+}
+CSS Property
+Property defines what should be changed.
+
+Examples
+
+color
+
+font-size
+
+background
+
+width
+
+height
+
+margin
+
+padding
+CSS Value
+Value defines how it should look.
+
+Example
+
+color:red;
+Property
+
+color
+Value
+
+red
+CSS Types
+CSS can be applied in three ways.
+
+Inline CSS
+
+Internal CSS
+
+External CSS
+1. Inline CSS
+CSS written inside HTML elements.
+
+Syntax
+
+<h1 style="color:red;">
+HTML
+</h1>
+Advantages
+
+Quick Styling
+
+Disadvantages
+
+Difficult to Maintain
+
+Not Reusable
+
+2. Internal CSS
+CSS written inside
+
+<style>
+
+</style>
+Example
+
+<style>
+
+h1{
+
+color:red;
+
+}
+
+</style>
+Advantages
+
+Good for Single Page
+
+Disadvantages
+
+Cannot reuse in multiple pages
+
+3. External CSS
+CSS stored inside a separate file.
+
+Example
+
+style.css
+HTML
+
+<link rel="stylesheet" href="style.css">
+style.css
+
+h1{
+
+color:red;
+
+}
+Advantages
+
+Reusable
+
+Easy Maintenance
+
+Professional
+
+Faster Development
+
+How to Connect External CSS?
+Step 1
+
+Create
+
+style.css
+Step 2
+
+Link
+
+<link
+rel="stylesheet"
+href="style.css">
+Step 3
+
+Write CSS
+
+body{
+
+background:#f5f5f5;
+
+}
+CSS Comments
+/* This is CSS Comment */
+CSS Selectors
+Selectors tell CSS which HTML element should be styled.
+
+Types of Selectors
+Universal Selector
+
+Element Selector
+
+Class Selector
+
+ID Selector
+
+Grouping Selector
+
+Descendant Selector
+
+Child Selector
+
+Adjacent Sibling Selector
+
+General Sibling Selector
+
+Attribute Selector
+
+Pseudo Class Selector
+
+Pseudo Element Selector
+1. Universal Selector
+Selects every element.
+
+Syntax
+
+*{
+
+margin:0;
+
+padding:0;
+
+}
+2. Element Selector
+Targets HTML tags.
+
+Example
+
+p{
+
+color:red;
+
+}
+3. Class Selector
+Starts with
+
+.
+HTML
+
+<p class="title">
+CSS
+
+.title{
+
+color:blue;
+
+}
+4. ID Selector
+Starts with
+
+#
+HTML
+
+<h1 id="logo">
+CSS
+
+#logo{
+
+color:red;
+
+}
+5. Group Selector
+Multiple selectors.
+
+h1,p,div{
+
+color:green;
+
+}
+6. Descendant Selector
+Targets children inside another element.
+
+div p{
+
+color:red;
+
+}
+7. Child Selector
+Direct child.
+
+div>p{
+
+color:blue;
+
+}
+8. Adjacent Sibling Selector
+Immediate next sibling.
+
+h1+p{
+
+color:red;
+
+}
+9. General Sibling Selector
+All siblings.
+
+h1~p{
+
+color:blue;
+
+}
+10. Attribute Selector
+input[type="text"]{
+
+background:yellow;
+
+}
+11. Pseudo Class Selector
+Starts with
+
+:
+Example
+
+button:hover{
+
+background:red;
+
+}
+Other Examples
+
+:first-child
+
+:last-child
+
+:nth-child()
+
+:focus
+
+:checked
+12. Pseudo Element Selector
+Starts with
+
+::
+Example
+
+p::first-letter{
+
+font-size:40px;
+
+}
+Other Examples
+
+::before
+
+::after
+
+::selection
+
+::placeholder
+CSS Specificity
+Specificity decides which CSS rule wins when multiple rules target the same element.
+
+Specificity Priority
+Highest
+
+Inline Style
+↓
+
+ID Selector
+↓
+
+Class Selector
+
+Attribute Selector
+
+Pseudo Class
+↓
+
+Element Selector
+
+Pseudo Element
+↓
+
+Lowest
+
+Universal Selector
+Specificity Example
+*{
+
+color:black;
+
+}
+
+h1{
+
+color:red;
+
+}
+
+.title{
+
+color:green;
+
+}
+
+#heading{
+
+color:blue;
+
+}
+HTML
+
+<h1
+id="heading"
+class="title">
+HTML
+</h1>
+Output
+
+Blue
+Because
+
+ID > Class > Element > Universal
+Important CSS Properties
+color
+
+background
+
+background-color
+
+font-size
+
+font-family
+
+font-weight
+
+width
+
+height
+
+margin
+
+padding
+
+border
+
+display
+
+position
+
+overflow
+
+text-align
+
+line-height
+
+letter-spacing
+
+word-spacing
+
+opacity
+
+visibility
+CSS Value Types
+Color
+
+Number
+
+Length
+
+Percentage
+
+Keyword
+
+URL
+
+Function
+Examples
+
+color:red;
+
+width:300px;
+
+height:50%;
+
+background:url(image.jpg);
+
+display:flex;
+CSS Units
+Absolute Units
+
+px
+
+cm
+
+mm
+
+in
+
+pt
+Relative Units
+
+%
+
+em
+
+rem
+
+vh
+
+vw
+
+vmin
+
+vmax
+Browser Developer Tools
+Every browser provides Developer Tools.
+
+Shortcut
+
+F12
+or
+
+Ctrl + Shift + I
+Used for
+
+Inspect HTML
+
+Edit CSS
+
+Debug Layout
+
+Test Responsive Design
+
+Interview Questions
+What is CSS?
+CSS stands for Cascading Style Sheets. It is used to style HTML webpages.
+
+Why do we use CSS?
+To improve the appearance and layout of webpages.
+
+What is Cascading?
+Cascading is the process of applying CSS rules based on priority.
+
+What is a Stylesheet?
+A stylesheet is a file containing CSS rules.
+
+Name the Types of CSS.
+Inline CSS
+
+Internal CSS
+
+External CSS
+Which CSS type is recommended?
+External CSS.
+
+What is a Selector?
+A selector selects HTML elements for styling.
+
+What is Specificity?
+Specificity is the priority system used to decide which CSS rule should be applied.
+
+Specificity Order
+Inline
+
+↓
+
+ID
+
+↓
+
+Class
+
+↓
+
+Element
+
+↓
+
+Universal
+Difference Between Property and Value
+Property specifies what to change.
+
+Value specifies how it should change.
+
+Example
+
+color:red;
+Property → color
+
+Value → red
+Summary
+✔ CSS = Cascading Style Sheets
+
+✔ Used for Styling
+
+✔ HTML = Structure
+
+✔ CSS = Design
+
+✔ 3 Types of CSS
+
+✔ External CSS is Recommended
+
+✔ Selectors identify HTML elements
+
+✔ Properties define what changes
+
+✔ Values define how it changes
+
+✔ Specificity decides which rule wins
+
+✔ CSS makes webpages attractive and responsive
+
+day2
+CSS - Day 1 Complete Notes
+
+CSS Basics: Introduction, Properties, Values, Selectors, Specificity
+What is CSS?
+Full Form
+CSS = Cascading Style Sheets
+CSS is a stylesheet language used to control the appearance and layout of HTML elements.
+
+HTML creates the structure of a webpage, while CSS makes the webpage beautiful, responsive, and visually attractive.
+
+Why Do We Use CSS?
+Without CSS, webpages look plain.
+
+CSS helps us to:
+
+Change Colors
+
+Change Fonts
+
+Add Backgrounds
+
+Create Layouts
+
+Add Animations
+
+Make Responsive Websites
+
+Improve User Experience (UI/UX)
+
+Example Without CSS
+<h1>Welcome to CSS</h1>
+
+<p>Learning CSS Basics</p>
+Output
+
+Black text
+White background
+Default browser styles
+Example With CSS
+<h1>Welcome to CSS</h1>
+h1{
+    color:red;
+    font-size:40px;
+}
+Output
+
+Large Red Heading
+What is Cascading?
+"Cascading" means flowing down according to priority.
+
+When multiple CSS rules target the same element, the browser decides which rule should be applied based on the CSS Cascade Rules.
+
+Example
+
+h1{
+    color:red;
+}
+
+h1{
+    color:blue;
+}
+Output
+
+Blue
+Because the last rule overrides the first one.
+
+Why is it Called Cascading Style Sheets?
+Breakdown
+
+Cascading
+Rules are applied based on priority.
+
+Style
+Used to style HTML elements.
+
+Sheets
+CSS rules are written inside style sheets (.css files).
+
+What is a Stylesheet?
+A stylesheet is a file that contains CSS rules.
+
+Example
+
+style.css
+Example
+
+h1{
+    color:red;
+}
+
+p{
+    color:green;
+}
+What is a CSS Rule?
+A CSS Rule consists of
+
+Selector
+
+Property
+
+Value
+Example
+
+h1{
+
+color:red;
+
+}
+Breakdown
+
+h1      → Selector
+
+color   → Property
+
+red     → Value
+CSS Syntax
+selector{
+
+property:value;
+
+}
+Example
+
+h1{
+
+color:blue;
+
+font-size:40px;
+
+}
+CSS Property
+Property defines what should be changed.
+
+Examples
+
+color
+
+font-size
+
+background
+
+width
+
+height
+
+margin
+
+padding
+CSS Value
+Value defines how it should look.
+
+Example
+
+color:red;
+Property
+
+color
+Value
+
+red
+CSS Types
+CSS can be applied in three ways.
+
+Inline CSS
+
+Internal CSS
+
+External CSS
+1. Inline CSS
+CSS written inside HTML elements.
+
+Syntax
+
+<h1 style="color:red;">
+HTML
+</h1>
+Advantages
+
+Quick Styling
+
+Disadvantages
+
+Difficult to Maintain
+
+Not Reusable
+
+2. Internal CSS
+CSS written inside
+
+<style>
+
+</style>
+Example
+
+<style>
+
+h1{
+
+color:red;
+
+}
+
+</style>
+Advantages
+
+Good for Single Page
+
+Disadvantages
+
+Cannot reuse in multiple pages
+
+3. External CSS
+CSS stored inside a separate file.
+
+Example
+
+style.css
+HTML
+
+<link rel="stylesheet" href="style.css">
+style.css
+
+h1{
+
+color:red;
+
+}
+Advantages
+
+Reusable
+
+Easy Maintenance
+
+Professional
+
+Faster Development
+
+How to Connect External CSS?
+Step 1
+
+Create
+
+style.css
+Step 2
+
+Link
+
+<link
+rel="stylesheet"
+href="style.css">
+Step 3
+
+Write CSS
+
+body{
+
+background:#f5f5f5;
+
+}
+CSS Comments
+/* This is CSS Comment */
+CSS Selectors
+Selectors tell CSS which HTML element should be styled.
+
+Types of Selectors
+Universal Selector
+
+Element Selector
+
+Class Selector
+
+ID Selector
+
+Grouping Selector
+
+Descendant Selector
+
+Child Selector
+
+Adjacent Sibling Selector
+
+General Sibling Selector
+
+Attribute Selector
+
+Pseudo Class Selector
+
+Pseudo Element Selector
+1. Universal Selector
+Selects every element.
+
+Syntax
+
+*{
+
+margin:0;
+
+padding:0;
+
+}
+2. Element Selector
+Targets HTML tags.
+
+Example
+
+p{
+
+color:red;
+
+}
+3. Class Selector
+Starts with
+
+.
+HTML
+
+<p class="title">
+CSS
+
+.title{
+
+color:blue;
+
+}
+4. ID Selector
+Starts with
+
+#
+HTML
+
+<h1 id="logo">
+CSS
+
+#logo{
+
+color:red;
+
+}
+5. Group Selector
+Multiple selectors.
+
+h1,p,div{
+
+color:green;
+
+}
+6. Descendant Selector
+Targets children inside another element.
+
+div p{
+
+color:red;
+
+}
+7. Child Selector
+Direct child.
+
+div>p{
+
+color:blue;
+
+}
+8. Adjacent Sibling Selector
+Immediate next sibling.
+
+h1+p{
+
+color:red;
+
+}
+9. General Sibling Selector
+All siblings.
+
+h1~p{
+
+color:blue;
+
+}
+10. Attribute Selector
+input[type="text"]{
+
+background:yellow;
+
+}
+11. Pseudo Class Selector
+Starts with
+
+:
+Example
+
+button:hover{
+
+background:red;
+
+}
+Other Examples
+
+:first-child
+
+:last-child
+
+:nth-child()
+
+:focus
+
+:checked
+12. Pseudo Element Selector
+Starts with
+
+::
+Example
+
+p::first-letter{
+
+font-size:40px;
+
+}
+Other Examples
+
+::before
+
+::after
+
+::selection
+
+::placeholder
+CSS Specificity
+Specificity decides which CSS rule wins when multiple rules target the same element.
+
+Specificity Priority
+Highest
+
+Inline Style
+↓
+
+ID Selector
+↓
+
+Class Selector
+
+Attribute Selector
+
+Pseudo Class
+↓
+
+Element Selector
+
+Pseudo Element
+↓
+
+Lowest
+
+Universal Selector
+Specificity Example
+*{
+
+color:black;
+
+}
+
+h1{
+
+color:red;
+
+}
+
+.title{
+
+color:green;
+
+}
+
+#heading{
+
+color:blue;
+
+}
+HTML
+
+<h1
+id="heading"
+class="title">
+HTML
+</h1>
+Output
+
+Blue
+Because
+
+ID > Class > Element > Universal
+Important CSS Properties
+color
+
+background
+
+background-color
+
+font-size
+
+font-family
+
+font-weight
+
+width
+
+height
+
+margin
+
+padding
+
+border
+
+display
+
+position
+
+overflow
+
+text-align
+
+line-height
+
+letter-spacing
+
+word-spacing
+
+opacity
+
+visibility
+CSS Value Types
+Color
+
+Number
+
+Length
+
+Percentage
+
+Keyword
+
+URL
+
+Function
+Examples
+
+color:red;
+
+width:300px;
+
+height:50%;
+
+background:url(image.jpg);
+
+display:flex;
+CSS Units
+Absolute Units
+
+px
+
+cm
+
+mm
+
+in
+
+pt
+Relative Units
+
+%
+
+em
+
+rem
+
+vh
+
+vw
+
+vmin
+
+vmax
+Browser Developer Tools
+Every browser provides Developer Tools.
+
+Shortcut
+
+F12
+or
+
+Ctrl + Shift + I
+Used for
+
+Inspect HTML
+
+Edit CSS
+
+Debug Layout
+
+Test Responsive Design
+
+Interview Questions
+What is CSS?
+CSS stands for Cascading Style Sheets. It is used to style HTML webpages.
+
+Why do we use CSS?
+To improve the appearance and layout of webpages.
+
+What is Cascading?
+Cascading is the process of applying CSS rules based on priority.
+
+What is a Stylesheet?
+A stylesheet is a file containing CSS rules.
+
+Name the Types of CSS.
+Inline CSS
+
+Internal CSS
+
+External CSS
+Which CSS type is recommended?
+External CSS.
+
+What is a Selector?
+A selector selects HTML elements for styling.
+
+What is Specificity?
+Specificity is the priority system used to decide which CSS rule should be applied.
+
+Specificity Order
+Inline
+
+↓
+
+ID
+
+↓
+
+Class
+
+↓
+
+Element
+
+↓
+
+Universal
+Difference Between Property and Value
+Property specifies what to change.
+
+Value specifies how it should change.
+
+Example
+
+color:red;
+Property → color
+
+Value → red
+Summary
+✔ CSS = Cascading Style Sheets
+
+✔ Used for Styling
+
+✔ HTML = Structure
+
+✔ CSS = Design
+
+✔ 3 Types of CSS
+
+✔ External CSS is Recommended
+
+✔ Selectors identify HTML elements
+
+✔ Properties define what changes
+
+✔ Values define how it changes
+
+✔ Specificity decides which rule wins
+
+✔ CSS makes webpages attractive and responsive
+
+day3
+CSS Box Model - Complete Notes
+
+What is the CSS Box Model?
+The CSS Box Model is the fundamental concept used to understand how every HTML element occupies space on a webpage.
+
+Every HTML element is treated as a rectangular box by the browser.
+
+Whether it's:
+
+<div>
+
+<h1>
+
+<p>
+
+<img>
+
+<button>
+
+<input>
+
+everything is considered a box.
+
+Why Do We Need the Box Model?
+Without the Box Model:
+
+Elements would touch each other.
+
+No spacing between content.
+
+Difficult to create layouts.
+
+Poor user experience.
+
+The Box Model helps us:
+
+Control spacing
+
+Add borders
+
+Create layouts
+
+Improve readability
+
+Build responsive websites
+
+Structure of CSS Box Model
+        +---------------------------+
+        |          Margin           |
+        |  +---------------------+  |
+        |  |       Border        |  |
+        |  | +-----------------+ |  |
+        |  | |     Padding     | |  |
+        |  | | +-------------+ | |  |
+        |  | | |   Content   | | |  |
+        |  | | +-------------+ | |  |
+        |  | +-----------------+ |  |
+        |  +---------------------+  |
+        +---------------------------+
+The Box Model consists of 4 Parts.
+
+1. Content
+2. Padding
+3. Border
+4. Margin
+1. Content
+Content is the actual data displayed inside an HTML element.
+
+Examples
+
+Text
+
+Images
+
+Buttons
+
+Videos
+
+Example
+
+<div>
+    Welcome to CSS
+</div>
+Here,
+
+Welcome to CSS
+is the content.
+
+Content Size
+width:300px;
+
+height:150px;
+Example
+
+div{
+
+width:300px;
+
+height:150px;
+
+}
+2. Padding
+Padding is the space between the Content and the Border.
+
+Padding increases the internal spacing.
+
+Example
+
+padding:20px;
+Output
+
+Border
+
+   Padding
+
+      Content
+Why Use Padding?
+Without Padding
+
+Text touches the border.
+With Padding
+
+Text has breathing space.
+Better readability.
+
+Padding Syntax
+All sides
+
+padding:20px;
+Top Bottom | Left Right
+
+padding:20px 40px;
+Top | Left Right | Bottom
+
+padding:20px 40px 10px;
+Top | Right | Bottom | Left
+
+padding:10px 20px 30px 40px;
+Individual Padding
+
+padding-top:20px;
+
+padding-right:10px;
+
+padding-bottom:30px;
+
+padding-left:15px;
+3. Border
+Border surrounds the padding and content.
+
+Example
+
+border:2px solid black;
+Border Syntax
+
+border:
+
+Width
+
+Style
+
+Color
+Example
+
+border:3px solid red;
+Border Width
+
+border-width:5px;
+Border Style
+
+solid
+
+dashed
+
+dotted
+
+double
+
+groove
+
+ridge
+
+inset
+
+outset
+Example
+
+border-style:dashed;
+Border Color
+
+border-color:blue;
+Individual Borders
+
+border-top
+
+border-right
+
+border-bottom
+
+border-left
+Border Radius
+
+Used to create rounded corners.
+
+Example
+
+border-radius:20px;
+Circle
+
+border-radius:50%;
+4. Margin
+Margin is the space outside the border.
+
+Margin separates one element from another.
+
+Example
+
+margin:30px;
+Why Use Margin?
+
+Without Margin
+
+Elements touch each other.
+With Margin
+
+Space between elements.
+Margin Syntax
+
+All Sides
+
+margin:20px;
+Top Bottom | Left Right
+
+margin:20px 40px;
+Top | Left Right | Bottom
+
+margin:20px 40px 10px;
+Top | Right | Bottom | Left
+
+margin:10px 20px 30px 40px;
+Individual Margin
+
+margin-top
+
+margin-right
+
+margin-bottom
+
+margin-left
+Auto Margin
+
+Centers block elements.
+
+margin:auto;
+Example
+
+div{
+
+width:300px;
+
+margin:auto;
+
+}
+Complete Box Model Example
+HTML
+
+<div>
+
+Welcome to CSS
+
+</div>
+CSS
+
+div{
+
+width:300px;
+
+height:150px;
+
+padding:20px;
+
+border:5px solid blue;
+
+margin:30px;
+
+background-color:lightblue;
+
+}
+Box Sizing
+What is box-sizing?
+Controls how width and height are calculated.
+
+Default
+
+box-sizing:content-box;
+Recommended
+
+box-sizing:border-box;
+Why border-box?
+
+Width includes
+
+Content
+
+Padding
+
+Border
+
+Easy calculations.
+
+Example
+
+*{
+
+box-sizing:border-box;
+
+}
+Total Width Formula
+Without Border Box
+
+Total Width
+
+=
+
+Width
+
++
+
+Left Padding
+
++
+
+Right Padding
+
++
+
+Left Border
+
++
+
+Right Border
+
++
+
+Left Margin
+
++
+
+Right Margin
+Example
+
+width:300px;
+
+padding:20px;
+
+border:5px;
+
+margin:10px;
+Calculation
+
+300
+
++
+
+20
+
++
+
+20
+
++
+
+5
+
++
+
+5
+
++
+
+10
+
++
+
+10
+
+=
+
+370px
+Box Model Summary
+Margin
+
+↓
+
+Border
+
+↓
+
+Padding
+
+↓
+
+Content
+Difference Between Padding and Margin
+Padding
+
+Margin
+
+Inside the Border
+
+Outside the Border
+
+Increases internal spacing
+
+Increases external spacing
+
+Background color is visible
+
+Background color is not visible
+
+Part of the element
+
+Space between elements
+
+Difference Between Border and Margin
+Border
+
+Margin
+
+Visible Line
+
+Invisible Space
+
+Surrounds Padding
+
+Outside Border
+
+Can Change Color
+
+No Color
+
+Supports Border Styles
+
+Only Spacing
+
+Difference Between Width and Height
+Width
+
+Height
+
+Horizontal Size
+
+Vertical Size
+
+Controls Element Width
+
+Controls Element Height
+
+Box Model Order
+Content
+
+↓
+
+Padding
+
+↓
+
+Border
+
+↓
+
+Margin
+Real-Life Example
+Imagine a Mobile Phone Box.
+
+Phone
+
+↓
+
+Bubble Wrap
+
+↓
+
+Cardboard Box
+
+↓
+
+Space Between Boxes
+Mapping
+
+Phone → Content
+
+Bubble Wrap → Padding
+
+Cardboard Box → Border
+
+Space Between Boxes → Margin
+Interview Questions
+What is the CSS Box Model?
+The CSS Box Model is a layout model that represents every HTML element as a rectangular box consisting of Content, Padding, Border, and Margin.
+
+What are the four parts of the Box Model?
+Content
+
+Padding
+
+Border
+
+Margin
+What is Padding?
+Padding is the space between the content and the border.
+
+What is Margin?
+Margin is the space outside the border used to separate elements.
+
+What is Border?
+Border is the visible line surrounding the content and padding.
+
+Difference Between Padding and Margin?
+Padding creates space inside the border.
+
+Margin creates space outside the border.
+
+What is box-sizing?
+box-sizing controls how the browser calculates the width and height of an element.
+
+Which box-sizing is recommended?
+box-sizing:border-box;
+because it makes layout calculations easier and is the preferred approach in modern web development.
+
+Summary
+✔ Every HTML Element is a Box
+
+✔ Box Model = Content + Padding + Border + Margin
+
+✔ Content stores actual data
+
+✔ Padding adds internal spacing
+
+✔ Border surrounds the content
+
+✔ Margin creates external spacing
+
+✔ box-sizing:border-box is the recommended practice
+
+✔ Understanding the Box Model is essential for building professional website layouts
+
+day4
+CSS Display Properties - Complete Notes
+
+What is Display Property?
+The display property is one of the most important properties in CSS.
+
+It controls how an HTML element is displayed on a webpage.
+
+Every HTML element has a default display value assigned by the browser.
+
+Example:
+
+div      → block
+
+p        → block
+
+h1       → block
+
+span     → inline
+
+a         → inline
+
+img       → inline
+
+button    → inline-block
+The browser decides how each element behaves based on its display property.
+
+Why Do We Use Display?
+Display helps us to:
+
+Change Block Elements into Inline Elements.
+
+Change Inline Elements into Block Elements.
+
+Create Navigation Bars.
+
+Create Responsive Layouts.
+
+Align Elements Properly.
+
+Hide Elements.
+
+Build Professional UI Designs.
+
+Types of Display Properties
+block
+
+inline
+
+inline-block
+
+none
+
+flex
+
+inline-flex
+
+grid
+
+inline-grid
+
+contents
+
+list-item
+The most commonly used are:
+
+block
+
+inline
+
+inline-block
+
+none
+
+flex
+
+grid
+1. display: block
+A block element always starts on a new line.
+
+It occupies the full available width.
+
+Examples
+
+div
+
+p
+
+h1-h6
+
+section
+
+article
+
+header
+
+footer
+
+nav
+
+main
+Characteristics
+✔ Starts on new line
+
+✔ Takes full width
+
+✔ Width can be changed
+
+✔ Height can be changed
+
+✔ Margin works
+
+✔ Padding works
+
+Example
+
+div{
+
+display:block;
+
+}
+Can we apply Width and Height?
+YES
+
+Example
+
+div{
+
+width:300px;
+
+height:200px;
+
+background:red;
+
+}
+2. display: inline
+Inline elements stay in the same line.
+
+They only occupy the required space.
+
+Examples
+
+span
+
+a
+
+strong
+
+em
+
+b
+
+i
+
+small
+Characteristics
+✔ Same Line
+
+✔ Takes Required Width
+
+✔ Width does NOT work
+
+✔ Height does NOT work
+
+✔ Left & Right Padding works
+
+✔ Top & Bottom Padding has limited visual effect
+
+Example
+
+span{
+
+display:inline;
+
+}
+Can we Apply Width?
+span{
+
+width:300px;
+
+}
+Result
+
+No
+Can we Apply Height?
+span{
+
+height:200px;
+
+}
+Result
+
+No
+Why?
+Because inline elements only take the space required by their content.
+
+The browser ignores explicit width and height for normal inline elements.
+
+Example
+<span>
+
+HTML
+
+</span>
+
+<span>
+
+CSS
+
+</span>
+Output
+
+HTML CSS
+Same Line
+
+3. display: inline-block
+Combination of Block and Inline.
+
+Characteristics
+
+✔ Same Line
+
+✔ Width works
+
+✔ Height works
+
+✔ Margin works
+
+✔ Padding works
+
+Example
+
+span{
+
+display:inline-block;
+
+width:200px;
+
+height:100px;
+
+}
+Now width and height work.
+
+Why Use Inline-Block?
+Useful for
+
+Buttons
+
+Cards
+
+Navigation
+
+Product Boxes
+
+Example
+<span>
+
+HTML
+
+</span>
+
+<span>
+
+CSS
+
+</span>
+span{
+
+display:inline-block;
+
+width:200px;
+
+height:100px;
+
+background:red;
+
+}
+Output
+
+Two boxes in the same line.
+
+4. display: none
+Completely hides the element.
+
+Example
+
+div{
+
+display:none;
+
+}
+Result
+
+The element disappears.
+
+No space is reserved.
+
+Difference Between display:none and visibility:hidden
+display:none
+
+Hidden
+
+No Space
+visibility:hidden
+
+Hidden
+
+Space Reserved
+5. display:flex
+Creates a Flexible Layout.
+
+Example
+
+.container{
+
+display:flex;
+
+}
+Used for
+
+Navbar
+
+Cards
+
+Dashboard
+
+Gallery
+
+6. display:grid
+Creates Grid Layout.
+
+Example
+
+.container{
+
+display:grid;
+
+}
+Used for
+
+Dashboard
+
+Gallery
+
+Product Layout
+
+Difference Between Block and Inline
+Block
+
+Inline
+
+New Line
+
+Same Line
+
+Full Width
+
+Required Width
+
+Width Works
+
+Width Doesn't Work
+
+Height Works
+
+Height Doesn't Work
+
+Difference Between Inline and Inline-Block
+Inline
+
+Inline-Block
+
+Width Doesn't Work
+
+Width Works
+
+Height Doesn't Work
+
+Height Works
+
+Same Line
+
+Same Line
+
+Difference Between Block and Inline-Block
+Block
+
+Inline-Block
+
+New Line
+
+Same Line
+
+Width Works
+
+Width Works
+
+Height Works
+
+Height Works
+
+HTML Example
+<div>
+
+Block Element
+
+</div>
+
+<span>
+
+Inline Element
+
+</span>
+
+<button>
+
+Inline Block
+
+</button>
+CSS Example
+div{
+
+display:block;
+
+}
+
+span{
+
+display:inline;
+
+}
+
+button{
+
+display:inline-block;
+
+width:200px;
+
+height:60px;
+
+}
+Real Life Example
+Imagine a classroom.
+
+Block
+Every student gets one complete bench.
+
+Student 1
+
+Student 2
+
+Student 3
+New Line
+
+Inline
+Everyone sits together.
+
+Student1 Student2 Student3
+No fixed size.
+
+Inline Block
+Everyone sits together,
+
+but each student gets a fixed chair.
+
+[Student1]
+
+[Student2]
+
+[Student3]
+Which Elements Allow Width & Height?
+Element
+
+Width
+
+Height
+
+div (Block)
+
+✅
+
+✅
+
+p (Block)
+
+✅
+
+✅
+
+section (Block)
+
+✅
+
+✅
+
+span (Inline)
+
+❌
+
+❌
+
+a (Inline)
+
+❌
+
+❌
+
+strong (Inline)
+
+❌
+
+❌
+
+button (Inline-Block)
+
+✅
+
+✅
+
+img (Inline, but supports dimensions)
+
+✅
+
+✅
+
+Interview Questions
+What is display property?
+The display property controls how an HTML element is displayed on the webpage.
+
+Name the most commonly used display values.
+block
+
+inline
+
+inline-block
+
+none
+
+flex
+
+grid
+Can we apply width and height to div?
+Yes.
+
+Because div is a Block Element.
+
+Can we apply width and height to span?
+No.
+
+Because span is an Inline Element.
+
+Which display property allows width and height while staying in the same line?
+inline-block
+Which property hides an element completely?
+display:none;
+Difference Between display:none and visibility:hidden?
+display:none
+
+↓
+
+Hidden
+
+No Space
+
+----------------------
+
+visibility:hidden
+
+↓
+
+Hidden
+
+Space Reserved
+Summary
+✔ display controls how elements appear.
+
+✔ Block → New Line + Width & Height Work.
+
+✔ Inline → Same Line + Width & Height Don't Work.
+
+✔ Inline-Block → Same Line + Width & Height Work.
+
+✔ None → Hides Element Completely.
+
+✔ Flex → One-Dimensional Layout.
+
+✔ Grid → Two-Dimensional Layout.
+day5
+CSS Flexbox - Complete Notes
+
+What is Flexbox?
+Flexbox (Flexible Box Layout) is a CSS layout model used to arrange, align, and distribute space between items inside a container.
+
+It helps developers build responsive layouts without using floats or positioning.
+
+Why Do We Use Flexbox?
+Before Flexbox, layouts were created using:
+
+float
+
+inline-block
+
+table
+
+position
+
+These methods were difficult to manage.
+
+Flexbox makes layout creation easy.
+
+It is commonly used for:
+
+Navigation Bars
+
+Card Layouts
+
+Dashboards
+
+Product Lists
+
+Image Galleries
+
+Centering Elements
+
+Responsive Designs
+
+Flexbox Terminology
+There are two main parts.
+
+1. Flex Container
+
+2. Flex Items
+Example
+
+<div class="container">
+
+<div>1</div>
+
+<div>2</div>
+
+<div>3</div>
+
+</div>
+container → Flex Container
+
+Three divs → Flex Items
+Step 1 - Create Flex Container
+.container{
+
+display:flex;
+
+}
+Now all child elements become Flex Items.
+
+Output
+Without Flex
+
+Box 1
+
+Box 2
+
+Box 3
+With Flex
+
+Box1  Box2  Box3
+Main Axis and Cross Axis
+------------------------------->
+
+Main Axis (Row)
+
+|
+
+|
+
+↓
+
+Cross Axis (Column)
+By default
+
+Main Axis → Horizontal
+
+Cross Axis → Vertical
+Flex Properties
+There are two types.
+
+Flex Container Properties
+display
+
+flex-direction
+
+justify-content
+
+align-items
+
+flex-wrap
+
+align-content
+
+gap
+
+row-gap
+
+column-gap
+Flex Item Properties
+order
+
+flex-grow
+
+flex-shrink
+
+flex-basis
+
+align-self
+
+flex
+1. display:flex
+Makes the parent a Flex Container.
+
+.container{
+
+display:flex;
+
+}
+2. flex-direction
+Changes the direction of Flex Items.
+
+Syntax
+
+flex-direction:value;
+Values
+
+row
+
+row-reverse
+
+column
+
+column-reverse
+row
+(Default)
+
+flex-direction:row;
+Output
+
+1 2 3
+row-reverse
+flex-direction:row-reverse;
+Output
+
+3 2 1
+column
+flex-direction:column;
+Output
+
+1
+
+2
+
+3
+column-reverse
+flex-direction:column-reverse;
+Output
+
+3
+
+2
+
+1
+3. justify-content
+Aligns items along the Main Axis.
+
+Syntax
+
+justify-content:value;
+Values
+
+flex-start
+
+center
+
+flex-end
+
+space-between
+
+space-around
+
+space-evenly
+flex-start
+justify-content:flex-start;
+Output
+
+1 2 3
+center
+justify-content:center;
+Output
+
+      1 2 3
+flex-end
+justify-content:flex-end;
+Output
+
+                1 2 3
+space-between
+justify-content:space-between;
+Output
+
+1          2          3
+space-around
+justify-content:space-around;
+Output
+
+ 1      2      3
+space-evenly
+justify-content:space-evenly;
+Output
+
+   1    2    3
+4. align-items
+Aligns items on the Cross Axis.
+
+Syntax
+
+align-items:value;
+Values
+
+stretch
+
+flex-start
+
+center
+
+flex-end
+
+baseline
+Center
+align-items:center;
+Moves items to the vertical center.
+
+5. gap
+Creates spacing between items.
+
+gap:20px;
+row-gap
+row-gap:20px;
+column-gap
+column-gap:30px;
+6. flex-wrap
+Controls whether items wrap onto multiple lines.
+
+Values
+
+nowrap
+
+wrap
+
+wrap-reverse
+Example
+
+flex-wrap:wrap;
+7. align-content
+Aligns multiple rows when wrapping occurs.
+
+Values
+
+center
+
+space-between
+
+space-around
+
+space-evenly
+Flex Item Properties
+order
+Changes item order.
+
+.item{
+
+order:2;
+
+}
+flex-grow
+Allows an item to grow.
+
+.item{
+
+flex-grow:1;
+
+}
+flex-shrink
+Allows an item to shrink.
+
+.item{
+
+flex-shrink:1;
+
+}
+flex-basis
+Sets initial size.
+
+.item{
+
+flex-basis:200px;
+
+}
+align-self
+Overrides align-items for one item.
+
+.item{
+
+align-self:center;
+
+}
+flex
+Shortcut Property.
+
+flex:1;
+Equivalent to
+
+flex-grow
+
+flex-shrink
+
+flex-basis
+How to Center a Div Horizontally?
+.container{
+
+display:flex;
+
+justify-content:center;
+
+}
+How to Center a Div Vertically?
+.container{
+
+display:flex;
+
+align-items:center;
+
+height:100vh;
+
+}
+How to Perfectly Center a Div?
+HTML
+
+<div class="container">
+
+<div class="box">
+
+Hello
+
+</div>
+
+</div>
+CSS
+
+.container{
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+height:100vh;
+
+}
+
+.box{
+
+width:200px;
+
+height:100px;
+
+background:skyblue;
+
+}
+This centers the box both horizontally and vertically.
+
+Difference Between justify-content and align-items
+justify-content
+
+align-items
+
+Main Axis
+
+Cross Axis
+
+Horizontal (default row)
+
+Vertical (default row)
+
+Left, Center, Right
+
+Top, Center, Bottom
+
+Difference Between Flex and Grid
+Flex
+
+Grid
+
+One-Dimensional
+
+Two-Dimensional
+
+Row OR Column
+
+Rows AND Columns
+
+Best for Navbar
+
+Best for Gallery
+
+Best for Cards
+
+Best for Dashboard
+
+Real-Time Uses
+Flexbox is used for:
+
+Navigation Bars
+
+Login Pages
+
+Product Cards
+
+Image Galleries
+
+Team Member Cards
+
+Pricing Tables
+
+Landing Pages
+
+Dashboards
+
+Interview Questions
+What is Flexbox?
+Flexbox is a CSS layout model used to align and distribute items inside a container.
+
+Which property enables Flexbox?
+display:flex;
+What is the Main Axis?
+The direction in which flex items are placed. By default, it is horizontal (row).
+
+What is the Cross Axis?
+The direction perpendicular to the main axis. By default, it is vertical.
+
+Which property centers items horizontally?
+justify-content:center;
+Which property centers items vertically?
+align-items:center;
+How do you perfectly center a div?
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+Difference Between justify-content and align-items?
+justify-content aligns items on the main axis, while align-items aligns items on the cross axis.
+
+Summary
+✔ Flexbox creates flexible layouts.
+
+✔ display:flex makes the parent a Flex Container.
+
+✔ justify-content controls horizontal alignment.
+
+✔ align-items controls vertical alignment.
+
+✔ gap adds spacing between items.
+
+✔ flex-direction changes item direction.
+
+✔ flex-wrap moves items to the next line.
+
+✔ The combination of justify-content:center and align-items:center perfectly centers a div.
+
+test
+terview Questions
+
+1.
+What is CSS? Explain the full form of CSS.
+
+2.
+What is Cascading in CSS? Give a real-time example.
+
+3.
+What is the difference between Cascading and Specificity?
+
+4.
+What are the three types of CSS? Which one is recommended in real-time projects and why?
+
+5.
+Explain the following CSS selectors with examples:
+
+Universal Selector
+
+Element Selector
+
+Class Selector
+
+ID Selector
+
+Group Selector
+
+Descendant Selector
+
+Child Selector
+
+6.
+What is the difference between Class Selector and ID Selector?
+
+7.
+What is the difference between Descendant Selector and Child Selector?
+
+8.
+Explain the CSS Box Model. Name its four parts.
+
+9.
+What is the difference between Padding and Margin?
+
+10.
+What is box-sizing:border-box? Why is it recommended?
+
+11.
+Explain the difference between the following display properties:
+
+block
+
+inline
+
+inline-block
+
+12.
+Can we apply width and height to:
+
+div
+
+span
+
+button
+
+Explain why.
+
+13.
+What is the difference between:
+
+display:none;
+and
+
+visibility:hidden;
+14.
+Explain Flexbox.
+
+What are:
+
+Flex Container
+
+Flex Item
+
+Main Axis
+
+Cross Axis
+
+15.
+How do you perfectly center a div using Flexbox?
+
+Write the CSS code and explain each property.
+
+
+Task 1 – Student Dashboard
+
+Create a Student Dashboard.
+
+Requirements:
+
+External CSS
+
+Universal Selector
+
+Class Selector
+
+ID Selector
+
+Box Model
+
+Display Block
+
+Flexbox for Header
+
+Task 2 – Product Card Layout
+Create 6 Product Cards.
+
+Requirements:
+
+Width
+
+Height
+
+Padding
+
+Margin
+
+Border
+
+Border Radius
+
+Background Color
+
+display:inline-block
+
+Arrange all cards in a single row.
+
+Task 3 – Navigation Bar
+Create a Responsive Navigation Bar.
+
+Menu Items:
+
+Home
+
+About
+
+Services
+
+Gallery
+
+Contact
+
+Requirements:
+
+Use Flexbox
+
+justify-content:space-between
+
+align-items:center
+
+External CSS
+
+Class Selector
+
+Task 4 – Employee Cards
+Create 4 Employee Cards.
+
+Display:
+
+Employee Photo
+
+Name
+
+Department
+
+Email
+
+Requirements:
+
+Box Model
+
+Flexbox
+
+gap
+
+justify-content:center
+
+align-items:center
+
+Task 5 – Mini Portfolio Website
+Create a Portfolio Page containing:
+
+Header
+
+Navigation
+
+About Section
+
+Skills Section
+
+Projects Section
+
+Footer
+
+Requirements
+Use the following concepts:
+
+External CSS
+
+Element Selector
+
+Class Selector
+
+ID Selector
+
+Universal Selector
+
+Group Selector
+
+Descendant Selector
+
+Child Selector
+
+Box Model
+
+Display Properties
+
+Flexbox
+
+Center the content using Flexbox
+
+day6
+CSS Position - Complete Notes
+
+What is Position?
+The position property in CSS is used to control the location of an HTML element on a webpage.
+
+Normally, HTML elements are displayed according to the Normal Document Flow.
+
+Using the position property, we can move elements anywhere on the page.
+
+Why Do We Use Position?
+Position is used to:
+
+Move elements
+
+Create Sticky Navigation Bars
+
+Create Fixed Buttons
+
+Create Popups
+
+Create Dropdown Menus
+
+Create Image Overlays
+
+Create Professional Layouts
+
+Syntax
+selector{
+
+position:value;
+
+}
+Types of Position
+There are 5 Position Values.
+
+static
+
+relative
+
+absolute
+
+fixed
+
+sticky
+Position Hierarchy
+static
+
+↓
+
+relative
+
+↓
+
+absolute
+
+↓
+
+fixed
+
+↓
+
+sticky
+Position Properties
+These properties work with position.
+
+top
+
+right
+
+bottom
+
+left
+
+z-index
+1. position: static
+What is Static?
+Static is the default position of every HTML element.
+
+Browser automatically places the element according to the HTML document flow.
+
+Syntax
+div{
+
+position:static;
+
+}
+Characteristics
+✔ Default Position
+
+✔ Cannot move using
+
+top
+
+left
+
+right
+
+bottom
+✔ Follows Normal Flow
+
+Example
+
+div{
+
+position:static;
+
+top:100px;
+
+}
+Result
+
+No Change
+Because Static ignores top, left, right and bottom.
+
+2. position: relative
+What is Relative?
+Relative moves an element relative to its original position.
+
+The original space is still reserved.
+
+Syntax
+
+div{
+
+position:relative;
+
+}
+Example
+
+div{
+
+position:relative;
+
+top:50px;
+
+left:100px;
+
+}
+Output
+
+The element moves
+
+50px Down
+
+100px Right
+
+Its original space remains empty.
+
+Characteristics
+✔ Moves from Original Position
+
+✔ Original Space Reserved
+
+✔ Supports
+
+top
+
+left
+
+right
+
+bottom
+3. position: absolute
+What is Absolute?
+Absolute removes the element from the normal document flow.
+
+It positions the element relative to the nearest positioned parent.
+
+Syntax
+
+div{
+
+position:absolute;
+
+}
+Example
+
+.parent{
+
+position:relative;
+
+}
+
+.child{
+
+position:absolute;
+
+top:20px;
+
+left:30px;
+
+}
+Characteristics
+✔ Removed from Normal Flow
+
+✔ No Original Space
+
+✔ Moves relative to nearest parent having
+
+position:relative;
+If no parent exists,
+
+it positions relative to the webpage.
+
+Parent Requirement
+<div class="parent">
+
+<div class="child">
+
+</div>
+
+</div>
+CSS
+
+.parent{
+
+position:relative;
+
+}
+
+.child{
+
+position:absolute;
+
+top:20px;
+
+left:20px;
+
+}
+Without
+
+position:relative;
+the child moves relative to the browser window.
+
+4. position: fixed
+What is Fixed?
+Fixed positions an element relative to the browser viewport.
+
+Even if the page scrolls,
+
+the element stays in the same place.
+
+Syntax
+
+div{
+
+position:fixed;
+
+}
+Example
+
+button{
+
+position:fixed;
+
+bottom:20px;
+
+right:20px;
+
+}
+Common Uses
+
+Chat Button
+
+WhatsApp Button
+
+Back to Top Button
+
+Floating Action Button
+
+Characteristics
+✔ Fixed to Screen
+
+✔ Ignores Scrolling
+
+✔ Removed from Normal Flow
+
+5. position: sticky
+What is Sticky?
+Sticky behaves like Relative until scrolling reaches a specified point.
+
+Then it behaves like Fixed.
+
+Syntax
+
+header{
+
+position:sticky;
+
+top:0;
+
+}
+Common Uses
+
+Navigation Bar
+
+Table Header
+
+Sidebar
+
+Characteristics
+✔ Relative + Fixed
+
+✔ Requires
+
+top
+or
+
+bottom
+to work.
+
+Position Properties
+top
+Moves element downward from the top.
+
+Example
+
+top:20px;
+left
+Moves element from the left.
+
+left:50px;
+right
+Moves element from the right.
+
+right:30px;
+bottom
+Moves element upward from the bottom.
+
+bottom:20px;
+z-index
+Controls stacking order.
+
+Higher value appears above lower value.
+
+Example
+
+z-index:10;
+Real-Time Example
+Sticky Navbar
+
+nav{
+
+position:sticky;
+
+top:0;
+
+}
+Floating WhatsApp Button
+
+.whatsapp{
+
+position:fixed;
+
+bottom:20px;
+
+right:20px;
+
+}
+Notification Badge
+
+.parent{
+
+position:relative;
+
+}
+
+.badge{
+
+position:absolute;
+
+top:0;
+
+right:0;
+
+}
+Difference Between Relative and Absolute
+Relative
+
+Absolute
+
+Original Space Reserved
+
+Original Space Removed
+
+Moves from Original Position
+
+Moves from Parent
+
+Stays in Document Flow
+
+Removed from Document Flow
+
+Difference Between Fixed and Sticky
+Fixed
+
+Sticky
+
+Always Fixed
+
+Becomes Fixed on Scroll
+
+Relative to Viewport
+
+Relative Until Scroll Position
+
+Doesn't Need Parent
+
+Works with Scroll
+
+Difference Between Static and Relative
+Static
+
+Relative
+
+Default
+
+Custom Position
+
+Cannot Move
+
+Can Move
+
+Ignores Top/Left
+
+Supports Top/Left
+
+Difference Between Absolute and Fixed
+Absolute
+
+Fixed
+
+Parent Based
+
+Browser Viewport
+
+Scrolls with Page
+
+Doesn't Scroll
+
+Needs Relative Parent
+
+No Parent Needed
+
+Real-Life Example
+Imagine a classroom.
+
+Static
+Students sit in their assigned seats.
+
+Relative
+A student moves one chair forward.
+
+His original seat remains empty.
+
+Absolute
+A teacher places a notice board at a specific position inside the classroom.
+
+Fixed
+A wall clock always stays at the same place,
+
+even if students move around.
+
+Sticky
+A classroom timetable stays at the top of the wall while you look around.
+
+Interview Questions
+What is Position?
+Position controls the location of HTML elements on a webpage.
+
+Name all Position Values.
+static
+
+relative
+
+absolute
+
+fixed
+
+sticky
+Which is the default position?
+static
+Which position removes the element from normal flow?
+absolute
+
+fixed
+Which position needs a relative parent?
+absolute
+Which position is used for a floating WhatsApp button?
+fixed
+Which position is used for a sticky navigation bar?
+sticky
+What is z-index?
+z-index controls which element appears above another when elements overlap.
+
+Difference Between Relative and Absolute?
+Relative moves from its original position and keeps its space.
+
+Absolute is removed from the normal flow and is positioned relative to the nearest positioned parent.
+
+Difference Between Fixed and Sticky?
+Fixed always stays attached to the viewport.
+
+Sticky behaves like relative until a scroll threshold is reached, then it sticks like a fixed element.
+
+Summary
+✔ static → Default Position
+
+✔ relative → Moves from Original Position
+
+✔ absolute → Moves Relative to Parent
+
+✔ fixed → Fixed to Browser Window
+
+✔ sticky → Relative + Fixed on Scroll
+
+✔ top, left, right, bottom control movement
+
+✔ z-index controls stacking order
+
+✔ position:relative is commonly used as the parent for absolute positioning
+
+day7
+CSS Grid - Complete Notes (Basic to Intermediate)
+
+What is CSS Grid?
+CSS Grid is a two-dimensional layout system in CSS.
+
+It is used to arrange elements into rows and columns.
+
+Unlike Flexbox (which works in one direction), Grid works in both row and column directions.
+
+Why Do We Use Grid?
+Grid helps us to create:
+
+Dashboards
+
+Image Galleries
+
+Product Cards
+
+Admin Panels
+
+Portfolio Websites
+
+Responsive Layouts
+
+Newspaper Layouts
+
+Flex vs Grid
+Flexbox
+
+Grid
+
+One-Dimensional
+
+Two-Dimensional
+
+Row OR Column
+
+Rows AND Columns
+
+Best for Navbar
+
+Best for Dashboard
+
+Best for Cards
+
+Best for Gallery
+
+Grid Terminology
+There are two main parts.
+
+1. Grid Container
+
+2. Grid Items
+Example
+
+<div class="container">
+
+<div>1</div>
+
+<div>2</div>
+
+<div>3</div>
+
+<div>4</div>
+
+</div>
+container → Grid Container
+
+All Child Divs → Grid Items
+Step 1 - Create Grid Container
+.container{
+
+display:grid;
+
+}
+Now all child elements become Grid Items.
+
+Grid Properties
+Grid Container Properties
+display
+
+grid-template-columns
+
+grid-template-rows
+
+gap
+
+row-gap
+
+column-gap
+
+justify-content
+
+align-content
+
+justify-items
+
+align-items
+Grid Item Properties
+grid-column
+
+grid-row
+
+justify-self
+
+align-self
+grid-template-columns
+Defines the number and width of columns.
+
+Example
+
+.container{
+
+display:grid;
+
+grid-template-columns:200px 200px 200px;
+
+}
+Output
+
+|200|200|200|
+Three columns.
+
+Using repeat()
+Instead of writing repeatedly,
+
+grid-template-columns:200px 200px 200px;
+Write
+
+grid-template-columns:repeat(3,200px);
+Much cleaner.
+
+grid-template-rows
+Defines row heights.
+
+Example
+
+grid-template-rows:150px 150px;
+Two rows.
+
+gap
+Adds spacing between rows and columns.
+
+Example
+
+gap:20px;
+row-gap
+row-gap:20px;
+Only row spacing.
+
+column-gap
+column-gap:30px;
+Only column spacing.
+
+What is FR?
+FR means
+
+Fractional Unit
+It divides the available space into equal fractions.
+
+Instead of fixed pixels,
+
+Grid automatically distributes space.
+
+Example
+
+grid-template-columns:1fr 1fr 1fr;
+Output
+
+|------|------|------|
+Each column gets equal width.
+
+Different FR Values
+Example
+
+grid-template-columns:1fr 2fr 1fr;
+Output
+
+|----|--------|----|
+The second column gets twice the space.
+
+Why Use FR?
+Without FR
+
+grid-template-columns:300px 300px 300px;
+Fixed layout.
+
+Not responsive.
+
+With FR
+
+grid-template-columns:1fr 1fr 1fr;
+Responsive.
+
+Columns automatically adjust based on screen size.
+
+Responsive Grid
+Example
+
+.container{
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:20px;
+
+}
+This creates:
+
+3 Equal Columns
+
+Responsive Layout
+
+Equal Width
+
+Responsive Auto-Fit
+Modern Responsive Grid
+
+.container{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+gap:20px;
+
+}
+Explanation
+
+auto-fit
+
+↓
+
+Automatically fit as many columns as possible.
+
+------------------------
+
+minmax(250px,1fr)
+
+↓
+
+Minimum Width
+
+250px
+
+Maximum
+
+1 Fraction
+Perfect for Product Cards.
+
+justify-items
+Aligns all grid items horizontally.
+
+Example
+
+justify-items:center;
+align-items
+Aligns all grid items vertically.
+
+Example
+
+align-items:center;
+justify-content
+Moves the entire grid horizontally.
+
+justify-content:center;
+align-content
+Moves the entire grid vertically.
+
+align-content:center;
+Grid Item Properties
+grid-column
+Makes an item span multiple columns.
+
+Example
+
+.item{
+
+grid-column:1/3;
+
+}
+The item occupies Column 1 and Column 2.
+
+grid-row
+Makes an item span multiple rows.
+
+.item{
+
+grid-row:1/3;
+
+}
+Gallery Example
+HTML
+
+<div class="gallery">
+
+<div>Image 1</div>
+
+<div>Image 2</div>
+
+<div>Image 3</div>
+
+<div>Image 4</div>
+
+<div>Image 5</div>
+
+<div>Image 6</div>
+
+</div>
+CSS
+
+.gallery{
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:20px;
+
+}
+Output
+
+Image1 Image2 Image3
+
+Image4 Image5 Image6
+Dashboard Example
+HTML
+
+<div class="dashboard">
+
+<div class="card">Users</div>
+
+<div class="card">Revenue</div>
+
+<div class="card">Orders</div>
+
+<div class="card">Products</div>
+
+</div>
+CSS
+
+.dashboard{
+
+display:grid;
+
+grid-template-columns:repeat(2,1fr);
+
+gap:20px;
+
+}
+
+.card{
+
+height:150px;
+
+background:skyblue;
+
+}
+Output
+
+Users      Revenue
+
+Orders     Products
+Difference Between PX and FR
+PX
+
+FR
+
+Fixed Width
+
+Flexible Width
+
+Not Responsive
+
+Responsive
+
+Manual Size
+
+Automatic Space Distribution
+
+Difference Between Grid and Flex
+Grid
+
+Flex
+
+2D Layout
+
+1D Layout
+
+Rows & Columns
+
+Row or Column
+
+Gallery
+
+Navbar
+
+Dashboard
+
+Menu
+
+Real-Time Uses
+Grid is used in:
+
+Admin Dashboard
+
+Product Listing
+
+Photo Gallery
+
+Portfolio Website
+
+News Website
+
+Analytics Dashboard
+
+Interview Questions
+What is CSS Grid?
+CSS Grid is a two-dimensional layout system used to create rows and columns.
+
+Which property enables Grid?
+display:grid;
+What is FR?
+FR stands for Fractional Unit.
+
+It divides the available space proportionally among grid columns or rows.
+
+Why is FR better than PX?
+FR creates flexible and responsive layouts, while PX creates fixed-width layouts.
+
+What is gap?
+The gap property adds spacing between grid rows and columns.
+
+What does repeat() do?
+repeat() avoids writing the same column or row values multiple times.
+
+Example:
+
+grid-template-columns:repeat(3,1fr);
+What is auto-fit?
+auto-fit automatically adjusts the number of columns based on the available screen width.
+
+What is minmax()?
+minmax() sets a minimum and maximum size for grid columns or rows.
+
+Example:
+
+minmax(250px,1fr)
+Difference Between Grid and Flex?
+Grid is used for two-dimensional layouts (rows and columns), while Flexbox is used for one-dimensional layouts (either a row or a column).
+
+Summary
+✔ display:grid creates a Grid Container.
+
+✔ Grid works in Rows and Columns.
+
+✔ grid-template-columns defines columns.
+
+✔ grid-template-rows defines rows.
+
+✔ gap adds spacing.
+
+✔ repeat() reduces repetitive code.
+
+✔ FR means Fractional Unit.
+
+✔ 1fr divides available space equally.
+
+✔ auto-fit and minmax() create responsive layouts.
+
+✔ Grid is ideal for galleries, dashboards, and modern responsive websites.
+
+day8
+CSS Pseudo Class & Pseudo Element - Complete Notes
+
+What is a Pseudo Class?
+A Pseudo Class is a keyword added to a selector that defines the special state of an HTML element.
+
+It is used to style an element based on:
+
+Mouse Hover
+
+Mouse Click
+
+Keyboard Focus
+
+Child Position
+
+Checked State
+
+Visited Link
+
+Pseudo Classes start with a single colon (:).
+
+Syntax
+selector:pseudo-class{
+    property:value;
+}
+Example
+
+button:hover{
+    background-color: blue;
+    color: white;
+}
+Why Do We Use Pseudo Classes?
+Pseudo Classes help to:
+
+Create Hover Effects
+
+Highlight Active Elements
+
+Improve User Experience
+
+Design Navigation Menus
+
+Style Form Inputs
+
+Create Interactive Websites
+
+Common Pseudo Classes
+:hover
+
+:active
+
+:focus
+
+:visited
+
+:link
+
+:first-child
+
+:last-child
+
+:nth-child()
+
+:nth-of-type()
+
+:checked
+
+:disabled
+
+:enabled
+
+:not()
+
+:empty
+1. :hover
+Applies styles when the mouse pointer is placed over an element.
+
+Example
+
+button:hover{
+    background:red;
+    color:white;
+}
+2. :active
+Applies styles while clicking an element.
+
+button:active{
+    background:black;
+}
+3. :focus
+Used when an input field gets focus.
+
+input:focus{
+    border:2px solid blue;
+}
+Mostly used in:
+
+Login Forms
+
+Registration Forms
+
+Search Boxes
+
+4. :visited
+Styles links that have already been visited.
+
+a:visited{
+    color:purple;
+}
+5. :link
+Styles links that have not yet been visited.
+
+a:link{
+    color:blue;
+}
+6. :first-child
+Selects the first child of a parent.
+
+li:first-child{
+    color:red;
+}
+7. :last-child
+Selects the last child.
+
+li:last-child{
+    color:green;
+}
+8. :nth-child()
+Selects elements based on position.
+
+Example
+
+li:nth-child(2){
+    color:red;
+}
+Even Rows
+
+li:nth-child(even){
+    background:lightgray;
+}
+Odd Rows
+
+li:nth-child(odd){
+    background:lightblue;
+}
+9. :checked
+Used with Radio Buttons and Checkboxes.
+
+input:checked{
+    accent-color:red;
+}
+10. :disabled
+Targets disabled elements.
+
+input:disabled{
+    background:gray;
+}
+11. :enabled
+Targets enabled inputs.
+
+input:enabled{
+    background:white;
+}
+12. :not()
+Excludes specific elements.
+
+div:not(.active){
+    background:yellow;
+}
+What is a Pseudo Element?
+A Pseudo Element is used to style a specific part of an HTML element.
+
+Pseudo Elements start with double colon (::).
+
+Syntax
+selector::pseudo-element{
+    property:value;
+}
+Example
+
+p::first-letter{
+    color:red;
+}
+Why Use Pseudo Elements?
+Used to:
+
+Style First Letter
+
+Style First Line
+
+Insert Content
+
+Highlight Selected Text
+
+Style Placeholders
+
+Common Pseudo Elements
+::before
+
+::after
+
+::first-letter
+
+::first-line
+
+::selection
+
+::placeholder
+
+::marker
+
+::file-selector-button
+1. ::before
+Inserts content before an element.
+
+h1::before{
+    content:"★ ";
+}
+Output
+
+★ Welcome
+2. ::after
+Inserts content after an element.
+
+h1::after{
+    content:" ✔";
+}
+Output
+
+Welcome ✔
+3. ::first-letter
+Styles only the first letter.
+
+p::first-letter{
+    font-size:40px;
+    color:red;
+}
+4. ::first-line
+Styles only the first line.
+
+p::first-line{
+    color:blue;
+}
+5. ::selection
+Styles highlighted text.
+
+::selection{
+    background:black;
+    color:white;
+}
+6. ::placeholder
+Styles placeholder text.
+
+input::placeholder{
+    color:red;
+}
+7. ::marker
+Styles list bullets or numbers.
+
+li::marker{
+    color:red;
+}
+Difference Between Pseudo Class and Pseudo Element
+Pseudo Class
+
+Pseudo Element
+
+Starts with :
+
+Starts with ::
+
+Styles element state
+
+Styles part of an element
+
+Depends on user interaction
+
+Doesn't depend on interaction
+
+Example: :hover
+
+Example: ::before
+
+Real-Time Uses
+Pseudo Classes
+Button Hover Effects
+
+Navigation Menu
+
+Login Forms
+
+Active Links
+
+Form Validation
+
+Pseudo Elements
+Add Icons
+
+Decorative Lines
+
+Quote Symbols
+
+Custom Bullets
+
+Highlight First Letter
+
+Interview Questions
+What is a Pseudo Class?
+A Pseudo Class is used to style an element based on its current state or user interaction.
+
+What is a Pseudo Element?
+A Pseudo Element is used to style a specific part of an HTML element.
+
+Which symbol is used for a Pseudo Class?
+:
+Which symbol is used for a Pseudo Element?
+::
+Name Five Pseudo Classes.
+:hover
+
+:active
+
+:focus
+
+:first-child
+
+:nth-child()
+Name Five Pseudo Elements.
+::before
+
+::after
+
+::first-letter
+
+::first-line
+
+::selection
+Which Pseudo Class is used for hovering?
+:hover
+Which Pseudo Element inserts content before an element?
+::before
+Which Pseudo Element inserts content after an element?
+::after
+Which Pseudo Class is used for input focus?
+:focus
+Which Pseudo Class styles selected checkboxes?
+:checked
+Summary
+✔ Pseudo Class → Styles an element's state.
+
+✔ Starts with :
+
+✔ Example → :hover
+
+--------------------------------
+
+✔ Pseudo Element → Styles part of an element.
+
+✔ Starts with ::
+
+✔ Example → ::before
+
+--------------------------------
+
+Pseudo Class = State
+
+Pseudo Element = Part of an Element
+
+day9
+CSS Transition & Transform - Complete Notes
+
+Introduction
+Modern websites are interactive because of Animations, Transitions, and Transforms.
+
+Examples:
+
+Button Hover Effects
+
+Image Zoom
+
+Card Flip
+
+Menu Animation
+
+Loading Effects
+
+CSS provides two important properties:
+
+1. Transition
+
+2. Transform
+What is Transition?
+A Transition creates a smooth animation when a CSS property changes.
+
+Without Transition
+
+Hover
+
+↓
+
+Immediate Change
+With Transition
+
+Hover
+
+↓
+
+Smooth Change
+Why Do We Use Transition?
+Transition helps to:
+
+Create Smooth Animations
+
+Improve User Experience
+
+Make Buttons Attractive
+
+Create Hover Effects
+
+Animate Images
+
+Animate Cards
+
+Syntax
+transition: property duration timing-function delay;
+Transition Properties
+transition-property
+
+transition-duration
+
+transition-timing-function
+
+transition-delay
+
+transition (Shortcut)
+1. transition-property
+Specifies which property should animate.
+
+Example
+
+transition-property: background-color;
+Multiple Properties
+
+transition-property: background-color, color;
+2. transition-duration
+Specifies animation time.
+
+Syntax
+
+transition-duration:1s;
+Units
+
+s
+
+ms
+Example
+
+transition-duration:2s;
+Means
+
+Animation takes 2 Seconds.
+3. transition-timing-function
+Controls animation speed.
+
+Values
+
+ease
+
+linear
+
+ease-in
+
+ease-out
+
+ease-in-out
+ease
+Starts slow
+
+Middle Fast
+
+Ends Slow
+
+linear
+Same Speed
+
+Entire Animation
+
+ease-in
+Starts Slow
+
+Ends Fast
+
+ease-out
+Starts Fast
+
+Ends Slow
+
+ease-in-out
+Slow
+
+↓
+
+Fast
+
+↓
+
+Slow
+
+4. transition-delay
+Delays animation.
+
+Example
+
+transition-delay:2s;
+Animation starts after 2 seconds.
+
+Shortcut
+transition:all 0.5s ease;
+Equivalent
+
+transition-property:all;
+
+transition-duration:.5s;
+
+transition-timing-function:ease;
+Example
+HTML
+
+<button>
+
+Hover Me
+
+</button>
+CSS
+
+button{
+
+background:red;
+
+transition:background 1s ease;
+
+}
+
+button:hover{
+
+background:green;
+
+}
+What is Transform?
+Transform changes the
+
+Size
+
+Position
+
+Rotation
+
+Shape
+
+of an element.
+
+Why Use Transform?
+Used for
+
+Image Zoom
+
+Card Rotation
+
+Hover Effects
+
+Button Effects
+
+Icon Animation
+
+Syntax
+transform:value;
+Transform Functions
+translate()
+
+translateX()
+
+translateY()
+
+scale()
+
+scaleX()
+
+scaleY()
+
+rotate()
+
+skew()
+
+skewX()
+
+skewY()
+1. translate()
+Moves an element.
+
+Example
+
+transform:translate(100px,50px);
+Moves
+
+100px Right
+
+50px Down
+translateX()
+transform:translateX(100px);
+Moves only horizontally.
+
+translateY()
+transform:translateY(50px);
+Moves only vertically.
+
+2. scale()
+Zoom In
+
+Zoom Out
+
+Example
+
+transform:scale(1.2);
+Means
+
+120%
+Original Size
+
+100%
+Zoom In
+transform:scale(1.5);
+Zoom Out
+transform:scale(.8);
+scaleX()
+Horizontal Zoom
+
+transform:scaleX(2);
+scaleY()
+Vertical Zoom
+
+transform:scaleY(2);
+3. rotate()
+Rotates an element.
+
+Example
+
+transform:rotate(45deg);
+Values
+
+45deg
+
+90deg
+
+180deg
+
+360deg
+4. skew()
+Tilts an element.
+
+Example
+
+transform:skew(20deg);
+skewX()
+Horizontal Tilt
+
+transform:skewX(20deg);
+skewY()
+Vertical Tilt
+
+transform:skewY(20deg);
+Combining Transform
+transform:scale(1.2) rotate(10deg);
+Image becomes
+
+Larger
+
+Rotated
+
+Transition + Transform
+Most Common Combination
+
+.card{
+
+transition:.5s;
+
+}
+
+.card:hover{
+
+transform:scale(1.1);
+
+}
+Hover
+
+↓
+
+Smooth Zoom
+
+Image Zoom Example
+img{
+
+transition:.5s;
+
+}
+
+img:hover{
+
+transform:scale(1.2);
+
+}
+Rotate Example
+img{
+
+transition:.5s;
+
+}
+
+img:hover{
+
+transform:rotate(360deg);
+
+}
+Button Hover Example
+button{
+
+transition:.4s;
+
+}
+
+button:hover{
+
+transform:translateY(-5px);
+
+}
+Button moves upward.
+
+Card Hover Example
+.card{
+
+transition:.4s;
+
+}
+
+.card:hover{
+
+transform:translateY(-10px);
+
+}
+Looks like lifting.
+
+Logo Animation
+.logo{
+
+transition:1s;
+
+}
+
+.logo:hover{
+
+transform:rotate(360deg);
+
+}
+Difference Between Transition and Transform
+Transition
+
+Transform
+
+Creates smooth animation
+
+Changes shape or position
+
+Needs property change
+
+Changes element directly
+
+Controls animation time
+
+Controls movement/rotation/zoom
+
+Common Real-Time Uses
+Transition
+
+Button Hover
+
+Navbar Hover
+
+Card Hover
+
+Form Input Hover
+
+Transform
+
+Image Zoom
+
+Card Lift
+
+Logo Rotation
+
+Product Hover
+
+Gallery Effects
+
+Interview Questions
+What is Transition?
+Transition creates a smooth animation between CSS property changes.
+
+What is Transform?
+Transform changes the position, size, rotation, or shape of an element.
+
+Name the Transition Properties.
+transition-property
+
+transition-duration
+
+transition-timing-function
+
+transition-delay
+Name Five Transform Functions.
+translate()
+
+scale()
+
+rotate()
+
+skew()
+
+translateX()
+Which property is used for Image Zoom?
+transform:scale(1.2);
+Which property rotates an element?
+transform:rotate(360deg);
+Which property moves an element?
+transform:translate();
+Which timing function maintains the same speed?
+linear
+Which timing function starts slow and ends slow?
+ease-in-out
+Summary
+✔ Transition creates smooth animations.
+
+✔ Transform changes size, position, rotation, and shape.
+
+✔ transition-duration controls animation time.
+
+✔ transition-delay delays animation.
+
+✔ transition-timing-function controls animation speed.
+
+✔ translate() moves elements.
+
+✔ scale() zooms elements.
+
+✔ rotate() rotates elements.
+
+✔ skew() tilts elements.
+
+✔ Transition + Transform together create modern hover effects used in professional websites.
+
+day10
+
+CSS Media Query - Complete Notes
+
+What is Responsive Web Design?
+Responsive Web Design (RWD) means a website automatically adjusts its layout based on the screen size of the device.
+
+A responsive website works properly on:
+
+📱 Mobile
+
+📲 Tablet
+
+💻 Laptop
+
+🖥️ Desktop
+
+📺 Large Screens
+
+What is a Media Query?
+A Media Query is a CSS feature that applies different styles for different screen sizes or devices.
+
+It checks the device's screen width, height, or orientation and loads the appropriate CSS.
+
+Why Do We Use Media Queries?
+Media Queries help us:
+
+Build Responsive Websites
+
+Change Layouts
+
+Change Font Sizes
+
+Change Background Colors
+
+Change Grid Columns
+
+Change Flex Direction
+
+Improve Mobile Experience
+
+Syntax
+@media media-type and (condition){
+
+    CSS Code
+
+}
+Most Common
+
+@media (max-width:768px){
+
+}
+Media Query Structure
+@media (max-width:768px){
+
+body{
+
+background:red;
+
+}
+
+}
+Meaning
+
+If screen width is
+
+768px or less
+
+↓
+
+Apply this CSS
+Types of Media Queries
+max-width
+
+min-width
+
+min-height
+
+max-height
+
+orientation
+max-width
+Applies CSS when screen size is equal to or smaller than the given width.
+
+Example
+
+@media (max-width:768px){
+
+body{
+
+background:lightblue;
+
+}
+
+}
+Works for
+
+768px
+
+600px
+
+480px
+
+320px
+min-width
+Applies CSS when screen size is equal to or larger than the given width.
+
+Example
+
+@media (min-width:768px){
+
+body{
+
+background:lightgreen;
+
+}
+
+}
+Works for
+
+768px
+
+1024px
+
+1440px
+Common Breakpoints
+Mobile
+
+0px - 576px
+
+---------------------
+
+Tablet
+
+577px - 768px
+
+---------------------
+
+Laptop
+
+769px - 992px
+
+---------------------
+
+Desktop
+
+993px - 1200px
+
+---------------------
+
+Large Desktop
+
+1201px and above
+Background Color Change Example
+HTML
+
+<body>
+
+<h1>Responsive Website</h1>
+
+</body>
+CSS
+
+body{
+
+background:white;
+
+}
+
+@media (max-width:768px){
+
+body{
+
+background:lightblue;
+
+}
+
+}
+Result
+
+Desktop → White
+
+Mobile → Light Blue
+
+Font Size Example
+h1{
+
+font-size:40px;
+
+}
+
+@media (max-width:768px){
+
+h1{
+
+font-size:25px;
+
+}
+
+}
+Flex Responsive Example
+HTML
+
+<div class="container">
+
+<div>1</div>
+
+<div>2</div>
+
+<div>3</div>
+
+</div>
+Desktop CSS
+
+.container{
+
+display:flex;
+
+gap:20px;
+
+}
+Desktop Output
+
+1   2   3
+Mobile Responsive
+@media (max-width:768px){
+
+.container{
+
+flex-direction:column;
+
+}
+
+}
+Mobile Output
+
+1
+
+2
+
+3
+Grid Responsive Example
+Desktop
+
+.container{
+
+display:grid;
+
+grid-template-columns:repeat(4,1fr);
+
+gap:20px;
+
+}
+Desktop Output
+
+1  2  3  4
+Tablet
+
+@media (max-width:768px){
+
+.container{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+Output
+
+1 2
+
+3 4
+Mobile
+
+@media (max-width:576px){
+
+.container{
+
+grid-template-columns:1fr;
+
+}
+
+}
+Output
+
+1
+
+2
+
+3
+
+4
+Responsive Image
+img{
+
+width:100%;
+
+height:auto;
+
+}
+Image automatically adjusts to screen width.
+
+Multiple Media Queries
+@media (max-width:992px){
+
+body{
+
+background:orange;
+
+}
+
+}
+
+@media (max-width:768px){
+
+body{
+
+background:skyblue;
+
+}
+
+}
+
+@media (max-width:576px){
+
+body{
+
+background:pink;
+
+}
+
+}
+Orientation
+Landscape
+
+@media (orientation:landscape){
+
+body{
+
+background:yellow;
+
+}
+
+}
+Portrait
+
+@media (orientation:portrait){
+
+body{
+
+background:lightgreen;
+
+}
+
+}
+Real-Time Example
+Desktop
+
+Logo   Home About Contact
+Mobile
+
+Logo
+
+Home
+
+About
+
+Contact
+Using
+
+display:flex;
+
+flex-direction:column;
+Responsive Dashboard
+Desktop
+
+Card1 Card2 Card3 Card4
+Tablet
+
+Card1 Card2
+
+Card3 Card4
+Mobile
+
+Card1
+
+Card2
+
+Card3
+
+Card4
+Using
+
+grid-template-columns
+Difference Between Flex and Grid in Responsive Design
+Flex
+
+Grid
+
+One Direction
+
+Rows & Columns
+
+Navbar
+
+Dashboard
+
+Menu
+
+Gallery
+
+Cards in One Row
+
+Product Layout
+
+Best Practices
+✔ Mobile First Design
+
+✔ Use Relative Units
+
+✔ Use Flexbox for Navigation
+
+✔ Use Grid for Dashboards
+
+✔ Use Images with width:100%
+
+✔ Test on Multiple Screen Sizes
+Interview Questions
+What is Responsive Web Design?
+Responsive Web Design is a design approach where a website automatically adjusts its layout according to the screen size.
+
+What is a Media Query?
+A Media Query is a CSS feature that applies different styles based on the device's screen size or characteristics.
+
+Which property is commonly used for Mobile Design?
+@media (max-width:768px){
+
+}
+Difference Between max-width and min-width?
+max-width
+
+↓
+
+Applies CSS up to the given width.
+
+----------------------
+
+min-width
+
+↓
+
+Applies CSS from the given width and above.
+How do you make Flexbox responsive?
+@media (max-width:768px){
+
+.container{
+
+flex-direction:column;
+
+}
+
+}
+How do you make Grid responsive?
+@media (max-width:768px){
+
+.container{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+How do you create a single-column layout on mobile?
+grid-template-columns:1fr;
+Why do we use width:100% for images?
+To make images automatically adjust to different screen sizes.
+
+Summary
+✔ Media Query makes websites responsive.
+
+✔ @media is used to write responsive CSS.
+
+✔ max-width targets smaller screens.
+
+✔ min-width targets larger screens.
+
+✔ Flexbox changes direction using flex-direction.
+
+✔ Grid changes columns using grid-template-columns.
+
+✔ Images should use width:100%.
+
+✔ Responsive websites work on Mobile, Tablet, Laptop, and Desktop.
+
+
+
+  # CSS vs CSS3 - Complete Notes
+
+# What is CSS?
+
+## Full Form
+
+```text id="css01"
+CSS = Cascading Style Sheets
+```
+
+CSS is a stylesheet language used to design and style HTML webpages.
+
+HTML creates the **structure**, and CSS makes the webpage **beautiful and attractive**.
+
+CSS was introduced by **Håkon Wium Lie** in **1996**.
+
+---
+
+# What is CSS3?
+
+CSS3 is the **latest major version of CSS**.
+
+Instead of releasing one large version, CSS3 is divided into **Modules**.
+
+Examples:
+
+* Flexbox Module
+* Grid Module
+* Animation Module
+* Transition Module
+* Transform Module
+* Media Query Module
+
+---
+
+# Why was CSS3 introduced?
+
+Earlier CSS had many limitations.
+
+Problems:
+
+* No Animation
+* No Responsive Design
+* No Rounded Corners
+* No Gradients
+* No Shadows
+* Difficult Layout Creation
+
+CSS3 solved these problems by introducing modern features.
+
+---
+
+# CSS History
+
+```text id="css02"
+1994
+
+↓
+
+CSS Idea Proposed
+
+↓
+
+1996
+
+↓
+
+CSS1 Released
+
+↓
+
+1998
+
+↓
+
+CSS2 Released
+
+↓
+
+2011+
+
+↓
+
+CSS3 Modules Released
+
+↓
+
+Present
+
+↓
+
+Modern CSS
+```
+
+---
+
+# Difference Between CSS and CSS3
+
+| CSS               | CSS3                       |
+| ----------------- | -------------------------- |
+| Older Version     | Latest Version             |
+| Limited Features  | Modern Features            |
+| No Animation      | Supports Animation         |
+| No Transition     | Supports Transition        |
+| No Transform      | Supports Transform         |
+| No Flexbox        | Supports Flexbox           |
+| No Grid           | Supports Grid              |
+| Limited Selectors | Advanced Selectors         |
+| No Media Queries  | Supports Responsive Design |
+| No Border Radius  | Supports Rounded Corners   |
+
+---
+
+# CSS Features
+
+```text id="css03"
+Colors
+
+Fonts
+
+Background
+
+Border
+
+Margin
+
+Padding
+
+Width
+
+Height
+
+Display
+
+Position
+```
+
+These are the basic styling properties.
+
+---
+
+# CSS3 Features
+
+```text id="css04"
+Border Radius
+
+Box Shadow
+
+Text Shadow
+
+Gradient
+
+Transition
+
+Transform
+
+Animation
+
+Flexbox
+
+Grid
+
+Media Query
+
+Multiple Backgrounds
+
+RGBA
+
+HSLA
+
+Opacity
+
+Custom Fonts
+```
+
+---
+
+# 1. Border Radius
+
+### CSS
+
+```css id="css05"
+div{
+
+border:2px solid black;
+
+}
+```
+
+Only square corners.
+
+---
+
+### CSS3
+
+```css id="css06"
+div{
+
+border-radius:20px;
+
+}
+```
+
+Rounded corners.
+
+---
+
+# 2. Box Shadow
+
+### CSS
+
+Not Available
+
+---
+
+### CSS3
+
+```css id="css07"
+box-shadow:5px 5px 10px gray;
+```
+
+Creates a shadow around the element.
+
+---
+
+# 3. Text Shadow
+
+```css id="css08"
+text-shadow:2px 2px 5px gray;
+```
+
+Adds a shadow to text.
+
+---
+
+# 4. Gradient Background
+
+### CSS
+
+Only one background color.
+
+```css id="css09"
+background:red;
+```
+
+---
+
+### CSS3
+
+```css id="css10"
+background:linear-gradient(red,blue);
+```
+
+Smooth color transition.
+
+---
+
+# 5. Transition
+
+```css id="css11"
+transition:.5s;
+```
+
+Creates smooth animations.
+
+---
+
+# 6. Transform
+
+```css id="css12"
+transform:scale(1.2);
+```
+
+Zooms the element.
+
+Other Functions
+
+```text id="css13"
+translate()
+
+rotate()
+
+scale()
+
+skew()
+```
+
+---
+
+# 7. Animation
+
+```css id="css14"
+animation:move 2s infinite;
+```
+
+Creates automatic movement without user interaction.
+
+---
+
+# 8. Flexbox
+
+```css id="css15"
+display:flex;
+```
+
+Creates one-dimensional layouts.
+
+Best for:
+
+* Navbar
+* Cards
+* Buttons
+
+---
+
+# 9. Grid
+
+```css id="css16"
+display:grid;
+```
+
+Creates two-dimensional layouts.
+
+Best for:
+
+* Dashboard
+* Gallery
+* Product Layout
+
+---
+
+# 10. Media Query
+
+```css id="css17"
+@media (max-width:768px){
+
+}
+```
+
+Used for responsive web design.
+
+---
+
+# 11. Opacity
+
+```css id="css18"
+opacity:.5;
+```
+
+Controls element transparency.
+
+---
+
+# 12. RGBA Colors
+
+```css id="css19"
+background:rgba(255,0,0,.5);
+```
+
+RGBA means
+
+```text id="css20"
+Red
+
+Green
+
+Blue
+
+Alpha
+```
+
+Alpha controls transparency.
+
+---
+
+# 13. HSLA
+
+```css id="css21"
+color:hsla(200,100%,50%,.8);
+```
+
+HSLA means
+
+```text id="css22"
+Hue
+
+Saturation
+
+Lightness
+
+Alpha
+```
+
+---
+
+# 14. Multiple Backgrounds
+
+```css id="css23"
+background-image:url(img1.png),url(img2.png);
+```
+
+Multiple background images in one element.
+
+---
+
+# 15. Custom Fonts
+
+```css id="css24"
+@font-face{
+
+font-family:"MyFont";
+
+src:url(font.ttf);
+
+}
+```
+
+Allows custom fonts.
+
+---
+
+# Browser Support
+
+Modern browsers support CSS3.
+
+Examples
+
+```text id="css25"
+Google Chrome
+
+Microsoft Edge
+
+Mozilla Firefox
+
+Safari
+
+Opera
+```
+
+---
+
+# Real-Time Uses
+
+### CSS
+
+* Basic Website
+* Text Styling
+* Background Colors
+* Borders
+
+---
+
+### CSS3
+
+* Responsive Websites
+* Landing Pages
+* Admin Dashboards
+* Animations
+* Modern UI
+* Portfolio Websites
+* E-Commerce Websites
+
+---
+
+# CSS Modules
+
+CSS3 is divided into modules.
+
+Examples
+
+```text id="css26"
+Selectors
+
+Backgrounds
+
+Borders
+
+Animations
+
+Transitions
+
+Transforms
+
+Flexbox
+
+Grid
+
+Fonts
+
+Media Queries
+```
+
+Each module is developed independently.
+
+---
+
+# Interview Questions
+
+### What is CSS?
+
+CSS stands for Cascading Style Sheets. It is used to style HTML webpages.
+
+---
+
+### What is CSS3?
+
+CSS3 is the latest version of CSS with modern styling features.
+
+---
+
+### Why was CSS3 introduced?
+
+CSS3 was introduced to provide advanced styling features such as animations, transitions, responsive design, Flexbox, Grid, gradients, and shadows.
+
+---
+
+### Name five CSS3 features.
+
+```text id="css27"
+Flexbox
+
+Grid
+
+Transition
+
+Transform
+
+Animation
+```
+
+---
+
+### Does CSS support Media Queries?
+
+No.
+
+Media Queries were introduced in CSS3.
+
+---
+
+### Which version introduced Flexbox?
+
+```text id="css28"
+CSS3
+```
+
+---
+
+### Which version introduced Grid?
+
+```text id="css29"
+CSS3
+```
+
+---
+
+### Which version introduced Animation?
+
+```text id="css30"
+CSS3
+```
+
+---
+
+### Which version introduced Border Radius?
+
+```text id="css31"
+CSS3
+```
+
+---
+
+### Difference Between CSS and CSS3?
+
+CSS provides basic styling, while CSS3 extends CSS with modern features such as animations, transitions, transforms, responsive design, Flexbox, Grid, gradients, shadows, and advanced selectors.
+
+---
+
+# CSS vs CSS3 Summary
+
+```text id="css32"
+✔ CSS = Basic Styling
+
+✔ CSS3 = Modern Styling
+
+✔ CSS → Static Design
+
+✔ CSS3 → Interactive Design
+
+✔ CSS3 supports:
+
+• Border Radius
+• Box Shadow
+• Text Shadow
+• Gradient
+• Transition
+• Transform
+• Animation
+• Flexbox
+• Grid
+• Media Queries
+• RGBA
+• HSLA
+• Opacity
+• Custom Fonts
+
+✔ CSS3 is the foundation of modern responsive web development.
+```
+# CSS Cascading & Specificity - Complete Notes
+
+# What is Cascading?
+
+## Definition
+
+The word **Cascade** means **to flow from top to bottom**.
+
+In CSS, **Cascading** is the process the browser uses to decide **which CSS rule should be applied** when multiple CSS rules target the same HTML element.
+
+Simply,
+
+> **Cascading = The rule selection process used by the browser.**
+
+---
+
+# Why is it Called Cascading Style Sheets?
+
+CSS consists of three words.
+
+### Cascading
+
+Rules are applied based on priority.
+
+↓
+
+### Style
+
+Adds design to HTML.
+
+↓
+
+### Sheets
+
+CSS rules are written inside style sheets.
+
+---
+
+# Why Do We Need Cascading?
+
+Imagine writing two different colors for the same heading.
+
+```css id="cas01"
+h1{
+
+color:red;
+
+}
+
+h1{
+
+color:blue;
+
+}
+```
+
+HTML
+
+```html id="cas02"
+<h1>Welcome</h1>
+```
+
+Output
+
+```text id="cas03"
+Blue
+```
+
+Because the browser follows the **Cascade Rule**.
+
+The **last rule wins** when both selectors have the same priority.
+
+---
+
+# CSS Cascade Order
+
+When multiple CSS rules target the same element, the browser follows this order.
+
+```text id="cas04"
+1. !important
+
+↓
+
+2. Specificity
+
+↓
+
+3. Source Order (Last Rule)
+
+↓
+```
+
+The browser checks these one by one.
+
+---
+
+# Rule 1 - !important
+
+Highest Priority.
+
+Example
+
+```css id="cas05"
+h1{
+
+color:red !important;
+
+}
+
+h1{
+
+color:blue;
+
+}
+```
+
+Output
+
+```text id="cas06"
+Red
+```
+
+Because
+
+```text id="cas07"
+!important
+```
+
+has the highest priority.
+
+---
+
+# Rule 2 - Specificity
+
+If `!important` is not present,
+
+the browser checks **Specificity**.
+
+---
+
+# Rule 3 - Source Order
+
+If specificity is equal,
+
+the browser applies the **last written rule**.
+
+Example
+
+```css id="cas08"
+p{
+
+color:red;
+
+}
+
+p{
+
+color:green;
+
+}
+```
+
+Output
+
+```text id="cas09"
+Green
+```
+
+---
+
+# What is Specificity?
+
+Specificity is the **priority scoring system** used by the browser to determine which selector is stronger.
+
+In simple words,
+
+> **Specificity tells the browser which selector has the highest priority.**
+
+---
+
+# Why Do We Need Specificity?
+
+Suppose one element has multiple selectors.
+
+Example
+
+```html id="spe01"
+<h1
+
+id="title"
+
+class="heading">
+
+CSS
+
+</h1>
+```
+
+CSS
+
+```css id="spe02"
+h1{
+
+color:red;
+
+}
+
+.heading{
+
+color:green;
+
+}
+
+#title{
+
+color:blue;
+
+}
+```
+
+Output
+
+```text id="spe03"
+Blue
+```
+
+Because
+
+```text id="spe04"
+ID Selector
+```
+
+has the highest specificity.
+
+---
+
+# Specificity Priority
+
+Highest
+
+```text id="spe05"
+Inline Style
+```
+
+↓
+
+```text id="spe06"
+ID Selector
+```
+
+↓
+
+```text id="spe07"
+Class Selector
+
+Attribute Selector
+
+Pseudo Class
+```
+
+↓
+
+```text id="spe08"
+Element Selector
+
+Pseudo Element
+```
+
+↓
+
+Lowest
+
+```text id="spe09"
+Universal Selector (*)
+```
+
+---
+
+# Specificity Score
+
+| Selector           | Score |
+| ------------------ | ----: |
+| Inline Style       |  1000 |
+| ID Selector        |   100 |
+| Class Selector     |    10 |
+| Attribute Selector |    10 |
+| Pseudo Class       |    10 |
+| Element Selector   |     1 |
+| Pseudo Element     |     1 |
+| Universal Selector |     0 |
+
+---
+
+# Example 1
+
+```css id="spe10"
+h1{
+
+color:red;
+
+}
+
+.heading{
+
+color:green;
+
+}
+```
+
+```html id="spe11"
+<h1 class="heading">
+
+CSS
+
+</h1>
+```
+
+Output
+
+```text id="spe12"
+Green
+```
+
+Because
+
+```text id="spe13"
+Class (10)
+
+>
+
+Element (1)
+```
+
+---
+
+# Example 2
+
+```css id="spe14"
+.heading{
+
+color:green;
+
+}
+
+#title{
+
+color:blue;
+
+}
+```
+
+```html id="spe15"
+<h1
+
+id="title"
+
+class="heading">
+
+CSS
+
+</h1>
+```
+
+Output
+
+```text id="spe16"
+Blue
+```
+
+Because
+
+```text id="spe17"
+ID (100)
+
+>
+
+Class (10)
+```
+
+---
+
+# Example 3
+
+```css id="spe18"
+#title{
+
+color:red;
+
+}
+
+#title{
+
+color:blue;
+
+}
+```
+
+Output
+
+```text id="spe19"
+Blue
+```
+
+Reason
+
+Both selectors have the same specificity.
+
+The browser follows **Cascading**.
+
+The last rule wins.
+
+---
+
+# Difference Between Cascading and Specificity
+
+| Cascading                                        | Specificity                        |
+| ------------------------------------------------ | ---------------------------------- |
+| Overall process used by the browser              | Priority calculation for selectors |
+| Uses `!important`, Specificity, and Source Order | Uses only selector strength        |
+| Decides the final applied style                  | Decides which selector is stronger |
+| Last rule wins when priorities are equal         | Higher specificity wins            |
+
+---
+
+# Easy Memory Trick
+
+```text id="spe20"
+Specificity
+
+↓
+
+Who is Stronger?
+
+↓
+
+Inline
+
+↓
+
+ID
+
+↓
+
+Class
+
+↓
+
+Element
+
+↓
+
+Universal
+
+-----------------------
+
+Cascading
+
+↓
+
+If everyone is equally strong,
+
+↓
+
+Last Rule Wins.
+```
+
+---
+
+# Real-Time Example
+
+Imagine a company.
+
+```text id="spe21"
+CEO
+
+↓
+
+Manager
+
+↓
+
+Team Leader
+
+↓
+
+Employee
+```
+
+If the CEO gives an instruction,
+
+everyone follows it.
+
+Similarly,
+
+```text id="spe22"
+Inline Style
+
+↓
+
+ID
+
+↓
+
+Class
+
+↓
+
+Element
+
+↓
+
+Universal
+```
+
+Now imagine two CEOs give instructions.
+
+The latest instruction is followed.
+
+That is **Cascading**.
+
+---
+
+# Interview Questions
+
+### What is Cascading?
+
+Cascading is the process used by the browser to decide which CSS rule should be applied when multiple rules target the same element.
+
+---
+
+### What is Specificity?
+
+Specificity is the selector priority system used to determine which CSS selector has the highest precedence.
+
+---
+
+### What is the Cascade Order?
+
+```text id="spe23"
+!important
+
+↓
+
+Specificity
+
+↓
+
+Source Order (Last Rule)
+```
+
+---
+
+### Which selector has the highest specificity?
+
+```text id="spe24"
+Inline Style
+```
+
+---
+
+### What is the specificity order?
+
+```text id="spe25"
+Inline
+
+↓
+
+ID
+
+↓
+
+Class
+
+↓
+
+Element
+
+↓
+
+Universal
+```
+
+---
+
+### When does the last rule win?
+
+When two selectors have the same specificity and no `!important` rule is applied.
+
+---
+
+### Which is stronger: ID or Class?
+
+The **ID Selector** is stronger because its specificity score is **100**, while a Class Selector has a score of **10**.
+
+---
+
+# Summary
+
+```text id="spe26"
+✔ Cascading = Browser's rule selection process.
+
+✔ Specificity = Selector priority calculation.
+
+✔ Cascade Order:
+!important → Specificity → Source Order.
+
+✔ Specificity Order:
+Inline → ID → Class → Element → Universal.
+
+✔ If specificity is equal, the browser applies the last CSS rule.
+
+✔ Understanding Cascading and Specificity helps avoid CSS conflicts in real-world projects.
+```
+

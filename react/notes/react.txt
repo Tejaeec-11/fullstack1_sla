@@ -1,0 +1,7874 @@
+react
+
+day1
+REACT.JS – DAY 1 BASIC NOTES
+
+1. What is React?
+
+React is an open-source JavaScript library used to build interactive and reusable user interfaces, especially for web applications. React was created at Facebook and was open-sourced in 2013. Today it is maintained by Meta and the open-source community. React mainly focuses on the UI layer of an application.
+
+In traditional JavaScript applications, developers manually select DOM elements and update them whenever data changes. React provides a declarative and component-based approach. We describe what the UI should look like for the current data/state, and React handles the necessary rendering and DOM updates.
+
+JavaScript
+
+↓
+
+React
+
+↓
+
+Components
+
+↓
+
+UI
+
+Simple example:
+
+function App() {
+
+return <h1>Hello React</h1>;
+
+}
+
+export default App;
+
+---
+
+2. Why Do We Use React?
+
+Consider an application containing:
+
+Navbar
+
+Sidebar
+
+Dashboard
+
+Profile
+
+Products
+
+Cart
+
+Footer
+
+Instead of writing the entire application as one huge file, React allows us to divide the UI into smaller components.
+
+Application
+
+│
+
+├── Navbar
+
+├── Sidebar
+
+├── Dashboard
+
+│ ├── Card
+
+│ ├── Chart
+
+│ └── Table
+
+└── Footer
+
+Each component can contain its own UI and logic and can be reused when needed. This makes larger applications easier to develop, test, understand, and maintain.
+
+---
+
+3. Important Features of React
+
+Component-Based Architecture
+
+React applications are built using components.
+
+function Header() {
+
+return <h1>My Website</h1>;
+
+}
+
+The component can be reused:
+
+<Header />
+
+---
+
+Declarative UI
+
+We tell React what UI we want, instead of manually describing every DOM operation.
+
+Example:
+
+function App() {
+
+const name = "Arun";
+
+return <h1>Welcome {name}</h1>;
+
+}
+
+---
+
+JSX
+
+React commonly uses JSX, which allows HTML-like markup to be written inside JavaScript.
+
+const element = <h1>Hello React</h1>;
+
+---
+
+Virtual DOM
+
+React uses an in-memory representation of the UI as part of its rendering process and determines the necessary updates before committing changes to the browser DOM.
+
+---
+
+Reusable Components
+
+Create once:
+
+function Button() {
+
+return <button>Login</button>;
+
+}
+
+Reuse:
+
+<Button />
+
+<Button />
+
+<Button />
+
+---
+
+One-Way Data Flow
+
+React commonly passes data from parent components to child components using props.
+
+Parent
+
+↓
+
+Props
+
+↓
+
+Child
+
+---
+
+State-Based UI
+
+React can update the UI when component state changes.
+
+State Changes
+
+↓
+
+Component Renders Again
+
+↓
+
+React Calculates Required Changes
+
+↓
+
+Browser UI Updated
+
+---
+
+4. React Application Basic Flow
+
+The basic React application process is:
+
+Browser
+
+↓
+
+index.html
+
+↓
+
+main.jsx
+
+↓
+
+<App />
+
+↓
+
+Components
+
+↓
+
+JSX
+
+↓
+
+React Rendering
+
+↓
+
+Browser DOM
+
+↓
+
+UI
+
+We will understand each part separately.
+
+---
+
+5. Creating a React Project with Vite
+
+A common modern setup is Vite.
+
+npm create vite@latest
+
+Select:
+
+Project Name → my-react-app
+
+Framework
+
+→ React
+
+Variant
+
+→ JavaScript
+
+Then:
+
+cd my-react-app
+
+npm install
+
+npm run dev
+
+---
+
+6. Basic React Project Structure
+
+A basic Vite React project can look like:
+
+my-react-app/
+
+│
+
+├── node_modules/
+
+├── public/
+
+├── src/
+
+│ ├── assets/
+
+│ ├── App.jsx
+
+│ ├── App.css
+
+│ ├── index.css
+
+│ └── main.jsx
+
+│
+
+├── index.html
+
+├── package.json
+
+└── vite.config.js
+
+The main files beginners should first understand are:
+
+index.html
+
+main.jsx
+
+App.jsx
+
+---
+
+7. What is "index.html"?
+
+"index.html" is the HTML entry page loaded by the browser.
+
+Inside it, Vite's React template contains a root element similar to:
+
+<div id="root"></div>
+
+React mounts the application inside this element.
+
+Think:
+
+HTML gives React an empty container.
+
+React builds the application inside that container.
+
+---
+
+8. What is "main.jsx"?
+
+"main.jsx" is the JavaScript entry point for the React application in a typical Vite React project.
+
+Example:
+
+import { StrictMode } from "react";
+
+import { createRoot } from "react-dom/client";
+
+import App from "./App.jsx";
+
+import "./index.css";
+
+createRoot(document.getElementById("root")).render(
+
+<StrictMode>
+
+<App />
+
+</StrictMode>
+
+);
+
+Important part:
+
+createRoot(document.getElementById("root"))
+
+It finds:
+
+<div id="root"></div>
+
+Then:
+
+.render(<App />);
+
+starts rendering the React application.
+
+Basic connection:
+
+index.html
+
+↓
+
+#root
+
+↓
+
+main.jsx
+
+↓
+
+createRoot()
+
+↓
+
+<App />
+
+↓
+
+Application UI
+
+---
+
+9. What is "App.jsx"?
+
+"App.jsx" is commonly used as the root application component in a Vite React starter project.
+
+Example:
+
+function App() {
+
+return (
+
+<div>
+
+<h1>Welcome to React</h1>
+
+<p>My First Application</p>
+
+</div>
+
+);
+
+}
+
+export default App;
+
+"App.jsx" is not a special mandatory filename built into React. It is a common project convention. We could technically name the component differently and import it correctly.
+
+For beginners, think:
+
+main.jsx
+
+↓
+
+App.jsx
+
+↓
+
+Other Components
+
+---
+
+10. What is a Component?
+
+A component is a reusable piece of UI. In modern React, components are commonly JavaScript functions that return JSX.
+
+For example, instead of writing navbar code repeatedly, we can create one "Navbar" component and use it wherever required. Components make applications easier to divide into manageable pieces.
+
+Syntax:
+
+function Welcome() {
+
+return (
+
+<h1>Hello Student</h1>
+
+);
+
+}
+
+export default Welcome;
+
+Arrow function:
+
+const Welcome = () => {
+
+return (
+
+<h1>Hello Student</h1>
+
+);
+
+};
+
+export default Welcome;
+
+---
+
+11. Important Component Rule
+
+Component names should start with a capital letter.
+
+Correct:
+
+function Header() {
+
+return <h1>Header</h1>;
+
+}
+
+Use:
+
+<Header />
+
+React treats lowercase names such as:
+
+<div>
+
+<button>
+
+input
+
+as built-in/host elements, while capitalized names represent React components.
+
+---
+
+12. Why Components Are Important
+
+Suppose we create an e-commerce website.
+
+Without component separation:
+
+One Huge File
+
+Navbar
+
+Banner
+
+Products
+
+Cart
+
+Footer
+
+Everything Together
+
+With React:
+
+App
+
+│
+
+├── Navbar
+
+├── Banner
+
+├── ProductList
+
+│ ├── ProductCard
+
+│ ├── ProductCard
+
+│ └── ProductCard
+
+├── Cart
+
+└── Footer
+
+Benefits include:
+
+Reusability
+
+Maintainability
+
+Readability
+
+Separation of concerns
+
+Easier testing
+
+Better application structure
+
+---
+
+13. Creating Multiple Components
+
+Folder:
+
+src/
+
+│
+
+├── components/
+
+│ ├── Header.jsx
+
+│ ├── Content.jsx
+
+│ └── Footer.jsx
+
+│
+
+├── App.jsx
+
+└── main.jsx
+
+"Header.jsx"
+
+const Header = () => {
+
+return (
+
+<header>
+
+<h1>My React App</h1>
+
+</header>
+
+);
+
+};
+
+export default Header;
+
+"Content.jsx"
+
+const Content = () => {
+
+return (
+
+<main>
+
+<h2>Welcome</h2>
+
+<p>Learning React is fun!</p>
+
+</main>
+
+);
+
+};
+
+export default Content;
+
+"Footer.jsx"
+
+const Footer = () => {
+
+return (
+
+<footer>
+
+<p>Copyright 2026</p>
+
+</footer>
+
+);
+
+};
+
+export default Footer;
+
+---
+
+14. Import Components into "App.jsx"
+
+import Header from "./components/Header";
+
+import Content from "./components/Content";
+
+import Footer from "./components/Footer";
+
+const App = () => {
+
+return (
+
+<div>
+
+<Header />
+
+<Content />
+
+<Footer />
+
+</div>
+
+);
+
+};
+
+export default App;
+
+Execution:
+
+main.jsx
+
+↓
+
+<App />
+
+↓
+
+App.jsx
+
+↓
+
+Header
+
+Content
+
+Footer
+
+↓
+
+Complete UI
+
+---
+
+15. What is JSX?
+
+JSX stands for JavaScript XML. It is a syntax extension commonly used with React that allows developers to describe UI using HTML-like markup inside JavaScript.
+
+Example:
+
+const App = () => {
+
+return (
+
+<h1>Hello React</h1>
+
+);
+
+};
+
+This:
+
+<h1>Hello React</h1>
+
+is JSX.
+
+Browsers do not directly execute JSX syntax as plain JavaScript. Build tools such as Vite use transformation tooling so JSX is converted into JavaScript that can be executed by the browser.
+
+---
+
+16. JavaScript inside JSX
+
+Use curly braces:
+
+{ }
+
+Example:
+
+const App = () => {
+
+const name = "Arun";
+
+const age = 22;
+
+return (
+
+<div>
+
+<h1>Hello {name}</h1>
+
+<p>Age: {age}</p>
+
+</div>
+
+);
+
+};
+
+Output:
+
+Hello Arun
+
+Age: 22
+
+Easy memory:
+
+JSX
+
++
+
+{ JavaScript Expression }
+
+---
+
+17. JSX Rules
+
+Rule 1 – Return a Single Parent
+
+Incorrect:
+
+return (
+
+<h1>Hello</h1>
+
+<p>Welcome</p>
+
+);
+
+Correct:
+
+return (
+
+<div>
+
+<h1>Hello</h1>
+
+<p>Welcome</p>
+
+</div>
+
+);
+
+Or use Fragment:
+
+return (
+
+<>
+
+<h1>Hello</h1>
+
+<p>Welcome</p>
+
+</>
+
+);
+
+---
+
+18. "className" instead of "class"
+
+In JSX:
+
+<h1 className="title">
+
+Hello
+
+</h1>
+
+We commonly use:
+
+HTML → class
+
+JSX → className
+
+---
+
+19. Self-Closing Elements
+
+Use:
+
+<img src="/image.jpg" alt="Profile" />
+
+<input type="text" />
+
+<br />
+
+---
+
+20. Event Syntax
+
+HTML-style inline event syntax:
+
+<button onclick="showData()">
+
+React:
+
+<button onClick={showData}>
+
+Click
+
+</button>
+
+Example:
+
+const App = () => {
+
+const showMessage = () => {
+
+alert("Hello React");
+
+};
+
+return (
+
+<button onClick={showMessage}>
+
+Click Me
+
+</button>
+
+);
+
+};
+
+export default App;
+
+---
+
+21. What is Real DOM?
+
+DOM stands for Document Object Model. The browser represents an HTML document as a tree of nodes/elements that JavaScript and browser APIs can interact with.
+
+Example HTML:
+
+<div>
+
+<h1>Hello</h1>
+
+<p>Welcome</p>
+
+</div>
+
+Conceptual DOM tree:
+
+div
+
+├── h1
+
+│ └── Hello
+
+└── p
+
+└── Welcome
+
+This browser-managed tree is what we commonly refer to as the real DOM.
+
+---
+
+22. Traditional DOM Update Example
+
+Vanilla JavaScript:
+
+<h1 id="count">0</h1>
+
+<button id="btn">
+
+Add
+
+</button>
+
+let count = 0;
+
+const heading = document.getElementById("count");
+
+const button = document.getElementById("btn");
+
+button.addEventListener("click", () => {
+
+count++;
+
+heading.textContent = count;
+
+});
+
+Here we manually select and update the DOM element.
+
+---
+
+23. What is Virtual DOM?
+
+Virtual DOM is a common term for React's in-memory representation of the UI. React uses its internal tree structures to determine what the UI should look like based on the latest component output.
+
+When state changes, React renders the affected component logic again, creates the next representation, determines the necessary changes, and then commits the required updates to the browser DOM.
+
+Simple concept:
+
+State Change
+
+↓
+
+React Renders
+
+↓
+
+New UI Representation
+
+↓
+
+Compare / Reconcile
+
+↓
+
+Required DOM Changes
+
+↓
+
+Browser UI Updated
+
+---
+
+24. Virtual DOM vs Real DOM
+
+Real DOM| Virtual DOM Concept
+
+Browser's actual DOM tree| React's in-memory UI representation
+
+Browser APIs modify it| Managed internally by React
+
+Actual page changes happen here| Helps React calculate desired changes
+
+DOM operations can involve browser rendering work| React batches/calculates updates before committing
+
+Important interview clarification:
+
+React is not simply "fast because Virtual DOM is always faster than DOM." Performance depends on the application. The important concept is that React provides a declarative rendering model and determines the necessary UI updates for us.
+
+---
+
+25. What is Reconciliation?
+
+Reconciliation is the process React uses to determine how a newly rendered element/component tree relates to the previous one and what updates are necessary.
+
+When props or state change, React renders again. During reconciliation, React compares the new element tree with the previous tree, preserves or replaces component instances where appropriate, and determines what work needs to be committed to the DOM.
+
+Basic process:
+
+Previous UI
+
+↓
+
+State Changes
+
+↓
+
+New Render
+
+↓
+
+Reconciliation
+
+↓
+
+Determine Differences
+
+↓
+
+Commit Necessary Updates
+
+↓
+
+Real DOM
+
+---
+
+26. Reconciliation Example
+
+Imagine:
+
+<h1>Count: 0</h1>
+
+<p>Welcome</p>
+
+After update:
+
+<h1>Count: 1</h1>
+
+<p>Welcome</p>
+
+The paragraph did not logically change.
+
+The relevant update is:
+
+Count: 0
+
+↓
+
+Count: 1
+
+React determines the required change and commits the corresponding DOM update.
+
+---
+
+27. React State Update Example
+
+We will later study "useState()" deeply, but this example is useful for understanding rendering.
+
+import { useState } from "react";
+
+const App = () => {
+
+const [count, setCount] = useState(0);
+
+const increase = () => {
+
+setCount(count + 1);
+
+};
+
+return (
+
+<div>
+
+<h1>Count: {count}</h1>
+
+<button onClick={increase}>
+
+Add
+
+</button>
+
+</div>
+
+);
+
+};
+
+export default App;
+
+Initial:
+
+count = 0
+
+Screen
+
+↓
+
+Count: 0
+
+Click button:
+
+setCount(1)
+
+Then conceptually:
+
+State Changes
+
+↓
+
+Component Scheduled to Render
+
+↓
+
+App() Runs Again
+
+↓
+
+New JSX Result
+
+↓
+
+Reconciliation
+
+↓
+
+Required Change Determined
+
+↓
+
+DOM Commit
+
+↓
+
+Count: 1
+
+---
+
+28. React Rendering Process – Important
+
+Students should remember this flow:
+
+USER ACTION
+
+↓
+
+EVENT
+
+↓
+
+STATE UPDATE
+
+↓
+
+RENDER
+
+↓
+
+RECONCILIATION
+
+↓
+
+COMMIT
+
+↓
+
+BROWSER UI UPDATE
+
+Example:
+
+Click Button
+
+↓
+
+onClick
+
+↓
+
+setCount()
+
+↓
+
+Component renders
+
+↓
+
+React reconciles trees
+
+↓
+
+Necessary DOM update
+
+↓
+
+New value visible
+
+---
+
+29. React vs Traditional JavaScript DOM
+
+Vanilla JavaScript:
+
+const title = document.getElementById("title");
+
+title.textContent = "Welcome";
+
+We explicitly tell the browser:
+
+Find this element
+
+↓
+
+Change this property
+
+React:
+
+const App = () => {
+
+const name = "Welcome";
+
+return (
+
+<h1>{name}</h1>
+
+);
+
+};
+
+React style is more declarative:
+
+Data / State
+
+↓
+
+Describe UI
+
+↓
+
+React Rendering
+
+↓
+
+DOM Updates
+
+---
+
+30. What is "return" in a Component?
+
+A component commonly returns JSX describing what should appear in the UI.
+
+const Header = () => {
+
+return (
+
+<h1>Welcome</h1>
+
+);
+
+};
+
+Think:
+
+Component Function
+
+↓
+
+return
+
+↓
+
+JSX
+
+↓
+
+React renders UI
+
+---
+
+31. What is "export default"?
+
+If we create:
+
+const Header = () => {
+
+return <h1>Header</h1>;
+
+};
+
+and want to use it in another file:
+
+export default Header;
+
+Then:
+
+import Header from "./Header";
+
+Use:
+
+<Header />
+
+Flow:
+
+Header.jsx
+
+↓
+
+export
+
+↓
+
+App.jsx
+
+↓
+
+import
+
+↓
+
+<Header />
+
+---
+
+32. Basic CSS in React
+
+"App.css"
+
+.title {
+
+color: blue;
+
+font-size: 40px;
+
+}
+
+"App.jsx"
+
+import "./App.css";
+
+const App = () => {
+
+return (
+
+<h1 className="title">
+
+Hello React
+
+</h1>
+
+);
+
+};
+
+export default App;
+
+---
+
+33. Images in React
+
+From "public":
+
+<img
+
+src="/profile.jpg"
+
+alt="Profile"
+
+/>
+
+Imported from "src/assets":
+
+import profile from "./assets/profile.jpg";
+
+const App = () => {
+
+return (
+
+<img
+
+src={profile}
+
+alt="Profile"
+
+/>
+
+);
+
+};
+
+---
+
+34. Simple React Application
+
+"Header.jsx"
+
+const Header = () => {
+
+return (
+
+<header>
+
+<h1>Student Portal</h1>
+
+</header>
+
+);
+
+};
+
+export default Header;
+
+"Student.jsx"
+
+const Student = () => {
+
+const name = "Arun";
+
+const course = "React JS";
+
+return (
+
+<div>
+
+<h2>{name}</h2>
+
+<p>
+
+Course: {course}
+
+</p>
+
+</div>
+
+);
+
+};
+
+export default Student;
+
+"Footer.jsx"
+
+const Footer = () => {
+
+return (
+
+<footer>
+
+<p>Student Portal 2026</p>
+
+</footer>
+
+);
+
+};
+
+export default Footer;
+
+"App.jsx"
+
+import Header from "./components/Header";
+
+import Student from "./components/Student";
+
+import Footer from "./components/Footer";
+
+const App = () => {
+
+return (
+
+<>
+
+<Header />
+
+<Student />
+
+<Footer />
+
+</>
+
+);
+
+};
+
+export default App;
+
+---
+
+35. Complete Application Execution
+
+When we run:
+
+npm run dev
+
+Conceptually:
+
+Browser loads index.html
+
+↓
+
+#root
+
+↓
+
+main.jsx initializes React
+
+↓
+
+createRoot()
+
+↓
+
+<App />
+
+↓
+
+App.jsx
+
+↓
+
+Child Components
+
+↓
+
+JSX
+
+↓
+
+React renders/reconciles
+
+↓
+
+DOM changes committed
+
+↓
+
+Browser UI
+
+---
+
+36. Important React Terms
+
+React
+
+→ JavaScript library for building UIs
+
+Component
+
+→ Reusable UI unit
+
+JSX
+
+→ HTML-like syntax extension for JavaScript
+
+Props
+
+→ Data passed from parent to child
+
+State
+
+→ Component data that can trigger rendering updates
+
+Real DOM
+
+→ Browser's actual DOM tree
+
+Virtual DOM
+
+→ Common term for React's in-memory UI representation
+
+Reconciliation
+
+→ React's process for determining required updates
+
+Render
+
+→ React evaluates components to determine UI
+
+Commit
+
+→ React applies required changes to the DOM
+
+App.jsx
+
+→ Common root application component file
+
+main.jsx
+
+→ Common Vite React entry file
+
+---
+
+37. Important Interview Questions
+
+What is React?
+
+React is an open-source JavaScript library for building component-based user interfaces.
+
+Is React a library or framework?
+
+React itself is primarily a UI library. Full applications often combine React with routing, data fetching, build tools, and other libraries/frameworks.
+
+What is a component?
+
+A component is a reusable unit of UI, commonly written as a JavaScript function returning JSX.
+
+Why are components important?
+
+They improve reusability, maintainability, organization, and separation of concerns.
+
+What is JSX?
+
+JSX is a syntax extension that allows HTML-like UI markup to be written inside JavaScript.
+
+Can a browser directly execute JSX syntax as ordinary JavaScript?
+
+No. JSX normally needs to be transformed into JavaScript by tooling before execution.
+
+What is Virtual DOM?
+
+It is the common term for React's in-memory representation of UI used as part of its rendering and reconciliation process.
+
+What is the Real DOM?
+
+It is the browser's actual Document Object Model.
+
+What is reconciliation?
+
+Reconciliation is React's process of determining how a new render differs from the previous one and what updates are required.
+
+What is "App.jsx"?
+
+It is commonly the root application component in Vite React projects, though the filename itself is only a convention.
+
+What is "main.jsx"?
+
+It is commonly the application entry point that creates the React root and renders the root component.
+
+Why should component names start with capital letters?
+
+React uses capitalization to distinguish custom components from built-in/host elements such as "div" and "button".
+
+---
+
+38. React Day 1 – Must Remember
+
+React
+
+↓
+
+Components
+
+↓
+
+JSX
+
+↓
+
+Data / State
+
+↓
+
+Render
+
+↓
+
+Reconciliation
+
+↓
+
+Commit
+
+↓
+
+Real DOM
+
+↓
+
+Browser UI
+
+Project flow:
+
+index.html
+
+↓
+
+main.jsx
+
+↓
+
+App.jsx
+
+↓
+
+Components
+
+↓
+
+JSX
+
+↓
+
+UI
+
+Component flow:
+
+Create Component
+
+↓
+
+Return JSX
+
+↓
+
+export
+
+↓
+
+import
+
+↓
+
+<Component />
+
+↓
+
+Display UI
+
+---
+
+39. Day 1 Golden Interview Answer
+
+React is an open-source JavaScript library used to build interactive, component-based user interfaces. React applications are divided into reusable components, and JSX is commonly used to describe the UI. Instead of manually updating individual DOM elements throughout the application, developers describe the UI based on data and state, and React manages the rendering process.
+
+When props or state change, React renders the relevant components again and performs reconciliation to determine the necessary changes. Those changes are then committed to the browser's real DOM. In a typical Vite React project, "main.jsx" initializes the React application, "App.jsx" acts as the root application component by convention, and additional components are imported and composed to build the complete interface.
+
+React - 3 Phase
+
+Create phase
+
+Project Setup - dependances - files - folders - git
+
+CRA - 3 V
+
+VITE - 4 V
+
+Components making
+
+Single Components - muilt components
+
+Rendering methods
+
+React Router Dom - Navigation
+
+update phase
+
+optimise phase
+
+day2
+5. Creating a React Project with Vite
+
+A common modern setup is Vite.
+
+npm create vite@latest
+
+Select:
+
+Project Name → my-react-app
+
+Framework
+
+→ React
+
+Variant
+
+→ JavaScript
+
+Then:
+
+cd my-react-app
+
+npm install
+
+npm run dev
+
+---
+
+6. Basic React Project Structure
+
+A basic Vite React project can look like:
+
+my-react-app/
+
+│
+
+├── node_modules/
+
+├── public/
+
+├── src/
+
+│ ├── assets/
+
+│ ├── App.jsx
+
+│ ├── App.css
+
+│ ├── index.css
+
+│ └── main.jsx
+
+│
+
+├── index.html
+
+├── package.json
+
+└── vite.config.js
+
+The main files beginners should first understand are:
+
+index.html
+
+main.jsx
+
+App.jsx
+
+---
+
+7. What is "index.html"?
+
+"index.html" is the HTML entry page loaded by the browser.
+
+Inside it, Vite's React template contains a root element similar to:
+
+<div id="root"></div>
+
+React mounts the application inside this element.
+
+Think:
+
+HTML gives React an empty container.
+
+React builds the application inside that container.
+
+---
+
+8. What is "main.jsx"?
+
+"main.jsx" is the JavaScript entry point for the React application in a typical Vite React project.
+
+Example:
+
+import { StrictMode } from "react";
+
+import { createRoot } from "react-dom/client";
+
+import App from "./App.jsx";
+
+import "./index.css";
+
+createRoot(document.getElementById("root")).render(
+
+<StrictMode>
+
+<App />
+
+</StrictMode>
+
+);
+
+Important part:
+
+createRoot(document.getElementById("root"))
+
+It finds:
+
+<div id="root"></div>
+
+Then:
+
+.render(<App />);
+
+starts rendering the React application.
+
+Basic connection:
+
+index.html
+
+↓
+
+#root
+
+↓
+
+main.jsx
+
+↓
+
+createRoot()
+
+↓
+
+<App />
+
+↓
+
+Application UI
+
+---
+
+9. What is "App.jsx"?
+
+"App.jsx" is commonly used as the root application component in a Vite React starter project.
+
+Example:
+
+function App() {
+
+return (
+
+<div>
+
+<h1>Welcome to React</h1>
+
+<p>My First Application</p>
+
+</div>
+
+);
+
+}
+
+export default App;
+
+"App.jsx" is not a special mandatory filename built into React. It is a common project convention. We could technically name the component differently and import it correctly.
+
+For beginners, think:
+
+main.jsx
+
+↓
+
+App.jsx
+
+↓
+
+Other Components
+
+---
+
+10. What is a Component?
+
+A component is a reusable piece of UI. In modern React, components are commonly JavaScript functions that return JSX.
+
+For example, instead of writing navbar code repeatedly, we can create one "Navbar" component and use it wherever required. Components make applications easier to divide into manageable pieces.
+
+Syntax:
+
+function Welcome() {
+
+return (
+
+<h1>Hello Student</h1>
+
+);
+
+}
+
+export default Welcome;
+
+Arrow function:
+
+const Welcome = () => {
+
+return (
+
+<h1>Hello Student</h1>
+
+);
+
+};
+
+export default Welcome;
+
+---
+
+11. Important Component Rule
+
+Component names should start with a capital letter.
+
+Correct:
+
+function Header() {
+
+return <h1>Header</h1>;
+
+}
+
+Use:
+
+<Header />
+
+React treats lowercase names such as:
+
+<div>
+
+<button>
+
+input
+
+as built-in/host elements, while capitalized names represent React components.
+
+---
+
+12. Why Components Are Important
+
+Suppose we create an e-commerce website.
+
+Without component separation:
+
+One Huge File
+
+Navbar
+
+Banner
+
+Products
+
+Cart
+
+Footer
+
+Everything Together
+
+With React:
+
+App
+
+│
+
+├── Navbar
+
+├── Banner
+
+├── ProductList
+
+│ ├── ProductCard
+
+│ ├── ProductCard
+
+│ └── ProductCard
+
+├── Cart
+
+└── Footer
+
+Benefits include:
+
+Reusability
+
+Maintainability
+
+Readability
+
+Separation of concerns
+
+Easier testing
+
+Better application structure
+
+---
+
+13. Creating Multiple Components
+
+Folder:
+
+src/
+
+│
+
+├── components/
+
+│ ├── Header.jsx
+
+│ ├── Content.jsx
+
+│ └── Footer.jsx
+
+│
+
+├── App.jsx
+
+└── main.jsx
+
+"Header.jsx"
+
+const Header = () => {
+
+return (
+
+<header>
+
+<h1>My React App</h1>
+
+</header>
+
+);
+
+};
+
+export default Header;
+
+"Content.jsx"
+
+const Content = () => {
+
+return (
+
+<main>
+
+<h2>Welcome</h2>
+
+<p>Learning React is fun!</p>
+
+</main>
+
+);
+
+};
+
+export default Content;
+
+"Footer.jsx"
+
+const Footer = () => {
+
+return (
+
+<footer>
+
+<p>Copyright 2026</p>
+
+</footer>
+
+);
+
+};
+
+export default Footer;
+
+---
+
+14. Import Components into "App.jsx"
+
+import Header from "./components/Header";
+
+import Content from "./components/Content";
+
+import Footer from "./components/Footer";
+
+const App = () => {
+
+return (
+
+<div>
+
+<Header />
+
+<Content />
+
+<Footer />
+
+</div>
+
+);
+
+};
+
+export default App;
+
+Execution:
+
+main.jsx
+
+↓
+
+<App />
+
+↓
+
+App.jsx
+
+↓
+
+Header
+
+Content
+
+Footer
+
+↓
+
+Complete UI
+
+---
+
+15. What is JSX?
+
+JSX stands for JavaScript XML. It is a syntax extension commonly used with React that allows developers to describe UI using HTML-like markup inside JavaScript.
+
+Example:
+
+const App = () => {
+
+return (
+
+<h1>Hello React</h1>
+
+);
+
+};
+
+This:
+
+<h1>Hello React</h1>
+
+is JSX.
+
+Browsers do not directly execute JSX syntax as plain JavaScript. Build tools such as Vite use transformation tooling so JSX is converted into JavaScript that can be executed by the browser.
+
+---
+
+16. JavaScript inside JSX
+
+Use curly braces:
+
+{ }
+
+Example:
+
+const App = () => {
+
+const name = "Arun";
+
+const age = 22;
+
+return (
+
+<div>
+
+<h1>Hello {name}</h1>
+
+<p>Age: {age}</p>
+
+</div>
+
+);
+
+};
+
+Output:
+
+Hello Arun
+
+Age: 22
+
+Easy memory:
+
+JSX
+
++
+
+{ JavaScript Expression }
+
+---
+
+17. JSX Rules
+
+Rule 1 – Return a Single Parent
+
+Incorrect:
+
+return (
+
+<h1>Hello</h1>
+
+<p>Welcome</p>
+
+);
+
+Correct:
+
+return (
+
+<div>
+
+<h1>Hello</h1>
+
+<p>Welcome</p>
+
+</div>
+
+);
+
+Or use Fragment:
+
+return (
+
+<>
+
+<h1>Hello</h1>
+
+<p>Welcome</p>
+
+</>
+
+);
+
+---
+
+18. "className" instead of "class"
+
+In JSX:
+
+<h1 className="title">
+
+Hello
+
+</h1>
+
+We commonly use:
+
+HTML → class
+
+JSX → className
+
+---
+
+19. Self-Closing Elements
+
+Use:
+
+<img src="/image.jpg" alt="Profile" />
+
+<input type="text" />
+
+<br />
+
+---
+
+20. Event Syntax
+
+HTML-style inline event syntax:
+
+<button onclick="showData()">
+
+React:
+
+<button onClick={showData}>
+
+Click
+
+</button>
+
+Example:
+
+const App = () => {
+
+const showMessage = () => {
+
+alert("Hello React");
+
+};
+
+return (
+
+<button onClick={showMessage}>
+
+Click Me
+
+</button>
+
+);
+
+};
+
+export default App;
+
+---
+
+21. What is Real DOM?
+
+DOM stands for Document Object Model. The browser represents an HTML document as a tree of nodes/elements that JavaScript and browser APIs can interact with.
+
+Example HTML:
+
+<div>
+
+<h1>Hello</h1>
+
+<p>Welcome</p>
+
+</div>
+
+Conceptual DOM tree:
+
+div
+
+├── h1
+
+│ └── Hello
+
+└── p
+
+└── Welcome
+
+This browser-managed tree is what we commonly refer to as the real DOM.
+
+---
+
+22. Traditional DOM Update Example
+
+Vanilla JavaScript:
+
+<h1 id="count">0</h1>
+
+<button id="btn">
+
+Add
+
+</button>
+
+let count = 0;
+
+const heading = document.getElementById("count");
+
+const button = document.getElementById("btn");
+
+button.addEventListener("click", () => {
+
+count++;
+
+heading.textContent = count;
+
+});
+
+Here we manually select and update the DOM element.
+
+---
+
+23. What is Virtual DOM?
+
+Virtual DOM is a common term for React's in-memory representation of the UI. React uses its internal tree structures to determine what the UI should look like based on the latest component output.
+
+When state changes, React renders the affected component logic again, creates the next representation, determines the necessary changes, and then commits the required updates to the browser DOM.
+
+Simple concept:
+
+State Change
+
+↓
+
+React Renders
+
+↓
+
+New UI Representation
+
+↓
+
+Compare / Reconcile
+
+↓
+
+Required DOM Changes
+
+↓
+
+Browser UI Updated
+
+---
+
+24. Virtual DOM vs Real DOM
+
+Real DOM| Virtual DOM Concept
+
+Browser's actual DOM tree| React's in-memory UI representation
+
+Browser APIs modify it| Managed internally by React
+
+Actual page changes happen here| Helps React calculate desired changes
+
+DOM operations can involve browser rendering work| React batches/calculates updates before committing
+
+Important interview clarification:
+
+React is not simply "fast because Virtual DOM is always faster than DOM." Performance depends on the application. The important concept is that React provides a declarative rendering model and determines the necessary UI updates for us.
+
+---
+
+25. What is Reconciliation?
+
+Reconciliation is the process React uses to determine how a newly rendered element/component tree relates to the previous one and what updates are necessary.
+
+When props or state change, React renders again. During reconciliation, React compares the new element tree with the previous tree, preserves or replaces component instances where appropriate, and determines what work needs to be committed to the DOM.
+
+Basic process:
+
+Previous UI
+
+↓
+
+State Changes
+
+↓
+
+New Render
+
+↓
+
+Reconciliation
+
+↓
+
+Determine Differences
+
+↓
+
+Commit Necessary Updates
+
+↓
+
+Real DOM
+
+---
+
+26. Reconciliation Example
+
+Imagine:
+
+<h1>Count: 0</h1>
+
+<p>Welcome</p>
+
+After update:
+
+<h1>Count: 1</h1>
+
+<p>Welcome</p>
+
+The paragraph did not logically change.
+
+The relevant update is:
+
+Count: 0
+
+↓
+
+Count: 1
+
+React determines the required change and commits the corresponding DOM update.
+
+---
+
+27. React State Update Example
+
+We will later study "useState()" deeply, but this example is useful for understanding rendering.
+
+import { useState } from "react";
+
+const App = () => {
+
+const [count, setCount] = useState(0);
+
+const increase = () => {
+
+setCount(count + 1);
+
+};
+
+return (
+
+<div>
+
+<h1>Count: {count}</h1>
+
+<button onClick={increase}>
+
+Add
+
+</button>
+
+</div>
+
+);
+
+};
+
+export default App;
+
+Initial:
+
+count = 0
+
+Screen
+
+↓
+
+Count: 0
+
+Click button:
+
+setCount(1)
+
+Then conceptually:
+
+State Changes
+
+↓
+
+Component Scheduled to Render
+
+↓
+
+App() Runs Again
+
+↓
+
+New JSX Result
+
+↓
+
+Reconciliation
+
+↓
+
+Required Change Determined
+
+↓
+
+DOM Commit
+
+↓
+
+Count: 1
+
+---
+
+28. React Rendering Process – Important
+
+Students should remember this flow:
+
+USER ACTION
+
+↓
+
+EVENT
+
+↓
+
+STATE UPDATE
+
+↓
+
+RENDER
+
+↓
+
+RECONCILIATION
+
+↓
+
+COMMIT
+
+↓
+
+BROWSER UI UPDATE
+
+Example:
+
+Click Button
+
+↓
+
+onClick
+
+↓
+
+setCount()
+
+↓
+
+Component renders
+
+↓
+
+React reconciles trees
+
+↓
+
+Necessary DOM update
+
+↓
+
+New value visible
+
+---
+
+29. React vs Traditional JavaScript DOM
+
+Vanilla JavaScript:
+
+const title = document.getElementById("title");
+
+title.textContent = "Welcome";
+
+We explicitly tell the browser:
+
+Find this element
+
+↓
+
+Change this property
+
+React:
+
+const App = () => {
+
+const name = "Welcome";
+
+return (
+
+<h1>{name}</h1>
+
+);
+
+};
+
+React style is more declarative:
+
+Data / State
+
+↓
+
+Describe UI
+
+↓
+
+React Rendering
+
+↓
+
+DOM Updates
+
+---
+
+30. What is "return" in a Component?
+
+A component commonly returns JSX describing what should appear in the UI.
+
+const Header = () => {
+
+return (
+
+<h1>Welcome</h1>
+
+);
+
+};
+
+Think:
+
+Component Function
+
+↓
+
+return
+
+↓
+
+JSX
+
+↓
+
+React renders UI
+
+---
+
+31. What is "export default"?
+
+If we create:
+
+const Header = () => {
+
+return <h1>Header</h1>;
+
+};
+
+and want to use it in another file:
+
+export default Header;
+
+Then:
+
+import Header from "./Header";
+
+Use:
+
+<Header />
+
+Flow:
+
+Header.jsx
+
+↓
+
+export
+
+↓
+
+App.jsx
+
+↓
+
+import
+
+↓
+
+<Header />
+
+---
+
+32. Basic CSS in React
+
+"App.css"
+
+.title {
+
+color: blue;
+
+font-size: 40px;
+
+}
+
+"App.jsx"
+
+import "./App.css";
+
+const App = () => {
+
+return (
+
+<h1 className="title">
+
+Hello React
+
+</h1>
+
+);
+
+};
+
+export default App;
+
+---
+
+33. Images in React
+
+From "public":
+
+<img
+
+src="/profile.jpg"
+
+alt="Profile"
+
+/>
+
+Imported from "src/assets":
+
+import profile from "./assets/profile.jpg";
+
+const App = () => {
+
+return (
+
+<img
+
+src={profile}
+
+alt="Profile"
+
+/>
+
+);
+
+};
+
+---
+
+34. Simple React Application
+
+"Header.jsx"
+
+const Header = () => {
+
+return (
+
+<header>
+
+<h1>Student Portal</h1>
+
+</header>
+
+);
+
+};
+
+export default Header;
+
+"Student.jsx"
+
+const Student = () => {
+
+const name = "Arun";
+
+const course = "React JS";
+
+return (
+
+<div>
+
+<h2>{name}</h2>
+
+<p>
+
+Course: {course}
+
+</p>
+
+</div>
+
+);
+
+};
+
+export default Student;
+
+"Footer.jsx"
+
+const Footer = () => {
+
+return (
+
+<footer>
+
+<p>Student Portal 2026</p>
+
+</footer>
+
+);
+
+};
+
+export default Footer;
+
+"App.jsx"
+
+import Header from "./components/Header";
+
+import Student from "./components/Student";
+
+import Footer from "./components/Footer";
+
+const App = () => {
+
+return (
+
+<>
+
+<Header />
+
+<Student />
+
+<Footer />
+
+</>
+
+);
+
+};
+
+export default App;
+
+---
+
+35. Complete Application Execution
+
+When we run:
+
+npm run dev
+
+Conceptually:
+
+Browser loads index.html
+
+↓
+
+#root
+
+↓
+
+main.jsx initializes React
+
+↓
+
+createRoot()
+
+↓
+
+<App />
+
+↓
+
+App.jsx
+
+↓
+
+Child Components
+
+↓
+
+JSX
+
+↓
+
+React renders/reconciles
+
+↓
+
+DOM changes committed
+
+↓
+
+Browser UI
+
+---
+
+36. Important React Terms
+
+React
+
+→ JavaScript library for building UIs
+
+Component
+
+→ Reusable UI unit
+
+JSX
+
+→ HTML-like syntax extension for JavaScript
+
+Props
+
+→ Data passed from parent to child
+
+State
+
+→ Component data that can trigger rendering updates
+
+Real DOM
+
+→ Browser's actual DOM tree
+
+Virtual DOM
+
+→ Common term for React's in-memory UI representation
+
+Reconciliation
+
+→ React's process for determining required updates
+
+Render
+
+→ React evaluates components to determine UI
+
+Commit
+
+→ React applies required changes to the DOM
+
+App.jsx
+
+→ Common root application component file
+
+main.jsx
+
+→ Common Vite React entry file
+
+---
+
+37. Important Interview Questions
+
+What is React?
+
+React is an open-source JavaScript library for building component-based user interfaces.
+
+Is React a library or framework?
+
+React itself is primarily a UI library. Full applications often combine React with routing, data fetching, build tools, and other libraries/frameworks.
+
+What is a component?
+
+A component is a reusable unit of UI, commonly written as a JavaScript function returning JSX.
+
+Why are components important?
+
+They improve reusability, maintainability, organization, and separation of concerns.
+
+What is JSX?
+
+JSX is a syntax extension that allows HTML-like UI markup to be written inside JavaScript.
+
+Can a browser directly execute JSX syntax as ordinary JavaScript?
+
+No. JSX normally needs to be transformed into JavaScript by tooling before execution.
+
+What is Virtual DOM?
+
+It is the common term for React's in-memory representation of UI used as part of its rendering and reconciliation process.
+
+What is the Real DOM?
+
+It is the browser's actual Document Object Model.
+
+What is reconciliation?
+
+Reconciliation is React's process of determining how a new render differs from the previous one and what updates are required.
+
+What is "App.jsx"?
+
+It is commonly the root application component in Vite React projects, though the filename itself is only a convention.
+
+What is "main.jsx"?
+
+It is commonly the application entry point that creates the React root and renders the root component.
+
+Why should component names start with capital letters?
+
+React uses capitalization to distinguish custom components from built-in/host elements such as "div" and "button".
+
+---
+
+38. React Day 1 – Must Remember
+
+React
+
+↓
+
+Components
+
+↓
+
+JSX
+
+↓
+
+Data / State
+
+↓
+
+Render
+
+↓
+
+Reconciliation
+
+↓
+
+Commit
+
+↓
+
+Real DOM
+
+↓
+
+Browser UI
+
+Project flow:
+
+index.html
+
+↓
+
+main.jsx
+
+↓
+
+App.jsx
+
+↓
+
+Components
+
+↓
+
+JSX
+
+↓
+
+UI
+
+Component flow:
+
+Create Component
+
+↓
+
+Return JSX
+
+↓
+
+export
+
+↓
+
+import
+
+↓
+
+<Component />
+
+↓
+
+Display UI
+
+---
+
+39. Day 1 Golden Interview Answer
+
+React is an open-source JavaScript library used to build interactive, component-based user interfaces. React applications are divided into reusable components, and JSX is commonly used to describe the UI. Instead of manually updating individual DOM elements throughout the application, developers describe the UI based on data and state, and React manages the rendering process.
+
+When props or state change, React renders the relevant components again and performs reconciliation to determine the necessary changes. Those changes are then committed to the browser's real DOM. In a typical Vite React project, "main.jsx" initializes the React application, "App.jsx" acts as the root application component by convention, and additional components are imported and composed to build the complete interface.
+
+React - 3 Phase
+
+Create phase
+
+Project Setup - dependances - files - folders - git
+
+CRA - 3 V
+
+npx create-react-app intro
+
+VITE - 7 and 8 V
+
+npm create vite@latest introvite
+
+Components making
+
+Single Components - muilt components
+
+Rendering methods
+
+React Router Dom - Navigation
+
+update phase
+
+Components Making
+
+Component sharing - export - Named Export - Export Default - import - How it apply
+
+09:24 16-09-2026
+
+const App = ()=>{
+
+return (<>
+
+<div></div>
+
+</>)
+
+}
+
+day3
+REACT CSS, TAILWIND CSS & IMAGE HANDLING
+
+1. Why Styling is Needed in React?
+React is mainly used to build UI using components. But components alone only give structure and content. To make the application attractive, responsive, readable, and user-friendly, we need CSS.
+
+In React, styling can be done in different ways such as normal CSS files, inline styles, CSS Modules, and utility frameworks like Tailwind CSS. For beginners, the most important process is to first understand normal CSS in React, then Tailwind CSS, and finally how images are handled properly.
+
+React Component
+      ↓
+JSX
+      ↓
+CSS / Tailwind
+      ↓
+Styled UI
+2. React CSS – Basic Process
+In React, we can create a separate CSS file and import it inside the component.
+
+Example structure:
+
+src/
+│
+├── App.jsx
+├── App.css
+├── main.jsx
+└── index.css
+3. Normal CSS in React
+App.jsx
+import "./App.css";
+
+const App = () => {
+    return (
+        <div className="container">
+            <h1 className="title">Welcome to React</h1>
+            <p className="description">
+                Learning React CSS
+            </p>
+        </div>
+    );
+};
+
+export default App;
+App.css
+.container {
+    padding: 30px;
+    background-color: #f5f5f5;
+}
+
+.title {
+    color: blue;
+    font-size: 40px;
+}
+
+.description {
+    color: #555;
+    font-size: 18px;
+}
+4. Why className Instead of class?
+In normal HTML:
+
+<h1 class="title">Hello</h1>
+In React JSX:
+
+<h1 className="title">Hello</h1>
+We use:
+
+HTML → class
+
+React JSX → className
+Because JSX follows JavaScript syntax rules.
+
+5. Global CSS
+Global CSS means the style can affect the entire application.
+
+Usually:
+
+src/index.css
+Example:
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+}
+Then import it in:
+
+main.jsx
+Example:
+
+import "./index.css";
+Global CSS is commonly used for:
+
+body
+fonts
+reset styles
+background
+common spacing
+basic theme
+6. Component CSS
+Component CSS means styles are created mainly for one component.
+
+Example structure:
+
+components/
+│
+├── Header.jsx
+└── Header.css
+Header.jsx
+import "./Header.css";
+
+const Header = () => {
+    return (
+        <header className="header">
+            <h1>My Website</h1>
+        </header>
+    );
+};
+
+export default Header;
+Header.css
+.header {
+    background-color: black;
+    color: white;
+    padding: 20px;
+}
+7. Inline CSS in React
+React also supports inline styles.
+
+Syntax:
+
+style={{}}
+Example:
+
+const App = () => {
+    return (
+        <h1
+            style={{
+                color: "red",
+                fontSize: "40px",
+                backgroundColor: "yellow"
+            }}
+        >
+            Hello React
+        </h1>
+    );
+};
+
+export default App;
+Important:
+
+CSS property:
+
+background-color
+font-size
+React inline style:
+
+backgroundColor
+fontSize
+React inline styles use camelCase.
+
+8. Inline Style with Variable
+const App = () => {
+
+    const titleStyle = {
+        color: "blue",
+        fontSize: "40px",
+        textAlign: "center"
+    };
+
+    return (
+        <h1 style={titleStyle}>
+            React Styling
+        </h1>
+    );
+};
+
+export default App;
+9. CSS Modules
+CSS Modules help avoid class name conflicts.
+
+File:
+
+Card.module.css
+Card.module.css
+.card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+Card.jsx
+import styles from "./Card.module.css";
+
+const Card = () => {
+    return (
+        <div className={styles.card}>
+            Product Card
+        </div>
+    );
+};
+
+export default Card;
+Main benefit:
+
+Normal CSS
+→ Class names can conflict
+
+CSS Module
+→ Styles are scoped to component
+10. React CSS Methods – Easy Memory
+Normal CSS
+→ import "./App.css"
+
+Global CSS
+→ index.css
+
+Inline CSS
+→ style={{}}
+
+CSS Modules
+→ styles.className
+
+Tailwind CSS
+→ Utility classes
+11. What is Tailwind CSS?
+Tailwind CSS is a utility-first CSS framework. Instead of writing separate CSS classes for every design, Tailwind provides ready-made utility classes directly inside JSX.
+
+Example normal CSS:
+
+.title {
+    color: blue;
+    font-size: 40px;
+    font-weight: bold;
+}
+Tailwind:
+
+<h1 className="text-blue-600 text-4xl font-bold">
+    Hello
+</h1>
+Tailwind helps us build UI faster using small utility classes.
+
+12. Why Tailwind CSS?
+Tailwind is useful because:
+
+Fast UI development
+Less custom CSS
+Responsive utilities
+Reusable design system
+Consistent spacing
+Easy hover styles
+Easy flex/grid
+Easy dark mode
+Instead of creating multiple CSS files, many styles can be written directly in JSX.
+
+13. Tailwind CSS Installation in React + Vite
+Current Tailwind setup can depend on the Tailwind version. A common modern Vite setup uses the Tailwind Vite plugin.
+
+Install:
+
+npm install tailwindcss @tailwindcss/vite
+14. Configure Vite
+Open:
+
+vite.config.js
+Example:
+
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+import tailwindcss from "@tailwindcss/vite";
+
+export default defineConfig({
+    plugins: [
+        react(),
+        tailwindcss()
+    ]
+});
+15. Add Tailwind to CSS
+In:
+
+src/index.css
+Add:
+
+@import "tailwindcss";
+Then ensure index.css is imported in main.jsx.
+
+import "./index.css";
+Run:
+
+npm run dev
+Now Tailwind classes can be used.
+
+16. First Tailwind Example
+const App = () => {
+    return (
+        <div className="min-h-screen bg-gray-100 p-10">
+
+            <h1 className="text-4xl font-bold text-blue-600">
+                React + Tailwind CSS
+            </h1>
+
+        </div>
+    );
+};
+
+export default App;
+17. Important Tailwind Classes
+Text Color
+<p className="text-red-500">
+    Hello
+</p>
+text-red-500
+text-blue-500
+text-green-500
+text-gray-600
+18. Background Color
+<div className="bg-blue-500">
+    Content
+</div>
+Examples:
+
+bg-red-500
+bg-green-500
+bg-black
+bg-white
+bg-gray-100
+19. Font Size
+text-xs
+text-sm
+text-base
+text-lg
+text-xl
+text-2xl
+text-3xl
+text-4xl
+Example:
+
+<h1 className="text-4xl">
+    Heading
+</h1>
+20. Font Weight
+font-light
+font-normal
+font-medium
+font-semibold
+font-bold
+Example:
+
+<h1 className="font-bold">
+    Heading
+</h1>
+21. Padding
+p-2
+p-4
+p-6
+p-8
+Different directions:
+
+pt → padding top
+pb → padding bottom
+pl → padding left
+pr → padding right
+px → left + right
+py → top + bottom
+Example:
+
+<div className="px-6 py-4">
+    Content
+</div>
+22. Margin
+m-2
+m-4
+m-6
+
+mt
+mb
+ml
+mr
+mx
+my
+Example:
+
+<h1 className="mb-5">
+    Heading
+</h1>
+23. Width and Height
+w-full
+w-1/2
+w-64
+
+h-full
+h-screen
+h-64
+Example:
+
+<div className="w-full h-screen">
+</div>
+24. Border
+border
+border-2
+border-gray-300
+rounded
+rounded-lg
+rounded-xl
+rounded-full
+Example:
+
+<div className="border border-gray-300 rounded-xl">
+    Card
+</div>
+25. Shadow
+shadow
+shadow-md
+shadow-lg
+shadow-xl
+Example:
+
+<div className="shadow-lg">
+    Card
+</div>
+26. Flexbox in Tailwind
+Normal CSS:
+
+display: flex;
+justify-content: center;
+align-items: center;
+Tailwind:
+
+<div className="flex justify-center items-center">
+</div>
+Important flex classes:
+
+flex
+flex-row
+flex-col
+
+justify-start
+justify-center
+justify-between
+justify-around
+
+items-start
+items-center
+items-end
+
+gap-2
+gap-4
+gap-6
+27. Flex Example
+const App = () => {
+    return (
+        <div className="flex justify-between items-center p-6 bg-black text-white">
+
+            <h1>Logo</h1>
+
+            <div className="flex gap-5">
+                <p>Home</p>
+                <p>About</p>
+                <p>Contact</p>
+            </div>
+
+        </div>
+    );
+};
+28. Grid in Tailwind
+<div className="grid grid-cols-3 gap-5">
+    <div>Card 1</div>
+    <div>Card 2</div>
+    <div>Card 3</div>
+</div>
+Important:
+
+grid
+grid-cols-1
+grid-cols-2
+grid-cols-3
+grid-cols-4
+gap-4
+29. Hover in Tailwind
+<button className="bg-blue-500 hover:bg-blue-700">
+    Click
+</button>
+Syntax:
+
+hover:
+Examples:
+
+hover:text-white
+hover:bg-black
+hover:scale-105
+hover:shadow-lg
+30. Transition
+<button
+    className="
+        bg-blue-500
+        hover:bg-blue-700
+        transition
+        duration-300
+    "
+>
+    Submit
+</button>
+31. Responsive Design in Tailwind
+Tailwind uses responsive prefixes.
+
+sm:
+md:
+lg:
+xl:
+2xl:
+Example:
+
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+Meaning:
+
+Mobile
+→ 1 column
+
+Medium screen
+→ 2 columns
+
+Large screen
+→ 4 columns
+32. Responsive Text
+<h1 className="text-2xl md:text-4xl lg:text-6xl">
+    Responsive Heading
+</h1>
+33. Responsive Padding
+<div className="p-4 md:p-8 lg:p-12">
+    Content
+</div>
+34. Complete Tailwind Card
+const Card = () => {
+    return (
+        <div className="w-80 bg-white rounded-xl shadow-lg p-6">
+
+            <h2 className="text-2xl font-bold text-gray-800">
+                Product Name
+            </h2>
+
+            <p className="text-gray-500 mt-2">
+                Product description
+            </p>
+
+            <button
+                className="
+                    mt-5
+                    bg-blue-600
+                    text-white
+                    px-5
+                    py-2
+                    rounded-lg
+                    hover:bg-blue-700
+                    transition
+                "
+            >
+                Buy Now
+            </button>
+
+        </div>
+    );
+};
+
+export default Card;
+35. Image Handling in React
+React can handle images mainly in two common ways:
+
+1. public folder
+
+2. src/assets folder
+Both are important.
+
+36. Image from Public Folder
+Structure:
+
+public/
+│
+└── images/
+    └── logo.png
+Use:
+
+const App = () => {
+    return (
+        <img
+            src="/images/logo.png"
+            alt="Logo"
+        />
+    );
+};
+Important:
+
+public
+→ Direct URL path
+→ No import required
+37. Image from src/assets
+Structure:
+
+src/
+│
+├── assets/
+│   └── profile.jpg
+│
+└── App.jsx
+Import:
+
+import profileImage from "./assets/profile.jpg";
+Use:
+
+<img
+    src={profileImage}
+    alt="Profile"
+/>
+38. Why Use {} in Image src?
+This is a JavaScript variable:
+
+profileImage
+So JSX requires:
+
+src={profileImage}
+Not:
+
+src="profileImage"
+Because:
+
+" "
+→ String
+
+{ }
+→ JavaScript expression
+39. Image with Tailwind
+import profile from "./assets/profile.jpg";
+
+const App = () => {
+    return (
+        <img
+            src={profile}
+            alt="Profile"
+            className="w-40 h-40 rounded-full object-cover"
+        />
+    );
+};
+Important image classes:
+
+w-40
+h-40
+rounded-full
+object-cover
+40. object-cover
+Suppose image size is different from container size.
+
+Without:
+
+object-cover
+the image can stretch.
+
+Use:
+
+<img
+    src={image}
+    className="w-80 h-52 object-cover"
+/>
+object-cover keeps the image proportion and fills the container by cropping when necessary.
+
+41. object-contain
+<img
+    src={image}
+    className="w-80 h-52 object-contain"
+/>
+Difference:
+
+object-cover
+→ Fill container
+→ Can crop image
+
+object-contain
+→ Show full image
+→ Can leave empty space
+42. Dynamic Image
+const product = {
+    name: "Laptop",
+    image: "https://example.com/laptop.jpg"
+};
+Use:
+
+<img
+    src={product.image}
+    alt={product.name}
+/>
+This is common when images come from:
+
+API
+Database
+Array of Objects
+Backend
+43. Array of Objects with Images
+const products = [
+    {
+        id: 1,
+        name: "Laptop",
+        image: "https://via.placeholder.com/300"
+    },
+    {
+        id: 2,
+        name: "Mobile",
+        image: "https://via.placeholder.com/300"
+    }
+];
+Display:
+
+const App = () => {
+    return (
+        <div>
+
+            {products.map((product) => (
+                <div key={product.id}>
+
+                    <img
+                        src={product.image}
+                        alt={product.name}
+                    />
+
+                    <h2>
+                        {product.name}
+                    </h2>
+
+                </div>
+            ))}
+
+        </div>
+    );
+};
+44. Array of Objects + Tailwind + Image
+const products = [
+    {
+        id: 1,
+        name: "Laptop",
+        price: 50000,
+        image: "https://via.placeholder.com/300"
+    },
+    {
+        id: 2,
+        name: "Mobile",
+        price: 20000,
+        image: "https://via.placeholder.com/300"
+    }
+];
+
+const App = () => {
+
+    return (
+        <div
+            className="
+                grid
+                grid-cols-1
+                md:grid-cols-2
+                lg:grid-cols-3
+                gap-6
+                p-10
+            "
+        >
+
+            {products.map((product) => (
+
+                <div
+                    key={product.id}
+                    className="
+                        bg-white
+                        rounded-xl
+                        shadow-lg
+                        overflow-hidden
+                    "
+                >
+
+                    <img
+                        src={product.image}
+                        alt={product.name}
+                        className="
+                            w-full
+                            h-52
+                            object-cover
+                        "
+                    />
+
+                    <div className="p-5">
+
+                        <h2 className="text-xl font-bold">
+                            {product.name}
+                        </h2>
+
+                        <p className="text-gray-600 mt-2">
+                            ₹{product.price}
+                        </p>
+
+                    </div>
+
+                </div>
+
+            ))}
+
+        </div>
+    );
+};
+
+export default App;
+45. Background Image in React
+Inline style:
+
+const App = () => {
+    return (
+        <div
+            style={{
+                backgroundImage:
+                    "url('https://example.com/banner.jpg')"
+            }}
+        >
+            Banner
+        </div>
+    );
+};
+46. Background Image with Imported Image
+import banner from "./assets/banner.jpg";
+
+const App = () => {
+    return (
+        <div
+            style={{
+                backgroundImage: `url(${banner})`
+            }}
+        >
+            Banner
+        </div>
+    );
+};
+Notice template literal:
+
+`url(${banner})`
+47. Background Image + Tailwind
+import banner from "./assets/banner.jpg";
+
+const App = () => {
+    return (
+        <section
+            style={{
+                backgroundImage: `url(${banner})`
+            }}
+            className="
+                h-screen
+                bg-cover
+                bg-center
+                flex
+                items-center
+                justify-center
+            "
+        >
+            <h1 className="text-white text-5xl font-bold">
+                Welcome
+            </h1>
+        </section>
+    );
+};
+48. bg-cover and bg-center
+bg-cover
+→ Background fills container
+
+bg-center
+→ Background position center
+
+bg-no-repeat
+→ Prevent image repeat
+Example:
+
+className="
+    bg-cover
+    bg-center
+    bg-no-repeat
+"
+49. Image Hover Effect
+<img
+    src={image}
+    alt="Product"
+    className="
+        w-full
+        h-60
+        object-cover
+        transition
+        duration-300
+        hover:scale-105
+    "
+/>
+50. Important Accessibility Point
+Always use:
+
+alt=""
+Example:
+
+<img
+    src={profile}
+    alt="User profile"
+/>
+alt helps:
+
+Screen readers
+Accessibility
+Broken image fallback context
+SEO in relevant cases
+For purely decorative images, an empty alt may be appropriate:
+
+alt=""
+51. Complete Component with CSS
+import "./Profile.css";
+import profile from "./assets/profile.jpg";
+
+const Profile = () => {
+
+    return (
+        <div className="profile-card">
+
+            <img
+                src={profile}
+                alt="Profile"
+                className="profile-image"
+            />
+
+            <h2>Arun Kumar</h2>
+
+            <p>Frontend Developer</p>
+
+        </div>
+    );
+};
+
+export default Profile;
+Profile.css
+.profile-card {
+    width: 300px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.profile-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+52. Same Component with Tailwind
+import profile from "./assets/profile.jpg";
+
+const Profile = () => {
+
+    return (
+        <div
+            className="
+                w-80
+                bg-white
+                p-5
+                rounded-xl
+                shadow-lg
+            "
+        >
+
+            <img
+                src={profile}
+                alt="Profile"
+                className="
+                    w-full
+                    h-52
+                    object-cover
+                    rounded-lg
+                "
+            />
+
+            <h2 className="text-2xl font-bold mt-4">
+                Arun Kumar
+            </h2>
+
+            <p className="text-gray-500 mt-2">
+                Frontend Developer
+            </p>
+
+        </div>
+    );
+};
+
+export default Profile;
+53. Normal CSS vs Tailwind CSS
+Normal CSS:
+
+<div className="card">
+.card {
+    width: 300px;
+    padding: 20px;
+    background: white;
+    border-radius: 15px;
+}
+Tailwind:
+
+<div className="w-80 p-5 bg-white rounded-xl">
+Main difference:
+
+Normal CSS
+→ Create custom classes
+
+Tailwind
+→ Use utility classes
+54. When to Use Normal CSS?
+Normal CSS is useful when:
+
+Learning CSS fundamentals
+Complex custom styles
+Large reusable style blocks
+Custom animations
+Project already uses CSS
+55. When to Use Tailwind?
+Tailwind is useful when:
+
+Need faster development
+React component-based UI
+Responsive design
+Admin dashboards
+Landing pages
+Cards
+Forms
+Modern applications
+56. React Styling Full Process
+Create Component
+      ↓
+Write JSX
+      ↓
+Choose Styling Method
+      ↓
+CSS / Inline / Module / Tailwind
+      ↓
+Apply className
+      ↓
+Responsive / Hover / Layout
+      ↓
+Render UI
+57. React Image Full Process
+Local image:
+
+Image File
+   ↓
+src/assets
+   ↓
+import image
+   ↓
+src={image}
+   ↓
+<img />
+   ↓
+Screen
+Public image:
+
+public/images
+   ↓
+URL Path
+   ↓
+src="/images/image.jpg"
+   ↓
+Screen
+API image:
+
+Backend / API
+    ↓
+Image URL
+    ↓
+Object
+    ↓
+product.image
+    ↓
+src={product.image}
+    ↓
+Screen
+58. Important Interview Questions
+How do you add CSS in React?
+We can import a CSS file into a component or use inline styles, CSS Modules, or CSS frameworks such as Tailwind CSS.
+
+Why do we use className in React?
+JSX uses className instead of the HTML class attribute when assigning CSS classes.
+
+What is inline styling in React?
+Inline styling uses a JavaScript object passed to the style prop.
+
+style={{
+    color: "red"
+}}
+Why are inline CSS properties camelCase?
+Because inline styles are JavaScript objects.
+
+Example:
+
+background-color
+→ backgroundColor
+What is Tailwind CSS?
+Tailwind CSS is a utility-first CSS framework that provides predefined utility classes for building UI directly in markup/JSX.
+
+What is the difference between CSS and Tailwind?
+Normal CSS uses custom CSS rules and class definitions, while Tailwind mainly uses ready-made utility classes directly in JSX.
+
+How do you use a local image in React?
+Import the image:
+
+import image from "./assets/image.jpg";
+Then:
+
+<img src={image} alt="Example" />
+How do you use an image from the public folder?
+<img
+    src="/images/logo.png"
+    alt="Logo"
+/>
+What is object-cover?
+It makes an image fill its container while maintaining aspect ratio, cropping the image if required.
+
+Difference between object-cover and object-contain?
+object-cover
+→ Fill container
+→ May crop
+
+object-contain
+→ Show full image
+→ May leave empty space
+59. Important Tailwind Interview Classes
+LAYOUT
+
+flex
+grid
+
+justify-center
+justify-between
+items-center
+
+grid-cols-1
+grid-cols-2
+grid-cols-3
+
+gap-4
+
+
+SPACING
+
+p-4
+px-4
+py-4
+
+m-4
+mt-4
+mb-4
+
+
+SIZE
+
+w-full
+h-screen
+w-1/2
+
+
+TEXT
+
+text-lg
+text-2xl
+text-4xl
+
+font-bold
+font-semibold
+
+text-center
+
+
+COLOR
+
+text-blue-500
+text-gray-600
+
+bg-blue-500
+bg-white
+
+
+BORDER
+
+border
+rounded-lg
+rounded-xl
+rounded-full
+
+
+EFFECT
+
+shadow-lg
+hover:bg-blue-600
+hover:scale-105
+transition
+duration-300
+
+
+RESPONSIVE
+
+sm:
+md:
+lg:
+xl:
+60. Final Real-World Example
+import profile from "./assets/profile.jpg";
+
+const App = () => {
+
+    return (
+        <div
+            className="
+                min-h-screen
+                bg-gray-100
+                flex
+                justify-center
+                items-center
+                p-5
+            "
+        >
+
+            <div
+                className="
+                    w-full
+                    max-w-sm
+                    bg-white
+                    rounded-2xl
+                    shadow-xl
+                    overflow-hidden
+                "
+            >
+
+                <img
+                    src={profile}
+                    alt="Profile"
+                    className="
+                        w-full
+                        h-64
+                        object-cover
+                    "
+                />
+
+                <div className="p-6">
+
+                    <h1
+                        className="
+                            text-2xl
+                            font-bold
+                            text-gray-800
+                        "
+                    >
+                        Arun Kumar
+                    </h1>
+
+                    <p
+                        className="
+                            text-gray-500
+                            mt-2
+                        "
+                    >
+                        Frontend Developer
+                    </p>
+
+                    <button
+                        className="
+                            mt-5
+                            w-full
+                            bg-blue-600
+                            text-white
+                            py-3
+                            rounded-lg
+                            hover:bg-blue-700
+                            transition
+                            duration-300
+                        "
+                    >
+                        View Profile
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+    );
+};
+
+export default App;
+61. Complete Day Flow
+REACT STYLING
+     ↓
+Normal CSS
+     ↓
+className
+     ↓
+Global CSS
+     ↓
+Component CSS
+     ↓
+Inline Style
+     ↓
+CSS Modules
+     ↓
+Tailwind CSS
+     ↓
+Utility Classes
+     ↓
+Flex / Grid
+     ↓
+Spacing
+     ↓
+Responsive Design
+     ↓
+Hover / Transition
+     ↓
+Image Handling
+     ↓
+Public Images
+     ↓
+src/assets Images
+     ↓
+API Images
+     ↓
+object-cover / object-contain
+     ↓
+Responsive Cards / UI
+GOLDEN INTERVIEW ANSWER
+React supports multiple styling approaches such as normal CSS, global CSS, inline styles, CSS Modules, and utility frameworks like Tailwind CSS. In JSX, className is used to apply CSS classes, while inline styles are written as JavaScript objects using camelCase properties.
+
+Tailwind CSS is a utility-first CSS framework that allows developers to build responsive interfaces quickly using predefined classes. Images in React can be handled from the public folder, imported from src/assets, or received dynamically from an API. For responsive image handling, properties such as object-cover, object-contain, width, height, and responsive Tailwind classes are commonly used.
+
+day4
+REACT ROUTER DOM – COMPLETE BEGINNER NOTES
+
+1. What is React Router DOM?
+React Router DOM is a routing library used in React web applications to move between different pages or views without reloading the entire website.
+
+In a normal website, when we click a link, the browser may request a completely new HTML page from the server. In a React Single Page Application, React Router changes the displayed component based on the URL while keeping the application running.
+
+Traditional Website
+
+Page 1
+ ↓
+Click Link
+ ↓
+New HTML Page Loads
+React Router:
+
+React App
+ ↓
+URL Changes
+ ↓
+Matching Route Found
+ ↓
+Component Changes
+ ↓
+No Full Page Reload
+2. Why Do We Use React Router?
+Suppose our React application has:
+
+Home
+About
+Services
+Products
+Contact
+Login
+Dashboard
+Without React Router, we may manually show and hide components.
+
+With React Router, every page can have its own URL.
+
+/               → Home
+
+/about          → About
+
+/products       → Products
+
+/contact        → Contact
+
+/login          → Login
+
+/dashboard      → Dashboard
+This makes the application behave like a proper multi-page website while still working as a Single Page Application.
+
+3. What is SPA?
+SPA means:
+
+Single Page Application
+In an SPA, the browser initially loads one main HTML page. After that, JavaScript and React update the UI when the user navigates.
+
+Examples:
+
+React Application
+
+index.html
+    ↓
+React Loads
+    ↓
+Home Component
+    ↓
+Click About
+    ↓
+About Component
+The browser does not need to completely reload the application for every internal page.
+
+4. Install React Router DOM
+Inside the React project:
+
+npm install react-router-dom
+Short form:
+
+npm i react-router-dom
+After installation, it will be added to:
+
+package.json
+5. Basic Folder Structure
+src/
+│
+├── components/
+│   └── Navbar.jsx
+│
+├── pages/
+│   ├── Home.jsx
+│   ├── About.jsx
+│   ├── Contact.jsx
+│   └── Products.jsx
+│
+├── App.jsx
+├── main.jsx
+└── index.css
+Good practice:
+
+components/
+→ Reusable UI
+
+pages/
+→ Route-level components
+6. Main React Router Components
+The important beginner concepts are:
+
+BrowserRouter
+Routes
+Route
+Link
+NavLink
+useNavigate
+useParams
+Outlet
+Navigate
+Learn them in this order.
+
+7. BrowserRouter
+BrowserRouter enables routing in the React application using the browser URL.
+
+Usually it wraps the entire application.
+
+Example:
+
+import { BrowserRouter } from "react-router-dom";
+import App from "./App";
+
+const Main = () => {
+    return (
+        <BrowserRouter>
+            <App />
+        </BrowserRouter>
+    );
+};
+
+export default Main;
+In a Vite application, it is commonly placed in main.jsx.
+
+8. BrowserRouter in main.jsx
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import { BrowserRouter } from "react-router-dom";
+import App from "./App.jsx";
+import "./index.css";
+
+createRoot(document.getElementById("root")).render(
+    <StrictMode>
+
+        <BrowserRouter>
+            <App />
+        </BrowserRouter>
+
+    </StrictMode>
+);
+Process:
+
+main.jsx
+   ↓
+BrowserRouter
+   ↓
+App.jsx
+   ↓
+Routes
+9. What is Routes?
+Routes is a container used to hold multiple Route definitions.
+
+Example:
+
+<Routes>
+
+    <Route />
+
+    <Route />
+
+    <Route />
+
+</Routes>
+Think:
+
+Routes
+→ Collection of Route rules
+10. What is Route?
+Route connects:
+
+URL PATH
+    ↓
+COMPONENT
+Basic syntax:
+
+<Route
+    path="/about"
+    element={<About />}
+/>
+Meaning:
+
+/about
+   ↓
+About Component
+11. First Routing Example
+Home.jsx
+const Home = () => {
+    return (
+        <h1>Home Page</h1>
+    );
+};
+
+export default Home;
+About.jsx
+const About = () => {
+    return (
+        <h1>About Page</h1>
+    );
+};
+
+export default About;
+Contact.jsx
+const Contact = () => {
+    return (
+        <h1>Contact Page</h1>
+    );
+};
+
+export default Contact;
+12. App.jsx Routing
+import { Routes, Route } from "react-router-dom";
+
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+
+const App = () => {
+
+    return (
+        <Routes>
+
+            <Route
+                path="/"
+                element={<Home />}
+            />
+
+            <Route
+                path="/about"
+                element={<About />}
+            />
+
+            <Route
+                path="/contact"
+                element={<Contact />}
+            />
+
+        </Routes>
+    );
+
+};
+
+export default App;
+13. Complete Routing Flow
+Browser URL
+
+/about
+   ↓
+BrowserRouter
+   ↓
+Routes
+   ↓
+Checks Route path
+   ↓
+path="/about"
+   ↓
+element={<About />}
+   ↓
+About Component Displayed
+14. What is Link?
+Link is used to navigate between routes without doing a full browser refresh.
+
+Import:
+
+import { Link } from "react-router-dom";
+Use:
+
+<Link to="/">
+    Home
+</Link>
+<Link to="/about">
+    About
+</Link>
+15. Why Not Use <a> for Internal React Navigation?
+Normal HTML:
+
+<a href="/about">
+    About
+</a>
+This may trigger a normal browser navigation.
+
+React Router:
+
+<Link to="/about">
+    About
+</Link>
+For internal SPA navigation, use:
+
+Link
+because React Router handles the navigation without rebuilding the entire application page.
+
+16. Navbar Example
+import { Link } from "react-router-dom";
+
+const Navbar = () => {
+
+    return (
+        <nav>
+
+            <Link to="/">
+                Home
+            </Link>
+
+            <Link to="/about">
+                About
+            </Link>
+
+            <Link to="/contact">
+                Contact
+            </Link>
+
+        </nav>
+    );
+
+};
+
+export default Navbar;
+17. Navbar + Routes
+import { Routes, Route } from "react-router-dom";
+
+import Navbar from "./components/Navbar";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+
+const App = () => {
+
+    return (
+        <>
+
+            <Navbar />
+
+            <Routes>
+
+                <Route
+                    path="/"
+                    element={<Home />}
+                />
+
+                <Route
+                    path="/about"
+                    element={<About />}
+                />
+
+                <Route
+                    path="/contact"
+                    element={<Contact />}
+                />
+
+            </Routes>
+
+        </>
+    );
+
+};
+
+export default App;
+18. Link Syntax
+<Link to="/path">
+    Text
+</Link>
+Easy memory:
+
+Route
+→ path
+
+Link
+→ to
+Example:
+
+<Route
+    path="/products"
+    element={<Products />}
+/>
+<Link to="/products">
+    Products
+</Link>
+19. What is NavLink?
+NavLink works like Link, but it can also tell us whether a route is currently active.
+
+Import:
+
+import { NavLink } from "react-router-dom";
+Example:
+
+<NavLink to="/">
+    Home
+</NavLink>
+Main use:
+
+Navbar
+Sidebar
+Active menu highlighting
+20. NavLink Active Style
+<NavLink
+    to="/about"
+    className={({ isActive }) =>
+        isActive ? "active" : ""
+    }
+>
+    About
+</NavLink>
+CSS:
+
+.active {
+    color: red;
+    font-weight: bold;
+}
+When user is on:
+
+/about
+the About link receives the active class.
+
+21. Link vs NavLink
+Link
+→ Basic navigation
+
+NavLink
+→ Navigation + active state
+Use:
+
+Link
+→ Simple buttons / cards
+
+NavLink
+→ Navbar / Sidebar
+22. What is useNavigate?
+useNavigate() is used when navigation must happen through JavaScript logic.
+
+Example situations:
+
+Login Success
+Register Success
+Button Click
+Logout
+Form Submit
+Authentication Check
+Import:
+
+import { useNavigate } from "react-router-dom";
+23. useNavigate Basic Syntax
+const navigate = useNavigate();
+Then:
+
+navigate("/dashboard");
+24. useNavigate Example
+import { useNavigate } from "react-router-dom";
+
+const Login = () => {
+
+    const navigate = useNavigate();
+
+    const handleLogin = () => {
+
+        console.log("Login Successful");
+
+        navigate("/dashboard");
+    };
+
+    return (
+        <button onClick={handleLogin}>
+            Login
+        </button>
+    );
+
+};
+
+export default Login;
+Process:
+
+Button Click
+   ↓
+handleLogin()
+   ↓
+Login Logic
+   ↓
+navigate("/dashboard")
+   ↓
+Dashboard Route
+25. Link vs useNavigate
+Use Link when navigation is directly visible to the user.
+
+<Link to="/about">
+    About
+</Link>
+Use useNavigate() when navigation happens after some logic.
+
+if (loginSuccess) {
+    navigate("/dashboard");
+}
+Easy memory:
+
+User clicks link
+→ Link
+
+JavaScript decides navigation
+→ useNavigate
+26. Dynamic Routes
+Sometimes the URL contains a dynamic value.
+
+Example:
+
+/products/1
+
+/products/2
+
+/products/10
+Here:
+
+1
+2
+10
+are product IDs.
+
+27. Dynamic Route Syntax
+<Route
+    path="/products/:id"
+    element={<ProductDetails />}
+/>
+Here:
+
+:id
+is a route parameter.
+
+28. What is useParams?
+useParams() is used to get dynamic values from the URL.
+
+Import:
+
+import { useParams } from "react-router-dom";
+Example:
+
+const { id } = useParams();
+If URL:
+
+/products/5
+then:
+
+id = "5"
+Route parameters come from the URL as strings.
+
+29. Dynamic Route Full Example
+App.jsx
+<Route
+    path="/products/:id"
+    element={<ProductDetails />}
+/>
+ProductDetails.jsx
+import { useParams } from "react-router-dom";
+
+const ProductDetails = () => {
+
+    const { id } = useParams();
+
+    return (
+        <div>
+
+            <h1>Product Details</h1>
+
+            <p>
+                Product ID: {id}
+            </p>
+
+        </div>
+    );
+
+};
+
+export default ProductDetails;
+30. Dynamic Route Process
+User Clicks Product
+      ↓
+/products/7
+      ↓
+Route
+/products/:id
+      ↓
+useParams()
+      ↓
+id = "7"
+      ↓
+Fetch / Find Product
+      ↓
+Display Details
+31. Dynamic Product Example
+import { Link } from "react-router-dom";
+
+const Products = () => {
+
+    const products = [
+        {
+            id: 1,
+            name: "Laptop"
+        },
+        {
+            id: 2,
+            name: "Mobile"
+        }
+    ];
+
+    return (
+        <div>
+
+            {products.map((product) => (
+
+                <div key={product.id}>
+
+                    <h2>
+                        {product.name}
+                    </h2>
+
+                    <Link
+                        to={`/products/${product.id}`}
+                    >
+                        View Product
+                    </Link>
+
+                </div>
+
+            ))}
+
+        </div>
+    );
+
+};
+
+export default Products;
+Important:
+
+to={`/products/${product.id}`}
+If:
+
+product.id = 2
+URL becomes:
+
+/products/2
+32. 404 / Not Found Route
+If the user enters an unknown URL:
+
+/abc
+
+/hello
+
+/random
+we should display a Not Found page.
+
+Create:
+
+const NotFound = () => {
+
+    return (
+        <h1>404 - Page Not Found</h1>
+    );
+
+};
+
+export default NotFound;
+Route:
+
+<Route
+    path="*"
+    element={<NotFound />}
+/>
+* means:
+
+Any unmatched route
+33. Routes Order Concept
+Example:
+
+<Routes>
+
+    <Route
+        path="/"
+        element={<Home />}
+    />
+
+    <Route
+        path="/about"
+        element={<About />}
+    />
+
+    <Route
+        path="*"
+        element={<NotFound />}
+    />
+
+</Routes>
+The wildcard route handles URLs that do not match defined routes.
+
+34. Nested Routes
+Nested routes are used when one page contains child pages.
+
+Example:
+
+/dashboard
+
+/dashboard/profile
+
+/dashboard/settings
+Structure:
+
+Dashboard
+│
+├── Profile
+└── Settings
+35. Nested Route Syntax
+<Route
+    path="/dashboard"
+    element={<Dashboard />}
+>
+
+    <Route
+        path="profile"
+        element={<Profile />}
+    />
+
+    <Route
+        path="settings"
+        element={<Settings />}
+    />
+
+</Route>
+36. What is Outlet?
+Outlet defines where the child route component should appear inside the parent component.
+
+Import:
+
+import { Outlet } from "react-router-dom";
+Example:
+
+const Dashboard = () => {
+
+    return (
+        <div>
+
+            <h1>Dashboard</h1>
+
+            <Outlet />
+
+        </div>
+    );
+
+};
+
+export default Dashboard;
+37. Nested Route Process
+URL:
+
+/dashboard/profile
+Process:
+
+Dashboard Component
+      ↓
+Outlet
+      ↓
+Profile Component
+Output conceptually:
+
+Dashboard
+
+Profile Page
+38. Layout Route Concept
+Suppose every page should have:
+
+Navbar
+Page Content
+Footer
+Instead of adding Navbar and Footer to every page, create a layout.
+
+39. Layout Example
+Layout.jsx
+import { Outlet } from "react-router-dom";
+
+import Navbar from "./Navbar";
+import Footer from "./Footer";
+
+const Layout = () => {
+
+    return (
+        <>
+
+            <Navbar />
+
+            <main>
+                <Outlet />
+            </main>
+
+            <Footer />
+
+        </>
+    );
+
+};
+
+export default Layout;
+40. Layout Routes
+<Routes>
+
+    <Route element={<Layout />}>
+
+        <Route
+            path="/"
+            element={<Home />}
+        />
+
+        <Route
+            path="/about"
+            element={<About />}
+        />
+
+        <Route
+            path="/contact"
+            element={<Contact />}
+        />
+
+    </Route>
+
+</Routes>
+Process:
+
+Layout
+│
+├── Navbar
+│
+├── Outlet
+│     ↓
+│   Current Page
+│
+└── Footer
+41. What is Navigate?
+Navigate is a component used to redirect users declaratively.
+
+Import:
+
+import { Navigate } from "react-router-dom";
+Example:
+
+const ProtectedRoute = () => {
+
+    const isLoggedIn = false;
+
+    if (!isLoggedIn) {
+        return <Navigate to="/login" />;
+    }
+
+    return <Dashboard />;
+};
+42. useNavigate vs Navigate
+useNavigate()
+→ Hook
+→ Used inside functions/events
+
+Navigate
+→ Component
+→ Used while rendering
+Example:
+
+navigate("/home");
+vs:
+
+return <Navigate to="/login" />;
+43. Protected Route Basic Concept
+Suppose Dashboard should open only after login.
+
+Flow:
+
+User opens Dashboard
+      ↓
+Check Login
+      ↓
+Logged In?
+   ↙       ↘
+ YES       NO
+  ↓         ↓
+Dashboard  Login
+Simple example:
+
+import { Navigate } from "react-router-dom";
+
+const ProtectedRoute = ({ children }) => {
+
+    const user = localStorage.getItem("loggedUser");
+
+    if (!user) {
+        return <Navigate to="/login" />;
+    }
+
+    return children;
+};
+
+export default ProtectedRoute;
+Use:
+
+<Route
+    path="/dashboard"
+    element={
+        <ProtectedRoute>
+            <Dashboard />
+        </ProtectedRoute>
+    }
+/>
+44. Protected Route Process
+/dashboard
+   ↓
+ProtectedRoute
+   ↓
+Check loggedUser
+   ↓
+
+User Exists
+→ Dashboard
+
+No User
+→ Navigate Login
+45. Complete Login Navigation Example
+import { useNavigate } from "react-router-dom";
+
+const Login = () => {
+
+    const navigate = useNavigate();
+
+    const login = () => {
+
+        const user = {
+            name: "Arun"
+        };
+
+        localStorage.setItem(
+            "loggedUser",
+            JSON.stringify(user)
+        );
+
+        navigate("/dashboard");
+    };
+
+    return (
+        <button onClick={login}>
+            Login
+        </button>
+    );
+
+};
+
+export default Login;
+46. Logout Navigation
+import { useNavigate } from "react-router-dom";
+
+const Dashboard = () => {
+
+    const navigate = useNavigate();
+
+    const logout = () => {
+
+        localStorage.removeItem("loggedUser");
+
+        navigate("/login");
+    };
+
+    return (
+        <button onClick={logout}>
+            Logout
+        </button>
+    );
+
+};
+
+export default Dashboard;
+47. Relative Navigation
+Suppose we are inside:
+
+/dashboard
+We can use:
+
+<Link to="profile">
+    Profile
+</Link>
+instead of always writing the full path.
+
+This can produce:
+
+/dashboard/profile
+depending on route context.
+
+48. Absolute Route Path
+Starts with:
+
+/
+Example:
+
+<Link to="/about">
+    About
+</Link>
+This points from the application root.
+
+49. Basic Route Project
+App.jsx
+import {
+    Routes,
+    Route
+} from "react-router-dom";
+
+import Navbar from "./components/Navbar";
+
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Products from "./pages/Products";
+import ProductDetails from "./pages/ProductDetails";
+import Login from "./pages/Login";
+import Dashboard from "./pages/Dashboard";
+import NotFound from "./pages/NotFound";
+
+const App = () => {
+
+    return (
+        <>
+
+            <Navbar />
+
+            <Routes>
+
+                <Route
+                    path="/"
+                    element={<Home />}
+                />
+
+                <Route
+                    path="/about"
+                    element={<About />}
+                />
+
+                <Route
+                    path="/products"
+                    element={<Products />}
+                />
+
+                <Route
+                    path="/products/:id"
+                    element={<ProductDetails />}
+                />
+
+                <Route
+                    path="/login"
+                    element={<Login />}
+                />
+
+                <Route
+                    path="/dashboard"
+                    element={<Dashboard />}
+                />
+
+                <Route
+                    path="*"
+                    element={<NotFound />}
+                />
+
+            </Routes>
+
+        </>
+    );
+
+};
+
+export default App;
+50. Complete React Router Flow
+Application Starts
+      ↓
+BrowserRouter
+      ↓
+Current Browser URL
+      ↓
+Routes
+      ↓
+Route Matching
+      ↓
+Matching Component
+      ↓
+Component Rendered
+Navigation:
+
+Link / NavLink
+      ↓
+URL Changes
+      ↓
+React Router Checks Routes
+      ↓
+New Component
+      ↓
+Screen Updates
+Programmatic navigation:
+
+Button / Login / Logic
+      ↓
+useNavigate()
+      ↓
+URL Changes
+      ↓
+Route Matches
+      ↓
+Component Changes
+51. Most Important React Router Syntax
+BrowserRouter
+<BrowserRouter>
+    <App />
+</BrowserRouter>
+Routes
+<Routes>
+</Routes>
+Route
+<Route
+    path="/about"
+    element={<About />}
+/>
+Link
+<Link to="/about">
+    About
+</Link>
+NavLink
+<NavLink to="/about">
+    About
+</NavLink>
+Navigate Using JavaScript
+const navigate = useNavigate();
+
+navigate("/dashboard");
+Dynamic Route
+<Route
+    path="/products/:id"
+    element={<ProductDetails />}
+/>
+Read Parameter
+const { id } = useParams();
+Child Route Display
+<Outlet />
+Redirect
+<Navigate to="/login" />
+52. Important Interview Questions
+What is React Router DOM?
+React Router DOM is a routing library used in React web applications to map browser URLs to React UI and navigate between views without doing a full-page reload for normal internal client-side navigation.
+
+Why do we use BrowserRouter?
+BrowserRouter provides routing context and uses the browser history API for navigation.
+
+What is Routes?
+Routes contains route definitions and renders the best matching route branch for the current location.
+
+What is Route?
+Route connects a URL path with an element/component.
+
+Difference between Link and anchor tag?
+Link is designed for client-side routing within the React application. A normal anchor navigation performs standard browser navigation and can reload the document.
+
+Difference between Link and NavLink?
+Link performs navigation.
+
+NavLink performs navigation and provides active/pending state information useful for styling navigation menus.
+
+What is useNavigate?
+useNavigate() is a hook used for programmatic navigation.
+
+When do we use useNavigate?
+Common cases:
+
+Login
+Register
+Logout
+Form submission
+Button click
+Conditional navigation
+What is useParams?
+useParams() returns dynamic route parameters from the current matched URL.
+
+What is a dynamic route?
+A route containing variable path segments.
+
+Example:
+
+/product/:id
+What is Outlet?
+Outlet renders the matched child route inside a parent route/layout.
+
+What is Navigate?
+Navigate is a component used to perform declarative navigation or redirects during rendering.
+
+53. Common Beginner Mistakes
+Wrong
+<Route
+    path="/about"
+    component={About}
+/>
+For the declarative API shown in these notes, use:
+
+<Route
+    path="/about"
+    element={<About />}
+/>
+Wrong
+<Link href="/about">
+Correct:
+
+<Link to="/about">
+Wrong
+const navigate = useNavigate;
+
+navigate("/home");
+Correct:
+
+const navigate = useNavigate();
+
+navigate("/home");
+Wrong
+Using:
+
+<a href="/dashboard">
+for every internal route.
+
+Prefer:
+
+<Link to="/dashboard">
+for normal client-side internal navigation.
+
+54. Easy Memory Formula
+BrowserRouter
+→ Enable Router
+
+Routes
+→ Hold Routes
+
+Route
+→ URL + Component
+
+Link
+→ Navigate
+
+NavLink
+→ Navigate + Active State
+
+useNavigate
+→ Navigate through JavaScript
+
+useParams
+→ Read URL Parameter
+
+Outlet
+→ Show Child Route
+
+Navigate
+→ Redirect
+55. Recommended Learning Order
+Study React Router in this order:
+
+1. BrowserRouter
+
+2. Routes
+
+3. Route
+
+4. Link
+
+5. NavLink
+
+6. useNavigate
+
+7. Dynamic Route
+
+8. useParams
+
+9. 404 Route
+
+10. Nested Routes
+
+11. Outlet
+
+12. Layout Routes
+
+13. Navigate
+
+14. Protected Routes
+Don't immediately start protected routing before understanding normal routing clearly.
+
+56. Real-World Routing Structure
+Example e-commerce application:
+
+/
+→ Home
+
+/products
+→ Product List
+
+/products/5
+→ Product Details
+
+/cart
+→ Cart
+
+/login
+→ Login
+
+/register
+→ Register
+
+/dashboard
+→ Dashboard
+
+/dashboard/profile
+→ Profile
+
+*
+→ 404
+This combines:
+
+Static Routes
+Dynamic Routes
+Nested Routes
+Authentication Routes
+Fallback Route
+57. Final Process
+React App
+   ↓
+BrowserRouter
+   ↓
+Routes
+   ↓
+Route
+   ↓
+Page Component
+Navigation:
+
+Navbar
+ ↓
+Link / NavLink
+ ↓
+URL Change
+ ↓
+Route Match
+ ↓
+Page Change
+Dynamic data:
+
+Product Click
+ ↓
+/products/10
+ ↓
+:id
+ ↓
+useParams()
+ ↓
+10
+ ↓
+Product Details
+Authentication:
+
+Login Success
+ ↓
+useNavigate()
+ ↓
+Dashboard
+ ↓
+Protected Route
+ ↓
+Authentication Check
+GOLDEN INTERVIEW ANSWER
+React Router DOM is used for client-side routing in React web applications. It maps URLs to UI using routing components and lets users navigate between views without a full document reload during normal SPA navigation. BrowserRouter provides the routing context, Routes and Route define route mappings, while Link and NavLink are used for user navigation.
+
+For application logic, useNavigate() provides programmatic navigation, useParams() reads dynamic URL parameters, and Outlet is used for nested routes and shared layouts. React Router can also be combined with authentication logic to create protected routes and redirect unauthenticated users.
+
+day5
+3. Rendering Primitive Data
+
+Primitive data types we mainly use here:
+
+String
+Number
+Boolean
+Null
+Undefined
+In JSX, JavaScript values are written inside:
+
+{ }
+Example:
+
+const name = "Arun";
+
+root.render(
+    <h1>{name}</h1>
+);
+Output:
+
+Arun
+4. Rendering String
+import { createRoot } from "react-dom/client";
+
+const root = createRoot(
+    document.getElementById("root")
+);
+
+const name = "Arun";
+
+root.render(
+    <h1>{name}</h1>
+);
+Output:
+
+Arun
+String values can be directly rendered inside JSX.
+
+5. Rendering Number
+const age = 22;
+
+root.render(
+    <h1>{age}</h1>
+);
+Output:
+
+22
+Another example:
+
+const price = 5000;
+
+root.render(
+    <p>Price: {price}</p>
+);
+Output:
+
+Price: 5000
+6. Rendering String + Number
+const name = "Arun";
+const age = 22;
+
+root.render(
+    <div>
+
+        <h1>Name: {name}</h1>
+
+        <p>Age: {age}</p>
+
+    </div>
+);
+Output:
+
+Name: Arun
+Age: 22
+7. Rendering Boolean
+Example:
+
+const isLoggedIn = true;
+
+root.render(
+    <h1>{isLoggedIn}</h1>
+);
+Nothing is displayed.
+
+Why?
+
+React does not directly display:
+
+true
+false
+as text inside JSX.
+
+So this:
+
+{true}
+and:
+
+{false}
+do not normally produce visible text.
+
+8. How to Display Boolean?
+Convert it into a string.
+
+const isLoggedIn = true;
+
+root.render(
+    <h1>{String(isLoggedIn)}</h1>
+);
+
+day6
+REACT PROPS & DATA RENDERING – SHORT NOTES
+
+1. Props in React
+Props means properties. Props are used to pass data from a parent component to a child component.
+
+Props are read-only, so the child component should use the received data but should not directly change it.
+
+Process
+Parent Component
+      ↓
+Pass Data
+      ↓
+Props
+      ↓
+Child Component
+      ↓
+Display Data
+2. Primitive Data Rendering
+Primitive data means simple values such as:
+
+String
+Number
+Boolean
+Null
+Undefined
+In React, String and Number can be displayed directly inside JSX. Boolean, null, and undefined are not usually shown directly as visible text, so we often convert or conditionally display them.
+
+Process
+Primitive Value
+      ↓
+JSX
+      ↓
+React Render
+      ↓
+Screen
+3. Object Rendering
+An object contains multiple related values using key-value pairs.
+
+In React, we should not normally display the whole object directly. We access the required property such as name, age, city, role, or price and display that value.
+
+Process
+Object
+ ↓
+Select Property
+ ↓
+object.property
+ ↓
+JSX
+ ↓
+Screen
+Example concept:
+
+Student Object
+
+name
+age
+course
+city
+We display only the required properties.
+
+4. Object through Props
+An object can be created in the parent component and passed to the child component through props.
+
+The child receives the object and accesses its individual properties. This is common when we create profile cards, product cards, employee cards, or student cards.
+
+Process
+Parent
+ ↓
+Create Object
+ ↓
+Pass Object through Props
+ ↓
+Child Component
+ ↓
+Access Properties
+ ↓
+Display
+5. Array Rendering
+An array stores multiple values in a single variable.
+
+In React, when we want to display every value from an array, we normally use map(). map() takes each value and returns JSX for each item.
+
+Process
+Array
+ ↓
+map()
+ ↓
+Each Value
+ ↓
+Create JSX
+ ↓
+Display All Values
+Example concept:
+
+Skills Array
+
+HTML
+CSS
+JavaScript
+React
+Each value is displayed one by one.
+
+6. Why map() is Important in React
+map() is very important because React applications frequently receive lists of data from APIs.
+
+Instead of manually writing the same UI multiple times, we use map() to create repeated elements such as cards, rows, products, users, or students.
+
+Process
+Array Data
+ ↓
+map()
+ ↓
+Repeat UI
+ ↓
+One UI for Each Item
+7. Key in Array Rendering
+When we render multiple items using map(), React expects a key for each item.
+
+The key helps React identify which item was added, removed, or changed. A unique ID from the data is normally the best key.
+
+Process
+Array Item
+ ↓
+Unique ID
+ ↓
+key
+ ↓
+React Identifies Item
+ ↓
+Efficient Update
+8. Array of Objects
+An array of objects is one of the most commonly used data structures in React applications.
+
+Each object represents one record such as one user, one product, one employee, or one student. We use map() to take each object and display its required properties.
+
+Process
+Array of Objects
+       ↓
+      map()
+       ↓
+   Each Object
+       ↓
+Access Properties
+       ↓
+Create JSX
+       ↓
+Display
+9. Array of Objects Example Concept
+Suppose we have:
+
+Students
+
+Student 1
+- Name
+- Age
+- Course
+
+Student 2
+- Name
+- Age
+- Course
+
+Student 3
+- Name
+- Age
+- Course
+Instead of manually creating three student cards, React can use the array and map() to generate all three cards automatically.
+
+Process
+Students Array
+ ↓
+map()
+ ↓
+Student Object
+ ↓
+Name / Age / Course
+ ↓
+Student Card
+ ↓
+Screen
+10. Array of Objects through Props
+The parent component can store an array of objects and pass the complete array to a child component using props.
+
+The child component receives the array, uses map(), and displays each object. This pattern is widely used in real React projects.
+
+Process
+App Component
+ ↓
+Array of Objects
+ ↓
+Props
+ ↓
+List Component
+ ↓
+map()
+ ↓
+Card Component
+ ↓
+Screen
+11. Parent and Child Component Flow
+The parent component usually owns or prepares the data.
+
+The child component receives that data using props and focuses on displaying the UI. This separation makes the code easier to manage and reuse.
+
+Process
+Parent
+ ↓
+Data
+ ↓
+Props
+ ↓
+Child
+ ↓
+UI
+12. Component Reusability
+A component should ideally be reusable.
+
+For example, instead of creating separate components for Student 1, Student 2, and Student 3, we can create one Student Card component and pass different data through props.
+
+Process
+One Component
+ ↓
+Different Props
+ ↓
+Different Data
+ ↓
+Reusable UI
+13. Props with Primitive Data
+Primitive values such as name, age, role, or status can be passed directly through props.
+
+This is useful when the child component only needs a few individual values.
+
+Process
+Parent
+ ↓
+Primitive Values
+ ↓
+Props
+ ↓
+Child
+ ↓
+Display
+14. Props with Object Data
+When many related values belong to one entity, passing an object is cleaner than passing many separate props.
+
+For example, a user object can contain name, email, city, phone, and role together.
+
+Process
+User Object
+ ↓
+Props
+ ↓
+Child
+ ↓
+user.name
+user.email
+user.city
+ ↓
+Screen
+15. Props with Array Data
+Arrays can also be passed through props.
+
+The child component can receive the array and use map() to display all items.
+
+Process
+Array
+ ↓
+Props
+ ↓
+Child
+ ↓
+map()
+ ↓
+Multiple Elements
+16. Props with Array of Objects
+This is the most common real-world pattern.
+
+The parent gets or stores data, passes it to the child, and the child renders multiple records using map().
+
+Process
+API / Local Data
+      ↓
+Array of Objects
+      ↓
+Parent Component
+      ↓
+Props
+      ↓
+Child Component
+      ↓
+map()
+      ↓
+Cards / Rows
+17. Real-World Example Process
+In an e-commerce application:
+
+Products API
+ ↓
+Array of Product Objects
+ ↓
+App / Product Page
+ ↓
+Props
+ ↓
+Product List
+ ↓
+map()
+ ↓
+Product Card
+ ↓
+Screen
+The same pattern is used for:
+
+Students
+Employees
+Users
+Orders
+Courses
+Products
+Customers
+18. Primitive vs Object vs Array vs Array of Objects
+Primitive
+Single value.
+
+name
+age
+price
+status
+Object
+One entity with multiple properties.
+
+One User
+One Product
+One Student
+Array
+Multiple simple values.
+
+Skills
+Colors
+Categories
+Array of Objects
+Multiple records.
+
+Users
+Products
+Students
+Employees
+19. Easy Memory Formula
+Primitive
+→ Direct Render
+
+Object
+→ Access Property
+
+Array
+→ map()
+
+Array of Objects
+→ map() + Property Access
+
+Parent to Child
+→ Props
+20. Complete React Data Rendering Flow
+DATA
+ ↓
+Primitive / Object / Array / Array of Objects
+ ↓
+Parent Component
+ ↓
+Props
+ ↓
+Child Component
+ ↓
+map() if needed
+ ↓
+JSX
+ ↓
+React Rendering
+ ↓
+Screen
+21. Important Interview Points
+What are props?
+Props are read-only data passed from a parent component to a child component.
+
+Can props be changed by the child?
+No. Props should be treated as read-only.
+
+How do we render an object?
+By accessing its individual properties.
+
+How do we render an array?
+Usually using map().
+
+How do we render an array of objects?
+Use map() and access the required object properties.
+
+Why do we use key?
+To help React identify list items during updates.
+
+Why are props important?
+They allow components to share data and make components reusable.
+
+FINAL PROCESS TO REMEMBER
+Parent
+ ↓
+Data
+ ↓
+Props
+ ↓
+Child
+ ↓
+
+Primitive
+→ Direct
+
+Object
+→ Property
+
+Array
+→ map()
+
+Array of Objects
+→ map() + Property
+
+ ↓
+JSX
+ ↓
+Screen
+day7
+
+REACT ARRAY, OBJECT & ARRAY OF OBJECTS RENDERING
+
+1. Array Rendering in React
+An array is used to store multiple values in one variable. In React, when we want to display every value from an array on the screen, we commonly use the map() method.
+
+map() takes each value from the array one by one and returns JSX for each item. This is useful when we want to display lists such as skills, courses, colors, categories, or menu items.
+
+Process
+Array
+  ↓
+map()
+  ↓
+Each Value
+  ↓
+JSX
+  ↓
+Screen
+Example
+const courses = [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "React"
+];
+
+const App = () => {
+    return (
+        <div>
+            {courses.map((course, index) => (
+                <p key={index}>
+                    {course}
+                </p>
+            ))}
+        </div>
+    );
+};
+
+export default App;
+2. Why do we use map()?
+In React, we cannot manually write the same UI again and again for every array item. map() helps us create repeated JSX automatically.
+
+If an array contains 10 values, map() can generate 10 UI elements using one block of JSX.
+
+Process
+One Array
+   ↓
+map()
+   ↓
+Repeat JSX
+   ↓
+Multiple Elements
+3. What is key in Array Rendering?
+When we render a list using map(), React expects each item to have a unique key.
+
+The key helps React identify each item correctly when items are added, removed, or changed.
+
+Example
+{courses.map((course, index) => (
+    <p key={index}>
+        {course}
+    </p>
+))}
+For real project data, a unique id is better than using the array index.
+
+4. Object Rendering in React
+An object stores multiple related values as key-value pairs.
+
+Example:
+
+const student = {
+    name: "Arun",
+    age: 22,
+    course: "React"
+};
+We do not normally render the whole object directly.
+
+Instead, we access each property.
+
+Process
+Object
+  ↓
+Access Property
+  ↓
+student.name
+student.age
+student.course
+  ↓
+JSX
+  ↓
+Screen
+Example
+const student = {
+    name: "Arun",
+    age: 22,
+    course: "React"
+};
+
+const App = () => {
+    return (
+        <div>
+            <h2>{student.name}</h2>
+            <p>{student.age}</p>
+            <p>{student.course}</p>
+        </div>
+    );
+};
+
+export default App;
+5. Important Point for Object Rendering
+map() is mainly used for arrays.
+
+For one normal object, we usually access the values directly using:
+
+object.property
+Example:
+
+student.name
+student.age
+student.course
+Easy memory:
+
+Array
+→ map()
+
+Object
+→ property access
+6. Array of Objects Rendering
+An array of objects means an array contains multiple objects.
+
+This is one of the most important data structures in React because API data commonly comes as an array of objects.
+
+Example:
+
+const students = [
+    {
+        id: 1,
+        name: "Arun",
+        age: 22
+    },
+    {
+        id: 2,
+        name: "Bala",
+        age: 23
+    }
+];
+7. How to Render Array of Objects?
+First, use map() because the outer data is an array.
+
+Then, inside map(), access each object's properties.
+
+Process
+Array of Objects
+      ↓
+    map()
+      ↓
+Each Object
+      ↓
+student.name
+student.age
+      ↓
+JSX
+      ↓
+Screen
+Example
+const students = [
+    {
+        id: 1,
+        name: "Arun",
+        age: 22
+    },
+    {
+        id: 2,
+        name: "Bala",
+        age: 23
+    },
+    {
+        id: 3,
+        name: "Kumar",
+        age: 21
+    }
+];
+
+const App = () => {
+    return (
+        <div>
+
+            {students.map((student) => (
+                <div key={student.id}>
+
+                    <h2>{student.name}</h2>
+
+                    <p>
+                        Age: {student.age}
+                    </p>
+
+                </div>
+            ))}
+
+        </div>
+    );
+};
+
+export default App;
+8. Why student inside map()?
+In:
+
+students.map((student) => (
+students is the complete array.
+
+student represents one object at a time.
+
+Example:
+
+First iteration
+
+student =
+{
+    id: 1,
+    name: "Arun",
+    age: 22
+}
+Next iteration:
+
+student =
+{
+    id: 2,
+    name: "Bala",
+    age: 23
+}
+So we can access:
+
+student.name
+student.age
+9. Complete Array of Objects Flow
+Suppose:
+
+Students Array
+contains:
+
+Student 1
+Student 2
+Student 3
+React process:
+
+Students Array
+      ↓
+map()
+      ↓
+Student 1
+      ↓
+Create JSX
+
+Student 2
+      ↓
+Create JSX
+
+Student 3
+      ↓
+Create JSX
+      ↓
+Render All
+10. Real-World Example
+API may return:
+
+Products Array
+Each product may contain:
+
+id
+name
+price
+category
+image
+React process:
+
+API Data
+  ↓
+Array of Product Objects
+  ↓
+map()
+  ↓
+Each Product Object
+  ↓
+Access Product Properties
+  ↓
+Create Product Card
+  ↓
+Display Products
+This same pattern is used for:
+
+Students
+Employees
+Products
+Users
+Orders
+Courses
+Customers
+11. Array vs Object vs Array of Objects
+Array
+Contains multiple simple values.
+
+Example:
+
+HTML
+CSS
+JavaScript
+React
+Rendering:
+
+Array
+→ map()
+Object
+Contains one record with multiple properties.
+
+Example:
+
+One Student
+
+Name
+Age
+Course
+Rendering:
+
+Object
+→ property access
+Array of Objects
+Contains multiple records.
+
+Example:
+
+Student 1
+Student 2
+Student 3
+Rendering:
+
+Array of Objects
+→ map()
+→ object.property
+12. Easy Formula
+ARRAY
+→ map()
+
+OBJECT
+→ object.property
+
+ARRAY OF OBJECTS
+→ map()
+→ object.property
+13. Important Interview Points
+How do you render an array in React?
+Use map() to return JSX for every array item.
+
+How do you render an object?
+Access individual properties using dot notation.
+
+Can we use map() directly on an object?
+No. map() is an array method.
+
+How do you render an array of objects?
+Use map() on the array and access object properties inside the callback.
+
+Why is key important?
+It helps React identify list items during reconciliation.
+
+What is the best key?
+A stable and unique ID from the data.
+
+14. Final Process to Remember
+Primitive
+→ Direct Render
+
+Object
+→ Property Access
+
+Array
+→ map()
+
+Array of Objects
+→ map()
+→ Property Access
+Full React Rendering Flow
+Data
+ ↓
+Array / Object / Array of Objects
+ ↓
+map() if Array
+ ↓
+Access Value / Property
+ ↓
+JSX
+ ↓
+React Render
+ ↓
+Screen
+
+day8
+
+React useState, State, SetState & Events
+
+1. State
+State is data that belongs to a component and can change during user interaction. When state changes, React updates the component UI.
+
+State Change
+   ↓
+Component Re-render
+   ↓
+Updated Screen
+2. useState()
+useState() is a React Hook used to create and manage state inside a functional component.
+
+Syntax
+const [state, setState] = useState(initialValue);
+Example:
+
+const [count, setCount] = useState(0);
+3. state
+The first value stores the current state.
+
+const [count, setCount] = useState(0);
+Here:
+
+count
+→ Current Value
+4. setState
+The second value is a function used to update the state.
+
+setCount(10);
+After updating state, React renders the component again with the new value.
+
+setCount()
+   ↓
+State Updated
+   ↓
+Re-render
+   ↓
+New UI
+5. State Example
+import { useState } from "react";
+
+const App = () => {
+
+    const [count, setCount] = useState(0);
+
+    return (
+        <div>
+            <h1>{count}</h1>
+
+            <button onClick={() => setCount(count + 1)}>
+                Add
+            </button>
+        </div>
+    );
+};
+
+export default App;
+6. Events in React
+Events are actions performed by the user, such as clicking a button, typing in an input, or submitting a form.
+
+React events use camelCase names.
+
+HTML
+onclick
+
+React
+onClick
+7. Important React Events
+onClick
+→ Button click
+
+onChange
+→ Input value change
+
+onSubmit
+→ Form submit
+
+onMouseEnter
+→ Mouse enters element
+
+onMouseLeave
+→ Mouse leaves element
+
+onKeyDown
+→ Keyboard key press
+8. Event Example
+const handleClick = () => {
+    console.log("Button Clicked");
+};
+
+<button onClick={handleClick}>
+    Click
+</button>
+9. Event + State Process
+User Action
+   ↓
+Event
+   ↓
+Event Function
+   ↓
+setState()
+   ↓
+State Change
+   ↓
+Component Re-render
+   ↓
+Updated UI
+10. Easy Memory
+State
+→ Current Data
+
+useState()
+→ Create State
+
+setState
+→ Update State
+
+Event
+→ User Action
+
+Event + setState
+→ Dynamic UI
+
+day9
+REACT FORM HANDLING
+
+1. What is Form Handling in React?
+Form handling means getting user input, storing it in state, validating it, and using the data when the form is submitted.
+
+In React, form fields are commonly connected with useState(). When the user types, onChange updates the state, and when the form is submitted, onSubmit handles the form data.
+
+Process
+Input
+  ↓
+onChange
+  ↓
+State
+  ↓
+User Types
+  ↓
+State Updated
+  ↓
+Submit
+  ↓
+onSubmit
+  ↓
+Use Form Data
+2. Important Form Events
+onChange
+→ Input value changes
+
+onSubmit
+→ Form is submitted
+
+onClick
+→ Button click
+For form handling, the most important events are:
+
+onChange
+onSubmit
+3. Controlled Input
+A controlled input means the input value is controlled by React state.
+
+The state stores the current value, and the input gets its value from that state.
+
+Process
+State
+ ↓
+Input Value
+ ↓
+User Types
+ ↓
+onChange
+ ↓
+setState
+ ↓
+State Updated
+ ↓
+Input Updated
+4. Why use value and onChange?
+value connects the input to state.
+
+onChange updates the state whenever the user types.
+
+Syntax
+<input
+    value={state}
+    onChange={handleChange}
+/>
+5. What is event.target.value?
+When the user types inside an input, React gives us an event object.
+
+The current input value can be accessed using:
+
+event.target.value
+Process
+User Types
+ ↓
+Event
+ ↓
+event.target
+ ↓
+Input Element
+ ↓
+event.target.value
+ ↓
+Entered Data
+SINGLE INPUT FORM HANDLING
+6. Single Input Form Handling
+Single input form handling means managing one input field using one state variable.
+
+For example, if we have only a name input, we create one state for the name and update it using onChange.
+
+Process
+Name Input
+   ↓
+onChange
+   ↓
+event.target.value
+   ↓
+setName()
+   ↓
+name State
+7. Single Input Basic Syntax
+const [name, setName] = useState("");
+Input:
+
+<input
+    type="text"
+    value={name}
+    onChange={(event) => {
+        setName(event.target.value);
+    }}
+/>
+Here:
+
+name
+→ Current input value
+
+setName
+→ Update input value
+
+event.target.value
+→ Value typed by user
+8. Single Input Full Example
+import { useState } from "react";
+
+const App = () => {
+
+    const [name, setName] = useState("");
+
+    const handleSubmit = (event) => {
+
+        event.preventDefault();
+
+        console.log(name);
+    };
+
+    return (
+        <form onSubmit={handleSubmit}>
+
+            <input
+                type="text"
+                value={name}
+                onChange={(event) => {
+                    setName(event.target.value);
+                }}
+                placeholder="Enter Name"
+            />
+
+            <button type="submit">
+                Submit
+            </button>
+
+        </form>
+    );
+};
+
+export default App;
+9. Single Input Process
+Initial State
+name = ""
+
+   ↓
+
+User Types "Arun"
+
+   ↓
+
+onChange
+
+   ↓
+
+event.target.value
+
+   ↓
+
+"Arun"
+
+   ↓
+
+setName("Arun")
+
+   ↓
+
+name = "Arun"
+
+   ↓
+
+Submit
+
+   ↓
+
+handleSubmit()
+
+   ↓
+
+Use Data
+10. What is onSubmit?
+onSubmit is used on the <form> element.
+
+When the user clicks the submit button or submits the form, the submit handler function runs.
+
+Syntax
+<form onSubmit={handleSubmit}>
+11. Why preventDefault()?
+Normally, submitting an HTML form causes the browser to refresh or navigate.
+
+In React, we usually prevent that default behavior using:
+
+event.preventDefault();
+Then we can handle the form data using JavaScript.
+
+Process
+Form Submit
+   ↓
+Browser Default Refresh
+   ↓
+preventDefault()
+   ↓
+Stop Refresh
+   ↓
+React Handles Data
+12. Separate handleChange() Function
+Instead of writing the logic directly inside the input, we can create a separate function.
+
+const handleChange = (event) => {
+
+    setName(event.target.value);
+
+};
+Then:
+
+<input
+    value={name}
+    onChange={handleChange}
+/>
+This makes the code cleaner.
+
+13. Single Input with Display
+import { useState } from "react";
+
+const App = () => {
+
+    const [name, setName] = useState("");
+
+    return (
+        <div>
+
+            <input
+                type="text"
+                value={name}
+                onChange={(event) =>
+                    setName(event.target.value)
+                }
+            />
+
+            <h2>
+                {name}
+            </h2>
+
+        </div>
+    );
+};
+
+export default App;
+Process
+Type in Input
+ ↓
+onChange
+ ↓
+State Update
+ ↓
+Component Re-render
+ ↓
+Text Displays Immediately
+14. Single Input Form with Submit Display
+import { useState } from "react";
+
+const App = () => {
+
+    const [name, setName] = useState("");
+    const [submittedName, setSubmittedName] = useState("");
+
+    const handleSubmit = (event) => {
+
+        event.preventDefault();
+
+        setSubmittedName(name);
+
+    };
+
+    return (
+        <div>
+
+            <form onSubmit={handleSubmit}>
+
+                <input
+                    type="text"
+                    value={name}
+                    onChange={(event) =>
+                        setName(event.target.value)
+                    }
+                />
+
+                <button type="submit">
+                    Submit
+                </button>
+
+            </form>
+
+            <h2>
+                {submittedName}
+            </h2>
+
+        </div>
+    );
+};
+
+export default App;
+15. Why Two States Here?
+name
+→ Current input value
+
+submittedName
+→ Final submitted value
+Before submit:
+
+User is typing
+After submit:
+
+Submitted data is displayed
+16. Form Validation – Basic
+Before accepting the form, we can check whether the input is empty.
+
+if (name === "") {
+    console.log("Name is required");
+    return;
+}
+Process
+Submit
+ ↓
+Check Input
+ ↓
+Empty?
+ ↙   ↘
+Yes   No
+ ↓     ↓
+Error  Continue
+17. Clear Input after Submit
+After successful submission:
+
+setName("");
+This clears the input field because the input value is controlled by state.
+
+Process
+Submit
+ ↓
+Use Data
+ ↓
+setName("")
+ ↓
+State Empty
+ ↓
+Input Cleared
+18. Complete Single Input Form Flow
+useState("")
+    ↓
+Input
+    ↓
+value={name}
+    ↓
+User Types
+    ↓
+onChange
+    ↓
+event.target.value
+    ↓
+setName()
+    ↓
+State Updated
+    ↓
+Submit
+    ↓
+onSubmit
+    ↓
+preventDefault()
+    ↓
+Validation
+    ↓
+Use Data
+    ↓
+Clear Input
+19. Important Terms
+useState
+→ Store form data
+
+value
+→ Connect input with state
+
+onChange
+→ Detect input changes
+
+event.target.value
+→ Get entered value
+
+onSubmit
+→ Handle form submission
+
+preventDefault()
+→ Stop page refresh
+
+setState
+→ Update form state
+20. Important Interview Points
+What is form handling in React?
+Form handling is the process of collecting, storing, validating, and processing user input using React state and events.
+
+What is a controlled input?
+A controlled input is an input whose value is controlled by React state.
+
+Why use onChange?
+To update state whenever the input value changes.
+
+What is event.target.value?
+It gives the current value of the input element.
+
+Why use onSubmit?
+To handle the complete form submission.
+
+Why use preventDefault()?
+To stop the browser's default form refresh behavior.
+
+How do you clear an input?
+Update its state to an empty string.
+
+EASY MEMORY
+FORM HANDLING
+
+Input
+ ↓
+value
+ ↓
+State
+ ↓
+onChange
+ ↓
+setState
+ ↓
+Submit
+ ↓
+onSubmit
+ ↓
+preventDefault()
+ ↓
+Process Data
+SINGLE INPUT
+One Input
+ ↓
+One State
+ ↓
+onChange
+ ↓
+event.target.value
+ ↓
+setState
+ ↓
+Submit
+
+day10
+REACT FORM HANDLING – SINGLE OBJECT STATE
+
+1. What is Single Object Form Handling?
+When a form has multiple inputs like name, email, age, and city, creating separate state for every input is not always necessary.
+
+We can store all form values inside one object state and use one common handleChange() function to update every input.
+
+Process
+Multiple Inputs
+      ↓
+Single Object State
+      ↓
+Same handleChange()
+      ↓
+Update Required Property
+      ↓
+Form Object Updated
+2. Object State
+Instead of:
+
+const [name, setName] = useState("");
+const [email, setEmail] = useState("");
+const [age, setAge] = useState("");
+We can create one object:
+
+const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    age: "",
+    city: ""
+});
+Here:
+
+formData
+→ Complete form object
+
+setFormData
+→ Updates the form object
+3. Important Input name Property
+Every input should have a name.
+
+<input name="name" />
+
+<input name="email" />
+
+<input name="age" />
+
+<input name="city" />
+The name should match the object property.
+
+Object Property       Input name
+
+name             →    name
+email            →    email
+age              →    age
+city             →    city
+This is the important concept for using the same function.
+
+4. Same handleChange() Function
+Instead of creating:
+
+handleNameChange()
+handleEmailChange()
+handleAgeChange()
+handleCityChange()
+we create only:
+
+const handleChange = (event) => {
+
+    const { name, value } = event.target;
+
+    setFormData({
+        ...formData,
+        [name]: value
+    });
+};
+The same function handles all inputs.
+
+5. Understanding event.target
+When the user types:
+
+event.target.name
+→ Which input changed?
+
+event.target.value
+→ What value did the user enter?
+Example:
+
+If the user types "Arun" in the name input:
+
+name  = "name"
+
+value = "Arun"
+If the user types in email:
+
+name  = "email"
+
+value = "arun@gmail.com"
+So the same function can identify which property should be updated.
+
+6. Why Spread Operator ...formData?
+We should keep the existing object values while updating only one property.
+
+{
+    ...formData,
+    [name]: value
+}
+...formData copies the existing form data.
+
+Then:
+
+[name]: value
+updates only the input that changed.
+
+Process
+Old Object
+   ↓
+Copy Existing Values
+   ↓
+...formData
+   ↓
+Find Changed Input
+   ↓
+[name]
+   ↓
+Update its Value
+   ↓
+New Object
+7. Why [name]?
+[name] is a computed property name.
+
+Suppose:
+
+name = "email"
+Then:
+
+[name]: value
+behaves like:
+
+email: value
+If:
+
+name = "city"
+it behaves like:
+
+city: value
+So one function can dynamically update different properties.
+
+8. Complete Example
+import { useState } from "react";
+
+const App = () => {
+
+    const [formData, setFormData] = useState({
+        name: "",
+        email: "",
+        age: "",
+        city: ""
+    });
+
+    const handleChange = (event) => {
+
+        const { name, value } = event.target;
+
+        setFormData({
+            ...formData,
+            [name]: value
+        });
+    };
+
+    const handleSubmit = (event) => {
+
+        event.preventDefault();
+
+        console.log(formData);
+    };
+
+    return (
+        <form onSubmit={handleSubmit}>
+
+            <input
+                type="text"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
+                placeholder="Enter Name"
+            />
+
+            <input
+                type="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                placeholder="Enter Email"
+            />
+
+            <input
+                type="number"
+                name="age"
+                value={formData.age}
+                onChange={handleChange}
+                placeholder="Enter Age"
+            />
+
+            <input
+                type="text"
+                name="city"
+                value={formData.city}
+                onChange={handleChange}
+                placeholder="Enter City"
+            />
+
+            <button type="submit">
+                Submit
+            </button>
+
+        </form>
+    );
+};
+
+export default App;
+9. How Same Function Works
+For all inputs:
+
+onChange={handleChange}
+Name input:
+
+name="name"
+↓
+[name] becomes name
+Email input:
+
+name="email"
+↓
+[name] becomes email
+Age input:
+
+name="age"
+↓
+[name] becomes age
+City input:
+
+name="city"
+↓
+[name] becomes city
+10. Complete Flow
+User Types
+     ↓
+onChange
+     ↓
+handleChange(event)
+     ↓
+event.target
+     ↓
+Get name + value
+     ↓
+Copy Old Object
+...formData
+     ↓
+[name]: value
+     ↓
+setFormData()
+     ↓
+Object State Updated
+     ↓
+Component Re-render
+11. Example Update
+Initial state:
+
+{
+    name: "",
+    email: "",
+    age: "",
+    city: ""
+}
+User enters name:
+
+Arun
+State becomes:
+
+{
+    name: "Arun",
+    email: "",
+    age: "",
+    city: ""
+}
+Then user enters city:
+
+Chennai
+State becomes:
+
+{
+    name: "Arun",
+    email: "",
+    age: "",
+    city: "Chennai"
+}
+Only the required property changes. Other values remain unchanged.
+
+12. Form Submit Process
+When the user clicks Submit:
+
+Submit
+ ↓
+onSubmit
+ ↓
+handleSubmit()
+ ↓
+preventDefault()
+ ↓
+formData
+ ↓
+Complete Object Available
+Final object:
+
+{
+    name: "Arun",
+    email: "arun@gmail.com",
+    age: "22",
+    city: "Chennai"
+}
+This object can later be:
+
+Validated
+Stored
+Sent to API
+Added to Array
+Displayed on Screen
+13. Important Interview Point
+Why use one object state for forms?
+When a form contains multiple related fields, an object can keep all form values together in one state.
+
+How can one function handle multiple inputs?
+Give every input a name matching the state object's property and use:
+
+const { name, value } = event.target;
+Then dynamically update:
+
+[name]: value
+Why use spread operator?
+To preserve the other properties while updating only the changed property.
+
+EASY MEMORY
+Multiple Inputs
+      ↓
+One Object
+      ↓
+Each Input has name
+      ↓
+Same handleChange
+      ↓
+Get name + value
+      ↓
+...formData
+      ↓
+[name]: value
+      ↓
+Updated Object
+Main Formula
+const handleChange = (event) => {
+
+    const { name, value } = event.target;
+
+    setFormData({
+        ...formData,
+        [name]: value
+    });
+};
+This is the main syntax to remember for multiple inputs using one object state and one common change function.
+
+npm run dev 

@@ -1,0 +1,12557 @@
+js notes
+
+day1
+JAVASCRIPT – BASIC NOTES
+
+1. JAVASCRIPT BASIC
+
+JavaScript is a programming language used to create dynamic and interactive web pages.
+
+Basic JavaScript process:
+
+File
+
+↓
+
+Folder
+
+↓
+
+Code
+
+↓
+
+JavaScript File
+
+↓
+
+Browser
+
+↓
+
+JavaScript Engine
+
+↓
+
+Execution
+
+2. FILE AND FOLDER
+
+A JavaScript project normally contains files and folders.
+
+Example:
+
+project/
+
+│
+
+├── index.html
+
+├── script.js
+
+└── style.css
+
+HTML file → Structure
+
+CSS file → Design
+
+JavaScript file → Logic / Behaviour
+
+3. JAVASCRIPT FILE
+
+JavaScript code can be written in a separate .js file.
+
+Example:
+
+script.js
+
+console.log("Hello JavaScript");
+
+HTML file:
+
+<script src="script.js"></script>
+
+The HTML file loads the JavaScript file into the webpage.
+
+4. BROWSER
+
+A browser is software used to access and display websites.
+
+Examples:
+
+Google Chrome
+
+Microsoft Edge
+
+Firefox
+
+Safari
+
+Opera
+
+The browser reads HTML, CSS and JavaScript and displays the webpage.
+
+5. JAVASCRIPT ENGINE
+
+The browser contains a JavaScript Engine.
+
+The JavaScript Engine is responsible for understanding and executing JavaScript code.
+
+Examples:
+
+Chrome → V8 Engine
+
+Edge → V8 Engine
+
+Firefox → SpiderMonkey
+
+Safari → JavaScriptCore
+
+6. V8 ENGINE
+
+V8 is Google's JavaScript Engine.
+
+Chrome uses the V8 Engine to execute JavaScript.
+
+Basic process:
+
+JavaScript Code
+
+↓
+
+V8 Engine
+
+↓
+
+Execution
+
+↓
+
+Result
+
+7. COMPILER
+
+A compiler is a program that translates source code into a form that the computer can execute.
+
+In JavaScript, modern engines use a combination of techniques such as parsing, interpretation and Just-In-Time (JIT) compilation to execute JavaScript efficiently.
+
+Simple learning flow:
+
+JavaScript Code
+
+↓
+
+JavaScript Engine
+
+↓
+
+Parse
+
+↓
+
+Compile / Execute
+
+↓
+
+Result
+
+8. MEMORY AND EXECUTION
+
+When JavaScript runs, the JavaScript Engine needs memory to store data and an execution mechanism to run the code.
+
+Simple process:
+
+JavaScript Code
+
+↓
+
+Memory
+
+↓
+
+Execution
+
+↓
+
+Result
+
+Example:
+
+var username = "React";
+
+The value "React" is stored in memory and can be used during execution.
+
+9. VARIABLES
+
+A variable is a named storage location used to store a value.
+
+Example:
+
+var username = "React";
+
+Here:
+
+var → Keyword
+
+username → Variable Name
+
+= → Assignment Operator
+
+"React" → Value
+
+10. VARIABLE DECLARATION
+
+Declaration means creating a variable without assigning a value.
+
+Example:
+
+var username;
+
+Here:
+
+var → Keyword
+
+username → Variable Name
+
+This is called variable declaration.
+
+11. INITIALIZATION
+
+Initialization means assigning an initial value to a variable.
+
+Example:
+
+var username = "React";
+
+Here:
+
+var username → Declaration
+
+= "React" → Initialization / Assignment
+
+12. ASSIGNMENT
+
+The assignment operator is:
+
+=
+
+It is used to assign a value to a variable.
+
+Example:
+
+var username;
+
+username = "React";
+
+13. VARIABLE DECLARATION KEYWORDS
+
+JavaScript has three main variable declaration keywords:
+
+var
+
+let
+
+const
+
+14. VAR
+
+var is the traditional JavaScript variable declaration keyword.
+
+Example:
+
+var username = "React";
+
+15. LET
+
+let was introduced in ES6.
+
+ES6 means ECMAScript 2015.
+
+Example:
+
+let city = "Chennai";
+
+16. CONST
+
+const was also introduced in ES6.
+
+const is used when the variable binding should not be reassigned.
+
+Example:
+
+const course = "JavaScript";
+
+17. ES6
+
+ES6 stands for ECMAScript 2015.
+
+ES6 introduced many modern JavaScript features.
+
+Important variable declarations:
+
+var
+
+let
+
+const
+
+18. VAR – TRADITIONAL
+
+var is the older/traditional way of declaring variables.
+
+Example:
+
+var username = "React";
+
+var city = "Chennai";
+
+19. LET – MODERN JAVASCRIPT
+
+let is used to declare variables whose value can be reassigned.
+
+Example:
+
+let username = "React";
+
+username = "JavaScript";
+
+20. CONST – CONSTANT BINDING
+
+const is used when the variable should not be reassigned.
+
+Example:
+
+const course = "React";
+
+The following is not allowed:
+
+const course = "React";
+
+course = "JavaScript";
+
+21. BASIC VARIABLE SYNTAX
+
+Syntax:
+
+keyword variableName = value;
+
+Example:
+
+var username = "React";
+
+Breakdown:
+
+var
+
+↓
+
+Keyword
+
+username
+
+↓
+
+Variable Name
+
+=
+
+↓
+
+Assignment Operator
+
+"React"
+
+↓
+
+Value
+
+22. MORE VARIABLE EXAMPLES
+
+var username = "React";
+
+var city = "Chennai";
+
+let course = "JavaScript";
+
+const age = 25;
+
+23. VARIABLE DECLARATION WITHOUT VALUE
+
+Variables can be declared without immediately assigning a value.
+
+Example:
+
+var username;
+
+let city;
+
+The variable can be assigned later.
+
+username = "React";
+
+city = "Chennai";
+
+24. VARIABLE NAMES
+
+A variable name should clearly describe the data stored in it.
+
+Good examples:
+
+var username;
+
+var userAge;
+
+var userEmail;
+
+let courseName;
+
+let studentCount;
+
+const companyName;
+
+25. GIVEN EXAMPLES
+
+var CallReact;
+
+var cemimaCity;
+
+let ballProcess;
+
+In these examples:
+
+var / let
+
+↓
+
+Keyword
+
+CallReact / cemimaCity / ballProcess
+
+↓
+
+Variable Name
+
+26. VARIABLE NAMING RULES
+
+A variable name:
+
+• Can contain letters
+
+• Can contain numbers
+
+• Can contain _
+
+• Can contain $
+
+• Cannot start with a number
+
+• Cannot contain spaces
+
+• Cannot use reserved JavaScript keywords
+
+• Is case-sensitive
+
+Valid:
+
+var username;
+
+var userName;
+
+var user1;
+
+var user_name;
+
+var $price;
+
+Invalid:
+
+var 1user;
+
+var user name;
+
+var var;
+
+27. CASE SENSITIVE
+
+JavaScript variable names are case-sensitive.
+
+Example:
+
+var username = "React";
+
+var Username = "JavaScript";
+
+These are two different variables.
+
+username
+
+and
+
+Username
+
+28. DATA
+
+A variable stores a value.
+
+Example:
+
+var username = "React";
+
+Here:
+
+username
+
+↓
+
+Variable
+
+"React"
+
+↓
+
+Value
+
+29. DATA TYPES
+
+JavaScript values have different data types.
+
+Basic data types include:
+
+String
+
+Number
+
+Boolean
+
+Undefined
+
+Null
+
+BigInt
+
+Symbol
+
+Objects are also an important JavaScript data type/category.
+
+30. STRING
+
+A String is text data.
+
+Example:
+
+var username = "React";
+
+var city = "Chennai";
+
+31. NUMBER
+
+Number is used for numeric values.
+
+Example:
+
+var age = 25;
+
+var price = 500;
+
+32. BOOLEAN
+
+Boolean has two values:
+
+true
+
+false
+
+Example:
+
+var isStudent = true;
+
+var isLoggedIn = false;
+
+33. UNDEFINED
+
+A variable that has been declared but has not been assigned a value has the value undefined.
+
+Example:
+
+var username;
+
+console.log(username);
+
+34. NULL
+
+null represents an intentional absence of a value.
+
+Example:
+
+var username = null;
+
+35. VARIABLE FLOW
+
+Example:
+
+var username = "React";
+
+Step 1:
+
+var
+
+↓
+
+Keyword
+
+Step 2:
+
+username
+
+↓
+
+Variable Name
+
+Step 3:
+
+=
+
+↓
+
+Assignment Operator
+
+Step 4:
+
+"React"
+
+↓
+
+Value
+
+Step 5:
+
+"React"
+
+↓
+
+String Data Type
+
+36. COMPLETE BASIC JAVASCRIPT FLOW
+
+File
+
+↓
+
+Folder
+
+↓
+
+JavaScript File
+
+↓
+
+Browser
+
+↓
+
+JavaScript Engine
+
+↓
+
+Memory
+
+↓
+
+Execution
+
+↓
+
+Result
+
+37. BASIC JAVASCRIPT EXAMPLE
+
+var username = "React";
+
+let city = "Chennai";
+
+const course = "JavaScript";
+
+console.log(username);
+
+console.log(city);
+
+console.log(course);
+
+38. IMPORTANT TERMS
+
+JavaScript
+
+→ Programming Language
+
+Browser
+
+→ Software used to access websites
+
+JavaScript Engine
+
+→ Executes JavaScript
+
+V8
+
+→ JavaScript Engine used by Chrome
+
+Variable
+
+→ Named reference used to store a value
+
+var
+
+→ Traditional variable declaration
+
+let
+
+→ Modern variable declaration
+
+const
+
+→ Variable declaration used when reassignment is not allowed
+
+Keyword
+
+→ Reserved word with a special meaning in JavaScript
+
+Variable Name
+
+→ Name given to a variable
+
+Assignment Operator
+
+→ =
+
+Value
+
+→ Data stored/referenced by a variable
+
+Data Type
+
+→ Type/category of a value
+
+ES6
+
+→ ECMAScript 2015
+
+39. INTERVIEW BASIC QUESTIONS
+
+1. What is JavaScript?
+
+2. What is a variable?
+
+3. What is variable declaration?
+
+4. What is initialization?
+
+5. What is an assignment operator?
+
+6. What are var, let and const?
+
+7. What is the difference between var, let and const?
+
+8. What is ES6?
+
+9. What is a JavaScript Engine?
+
+10. What is V8?
+
+11. Which browser uses the V8 JavaScript Engine?
+
+12. What is a data type?
+
+13. What is a String?
+
+14. What is a Number?
+
+15. What is a Boolean?
+
+16. What is undefined?
+
+17. What is null?
+
+18. What are the rules for naming variables?
+
+19. Is JavaScript case-sensitive?
+
+20. How does JavaScript execute inside a browser?
+
+40. QUICK MEMORY
+
+var username = "React";
+
+var
+
+↓
+
+Keyword
+
+username
+
+↓
+
+Variable Name
+
+=
+
+↓
+
+Assignment Operator
+
+"React"
+
+↓
+
+Value
+
+String
+
+↓
+
+Data Type
+
+FINAL FLOW:
+
+JavaScript
+
+↓
+
+File
+
+↓
+
+Browser
+
+↓
+
+JavaScript Engine
+
+↓
+
+V8
+
+↓
+
+Memory
+
+↓
+
+Execution
+
+↓
+
+Output
+
+
+day2
+
+DAY 2 – JAVASCRIPT VARIABLES & DATA TYPES
+
+=========================================
+
+1. WHAT IS A VARIABLE?
+
+A variable is a named reference used to store or hold a value in a JavaScript program.
+
+Example:
+
+var username = "React";
+
+Here:
+
+var
+
+↓
+
+Keyword
+
+username
+
+↓
+
+Variable Name
+
+=
+
+↓
+
+Assignment Operator
+
+"React"
+
+↓
+
+Value
+
+String
+
+↓
+
+Data Type
+
+2. WHY DO WE USE VARIABLES?
+
+Variables are used to:
+
+• Store data
+
+• Reuse data
+
+• Modify data
+
+• Perform calculations
+
+• Store user input
+
+• Store application state
+
+• Pass data between different parts of a program
+
+Example:
+
+let price = 500;
+
+let quantity = 2;
+
+let total = price * quantity;
+
+console.log(total);
+
+Output:
+
+1000
+
+3. VARIABLE DECLARATION
+
+Declaration means creating a variable.
+
+Example:
+
+var username;
+
+let city;
+
+const course = "JavaScript";
+
+4. VARIABLE INITIALIZATION
+
+Initialization means assigning an initial value to a variable.
+
+Example:
+
+var username = "React";
+
+Here:
+
+var username
+
+↓
+
+Declaration
+
+"React"
+
+↓
+
+Initial Value
+
+5. ASSIGNMENT
+
+Assignment means giving a value to a variable.
+
+Example:
+
+let username;
+
+username = "React";
+
+Here:
+
+let username
+
+↓
+
+Declaration
+
+username = "React"
+
+↓
+
+Assignment
+
+6. DECLARATION + INITIALIZATION
+
+Both can happen in one statement.
+
+Example:
+
+let username = "React";
+
+7. VARIABLE DECLARATION KEYWORDS
+
+JavaScript has three variable declaration keywords:
+
+var
+
+let
+
+const
+
+8. VAR
+
+var is the traditional variable declaration keyword in JavaScript.
+
+Example:
+
+var username = "React";
+
+The value can be changed.
+
+Example:
+
+var username = "React";
+
+username = "JavaScript";
+
+console.log(username);
+
+Output:
+
+JavaScript
+
+9. LET
+
+let was introduced in ES6.
+
+ES6 = ECMAScript 2015
+
+let is used when a variable's value may need to be changed.
+
+Example:
+
+let city = "Chennai";
+
+city = "Bangalore";
+
+console.log(city);
+
+Output:
+
+Bangalore
+
+10. CONST
+
+const was introduced in ES6.
+
+const is used when a variable binding should not be reassigned.
+
+Example:
+
+const course = "JavaScript";
+
+course = "React";
+
+This produces an error because the const variable cannot be reassigned.
+
+11. VAR VS LET VS CONST
+
+var:
+
+• Traditional
+
+• Function scoped
+
+• Can be redeclared
+
+• Can be reassigned
+
+• Hoisted and initialized with undefined
+
+let:
+
+• Modern
+
+• Block scoped
+
+• Cannot be redeclared in the same scope
+
+• Can be reassigned
+
+• Has a Temporal Dead Zone before declaration
+
+const:
+
+• Modern
+
+• Block scoped
+
+• Cannot be redeclared in the same scope
+
+• Cannot be reassigned
+
+• Has a Temporal Dead Zone before declaration
+
+• Must be initialized during declaration
+
+12. EXAMPLE OF VAR REDECLARATION
+
+var username = "React";
+
+var username = "JavaScript";
+
+console.log(username);
+
+Output:
+
+JavaScript
+
+13. LET REDECLARATION
+
+let username = "React";
+
+let username = "JavaScript";
+
+This produces an error in the same scope.
+
+14. CONST REDECLARATION
+
+const username = "React";
+
+const username = "JavaScript";
+
+This produces an error in the same scope.
+
+15. REASSIGNMENT
+
+var:
+
+var city = "Chennai";
+
+city = "Bangalore";
+
+let:
+
+let city = "Chennai";
+
+city = "Bangalore";
+
+const:
+
+const city = "Chennai";
+
+city = "Bangalore";
+
+The const reassignment produces an error.
+
+16. VARIABLE NAMING
+
+A variable should have a meaningful name.
+
+Good examples:
+
+let username;
+
+let userAge;
+
+let userEmail;
+
+let studentName;
+
+let courseName;
+
+let totalPrice;
+
+17. VARIABLE NAMING RULES
+
+Rule 1:
+
+A variable name can contain letters.
+
+let username;
+
+Rule 2:
+
+A variable name can contain numbers, but it cannot start with a number.
+
+Valid:
+
+let user1;
+
+Invalid:
+
+let 1user;
+
+Rule 3:
+
+A variable name can contain underscore.
+
+let user_name;
+
+Rule 4:
+
+A variable name can contain dollar sign.
+
+let $price;
+
+Rule 5:
+
+Spaces are not allowed.
+
+Invalid:
+
+let user name;
+
+Rule 6:
+
+Reserved keywords cannot be used as variable names.
+
+Invalid:
+
+let var;
+
+let let;
+
+let const;
+
+Rule 7:
+
+JavaScript is case-sensitive.
+
+username
+
+Username
+
+USERName
+
+These are different names.
+
+18. NAMING CONVENTION
+
+JavaScript commonly uses camelCase.
+
+Examples:
+
+let firstName;
+
+let lastName;
+
+let userEmail;
+
+let mobileNumber;
+
+let totalAmount;
+
+let studentCount;
+
+19. WHAT IS A DATA TYPE?
+
+A data type describes the kind of value stored or represented by a variable.
+
+Example:
+
+let username = "React";
+
+Here:
+
+"React"
+
+is a String value.
+
+Therefore:
+
+String
+
+↓
+
+Data Type
+
+20. JAVASCRIPT DATA TYPES
+
+JavaScript has the following primitive data types:
+
+1. String
+
+2. Number
+
+3. BigInt
+
+4. Boolean
+
+5. Undefined
+
+6. Null
+
+7. Symbol
+
+JavaScript also has:
+
+8. Object
+
+Arrays and functions are objects/categories within JavaScript's object system.
+
+21. PRIMITIVE DATA TYPES
+
+Primitive values are basic values that are not objects.
+
+The primitive data types are:
+
+String
+
+Number
+
+BigInt
+
+Boolean
+
+Undefined
+
+Null
+
+Symbol
+
+22. STRING
+
+A String represents text.
+
+Strings can be written using:
+
+Double quotes:
+
+let username = "React";
+
+Single quotes:
+
+let username = 'React';
+
+Template literals:
+
+let username = `React`;
+
+Example:
+
+let city = "Chennai";
+
+console.log(city);
+
+23. STRING EXAMPLES
+
+let firstName = "Rahul";
+
+let course = "JavaScript";
+
+let message = "Welcome to JavaScript";
+
+24. NUMBER
+
+Number is used for numeric values.
+
+Example:
+
+let age = 25;
+
+let price = 500;
+
+let percentage = 85.5;
+
+JavaScript's Number type represents both:
+
+• Integer values
+
+• Floating-point values
+
+25. NUMBER EXAMPLES
+
+let a = 10;
+
+let b = 20;
+
+let total = a + b;
+
+console.log(total);
+
+Output:
+
+30
+
+26. SPECIAL NUMBER VALUES
+
+JavaScript Number also includes special numeric values:
+
+NaN
+
+Infinity
+
+-Infinity
+
+27. NaN
+
+NaN means:
+
+Not-a-Number
+
+Example:
+
+let result = "Hello" * 5;
+
+console.log(result);
+
+Output:
+
+NaN
+
+28. INFINITY
+
+Infinity represents a value greater than the largest finite number.
+
+Example:
+
+let result = 10 / 0;
+
+console.log(result);
+
+Output:
+
+Infinity
+
+29. BOOLEAN
+
+Boolean has only two values:
+
+true
+
+false
+
+Example:
+
+let isLoggedIn = true;
+
+let isAdmin = false;
+
+30. BOOLEAN EXAMPLE
+
+let age = 20;
+
+let isAdult = age >= 18;
+
+console.log(isAdult);
+
+Output:
+
+true
+
+31. UNDEFINED
+
+undefined means a variable has been declared but no value has been assigned.
+
+Example:
+
+let username;
+
+console.log(username);
+
+Output:
+
+undefined
+
+32. NULL
+
+null represents an intentional absence of a value.
+
+Example:
+
+let selectedUser = null;
+
+Here, the programmer intentionally says:
+
+"There is currently no selected user."
+
+33. UNDEFINED VS NULL
+
+undefined:
+
+Value has not been assigned.
+
+Example:
+
+let username;
+
+null:
+
+The programmer intentionally assigns no value.
+
+Example:
+
+let username = null;
+
+Simple memory:
+
+undefined
+
+↓
+
+No value assigned yet
+
+null
+
+↓
+
+Intentionally empty
+
+34. BIGINT
+
+BigInt is used to represent very large integers beyond the safe integer range of the Number type.
+
+Example:
+
+let bigNumber = 123456789012345678901234567890n;
+
+The n at the end indicates a BigInt literal.
+
+35. SYMBOL
+
+Symbol creates unique values.
+
+Example:
+
+let id = Symbol("id");
+
+Every Symbol is unique.
+
+Example:
+
+let id1 = Symbol("id");
+
+let id2 = Symbol("id");
+
+console.log(id1 === id2);
+
+Output:
+
+false
+
+36. OBJECT
+
+Object is used to store collections of related data.
+
+Example:
+
+let student = {
+
+name: "Rahul",
+
+age: 22,
+
+course: "JavaScript"
+
+};
+
+37. OBJECT VALUES
+
+Example:
+
+let student = {
+
+name: "Rahul",
+
+age: 22,
+
+course: "JavaScript"
+
+};
+
+Here:
+
+student
+
+↓
+
+Object
+
+name
+
+↓
+
+Property
+
+"Rahul"
+
+↓
+
+String Value
+
+age
+
+↓
+
+Property
+
+22
+
+↓
+
+Number Value
+
+38. ARRAY
+
+An Array stores multiple values in an ordered collection.
+
+Example:
+
+let courses = [
+
+"HTML",
+
+"CSS",
+
+"JavaScript",
+
+"React"
+
+];
+
+39. ARRAY DATA
+
+Example:
+
+let numbers = [10, 20, 30, 40];
+
+Array indexes start from:
+
+0
+
+Example:
+
+numbers[0]
+
+↓
+
+10
+
+numbers[1]
+
+↓
+
+20
+
+40. FUNCTION
+
+A function is a reusable block of code.
+
+Example:
+
+function greet() {
+
+console.log("Hello");
+
+}
+
+41. TYPEOF OPERATOR
+
+The typeof operator is used to determine the type of a value.
+
+Example:
+
+let username = "React";
+
+console.log(typeof username);
+
+Output:
+
+string
+
+42. TYPEOF EXAMPLES
+
+console.log(typeof "React");
+
+Output:
+
+string
+
+console.log(typeof 100);
+
+Output:
+
+number
+
+console.log(typeof true);
+
+Output:
+
+boolean
+
+console.log(typeof undefined);
+
+Output:
+
+undefined
+
+console.log(typeof 100n);
+
+Output:
+
+bigint
+
+console.log(typeof Symbol("id"));
+
+Output:
+
+symbol
+
+console.log(typeof {});
+
+Output:
+
+object
+
+console.log(typeof []);
+
+Output:
+
+object
+
+43. IMPORTANT typeof NULL POINT
+
+JavaScript has a historical behavior:
+
+typeof null
+
+returns:
+
+"object"
+
+Example:
+
+console.log(typeof null);
+
+Output:
+
+object
+
+This is a well-known JavaScript quirk.
+
+44. VARIABLE + DATA TYPE
+
+Example:
+
+let username = "React";
+
+Variable:
+
+username
+
+Value:
+
+"React"
+
+Data Type:
+
+String
+
+Example:
+
+let age = 25;
+
+Variable:
+
+age
+
+Value:
+
+25
+
+Data Type:
+
+Number
+
+Example:
+
+let isStudent = true;
+
+Variable:
+
+isStudent
+
+Value:
+
+true
+
+Data Type:
+
+Boolean
+
+45. MULTIPLE DATA TYPES
+
+let username = "Rahul";
+
+let age = 22;
+
+let salary = 35000.50;
+
+let isEmployee = true;
+
+let address = null;
+
+let phoneNumber;
+
+let bigNumber = 12345678901234567890n;
+
+46. DATA TYPE CHECKING
+
+let username = "Rahul";
+
+let age = 22;
+
+let isEmployee = true;
+
+console.log(typeof username);
+
+console.log(typeof age);
+
+console.log(typeof isEmployee);
+
+Output:
+
+string
+
+number
+
+boolean
+
+47. DYNAMIC TYPING
+
+JavaScript is dynamically typed.
+
+This means a variable does not need a fixed data type declaration.
+
+Example:
+
+let value = "React";
+
+value = 100;
+
+value = true;
+
+The same variable can refer to values of different types during execution.
+
+48. STATIC VS DYNAMIC TYPING
+
+Static Typed:
+
+The variable's type is generally checked/defined more strictly.
+
+Examples:
+
+Java
+
+C++
+
+C#
+
+TypeScript
+
+Dynamic Typed:
+
+The type is determined at runtime.
+
+Examples:
+
+JavaScript
+
+Python
+
+Ruby
+
+49. PRIMITIVE VS OBJECT
+
+Primitive:
+
+String
+
+Number
+
+BigInt
+
+Boolean
+
+Undefined
+
+Null
+
+Symbol
+
+Non-primitive / Object:
+
+Object
+
+Array
+
+Function
+
+Date
+
+Map
+
+Set
+
+etc.
+
+50. IMPORTANT DIFFERENCE
+
+Primitive:
+
+let a = 10;
+
+let b = a;
+
+b = 20;
+
+console.log(a);
+
+Output:
+
+10
+
+The original primitive value is not changed.
+
+51. OBJECT REFERENCE EXAMPLE
+
+let student1 = {
+
+name: "Rahul"
+
+};
+
+let student2 = student1;
+
+student2.name = "Guna";
+
+console.log(student1.name);
+
+Output:
+
+Guna
+
+Both variables refer to the same object.
+
+52. MEMORY CONCEPT
+
+When JavaScript executes:
+
+let username = "React";
+
+The JavaScript engine manages memory for the variable and its value.
+
+Conceptually:
+
+Variable
+
+↓
+
+username
+
+↓
+
+"React"
+
+For objects:
+
+let student = {
+
+name: "Rahul"
+
+};
+
+The variable holds a reference to the object.
+
+Conceptually:
+
+student
+
+↓
+
+Reference
+
+↓
+
+Object
+
+53. STACK AND HEAP – BASIC CONCEPT
+
+JavaScript engines use memory structures including:
+
+Stack
+
+Heap
+
+Simplified learning model:
+
+Primitive/local execution data
+
+↓
+
+Stack
+
+Objects and dynamically allocated data
+
+↓
+
+Heap
+
+Important:
+
+This is a simplified mental model. JavaScript specifications do not require a particular stack/heap implementation.
+
+54. VARIABLE DECLARATION EXAMPLES
+
+var CallReact;
+
+var cemimaCity;
+
+let ballProcess;
+
+let username = "React";
+
+const course = "JavaScript";
+
+55. PRACTICAL EXAMPLE
+
+let studentName = "Rahul";
+
+let studentAge = 22;
+
+let courseName = "MERN";
+
+let fees = 25000;
+
+let isPlaced = false;
+
+console.log(studentName);
+
+console.log(studentAge);
+
+console.log(courseName);
+
+console.log(fees);
+
+console.log(isPlaced);
+
+56. SIMPLE DATA TYPE PROGRAM
+
+let name = "Rahul";
+
+let age = 22;
+
+let salary = 35000;
+
+let isEmployee = true;
+
+let address = null;
+
+let phone;
+
+console.log(typeof name);
+
+console.log(typeof age);
+
+console.log(typeof salary);
+
+console.log(typeof isEmployee);
+
+console.log(typeof address);
+
+console.log(typeof phone);
+
+57. VARIABLE CHANGE EXAMPLE
+
+let score = 50;
+
+console.log(score);
+
+score = 80;
+
+console.log(score);
+
+Output:
+
+50
+
+80
+
+58. CONST EXAMPLE
+
+const companyName = "SLA";
+
+console.log(companyName);
+
+The variable cannot be reassigned:
+
+companyName = "ABC";
+
+This produces an error.
+
+59. IMPORTANT const CONCEPT
+
+const prevents reassignment of the variable binding.
+
+Example:
+
+const student = {
+
+name: "Rahul"
+
+};
+
+student.name = "Guna";
+
+This is allowed because the object itself can be mutated.
+
+But:
+
+student = {
+
+name: "Kumar"
+
+};
+
+This is not allowed because the const variable cannot be reassigned.
+
+60. IMPORTANT TERMS
+
+Variable
+
+→ Named reference used to store or access data.
+
+Declaration
+
+→ Creating a variable.
+
+Initialization
+
+→ Giving an initial value.
+
+Assignment
+
+→ Giving or changing a value.
+
+Keyword
+
+→ Reserved word with special meaning.
+
+Value
+
+→ Actual data.
+
+Data Type
+
+→ Type/category of a value.
+
+Primitive
+
+→ Basic non-object value.
+
+Object
+
+→ Collection/reference-based value.
+
+typeof
+
+→ Operator used to check the type of a value.
+
+ES6
+
+→ ECMAScript 2015.
+
+61. INTERVIEW QUESTIONS
+
+1. What is a variable?
+
+2. Why do we use variables?
+
+3. What is variable declaration?
+
+4. What is initialization?
+
+5. What is assignment?
+
+6. What are var, let and const?
+
+7. What is the difference between var, let and const?
+
+8. What is ES6?
+
+9. What is a data type?
+
+10. What are primitive data types in JavaScript?
+
+11. What is a String?
+
+12. What is a Number?
+
+13. What is a Boolean?
+
+14. What is undefined?
+
+15. What is null?
+
+16. What is the difference between null and undefined?
+
+17. What is BigInt?
+
+18. What is Symbol?
+
+19. What is an Object?
+
+20. What is an Array?
+
+21. What is typeof?
+
+22. What does typeof null return?
+
+23. Is JavaScript statically typed or dynamically typed?
+
+24. What is the difference between primitive and object values?
+
+25. What is the difference between declaration and initialization?
+
+26. Can a let variable be reassigned?
+
+27. Can a const variable be reassigned?
+
+28. Can a var variable be redeclared?
+
+29. Why should meaningful variable names be used?
+
+30. Is JavaScript case-sensitive?
+
+62. QUICK REVISION
+
+VARIABLES:
+
+var
+
+let
+
+const
+
+DECLARATION:
+
+let username;
+
+INITIALIZATION:
+
+let username = "React";
+
+ASSIGNMENT:
+
+username = "JavaScript";
+
+PRIMITIVE DATA TYPES:
+
+String
+
+Number
+
+BigInt
+
+Boolean
+
+Undefined
+
+Null
+
+Symbol
+
+OBJECT:
+
+Object
+
+Array
+
+Function
+
+Date
+
+Map
+
+Set
+
+TYPE CHECKING:
+
+typeof
+
+EXAMPLE:
+
+let username = "React";
+
+typeof username;
+
+Output:
+
+"string"
+
+63. FINAL FLOW
+
+VARIABLE
+
+Keyword
+
+↓
+
+Variable Name
+
+↓
+
+Assignment Operator
+
+↓
+
+Value
+
+↓
+
+Data Type
+
+Example:
+
+let username = "React";
+
+let
+
+↓
+
+Keyword
+
+username
+
+↓
+
+Variable Name
+
+=
+
+↓
+
+Assignment Operator
+
+"React"
+
+↓
+
+Value
+
+String
+
+↓
+
+Data Type
+
+DATA TYPES
+
+String
+
+↓
+
+"React"
+
+Number
+
+↓
+
+100
+
+Boolean
+
+↓
+
+true
+
+Undefined
+
+↓
+
+undefined
+
+Null
+
+↓
+
+null
+
+BigInt
+
+↓
+
+1000000000000000000n
+
+Symbol
+
+↓
+
+Symbol("id")
+
+Object
+
+↓
+
+{name: "Rahul"}
+
+FINAL MEMORY:
+
+Variable
+
+→ Stores/holds a reference to data
+
+Data Type
+
+→ Describes the kind of value
+
+var
+
+→ Traditional
+
+let
+
+→ Reassignable + block scoped
+
+const
+
+→ Non-reassignable binding + block scoped
+
+String
+
+→ Text
+
+Number
+
+→ Numeric values
+
+Boolean
+
+→ true / false
+
+Undefined
+
+→ Declared but not assigned
+
+Null
+
+→ Intentionally empty
+
+BigInt
+
+→ Very large integers
+
+Symbol
+
+→ Unique values
+
+Object
+
+→ Collection/reference-based value
+
+typeof
+
+→ Checks the type
+
+day3
+JAVASCRIPT – OPERATORS
+
+1. Arithmetic Operators
+
++ Addition
+
+- Subtraction
+
+* Multiplication
+
+/ Division
+
+% Modulus
+
+** Exponentiation
+
+2. Assignment Operators
+
+= Assignment
+
++= Add and Assign
+
+-= Subtract and Assign
+
+*= Multiply and Assign
+
+/= Divide and Assign
+
+%= Modulus and Assign
+
+**= Exponentiation and Assign
+
+3. Comparison Operators
+
+== Equal
+
+=== Strict Equal
+
+!= Not Equal
+
+!== Strict Not Equal
+
+> Greater Than
+
+< Less Than
+
+>= Greater Than or Equal
+
+<= Less Than or Equal
+
+4. Logical Operators
+
+&& AND
+
+|| OR
+
+! NOT
+
+5. Increment Operator
+
+++ Increment by 1
+
+6. Decrement Operator
+
+-- Decrement by 1
+
+
+
+day4
+JAVASCRIPT – CONDITIONS
+
+=======================
+
+1. WHAT IS A CONDITION?
+
+A condition is an expression that checks whether something is true or false.
+
+Example:
+
+let age = 20;
+
+age >= 18
+
+Result:
+
+true
+
+2. WHY DO WE USE CONDITIONS?
+
+Conditions are used to make decisions in a program.
+
+Example:
+
+If age is 18 or above
+
+→ Eligible
+
+Otherwise
+
+→ Not Eligible
+
+3. CONDITIONAL STATEMENTS
+
+JavaScript provides:
+
+1. if
+
+2. if...else
+
+3. if...else if...else
+
+4. Nested if
+
+5. Ternary operator
+
+6. switch
+
+4. if STATEMENT
+
+Used when we want to execute code only when a condition is true.
+
+Syntax:
+
+if (condition) {
+
+// code
+
+}
+
+Example:
+
+let age = 20;
+
+if (age >= 18) {
+
+console.log("Eligible");
+
+}
+
+5. if...else
+
+Used when there are two possible results.
+
+Syntax:
+
+if (condition) {
+
+// true
+
+} else {
+
+// false
+
+}
+
+Example:
+
+let age = 16;
+
+if (age >= 18) {
+
+console.log("Eligible");
+
+} else {
+
+console.log("Not Eligible");
+
+}
+
+6. if...else if...else
+
+Used when there are multiple conditions.
+
+Syntax:
+
+if (condition1) {
+
+} else if (condition2) {
+
+} else {
+
+}
+
+Example:
+
+let mark = 75;
+
+if (mark >= 90) {
+
+console.log("A+");
+
+} else if (mark >= 75) {
+
+console.log("A");
+
+} else if (mark >= 50) {
+
+console.log("B");
+
+} else {
+
+console.log("Fail");
+
+}
+
+7. NESTED if
+
+An if statement inside another if statement.
+
+Example:
+
+let age = 22;
+
+let hasId = true;
+
+if (age >= 18) {
+
+if (hasId) {
+
+console.log("Entry Allowed");
+
+}
+
+}
+
+8. CONDITIONS WITH COMPARISON OPERATORS
+
+Commonly used operators:
+
+>
+
+<
+
+>=
+
+<=
+
+==
+
+===
+
+!=
+
+!==
+
+Example:
+
+let age = 20;
+
+if (age >= 18) {
+
+console.log("Adult");
+
+}
+
+9. CONDITIONS WITH LOGICAL OPERATORS
+
+AND:
+
+&&
+
+OR:
+
+||
+
+NOT:
+
+!
+
+Example:
+
+let age = 22;
+
+let hasId = true;
+
+if (age >= 18 && hasId) {
+
+console.log("Allowed");
+
+}
+
+10. TERNARY OPERATOR
+
+Short form of simple if...else.
+
+Syntax:
+
+condition ? trueValue : falseValue;
+
+Example:
+
+let age = 20;
+
+let result = age >= 18
+
+? "Adult"
+
+: "Minor";
+
+console.log(result);
+
+day5
+
+JAVASCRIPT – CONTROL STATEMENTS & LOOPS
+
+=======================================
+
+1. WHAT IS A CONTROL STATEMENT?
+
+A control statement controls the flow or execution order of a JavaScript program.
+
+Normally:
+
+Code 1
+
+↓
+
+Code 2
+
+↓
+
+Code 3
+
+With control statements, we can decide:
+
+Condition
+
+↓
+
+Which code should execute?
+
+2. TYPES OF CONTROL STATEMENTS
+
+JavaScript control flow mainly includes:
+
+1. Conditional Statements
+
+→ if
+
+→ if...else
+
+→ else if
+
+→ switch
+
+2. Looping Statements
+
+→ for
+
+→ while
+
+→ do...while
+
+3. Jump / Transfer Statements
+
+→ break
+
+→ continue
+
+→ return
+
+==================================================
+
+3. SWITCH STATEMENT
+
+==================================================
+
+The switch statement is used when we need to compare one value with multiple fixed values.
+
+SYNTAX:
+
+switch (expression) {
+
+case value1:
+
+// code
+
+break;
+
+case value2:
+
+// code
+
+break;
+
+case value3:
+
+// code
+
+break;
+
+default:
+
+// code
+
+}
+
+4. SWITCH – BASIC EXAMPLE
+
+let day = 2;
+
+switch (day) {
+
+case 1:
+
+console.log("Monday");
+
+break;
+
+case 2:
+
+console.log("Tuesday");
+
+break;
+
+case 3:
+
+console.log("Wednesday");
+
+break;
+
+default:
+
+console.log("Invalid Day");
+
+}
+
+OUTPUT:
+
+Tuesday
+
+5. HOW SWITCH WORKS
+
+Example:
+
+let day = 2;
+
+switch (day) {
+
+case 1:
+
+console.log("Monday");
+
+break;
+
+case 2:
+
+console.log("Tuesday");
+
+break;
+
+case 3:
+
+console.log("Wednesday");
+
+break;
+
+default:
+
+console.log("Invalid Day");
+
+}
+
+PROCESS:
+
+day = 2
+
+↓
+
+switch checks day
+
+↓
+
+case 1 → No
+
+↓
+
+case 2 → Yes
+
+↓
+
+Execute "Tuesday"
+
+↓
+
+break
+
+↓
+
+Exit switch
+
+6. WHAT IS case?
+
+case defines a possible value.
+
+Example:
+
+case 1:
+
+console.log("Monday");
+
+7. WHAT IS break?
+
+break stops the switch after the matching case is executed.
+
+Example:
+
+case 2:
+
+console.log("Tuesday");
+
+break;
+
+Without break, JavaScript can continue executing the following cases.
+
+This is called FALL-THROUGH.
+
+8. WHAT IS default?
+
+default executes when none of the cases match.
+
+Example:
+
+let day = 10;
+
+switch (day) {
+
+case 1:
+
+console.log("Monday");
+
+break;
+
+case 2:
+
+console.log("Tuesday");
+
+break;
+
+default:
+
+console.log("Invalid Day");
+
+}
+
+OUTPUT:
+
+Invalid Day
+
+==================================================
+
+9. SWITCH REAL-TIME EXAMPLE
+
+==================================================
+
+let course = "React";
+
+switch (course) {
+
+case "HTML":
+
+console.log("HTML Course");
+
+break;
+
+case "CSS":
+
+console.log("CSS Course");
+
+break;
+
+case "JavaScript":
+
+console.log("JavaScript Course");
+
+break;
+
+case "React":
+
+console.log("React Course");
+
+break;
+
+default:
+
+console.log("Course Not Found");
+
+}
+
+OUTPUT:
+
+React Course
+
+==================================================
+
+10. SWITCH VS IF
+
+==================================================
+
+IF:
+
+Used mainly for conditions and ranges.
+
+Example:
+
+let age = 22;
+
+if (age >= 18) {
+
+console.log("Adult");
+
+}
+
+SWITCH:
+
+Used mainly when comparing one expression against multiple fixed values.
+
+Example:
+
+let day = 2;
+
+switch (day) {
+
+case 1:
+
+console.log("Monday");
+
+break;
+
+case 2:
+
+console.log("Tuesday");
+
+break;
+
+}
+
+MAIN DIFFERENCE:
+
+if
+
+↓
+
+Conditions / ranges / complex expressions
+
+switch
+
+↓
+
+One value + multiple fixed cases
+
+Example:
+
+IF is better:
+
+if (mark >= 90) {
+
+console.log("A+");
+
+}
+
+SWITCH is better:
+
+switch (day) {
+
+case 1:
+
+console.log("Monday");
+
+break;
+
+case 2:
+
+console.log("Tuesday");
+
+break;
+
+}
+
+==================================================
+
+11. LOOPS
+
+==================================================
+
+A loop is used to execute the same block of code repeatedly while a condition or iteration rule allows it.
+
+WHY DO WE USE LOOPS?
+
+Without a loop:
+
+console.log(1);
+
+console.log(2);
+
+console.log(3);
+
+console.log(4);
+
+console.log(5);
+
+Using a loop:
+
+for (let i = 1; i <= 5; i++) {
+
+console.log(i);
+
+}
+
+LOOP BENEFITS:
+
+• Reduces repeated code
+
+• Saves time
+
+• Processes multiple values
+
+• Works with arrays and collections
+
+• Automates repeated tasks
+
+==================================================
+
+12. TYPES OF LOOPS
+
+==================================================
+
+JavaScript basic loops:
+
+1. for
+
+2. while
+
+3. do...while
+
+==================================================
+
+13. FOR LOOP
+
+==================================================
+
+The for loop is commonly used when we know how many times we want to repeat something.
+
+SYNTAX:
+
+for (initialization; condition; increment/decrement) {
+
+// code
+
+}
+
+14. FOR LOOP BASIC EXAMPLE
+
+for (let i = 1; i <= 5; i++) {
+
+console.log(i);
+
+}
+
+OUTPUT:
+
+1
+
+2
+
+3
+
+4
+
+5
+
+15. FOR LOOP STEP-BY-STEP
+
+Code:
+
+for (let i = 1; i <= 5; i++) {
+
+console.log(i);
+
+}
+
+STEP 1 – INITIALIZATION
+
+let i = 1;
+
+The loop starts with i = 1.
+
+STEP 2 – CONDITION
+
+i <= 5
+
+JavaScript checks whether the condition is true.
+
+STEP 3 – EXECUTE
+
+console.log(i);
+
+STEP 4 – INCREMENT
+
+i++
+
+The value increases by 1.
+
+STEP 5 – CONDITION AGAIN
+
+i <= 5
+
+FLOW:
+
+Initialization
+
+↓
+
+Condition
+
+↓
+
+True?
+
+↓
+
+Execute Code
+
+↓
+
+Increment
+
+↓
+
+Condition
+
+↓
+
+True?
+
+↓
+
+Execute
+
+↓
+
+...
+
+↓
+
+False
+
+↓
+
+Exit Loop
+
+16. FOR LOOP EXAMPLE
+
+for (let i = 1; i <= 3; i++) {
+
+console.log("Hello");
+
+}
+
+OUTPUT:
+
+Hello
+
+Hello
+
+Hello
+
+==================================================
+
+17. WHILE LOOP
+
+==================================================
+
+The while loop executes code while a condition is true.
+
+SYNTAX:
+
+while (condition) {
+
+// code
+
+}
+
+18. WHILE LOOP EXAMPLE
+
+let i = 1;
+
+while (i <= 5) {
+
+console.log(i);
+
+i++;
+
+}
+
+OUTPUT:
+
+1
+
+2
+
+3
+
+4
+
+5
+
+19. WHILE LOOP PROCESS
+
+STEP 1:
+
+let i = 1;
+
+STEP 2:
+
+Check:
+
+i <= 5
+
+STEP 3:
+
+If true:
+
+console.log(i);
+
+STEP 4:
+
+Increment:
+
+i++
+
+STEP 5:
+
+Check the condition again.
+
+FLOW:
+
+Initialization
+
+↓
+
+Condition
+
+↓
+
+True
+
+↓
+
+Execute
+
+↓
+
+Update
+
+↓
+
+Condition
+
+↓
+
+...
+
+↓
+
+False
+
+↓
+
+Exit
+
+IMPORTANT:
+
+In a while loop, make sure the condition eventually becomes false.
+
+Otherwise, you can create an infinite loop.
+
+==================================================
+
+20. DO...WHILE LOOP
+
+==================================================
+
+The do...while loop executes the code first and checks the condition afterward.
+
+SYNTAX:
+
+do {
+
+// code
+
+} while (condition);
+
+21. DO...WHILE EXAMPLE
+
+let i = 1;
+
+do {
+
+console.log(i);
+
+i++;
+
+} while (i <= 5);
+
+OUTPUT:
+
+1
+
+2
+
+3
+
+4
+
+5
+
+22. DO...WHILE PROCESS
+
+STEP 1:
+
+Start
+
+STEP 2:
+
+Execute the code
+
+STEP 3:
+
+Update the value
+
+STEP 4:
+
+Check the condition
+
+STEP 5:
+
+If true → repeat
+
+STEP 6:
+
+If false → stop
+
+FLOW:
+
+Start
+
+↓
+
+Execute
+
+↓
+
+Update
+
+↓
+
+Condition
+
+↓
+
+True → Execute Again
+
+↓
+
+False → Exit
+
+==================================================
+
+23. IMPORTANT DIFFERENCE
+
+==================================================
+
+FOR:
+
+Initialization
+
+↓
+
+Condition
+
+↓
+
+Code
+
+↓
+
+Update
+
+WHILE:
+
+Initialization
+
+↓
+
+Condition
+
+↓
+
+Code
+
+↓
+
+Update
+
+DO...WHILE:
+
+Code
+
+↓
+
+Update
+
+↓
+
+Condition
+
+==================================================
+
+24. MAIN DIFFERENCE – for vs while vs do...while
+
+==================================================
+
+FOR:
+
+Use when the number of iterations is generally known.
+
+Example:
+
+for (let i = 1; i <= 10; i++) {
+
+console.log(i);
+
+}
+
+WHILE:
+
+Use when repetition depends mainly on a condition.
+
+Example:
+
+let i = 1;
+
+while (i <= 10) {
+
+console.log(i);
+
+i++;
+
+}
+
+DO...WHILE:
+
+Use when the code must execute at least once before checking the condition.
+
+Example:
+
+let i = 10;
+
+do {
+
+console.log(i);
+
+i++;
+
+} while (i <= 5);
+
+OUTPUT:
+
+10
+
+WHY?
+
+The code executes first.
+
+Only after execution does JavaScript check:
+
+10 <= 5
+
+false
+
+So the loop stops.
+
+==================================================
+
+25. BREAK
+
+==================================================
+
+break immediately stops a loop.
+
+Example:
+
+for (let i = 1; i <= 10; i++) {
+
+if (i === 5) {
+
+break;
+
+}
+
+console.log(i);
+
+}
+
+OUTPUT:
+
+1
+
+2
+
+3
+
+4
+
+==================================================
+
+26. CONTINUE
+
+==================================================
+
+continue skips the current iteration and moves to the next iteration.
+
+Example:
+
+for (let i = 1; i <= 5; i++) {
+
+if (i === 3) {
+
+continue;
+
+}
+
+console.log(i);
+
+}
+
+OUTPUT:
+
+1
+
+2
+
+4
+
+5
+
+==================================================
+
+27. CONTROL STATEMENT COMPLETE STRUCTURE
+
+==================================================
+
+CONTROL STATEMENTS
+
+↓
+
+CONDITIONAL
+
+↓
+
+if
+
+if...else
+
+else if
+
+switch
+
+↓
+
+LOOPING
+
+↓
+
+for
+
+while
+
+do...while
+
+↓
+
+JUMP / TRANSFER
+
+↓
+
+break
+
+continue
+
+return
+
+==================================================
+
+28. QUICK REVISION
+
+==================================================
+
+SWITCH
+
+→ One value + multiple fixed cases
+
+IF
+
+→ Conditions, ranges and complex expressions
+
+FOR
+
+→ Repetition with initialization, condition and update
+
+WHILE
+
+→ Repeat while condition is true
+
+DO...WHILE
+
+→ Execute at least once, then check condition
+
+BREAK
+
+→ Stop loop/switch
+
+CONTINUE
+
+→ Skip current iteration
+
+FINAL LOOP STRUCTURE:
+
+FOR:
+
+for (initialization; condition; update) {
+
+code
+
+}
+
+WHILE:
+
+while (condition) {
+
+code
+
+}
+
+DO...WHILE:
+
+do {
+
+code
+
+} while (condition);
+
+day6
+Factorial
+
+Sum
+
+Average
+
+Square
+
+Cube
+
+Power
+
+Multiplication
+
+Percentage
+
+Simple
+
+Interest
+
+Compound
+
+Interest Area
+
+Perimeter
+
+Volume
+
+Speed Distance
+
+Time Profit
+
+Loss
+
+Discount
+
+LCM
+
+GCD / HCF
+
+Arithmetic Progression
+
+Fibonacci
+
+Series Sum of Series primitive test basic 
+
+day6 non primitive
+JavaScript for Loop — Primitive Basics
+
+1. Primitive Data Types
+JavaScript-ல் முக்கியமான primitive data types:
+
+let name = "Ravi";       // String
+let age = 25;            // Number
+let isActive = true;     // Boolean
+let value = null;       // Null
+let data;                // Undefined
+let big = 123n;          // BigInt
+let id = Symbol("id");   // Symbol
+Logical programming ஆரம்பிக்கும்போது முக்கியமாக:
+
+String
+Number
+Boolean
+இவைகளை வைத்து practice பண்ணினால் போதும்.
+
+2. for Loop Basic Structure
+for (initialization; condition; increment) {
+
+    // code
+
+}
+Example:
+
+for (let i = 1; i <= 5; i++) {
+    console.log(i);
+}
+இதில்:
+
+let i = 1   → Starting value
+i <= 5      → Condition
+i++         → Update
+3. Multi-Line Output
+ஒவ்வொரு iteration-லும் console.log() பயன்படுத்தினால் multiple lines வரும்.
+
+for (let i = 1; i <= 5; i++) {
+    console.log(i);
+}
+Output:
+
+1
+2
+3
+4
+5
+Remember
+console.log()
+       ↓
+New line
+4. Single-Line Output
+ஒரே line-ல் output வேண்டுமென்றால் result-ஐ ஒரு variable-ல் சேர்க்கலாம்.
+
+let result = "";
+
+for (let i = 1; i <= 5; i++) {
+    result = result + i + " ";
+}
+
+console.log(result);
+Output:
+
+1 2 3 4 5
+Flow
+result = ""
+
+1 → "1 "
+2 → "1 2 "
+3 → "1 2 3 "
+4 → "1 2 3 4 "
+5 → "1 2 3 4 5 "
+5. Single Output
+ஒரு final answer மட்டும் வேண்டும் என்றால், loop-க்குள் console.log() வைக்காமல், result-ஐ calculate பண்ணி வெளியே print பண்ணலாம்.
+
+Example — Sum
+let sum = 0;
+
+for (let i = 1; i <= 5; i++) {
+    sum = sum + i;
+}
+
+console.log(sum);
+Output:
+
+15
+இங்கே 5 numbers process ஆனாலும் ஒரே output:
+
+15
+6. Single Output — Highest Number
+let highest = 0;
+
+for (let i = 1; i <= 10; i++) {
+
+    if (i > highest) {
+        highest = i;
+    }
+
+}
+
+console.log("Highest:", highest);
+Output:
+
+Highest: 10
+7. Single Output — Even Number Count
+let count = 0;
+
+for (let i = 1; i <= 10; i++) {
+
+    if (i % 2 === 0) {
+        count++;
+    }
+
+}
+
+console.log("Even Count:", count);
+Output:
+
+Even Count: 5
+8. Multi-Line Even Numbers
+for (let i = 1; i <= 10; i++) {
+
+    if (i % 2 === 0) {
+        console.log(i);
+    }
+
+}
+Output:
+
+2
+4
+6
+8
+10
+9. Single-Line Even Numbers
+let result = "";
+
+for (let i = 1; i <= 10; i++) {
+
+    if (i % 2 === 0) {
+        result = result + i + " ";
+    }
+
+}
+
+console.log(result);
+Output:
+
+2 4 6 8 10
+10. Single Output vs Single Line
+இது ரொம்ப important.
+
+Single output
+ஒரே answer:
+
+15
+Example:
+
+let sum = 0;
+
+for (let i = 1; i <= 5; i++) {
+    sum = sum + i;
+}
+
+console.log(sum);
+Single line
+பல values, ஆனால் ஒரே line:
+
+1 2 3 4 5
+Example:
+
+let result = "";
+
+for (let i = 1; i <= 5; i++) {
+    result = result + i + " ";
+}
+
+console.log(result);
+So:
+
+Single Output → One final answer
+Single Line   → Multiple values in one line
+Multi Line    → Each value in separate line
+11. String — Multi-Line
+let name = "JavaScript";
+
+for (let i = 0; i < name.length; i++) {
+    console.log(name[i]);
+}
+Output:
+
+J
+a
+v
+a
+S
+c
+r
+i
+p
+t
+12. String — Single Line
+let name = "JavaScript";
+let result = "";
+
+for (let i = 0; i < name.length; i++) {
+    result = result + name[i];
+}
+
+console.log(result);
+Output:
+
+JavaScript
+13. String — Single Character Output
+let name = "JavaScript";
+
+for (let i = 0; i < name.length; i++) {
+
+    if (name[i] === "S") {
+        console.log(name[i]);
+        break;
+    }
+
+}
+Output:
+
+S
+இங்கே break use பண்ணினதால் first matching value கிடைத்ததும் loop stop.
+
+14. break
+Loop-ஐ முழுவதுமாக stop செய்ய:
+
+for (let i = 1; i <= 10; i++) {
+
+    if (i === 5) {
+        break;
+    }
+
+    console.log(i);
+}
+Output:
+
+1
+2
+3
+4
+Rule
+break → Stop the loop
+15. continue
+Current iteration மட்டும் skip செய்ய:
+
+for (let i = 1; i <= 5; i++) {
+
+    if (i === 3) {
+        continue;
+    }
+
+    console.log(i);
+}
+Output:
+
+1
+2
+4
+5
+Rule
+continue → Skip current iteration
+
+
+
+Pattern 1 — Print
+for (let i = 1; i <= 5; i++) {
+    console.log(i);
+}
+Pattern 2 — Collect
+let result = "";
+
+for (let i = 1; i <= 5; i++) {
+    result = result + i + " ";
+}
+
+console.log(result);
+Pattern 3 — Calculate
+let result = 0;
+
+for (let i = 1; i <= 5; i++) {
+    result = result + i;
+}
+
+console.log(result);
+Pattern 4 — Find
+for (let i = 1; i <= 10; i++) {
+
+    if (i === 7) {
+        console.log(i);
+        break;
+    }
+
+}
+day 7
+
+1. Array என்றால் என்ன?
+
+ஒரே variable-க்குள் multiple values store பண்ணுவது Array.
+
+Creation
+let fruits = ["Apple", "Mango", "Orange", "Banana"];
+Accessing
+Array index எப்போதும் 0-ல் start ஆகும்.
+
+console.log(fruits[0]);
+console.log(fruits[1]);
+console.log(fruits[2]);
+Output:
+
+Apple
+Mango
+Orange
+Visual
+fruits
+
+Index:   0        1        2         3
+       Apple    Mango    Orange    Banana
+2. Array-ல் Number
+let marks = [80, 90, 75, 88];
+Access:
+
+console.log(marks[0]);
+Output:
+
+80
+Last value:
+
+console.log(marks[marks.length - 1]);
+Output:
+
+88
+3. Array Creation Different Ways
+Method 1 — Literal ⭐
+Most commonly used:
+
+let numbers = [10, 20, 30];
+Method 2 — Empty Array
+let numbers = [];
+Then values add:
+
+numbers.push(10);
+numbers.push(20);
+numbers.push(30);
+4. Array Accessing Using for
+let fruits = ["Apple", "Mango", "Orange"];
+
+for (let i = 0; i < fruits.length; i++) {
+    console.log(fruits[i]);
+}
+Output:
+
+Apple
+Mango
+Orange
+Important
+fruits[i]
+இதுதான் array-ல current value access பண்ணுறது.
+
+5. Array + for + Same Line
+let fruits = ["Apple", "Mango", "Orange"];
+
+let result = "";
+
+for (let i = 0; i < fruits.length; i++) {
+    result = result + fruits[i] + " ";
+}
+
+console.log(result);
+Output:
+
+Apple Mango Orange
+6. Object என்றால் என்ன?
+ஒரு entity-க்கு related information-ஐ key-value pair ஆக store பண்ணுவது Object.
+
+Example:
+
+let student = {
+    name: "Ravi",
+    age: 22,
+    course: "JavaScript",
+    mark: 85
+};
+இதில்:
+
+name   → "Ravi"
+age    → 22
+course → "JavaScript"
+mark   → 85
+7. Object Creation
+Basic syntax:
+
+let student = {
+    name: "Ravi",
+    age: 22
+};
+இதுதான் object creation.
+
+8. Object Accessing — Dot Notation ⭐
+console.log(student.name);
+console.log(student.age);
+Output:
+
+Ravi
+22
+Syntax:
+
+object.property
+Example:
+
+student.name
+student.age
+student.course
+9. Object Accessing — Bracket Notation
+console.log(student["name"]);
+console.log(student["age"]);
+Output:
+
+Ravi
+22
+Difference
+student.name
+vs
+
+student["name"]
+Both access the same value.
+
+10. Object Value Change
+let student = {
+    name: "Ravi",
+    age: 22
+};
+
+student.age = 23;
+
+console.log(student.age);
+Output:
+
+23
+11. Object New Property Add
+let student = {
+    name: "Ravi",
+    age: 22
+};
+
+student.city = "Chennai";
+
+console.log(student.city);
+Output:
+
+Chennai
+12. Array vs Object
+Array
+Use when you have a collection/list.
+
+let fruits = ["Apple", "Mango", "Orange"];
+Access:
+
+fruits[0]
+Object
+Use when you have properties of one entity.
+
+let student = {
+    name: "Ravi",
+    age: 22
+};
+Access:
+
+student.name
+Remember:
+
+Array  → Index
+Object → Key
+13. Array of Objects 🔥
+இது மிகவும் important.
+
+Real applications-ல் இது ரொம்ப common.
+
+Example:
+
+let students = [
+    {
+        name: "Ravi",
+        age: 22,
+        mark: 85
+    },
+    {
+        name: "Kumar",
+        age: 23,
+        mark: 90
+    },
+    {
+        name: "Priya",
+        age: 21,
+        mark: 95
+    }
+];
+இதுதான்:
+
+Array of Objects
+
+14. Array of Object Access
+First student:
+
+console.log(students[0]);
+Output:
+
+{
+    name: "Ravi",
+    age: 22,
+    mark: 85
+}
+First student's name:
+
+console.log(students[0].name);
+Output:
+
+Ravi
+Second student's mark:
+
+console.log(students[1].mark);
+Output:
+
+90
+Third student's age:
+
+console.log(students[2].age);
+Output:
+
+21
+15. Array of Objects + for Loop ⭐⭐⭐
+இதுதான் real-world coding-க்கு மிகவும் important.
+
+let students = [
+    {
+        name: "Ravi",
+        age: 22,
+        mark: 85
+    },
+    {
+        name: "Kumar",
+        age: 23,
+        mark: 90
+    },
+    {
+        name: "Priya",
+        age: 21,
+        mark: 95
+    }
+];
+
+for (let i = 0; i < students.length; i++) {
+
+    console.log(students[i].name);
+
+}
+Output:
+
+Ravi
+Kumar
+Priya
+16. Access Multiple Properties
+for (let i = 0; i < students.length; i++) {
+
+    console.log(students[i].name);
+    console.log(students[i].age);
+    console.log(students[i].mark);
+
+}
+17. Find Student Based on Mark
+for (let i = 0; i < students.length; i++) {
+
+    if (students[i].mark > 90) {
+        console.log(students[i].name);
+    }
+
+}
+Output:
+
+Priya
+Logic:
+
+Ravi  → 85 > 90 ❌
+Kumar → 90 > 90 ❌
+Priya → 95 > 90 ✅
+18. Find One Student
+let target = "Kumar";
+
+for (let i = 0; i < students.length; i++) {
+
+    if (students[i].name === target) {
+
+        console.log("Student Found:", students[i]);
+
+        break;
+    }
+
+}
+Output:
+
+Student Found: { name: "Kumar", age: 23, mark: 90 }
+
+day 8
+
+. What is a Function?
+
+A function is a reusable block of code that performs a specific task.
+
+Instead of writing the same code multiple times, we create a function once and call it whenever needed.
+
+function greet() {
+    console.log("Hello");
+}
+
+greet();
+Remember
+Create → Call → Execute
+
+Function Creation
+       ↓
+Function Call
+       ↓
+Code Execution
+2. Function Syntax
+function functionName() {
+    // statements
+}
+Example:
+
+function greet() {
+    console.log("Hello");
+}
+To execute the function:
+
+greet();
+3. Three Types of Functions
+For basic JavaScript, learn these three:
+
+1. Function Declaration
+function add() {
+    console.log(10 + 20);
+}
+2. Function Expression
+let add = function () {
+    console.log(10 + 20);
+};
+3. Arrow Function
+let add = () => {
+    console.log(10 + 20);
+};
+All three can perform the same task, but their syntax and behavior differ.
+
+4. Function Declaration
+Function Declaration is the traditional way of creating a function.
+
+Syntax
+function functionName() {
+    // code
+}
+Example
+function greet() {
+    console.log("Good Morning");
+}
+
+greet();
+Important Point
+Function declarations are hoisted, so they can generally be called before their definition.
+
+greet();
+
+function greet() {
+    console.log("Hello");
+}
+5. Function Expression
+In a Function Expression, a function is assigned to a variable.
+
+Syntax
+let functionName = function () {
+    // code
+};
+Example
+let greet = function () {
+    console.log("Hello");
+};
+
+greet();
+Remember
+Variable
+   ↓
+Function
+The function is treated as a value and stored in the variable.
+
+6. Arrow Function
+Arrow Function provides a shorter syntax for writing functions.
+
+Syntax
+let functionName = () => {
+    // code
+};
+Example
+let greet = () => {
+    console.log("Hello");
+};
+
+greet();
+Arrow functions are very common in modern JavaScript, especially with React.
+
+7. Parameter
+A parameter is a variable written inside the function definition.
+
+It acts as a placeholder for the value that the function will receive.
+
+Example:
+
+function greet(name) {
+    console.log("Hello " + name);
+}
+Here:
+
+name
+is the parameter.
+
+Think of it as:
+
+"Function-க்கு என்ன data வரப்போகிறது என்று சொல்லும் placeholder."
+
+8. Argument
+An argument is the actual value passed to the function when we call it.
+
+function greet(name) {
+    console.log("Hello " + name);
+}
+
+greet("Ravi");
+Here:
+
+name  → Parameter
+Ravi  → Argument
+Easy Difference
+Parameter → Function create பண்ணும்போது
+Argument  → Function call பண்ணும்போது
+9. Parameter vs Argument
+function add(a, b) {
+    console.log(a + b);
+}
+
+add(10, 20);
+Here:
+
+a → Parameter
+b → Parameter
+
+10 → Argument
+20 → Argument
+Memory Trick 🧠
+P = Placeholder
+
+A = Actual Value
+
+Parameter → Placeholder
+Argument  → Actual value
+10. Multiple Parameters
+A function can have multiple parameters.
+
+function student(name, age, course) {
+    console.log(name);
+    console.log(age);
+    console.log(course);
+}
+Calling:
+
+student("Ravi", 22, "JavaScript");
+Mapping happens like this:
+
+name   → "Ravi"
+age    → 22
+course → "JavaScript"
+11. Parameter Order is Important
+function student(name, age) {
+    console.log(name);
+    console.log(age);
+}
+
+student("Ravi", 22);
+Correct:
+
+name = Ravi
+age  = 22
+If we change the order:
+
+student(22, "Ravi");
+Then:
+
+name = 22
+age  = Ravi
+So arguments are assigned to parameters based on their position.
+
+12. Function with Return
+A function can calculate something and send the result back using return.
+
+function add(a, b) {
+    return a + b;
+}
+
+let result = add(10, 20);
+
+console.log(result);
+Output:
+
+30
+Flow:
+
+10 → a
+20 → b
+   ↓
+a + b
+   ↓
+30
+   ↓
+return
+   ↓
+result
+13. console.log() vs return
+console.log()
+Used to display a value.
+
+function add(a, b) {
+    console.log(a + b);
+}
+return
+Used to send the value back from the function.
+
+function add(a, b) {
+    return a + b;
+}
+Remember:
+
+console.log → Show
+return      → Send back
+14. Default Parameter
+A parameter can have a default value.
+
+function greet(name = "Guest") {
+    console.log("Hello " + name);
+}
+If no argument is passed:
+
+greet();
+Output:
+
+Hello Guest
+If an argument is passed:
+
+greet("Ravi");
+Output:
+
+Hello Ravi
+15. Function + Parameter + for Loop
+This is important for your logical programming.
+
+function printNumbers(n) {
+
+    for (let i = 1; i <= n; i++) {
+        console.log(i);
+    }
+
+}
+
+printNumbers(5);
+Here:
+
+n → Parameter
+5 → Argument
+The argument 5 controls the loop.
+
+Output:
+
+1
+2
+3
+4
+5
+16. Function + Parameter + Return
+function getSum(n) {
+
+    let sum = 0;
+
+    for (let i = 1; i <= n; i++) {
+        sum = sum + i;
+    }
+
+    return sum;
+}
+
+let result = getSum(5);
+
+console.log(result);
+Output:
+
+15
+Here:
+
+n      → Parameter
+5      → Argument
+sum    → Calculation
+return → Sends result
+result → Stores returned value
+⭐ Quick Revision
+Function
+→ Reusable block of code
+
+Parameter
+→ Placeholder inside function
+
+Argument
+→ Actual value passed during function call
+
+Return
+→ Sends value back from function
+
+console.log
+→ Displays value
+One example containing everything:
+function multiply(a, b) {
+    return a * b;
+}
+
+let result = multiply(5, 10);
+
+console.log(result);
+Identify:
+
+multiply     → Function
+a, b         → Parameters
+5, 10        → Arguments
+a * b        → Logic
+return       → Sends result
+result       → Stores returned value
+console.log  → Displays result
+
+day9
+
+Day 9 — JavaScript Functions, Scope & Hoisting
+
+1. Functions
+A function is a reusable block of code that performs a specific task.
+
+Functions help us to:
+
+Reuse code
+
+Avoid duplicate code
+
+Organize code
+
+Make code easier to maintain
+
+Make complex programs easier to understand
+
+Basic Syntax
+function functionName() {
+    // code
+}
+Example
+function greet() {
+    console.log("Hello JavaScript");
+}
+
+greet();
+Output
+Hello JavaScript
+2. Function Call
+Creating a function does not execute it.
+
+We need to call the function.
+
+function greet() {
+    console.log("Hello");
+}
+
+greet();
+Here:
+
+function greet() → Function creation
+greet()          → Function call
+3. Parameters
+A parameter is a variable defined inside the function definition.
+
+It receives data when the function is called.
+
+function greet(name) {
+    console.log("Hello " + name);
+}
+Here:
+
+name → Parameter
+4. Arguments
+An argument is the actual value passed to a function when calling it.
+
+function greet(name) {
+    console.log("Hello " + name);
+}
+
+greet("Ravi");
+Here:
+
+name  → Parameter
+"Ravi" → Argument
+Easy Difference
+Parameter → Placeholder
+Argument  → Actual Value
+5. Multiple Parameters and Arguments
+function add(a, b) {
+    console.log(a + b);
+}
+
+add(10, 20);
+Here:
+
+a → Parameter
+b → Parameter
+
+10 → Argument
+20 → Argument
+Output:
+
+30
+6. Return
+return is used to send a value back from a function.
+
+function add(a, b) {
+    return a + b;
+}
+
+let result = add(10, 20);
+
+console.log(result);
+Output:
+
+30
+console.log() vs return
+console.log()
+→ Displays the value
+
+return
+→ Sends the value back
+7. Function Declaration
+Function Declaration is the traditional way of creating a function.
+
+Syntax
+function functionName() {
+    // code
+}
+Example
+function add(a, b) {
+    return a + b;
+}
+
+console.log(add(10, 20));
+Output:
+
+30
+8. Function Expression
+A function can be stored inside a variable.
+
+Syntax
+let functionName = function() {
+    // code
+};
+Example
+let add = function(a, b) {
+    return a + b;
+};
+
+console.log(add(10, 20));
+Output:
+
+30
+9. Arrow Function
+Arrow functions provide a shorter syntax for writing functions.
+
+Syntax
+let functionName = () => {
+    // code
+};
+Example
+let add = (a, b) => {
+    return a + b;
+};
+
+console.log(add(10, 20));
+Output:
+
+30
+10. Arrow Function — Different Forms
+No Parameter
+let greet = () => {
+    console.log("Hello");
+};
+One Parameter
+let square = number => {
+    return number * number;
+};
+Multiple Parameters
+let add = (a, b) => {
+    return a + b;
+};
+Implicit Return
+When there is only one expression, {} and return can be removed.
+
+let add = (a, b) => a + b;
+Example:
+
+console.log(add(10, 20));
+Output:
+
+30
+11. Function Types — Difference
+Function Declaration
+
+Function Expression
+
+Arrow Function
+
+function add() {}
+
+let add = function() {}
+
+let add = () => {}
+
+Traditional syntax
+
+Function stored in variable
+
+Short syntax
+
+Hoisted
+
+Not callable before initialization
+
+Not callable before initialization
+
+Has its own this
+
+Has its own this
+
+Does not have its own this
+
+Can be used as constructor
+
+Yes
+
+No
+
+12. When to Use Which Function?
+Function Declaration
+Use when you need a normal reusable function.
+
+function calculateTotal(price, quantity) {
+    return price * quantity;
+}
+Function Expression
+Useful when a function needs to be stored in a variable or assigned conditionally.
+
+let calculate = function(a, b) {
+    return a + b;
+};
+Arrow Function
+Commonly used for short functions and callbacks.
+
+let square = number => number * number;
+Arrow functions are heavily used in modern JavaScript and React.
+
+13. Scope
+Scope defines where a variable can be accessed in a program.
+
+Simple definition:
+
+Scope = Where can I use this variable?
+
+JavaScript mainly has:
+
+Global Scope
+
+Function Scope
+
+Block Scope
+
+Nested Scope
+
+14. Global Scope
+A variable declared outside a function or block can be accessed from its accessible outer scope.
+
+let name = "Ravi";
+
+function greet() {
+    console.log(name);
+}
+
+greet();
+Output:
+
+Ravi
+15. Function Scope
+A variable declared inside a function can normally be accessed only inside that function.
+
+function test() {
+
+    let age = 25;
+
+    console.log(age);
+}
+
+test();
+Output:
+
+25
+But:
+
+function test() {
+
+    let age = 25;
+}
+
+console.log(age);
+This gives an error because age belongs to the function's scope.
+
+16. Block Scope
+let and const are block-scoped.
+
+A block is code inside { }.
+
+if (true) {
+
+    let age = 25;
+
+    console.log(age);
+}
+This works.
+
+But:
+
+if (true) {
+
+    let age = 25;
+}
+
+console.log(age);
+This gives an error because age exists only inside the block.
+
+17. var vs let Scope
+var
+if (true) {
+
+    var age = 25;
+
+}
+
+console.log(age);
+Output:
+
+25
+var is function-scoped, not block-scoped.
+
+let
+if (true) {
+
+    let age = 25;
+
+}
+
+console.log(age);
+Error.
+
+let is block-scoped.
+
+Remember
+var       → Function Scope
+let       → Block Scope
+const     → Block Scope
+18. Nested Scope
+A scope inside another scope is called a nested scope.
+
+let name = "Ravi";
+
+function outer() {
+
+    let age = 25;
+
+    function inner() {
+
+        console.log(name);
+        console.log(age);
+
+    }
+
+    inner();
+}
+
+outer();
+Output:
+
+Ravi
+25
+The inner scope can access variables from the outer scope.
+
+19. Scope Chain
+When JavaScript needs a variable, it searches the current scope first.
+
+If it cannot find it, it searches the outer scope.
+
+Current Scope
+      ↓
+Outer Scope
+      ↓
+Global / Outer Scope
+Example:
+
+let college = "SLA";
+
+function teacher() {
+
+    let subject = "JavaScript";
+
+    function student() {
+
+        console.log(college);
+        console.log(subject);
+
+    }
+
+    student();
+}
+
+teacher();
+20. Inner Scope vs Outer Scope
+Inner can access Outer
+let name = "Ravi";
+
+function test() {
+
+    console.log(name);
+
+}
+
+test();
+Works.
+
+Outer cannot access Inner
+function test() {
+
+    let name = "Ravi";
+
+}
+
+console.log(name);
+Error.
+
+Remember
+Inner scope can access outer scope, but outer scope cannot access inner scope.
+
+21. Shadowing
+When an inner scope has a variable with the same name as an outer variable, the inner variable shadows the outer variable.
+
+let name = "Ravi";
+
+function test() {
+
+    let name = "Kumar";
+
+    console.log(name);
+}
+
+test();
+
+console.log(name);
+Output:
+
+Kumar
+Ravi
+Inside the function, JavaScript uses the inner name.
+
+22. Hoisting
+Hoisting is JavaScript's behavior where declarations are processed before the related code executes.
+
+Different types of declarations behave differently.
+
+23. Function Declaration Hoisting
+Function declarations are hoisted.
+
+greet();
+
+function greet() {
+    console.log("Hello");
+}
+Output:
+
+Hello
+The function can generally be called before its declaration.
+
+24. var Hoisting
+console.log(age);
+
+var age = 25;
+Output:
+
+undefined
+Conceptually:
+
+var age;
+
+console.log(age);
+
+age = 25;
+So var is hoisted and initialized with undefined.
+
+25. let Hoisting
+console.log(age);
+
+let age = 25;
+Output:
+
+ReferenceError
+let is hoisted, but it cannot be accessed before initialization.
+
+This period is called the Temporal Dead Zone (TDZ).
+
+26. const Hoisting
+console.log(age);
+
+const age = 25;
+Output:
+
+ReferenceError
+const also has the TDZ before initialization.
+
+27. Temporal Dead Zone — TDZ
+TDZ = Temporal Dead Zone
+
+TDZ is the period between entering a scope and initializing a let or const variable.
+
+Example:
+
+console.log(name);
+
+let name = "Ravi";
+The variable cannot be accessed before:
+
+let name = "Ravi";
+is initialized.
+
+Flow
+Scope starts
+     ↓
+Variable declaration is known
+     ↓
+TDZ
+     ↓
+Initialization
+     ↓
+Variable can be accessed
+28. var vs let vs const
+Keyword
+
+Hoisted
+
+Before Initialization
+
+var
+
+Yes
+
+undefined
+
+let
+
+Yes
+
+ReferenceError
+
+const
+
+Yes
+
+ReferenceError
+
+Easy Memory
+var
+→ Hoisted
+→ undefined
+
+let
+→ Hoisted
+→ TDZ
+
+const
+→ Hoisted
+→ TDZ
+29. Function Expression and Hoisting
+greet();
+
+let greet = function() {
+    console.log("Hello");
+};
+This gives:
+
+ReferenceError
+The function value is not available before the let variable is initialized.
+
+30. Arrow Function and Hoisting
+greet();
+
+let greet = () => {
+    console.log("Hello");
+};
+This also gives:
+
+ReferenceError
+The arrow function is stored in a let variable, so it cannot be accessed before initialization.
+
+31. console.log() vs return vs break
+These are commonly confused.
+
+console.log()
+→ Displays a value
+
+return
+→ Sends a value back from a function
+→ Stops that function's execution
+
+break
+→ Stops a loop
+Example:
+
+function getEvenNumbers() {
+
+    let result = "";
+
+    for (let i = 1; i <= 10; i++) {
+
+        if (i % 2 === 0) {
+            result = result + i + " ";
+        }
+
+    }
+
+    return result;
+}
+
+console.log(getEvenNumbers());
+Output:
+
+2 4 6 8 10
+
+day10
+Day 10 — JavaScript ES6 & ES6+ Features
+
+1. What is ECMAScript?
+ECMAScript is the standard/specification that defines the JavaScript language.
+
+JavaScript is the programming language we use, while ECMAScript defines the language features and rules.
+
+ECMAScript
+    ↓
+JavaScript Standard
+    ↓
+JavaScript Engines
+    ↓
+Browser / Node.js
+2. What is ES6?
+ES6 is officially called ECMAScript 2015 (ES2015).
+
+ES5 → 2009
+
+ES6 / ES2015 → 2015
+
+ES6 was a major JavaScript update.
+
+From ES2016 onward, ECMAScript follows a yearly release cycle.
+
+"ES6+" generally means ES2015 and all newer ECMAScript versions.
+
+3. ES5 vs ES6 vs ES6+
+ES5
+Released in 2009.
+
+Important features:
+
+var
+Strict Mode
+JSON
+Array methods
+Object methods
+Getters / Setters
+Example:
+
+var name = "Ravi";
+
+function add(a, b) {
+    return a + b;
+}
+ES6 / ES2015
+Released in 2015.
+
+Major features:
+
+let
+const
+Arrow Functions
+Template Literals
+Default Parameters
+Rest Parameters
+Spread Syntax
+Destructuring
+Classes
+Modules
+Promises
+Map
+Set
+Symbol
+Iterators
+Generators
+for...of
+Enhanced Object Literals
+ES6+
+ES6+ means:
+
+ES2015
++
+ES2016
++
+ES2017
++
+ES2018
++
+...
++
+Current ECMAScript
+4. ECMAScript Version Timeline
+2009 → ES5
+2011 → ES5.1
+
+2015 → ES2015 / ES6
+2016 → ES2016 / ES7
+2017 → ES2017 / ES8
+2018 → ES2018 / ES9
+2019 → ES2019 / ES10
+2020 → ES2020 / ES11
+2021 → ES2021 / ES12
+2022 → ES2022 / ES13
+2023 → ES2023 / ES14
+2024 → ES2024 / ES15
+2025 → ES2025 / ES16
+2026 → ES2026 / ES17
+5. ES2015 / ES6 Features
+5.1 let
+let is used when a variable value can be changed.
+
+let age = 25;
+
+age = 26;
+
+console.log(age);
+Output:
+
+26
+let is block-scoped.
+
+5.2 const
+const is used when a variable should not be reassigned.
+
+const name = "Ravi";
+
+console.log(name);
+This is not allowed:
+
+const name = "Ravi";
+
+name = "Kumar";
+const is block-scoped.
+
+5.3 var vs let vs const
+var
+→ Function scoped
+
+let
+→ Block scoped
+
+const
+→ Block scoped
+All three declarations are hoisted, but their behavior before initialization differs.
+
+var
+→ undefined
+
+let
+→ TDZ → ReferenceError
+
+const
+→ TDZ → ReferenceError
+5.4 Template Literals
+Template literals use backticks.
+
+const name = "Ravi";
+const age = 25;
+
+console.log(`My name is ${name} and I am ${age} years old.`);
+Output:
+
+My name is Ravi and I am 25 years old.
+Syntax:
+
+`Text ${variable}`
+Advantages:
+
+String interpolation
+Multi-line strings
+Cleaner string formatting
+5.5 Arrow Functions
+Arrow functions provide shorter syntax for functions.
+
+Normal function:
+
+function add(a, b) {
+    return a + b;
+}
+Arrow function:
+
+const add = (a, b) => {
+    return a + b;
+};
+Short form:
+
+const add = (a, b) => a + b;
+5.6 Arrow Function Types
+No parameter
+const greet = () => {
+    console.log("Hello");
+};
+One parameter
+const square = number => number * number;
+Multiple parameters
+const add = (a, b) => a + b;
+Multiple statements
+const calculate = (a, b) => {
+    const sum = a + b;
+    const result = sum * 2;
+
+    return result;
+};
+Implicit return
+const square = number => number * number;
+Explicit return
+const square = number => {
+    return number * number;
+};
+5.7 Default Parameters
+Default parameters provide a default value when an argument is not supplied.
+
+function greet(name = "Guest") {
+    console.log(`Hello ${name}`);
+}
+
+greet();
+Output:
+
+Hello Guest
+With an argument:
+
+greet("Ravi");
+Output:
+
+Hello Ravi
+5.8 Destructuring
+Destructuring allows values to be extracted from arrays and objects.
+
+Array Destructuring
+const numbers = [10, 20, 30];
+
+const [a, b, c] = numbers;
+
+console.log(a);
+console.log(b);
+console.log(c);
+Output:
+
+10
+20
+30
+Object Destructuring
+const student = {
+    name: "Ravi",
+    age: 25
+};
+
+const { name, age } = student;
+
+console.log(name);
+console.log(age);
+Output:
+
+Ravi
+25
+5.9 Rest Parameter
+Rest parameter collects multiple arguments into an array.
+
+function add(...numbers) {
+
+    let total = 0;
+
+    for (const number of numbers) {
+        total += number;
+    }
+
+    return total;
+}
+
+console.log(add(10, 20, 30, 40));
+Output:
+
+100
+Remember:
+
+Rest → Collect
+5.10 Spread Syntax
+Spread expands values.
+
+const numbers = [10, 20, 30];
+
+console.log(...numbers);
+Output:
+
+10 20 30
+Array copy:
+
+const first = [10, 20];
+const second = [...first];
+
+console.log(second);
+Array combination:
+
+const first = [10, 20];
+const second = [30, 40];
+
+const result = [...first, ...second];
+
+console.log(result);
+Remember:
+
+Rest   → Collect
+Spread → Expand
+5.11 Enhanced Object Literals
+Old syntax:
+
+const name = "Ravi";
+const age = 25;
+
+const student = {
+    name: name,
+    age: age
+};
+ES6 shorthand:
+
+const name = "Ravi";
+const age = 25;
+
+const student = {
+    name,
+    age
+};
+5.12 Computed Property Names
+const key = "name";
+
+const student = {
+    [key]: "Ravi"
+};
+
+console.log(student.name);
+Output:
+
+Ravi
+5.13 for...of
+for...of is used to iterate over values of iterable objects.
+
+const numbers = [10, 20, 30];
+
+for (const number of numbers) {
+    console.log(number);
+}
+Output:
+
+10
+20
+30
+Remember:
+
+for...of → Values
+for...in → Keys / Indexes / Properties
+5.14 Classes
+ES6 introduced class syntax.
+
+class Student {
+
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    greet() {
+        console.log(`Hello ${this.name}`);
+    }
+}
+
+const student = new Student("Ravi", 25);
+
+student.greet();
+Output:
+
+Hello Ravi
+Important keywords:
+
+class
+constructor
+new
+this
+5.15 Inheritance
+Classes can inherit from other classes.
+
+class Animal {
+
+    speak() {
+        console.log("Animal Sound");
+    }
+}
+
+class Dog extends Animal {
+
+    bark() {
+        console.log("Woof");
+    }
+}
+
+const dog = new Dog();
+
+dog.speak();
+dog.bark();
+Output:
+
+Animal Sound
+Woof
+Important keywords:
+
+extends
+super
+5.16 Modules
+ES6 introduced native JavaScript modules.
+
+Export
+// math.js
+
+export function add(a, b) {
+    return a + b;
+}
+Import
+// app.js
+
+import { add } from "./math.js";
+
+console.log(add(10, 20));
+Output:
+
+30
+Important keywords:
+
+export
+import
+5.17 Promise
+Promises are used for asynchronous operations.
+
+const promise = new Promise((resolve, reject) => {
+
+    const success = true;
+
+    if (success) {
+        resolve("Success");
+    } else {
+        reject("Failed");
+    }
+
+});
+
+promise
+    .then(result => {
+        console.log(result);
+    })
+    .catch(error => {
+        console.log(error);
+    });
+Output:
+
+Success
+Promise states:
+
+Pending
+   ↓
+Fulfilled
+
+OR
+
+Pending
+   ↓
+Rejected
+5.18 Map
+Map stores key-value pairs.
+
+const users = new Map();
+
+users.set("name", "Ravi");
+users.set("age", 25);
+
+console.log(users.get("name"));
+console.log(users.get("age"));
+Output:
+
+Ravi
+25
+Important methods:
+
+set()
+get()
+has()
+delete()
+clear()
+5.19 Set
+Set stores unique values.
+
+const numbers = new Set([10, 20, 20, 30, 30]);
+
+console.log(numbers);
+Result:
+
+10, 20, 30
+Important methods:
+
+add()
+has()
+delete()
+clear()
+5.20 Symbol
+Symbol creates unique values.
+
+const id = Symbol("id");
+
+console.log(id);
+Two symbols are always different:
+
+const a = Symbol("id");
+const b = Symbol("id");
+
+console.log(a === b);
+Output:
+
+false
+5.21 Iterators
+Iterators provide a standard way to access values one at a time.
+
+const numbers = [10, 20, 30];
+
+const iterator = numbers[Symbol.iterator]();
+
+console.log(iterator.next());
+console.log(iterator.next());
+console.log(iterator.next());
+Each next() returns an object containing information such as:
+
+value
+done
+5.22 Generators
+Generators use the function* syntax and yield.
+
+function* numbers() {
+
+    yield 10;
+    yield 20;
+    yield 30;
+
+}
+
+const generator = numbers();
+
+console.log(generator.next());
+console.log(generator.next());
+console.log(generator.next());
+Important keywords:
+
+function*
+yield
+next()
+6. ES2016 Features
+ES2016 introduced important features including:
+
+Array.prototype.includes()
+Exponentiation operator **
+includes()
+const numbers = [10, 20, 30];
+
+console.log(numbers.includes(20));
+Output:
+
+true
+Exponentiation
+console.log(2 ** 3);
+Output:
+
+8
+7. ES2017 Features
+Important ES2017 features:
+
+async / await
+Object.values()
+Object.entries()
+String padding
+Object.getOwnPropertyDescriptors()
+async / await
+async function getData() {
+
+    const result = await Promise.resolve("Data Received");
+
+    console.log(result);
+}
+
+getData();
+Output:
+
+Data Received
+8. ES2018 Features
+Important ES2018 features:
+
+Object Rest
+Object Spread
+for await...of
+Promise finally()
+Async Iteration
+Object Spread
+const user = {
+    name: "Ravi",
+    age: 25
+};
+
+const updatedUser = {
+    ...user,
+    city: "Chennai"
+};
+
+console.log(updatedUser);
+Result:
+
+{
+    name: "Ravi",
+    age: 25,
+    city: "Chennai"
+}
+9. ES2019 Features
+Important ES2019 features:
+
+Array.flat()
+Array.flatMap()
+Object.fromEntries()
+String.trimStart()
+String.trimEnd()
+Optional catch binding
+flat()
+const numbers = [1, [2, 3], [4, 5]];
+
+console.log(numbers.flat());
+Result:
+
+[1, 2, 3, 4, 5]
+flatMap()
+const numbers = [1, 2, 3];
+
+const result = numbers.flatMap(number => [number, number * 2]);
+
+console.log(result);
+Result:
+
+[1, 2, 2, 4, 3, 6]
+10. ES2020 Features
+Important ES2020 features:
+
+Optional Chaining ?.
+Nullish Coalescing ??
+BigInt
+Promise.allSettled()
+globalThis
+Dynamic import()
+Optional Chaining
+const user = {};
+
+console.log(user.address?.city);
+Output:
+
+undefined
+Without optional chaining, accessing a missing nested property can throw.
+
+10.1 Nullish Coalescing
+const username = null;
+
+const result = username ?? "Guest";
+
+console.log(result);
+Output:
+
+Guest
+?? uses the right-hand value when the left-hand value is:
+
+null
+undefined
+10.2 BigInt
+BigInt is used for integers larger than the safe integer range.
+
+const bigNumber = 123456789012345678901234567890n;
+
+console.log(bigNumber);
+The n represents a BigInt literal.
+
+11. ES2021 Features
+Important ES2021 features:
+
+String.replaceAll()
+Promise.any()
+Logical Assignment Operators
+Numeric Separators
+WeakRef
+FinalizationRegistry
+replaceAll()
+const text = "apple apple apple";
+
+const result = text.replaceAll("apple", "orange");
+
+console.log(result);
+Output:
+
+orange orange orange
+11.1 Logical Assignment
+let a = null;
+
+a ??= 100;
+
+console.log(a);
+Output:
+
+100
+Operators:
+
+||=
+&&=
+??=
+12. ES2022 Features
+Important ES2022 features:
+
+Array.at()
+Object.hasOwn()
+Class Fields
+Private Class Fields
+Static Class Blocks
+Top-level await
+Error Cause
+at()
+const fruits = ["Apple", "Mango", "Orange"];
+
+console.log(fruits.at(0));
+console.log(fruits.at(-1));
+Output:
+
+Apple
+Orange
+12.1 Private Class Fields
+Private fields use #.
+
+class BankAccount {
+
+    #balance = 1000;
+
+    getBalance() {
+        return this.#balance;
+    }
+}
+
+const account = new BankAccount();
+
+console.log(account.getBalance());
+Output:
+
+1000
+The private field cannot be directly accessed from outside the class.
+
+13. ES2023 Features
+Important ES2023 features:
+
+Array.toSorted()
+Array.toReversed()
+Array.toSpliced()
+Array.with()
+findLast()
+findLastIndex()
+toSorted()
+const numbers = [30, 10, 20];
+
+const result = numbers.toSorted();
+
+console.log(result);
+Output:
+
+[10, 20, 30]
+The original array is not modified.
+
+13.1 toReversed()
+const numbers = [1, 2, 3];
+
+const result = numbers.toReversed();
+
+console.log(result);
+Output:
+
+[3, 2, 1]
+13.2 findLast()
+const numbers = [10, 20, 30, 40];
+
+const result = numbers.findLast(number => number > 20);
+
+console.log(result);
+Output:
+
+40
+14. ES2024 Features
+Important ES2024 features:
+
+Object.groupBy()
+Map.groupBy()
+Promise.withResolvers()
+Resizable ArrayBuffer
+Growable SharedArrayBuffer
+Object.groupBy()
+const students = [
+    { name: "Ravi", grade: "A" },
+    { name: "Kumar", grade: "B" },
+    { name: "Priya", grade: "A" }
+];
+
+const grouped = Object.groupBy(
+    students,
+    student => student.grade
+);
+
+console.log(grouped);
+Concept:
+
+A → Ravi, Priya
+B → Kumar
+14.1 Promise.withResolvers()
+const {
+    promise,
+    resolve,
+    reject
+} = Promise.withResolvers();
+
+resolve("Success");
+
+promise.then(result => {
+    console.log(result);
+});
+Output:
+
+Success
+15. ES2025 Features
+Important ES2025 features include:
+
+Iterator Helpers
+Set Methods
+RegExp.escape()
+Promise.try()
+Float16Array
+JSON Modules
+RegExp.escape()
+const value = RegExp.escape("hello.world");
+
+console.log(value);
+This safely escapes characters for use in a regular expression pattern.
+
+15.1 Set Methods
+Modern Set operations include methods for:
+
+union
+intersection
+difference
+symmetricDifference
+isSubsetOf
+isSupersetOf
+isDisjointFrom
+Example:
+
+const a = new Set([1, 2, 3]);
+const b = new Set([2, 3, 4]);
+
+console.log(a.union(b));
+16. ES2026 — Current ECMAScript
+As of 2026, ECMAScript 2026 is the current 17th edition.
+
+Important ES2026 features include:
+
+Array.fromAsync()
+Iterator.concat()
+Math.sumPrecise()
+Error.isError()
+Map.prototype.getOrInsert()
+Map.prototype.getOrInsertComputed()
+WeakMap.prototype.getOrInsert()
+WeakMap.prototype.getOrInsertComputed()
+JSON.rawJSON()
+JSON.parse source access
+Uint8Array Base64 / Hex methods
+Array.fromAsync()
+Used to create an array from an async iterable or other async source.
+
+async function* numbers() {
+    yield 10;
+    yield 20;
+    yield 30;
+}
+
+const result = await Array.fromAsync(numbers());
+
+console.log(result);
+Result:
+
+[10, 20, 30]
+17. Most Important ES6 Features for Interviews
+Focus strongly on these:
+
+1. let
+2. const
+3. var vs let vs const
+4. Arrow Functions
+5. Template Literals
+6. Default Parameters
+7. Rest Parameters
+8. Spread Syntax
+9. Destructuring
+10. for...of
+11. Classes
+12. Inheritance
+13. Modules
+14. Promises
+15. Map
+16. Set
+17. Symbol
+18. Iterators
+19. Generators
+18. Most Important ES6+ Features for Interviews
+ES2016
+→ includes()
+→ **
+
+ES2017
+→ async / await
+→ Object.values()
+→ Object.entries()
+
+ES2018
+→ Object Spread
+→ Object Rest
+→ Async Iteration
+
+ES2019
+→ flat()
+→ flatMap()
+→ Object.fromEntries()
+
+ES2020
+→ Optional Chaining ?.
+→ Nullish Coalescing ??
+→ BigInt
+→ Promise.allSettled()
+
+ES2021
+→ replaceAll()
+→ Promise.any()
+→ ||= &&= ??=
+
+ES2022
+→ at()
+→ Private Class Fields
+→ Top-level await
+→ Object.hasOwn()
+
+ES2023
+→ toSorted()
+→ toReversed()
+→ toSpliced()
+→ findLast()
+→ findLastIndex()
+
+ES2024
+→ Object.groupBy()
+→ Map.groupBy()
+→ Promise.withResolvers()
+
+ES2025
+→ Iterator Helpers
+→ Set Methods
+→ RegExp.escape()
+→ Promise.try()
+
+ES2026
+→ Array.fromAsync()
+→ Iterator.concat()
+→ Math.sumPrecise()
+→ Error.isError()
+→ Map/WeakMap getOrInsert methods
+19. ES5 vs ES6 — Practical Comparison
+Variables
+ES5:
+
+var name = "Ravi";
+ES6:
+
+let name = "Ravi";
+const age = 25;
+Functions
+ES5:
+
+var add = function(a, b) {
+    return a + b;
+};
+ES6:
+
+const add = (a, b) => a + b;
+Strings
+ES5:
+
+var message = "Hello " + name;
+ES6:
+
+const message = `Hello ${name}`;
+Object Extraction
+ES5:
+
+var name = student.name;
+var age = student.age;
+ES6:
+
+const { name, age } = student;
+Array/Object Copying
+ES6:
+
+const newArray = [...oldArray];
+
+const newObject = {
+    ...oldObject
+};
+Asynchronous Programming
+Older style:
+
+promise
+    .then(result => {
+        console.log(result);
+    })
+    .catch(error => {
+        console.log(error);
+    });
+Modern:
+
+async function getData() {
+
+    try {
+        const result = await promise;
+        console.log(result);
+    } catch (error) {
+        console.log(error);
+    }
+
+}
+20. Important Interview Differences
+var vs let vs const
+var
+→ Function scoped
+→ Can be redeclared
+→ Can be reassigned
+→ Hoisted and initialized to undefined
+
+let
+→ Block scoped
+→ Cannot be redeclared in the same scope
+→ Can be reassigned
+→ TDZ before initialization
+
+const
+→ Block scoped
+→ Cannot be redeclared in the same scope
+→ Cannot be reassigned
+→ TDZ before initialization
+Rest vs Spread
+Rest
+→ Collects multiple values
+→ Usually used in function parameters
+
+Spread
+→ Expands values
+→ Used with arrays, objects, function arguments
+Example:
+
+function add(...numbers) {
+    return numbers;
+}
+Rest.
+
+const numbers = [10, 20, 30];
+
+console.log(...numbers);
+Spread.
+
+Normal Function vs Arrow Function
+Normal Function
+→ Has its own this
+→ Has arguments object
+→ Can be used as constructor
+
+Arrow Function
+→ Does not have its own this
+→ Does not have its own arguments object
+→ Cannot be used as constructor
+→ Shorter syntax
+21. ES6 Interview Questions — Keywords
+What is ES6?
+ES6 = ECMAScript 2015
+When was ES6 introduced?
+2015
+What are major ES6 features?
+let
+const
+Arrow Functions
+Template Literals
+Destructuring
+Rest
+Spread
+Default Parameters
+Classes
+Modules
+Promises
+Map
+Set
+Symbol
+Iterators
+Generators
+What is ES6+?
+ES2015 + later yearly ECMAScript releases
+What is the current ECMAScript edition?
+ECMAScript 2026
+What changed after ES6?
+ECMAScript moved to yearly releases.
+22. Final Revision
+ES5
+→ 2009
+→ var
+→ Traditional JavaScript
+
+ES6 / ES2015
+→ 2015
+→ Major JavaScript upgrade
+
+let
+→ Block scoped variable
+
+const
+→ Block scoped constant binding
+
+Arrow Function
+→ Short function syntax
+
+Template Literal
+→ `Hello ${name}`
+
+Destructuring
+→ Extract values
+
+Rest
+→ Collect values
+
+Spread
+→ Expand values
+
+Class
+→ Modern class syntax
+
+Module
+→ import / export
+
+Promise
+→ Async operation
+
+Map
+→ Key-value collection
+
+Set
+→ Unique values
+
+ES2016
+→ includes(), **
+
+ES2017
+→ async / await
+
+ES2018
+→ Object Spread
+
+ES2019
+→ flat(), flatMap()
+
+ES2020
+→ ?., ??, BigInt
+
+ES2021
+→ replaceAll(), Promise.any()
+
+ES2022
+→ at(), private fields
+
+ES2023
+→ toSorted(), toReversed(), findLast()
+
+ES2024
+→ groupBy(), withResolvers()
+
+ES2025
+→ Iterator Helpers, Set Methods
+
+ES2026
+→ Array.fromAsync(), Iterator.concat(), Math.sumPrecise()
+Golden Interview Line
+ES6 (ECMAScript 2015) was a major JavaScript language update that introduced modern features such as let, const, arrow functions, template literals, destructuring, rest/spread, classes, modules, promises, maps, sets, iterators and generators. From ES2016 onward, ECMAScript follows an annual release cycle, with each edition adding incremental improvements to the language.
+
+test
+Question 1
+
+Write a program to print all even numbers from 1 to 50 using a for loop in a single line.
+
+Question 2
+Write a program to find the factorial of a given number using a while loop.
+
+Question 3
+Write a program to print numbers from 20 to 1 using a do...while loop.
+
+Question 4
+Write a program to reverse the string "JavaScript" using a loop without using the built-in reverse() method.
+
+Question 5
+Given the following array, find the highest number using a loop.
+
+const numbers = [45, 12, 89, 34, 67, 90, 23];
+Question 6
+Given the following array, print only the odd numbers and find their total.
+
+const numbers = [10, 15, 20, 25, 30, 35, 40];
+Question 7
+Create an object called student with name, age, course, and mark. Access and display all values.
+
+Question 8
+Given the following array of objects, display only the students who scored more than 75.
+
+const students = [
+    { name: "Arun", mark: 85 },
+    { name: "Bala", mark: 65 },
+    { name: "Charan", mark: 90 },
+    { name: "Deepak", mark: 70 }
+];
+Question 9
+Create three different functions to calculate the square of a number:
+
+Normal Function
+
+Function Expression
+
+Arrow Function
+
+Question 10
+Create a function that accepts name and age as parameters and returns a formatted sentence using a template literal.
+
+Expected format:
+
+My name is Ravi and I am 25 years old.
+Question 11
+Write a program demonstrating the difference between var, let, and const inside a block scope.
+
+Question 12
+Predict the output and explain the reason.
+
+console.log(a);
+
+var a = 10;
+Also explain what happens when var is replaced with let.
+
+Question 13
+Given the following object, extract name and course using destructuring.
+
+const student = {
+    name: "Ravi",
+    age: 22,
+    course: "JavaScript"
+};
+Question 14
+Create an arrow function using a rest parameter that accepts multiple numbers and returns their total.
+
+Example:
+
+Input: 10, 20, 30, 40
+Output: 100
+Question 15
+Given the following data:
+
+const users = [
+    {
+        name: "Ravi",
+        marks: [80, 90, 85],
+        address: {
+            city: "Chennai"
+        }
+    },
+    {
+        name: "Kumar",
+        marks: [60, 70, 75]
+    }
+];
+Write a program to display each user's name, city, and total marks.
+
+If the city does not exist, display:
+
+City Not Available
+Use modern JavaScript features wherever possible.
+
+day 9
+1. Callback Function
+
+What is a Callback Function?
+A callback function is a function that is passed as an argument to another function and executed later by that function.
+
+Simple Definition
+A function passed into another function as an argument is called a Callback Function.
+
+Basic Syntax
+const mainFunction = (callback) => {
+    callback();
+};
+Here:
+
+mainFunction → Parent / Higher Order Function
+callback     → Function received as parameter
+callback()   → Execute the received function
+2. Simple Callback Example
+const greet = () => {
+    console.log("Hello");
+};
+
+const processUser = (callback) => {
+    console.log("Processing User...");
+    callback();
+};
+
+processUser(greet);
+Output
+Processing User...
+Hello
+Step-by-Step Execution
+Step 1
+processUser(greet);
+We are calling processUser.
+
+We are passing the greet function as an argument.
+
+Important:
+
+processUser(greet);   // Passing function
+processUser(greet()); // Calling function
+Step 2
+The parameter receives the function.
+
+const processUser = (callback) => {
+Now:
+
+callback = greet function
+Step 3
+callback();
+Now the greet function gets executed.
+
+processUser()
+      ↓
+callback = greet
+      ↓
+callback()
+      ↓
+greet()
+      ↓
+Hello
+3. Callback with Data
+const calculate = (a, b, callback) => {
+    const result = a + b;
+
+    callback(result);
+};
+
+const displayResult = (data) => {
+    console.log(`Result: ${data}`);
+};
+
+calculate(10, 20, displayResult);
+Output
+Result: 30
+Flow
+calculate(10, 20, displayResult)
+                ↓
+        callback receives
+        displayResult function
+                ↓
+          Calculate 30
+                ↓
+        callback(result)
+                ↓
+       displayResult(30)
+                ↓
+           Result: 30
+4. Why Do We Need Callback Functions?
+Callbacks are useful when we want to control what should happen after a particular operation.
+
+Real-world concept
+Order Food
+    ↓
+Food Preparation
+    ↓
+Food Ready
+    ↓
+Delivery
+JavaScript:
+
+Function A completes
+       ↓
+Execute Function B
+Example:
+
+const downloadFile = (callback) => {
+    console.log("Downloading File...");
+    console.log("Download Completed");
+
+    callback();
+};
+
+const showMessage = () => {
+    console.log("File is ready!");
+};
+
+downloadFile(showMessage);
+5. Callback Function — Important Interview Points
+Callback Function
+        ↓
+Function passed as an argument
+        ↓
+Executed inside another function
+        ↓
+Useful for asynchronous operations
+        ↓
+Used in events, API calls, timers
+Important
+A function that accepts another function is called:
+
+Higher Order Function
+
+Example:
+
+const process = (callback) => {
+    callback();
+};
+6. Callback vs Normal Function Call
+Normal Function
+const greet = () => {
+    console.log("Hello");
+};
+
+greet();
+Here we directly call the function.
+
+Callback Function
+const greet = () => {
+    console.log("Hello");
+};
+
+const execute = (callback) => {
+    callback();
+};
+
+execute(greet);
+Here:
+
+greet()
+→ Direct execution
+
+execute(greet)
+→ Pass function
+
+callback()
+→ Execute function later
+7. Real-Time Callback Example — setTimeout
+const showMessage = () => {
+    console.log("Data Loaded");
+};
+
+setTimeout(showMessage, 2000);
+Flow
+Start
+ ↓
+setTimeout()
+ ↓
+Wait 2 Seconds
+ ↓
+showMessage()
+ ↓
+Data Loaded
+showMessage is a callback function.
+
+==================================================
+CLOSURE FUNCTION
+==================================================
+8. What is a Closure?
+Interview Definition
+A Closure is created when an inner function remembers and accesses variables from its outer function even after the outer function has finished executing.
+
+Simple Tamil explanation:
+
+Outer function execution mudinjirundhaalum, outer function variable-ai inner function remember panni use pannina athu Closure.
+
+9. Basic Closure Syntax
+const outerFunction = () => {
+
+    const outerVariable = "Hello";
+
+    const innerFunction = () => {
+        console.log(outerVariable);
+    };
+
+    return innerFunction;
+};
+10. Understanding the Full Closure Process
+Consider:
+
+const outerFunction = () => {
+
+    const message = "Hello from Closure";
+
+    const innerFunction = () => {
+        console.log(message);
+    };
+
+    return innerFunction;
+};
+
+const result = outerFunction();
+
+result();
+Output
+Hello from Closure
+Step-by-Step Process
+Step 1 — Function Definition
+const outerFunction = () => {
+The function is created but not executed yet.
+
+Step 2 — Call Outer Function
+const result = outerFunction();
+Now outerFunction() executes.
+
+Inside:
+
+const message = "Hello from Closure";
+Variable is created.
+
+Then:
+
+return innerFunction;
+The inner function is returned.
+
+So:
+
+result = innerFunction
+Step 3 — Outer Function Finishes
+Normally we think:
+
+outerFunction finished
+        ↓
+message should be removed
+But because innerFunction still needs message, JavaScript keeps the variable accessible.
+
+This relationship creates a:
+
+CLOSURE
+Step 4 — Call Returned Function
+result();
+Now:
+
+console.log(message);
+Even though the outer function already completed, the inner function can still access message.
+
+Output:
+
+Hello from Closure
+11. The Most Important Closure Example — Counter
+This is a very common interview question.
+
+const createCounter = () => {
+
+    let count = 0;
+
+    return () => {
+        count++;
+        return count;
+    };
+};
+
+const counter = createCounter();
+
+console.log(counter());
+console.log(counter());
+console.log(counter());
+Output
+1
+2
+3
+12. Full Process of Counter Closure
+This is the most important part.
+
+const createCounter = () => {
+We create an outer function.
+
+Inside:
+
+let count = 0;
+Initially:
+
+count = 0
+Then:
+
+return () => {
+    count++;
+    return count;
+};
+The outer function returns the inner function.
+
+Important Line
+const counter = createCounter();
+Let's understand this clearly.
+
+What happens here?
+createCounter()
+      ↓
+Outer function executes
+      ↓
+count = 0 created
+      ↓
+Inner function returned
+      ↓
+counter stores returned function
+So:
+
+counter = returned inner function
+Not the value.
+
+counter now holds a function.
+
+Then:
+counter();
+Executes:
+
+count++;
+Now:
+
+count = 1
+Returns:
+
+1
+Second Call
+counter();
+JavaScript remembers the previous value.
+
+Previous count = 1
+Then:
+
+count++;
+Now:
+
+count = 2
+Third Call
+counter();
+Previous count = 2
+      ↓
+count++
+      ↓
+3
+Closure Memory Visualization
+const counter = createCounter();
+
+createCounter()
+      │
+      ├── count = 0
+      │
+      └── returns inner function
+               │
+               ↓
+          counter variable
+               │
+               ↓
+          counter()
+               │
+               ├── count = 1
+               │
+          counter()
+               │
+               ├── count = 2
+               │
+          counter()
+               │
+               └── count = 3
+
+
+Array Methods Classification ⭐⭐⭐
+
+Add / Remove
+push()      → Add at end
+pop()       → Remove from end
+unshift()   → Add at beginning
+shift()     → Remove from beginning
+splice()    → Add / Remove / Replace
+Search
+includes()      → Check value exists
+indexOf()       → Find index
+find()          → First matching value
+findIndex()     → First matching index
+some()          → At least one matches
+every()         → All match
+Transformation
+map()       → Transform every value
+filter()    → Filter values
+reduce()    → Single result
+flat()      → Flatten array
+flatMap()   → Map + Flatten
+Conversion
+join()          → Array to String
+toString()      → Array to String
+Array.from()    → Convert iterable to Array
+Modification
+reverse()   → Reverse original array
+sort()      → Sort original array
+splice()    → Modify original array
+Non-Modifying
+slice()     → Extract / Copy
+concat()    → Combine
+includes()  → Check
+map()       → New array
+filter()    → New array
+
+
+
+40. Most Important Array Methods — Interview Priority
+
+Learn these first in this order:
+
+LEVEL 1 — MUST KNOW 🔥
+
+1. length
+2. push()
+3. pop()
+4. shift()
+5. unshift()
+6. slice()
+7. splice()
+8. forEach()
+9. map()
+10. filter()
+11. find()
+12. reduce()
+
+LEVEL 2 — IMPORTANT 🔥
+
+13. includes()
+14. indexOf()
+15. findIndex()
+16. some()
+17. every()
+18. sort()
+19. reverse()
+20. concat()
+
+LEVEL 3 — MODERN JS
+
+21. flat()
+22. flatMap()
+23. at()
+24. Array.from()
+25. Array.isArray()
+26. toSorted()
+27. toReversed()
+
+
+
+Manual Push Without push()
+const numbers = [10, 20, 30];
+const newArray = [];
+
+for (let i = 0; i < numbers.length; i++) {
+    newArray[newArray.length] = numbers[i];
+}
+
+console.log(newArray);
+
+day12
+
+JAVASCRIPT ARRAY METHODS & HIGHER ORDER ARRAY METHODS
+
+1. What is an Array?
+An Array is a collection used to store multiple values inside a single variable.
+
+const numbers = [10, 20, 30, 40];
+Array values are accessed using indexes.
+
+console.log(numbers[0]); // 10
+console.log(numbers[1]); // 20
+2. What are Array Methods?
+Array methods are built-in functions provided by JavaScript to perform operations on arrays.
+
+We can use array methods to:
+
+Add elements
+
+Remove elements
+
+Update elements
+
+Search elements
+
+Loop through elements
+
+Transform data
+
+Filter data
+
+Sort data
+
+Combine arrays
+
+Convert arrays
+
+Example:
+
+const numbers = [10, 20, 30];
+
+numbers.push(40);
+
+console.log(numbers);
+Output:
+
+[10, 20, 30, 40]
+3. Important Concept — Mutating vs Non-Mutating Methods
+Before learning array methods, we need to understand one important concept.
+
+Mutating Methods
+Mutating methods change the original array.
+
+const numbers = [10, 20, 30];
+
+numbers.push(40);
+
+console.log(numbers);
+Output:
+
+[10, 20, 30, 40]
+The original array is changed.
+
+Important Mutating Methods
+push()
+pop()
+shift()
+unshift()
+splice()
+sort()
+reverse()
+fill()
+copyWithin()
+Non-Mutating Methods
+Non-mutating methods do not change the original array.
+
+They usually return:
+
+New Array
+
+Value
+
+Boolean
+
+Index
+
+String
+
+Example:
+
+const numbers = [10, 20, 30];
+
+const result = numbers.map((value) => value * 2);
+
+console.log(result);
+console.log(numbers);
+Output:
+
+[20, 40, 60]
+[10, 20, 30]
+The original array is not changed.
+
+4. ARRAY METHOD RETURN & ORIGINAL ARRAY UPDATE
+Method
+
+Purpose
+
+Return
+
+Original Updated
+
+push()
+
+Add End
+
+New Length
+
+Yes
+
+pop()
+
+Remove End
+
+Removed Value
+
+Yes
+
+unshift()
+
+Add Start
+
+New Length
+
+Yes
+
+shift()
+
+Remove Start
+
+Removed Value
+
+Yes
+
+slice()
+
+Copy/Extract
+
+New Array
+
+No
+
+splice()
+
+Add/Remove/Replace
+
+Removed Array
+
+Yes
+
+concat()
+
+Combine
+
+New Array
+
+No
+
+forEach()
+
+Loop
+
+undefined
+
+No
+
+map()
+
+Transform
+
+New Array
+
+No
+
+filter()
+
+Filter
+
+New Array
+
+No
+
+find()
+
+First Match
+
+Value
+
+No
+
+findIndex()
+
+Match Index
+
+Index
+
+No
+
+includes()
+
+Check Value
+
+Boolean
+
+No
+
+indexOf()
+
+Find Index
+
+Number
+
+No
+
+some()
+
+Any Match
+
+Boolean
+
+No
+
+every()
+
+All Match
+
+Boolean
+
+No
+
+reduce()
+
+Single Result
+
+Any Value
+
+No
+
+sort()
+
+Sort
+
+Same Array
+
+Yes
+
+reverse()
+
+Reverse
+
+Same Array
+
+Yes
+
+join()
+
+Array to String
+
+String
+
+No
+
+flat()
+
+Flatten
+
+New Array
+
+No
+
+flatMap()
+
+Map + Flat
+
+New Array
+
+No
+
+5. push() — Add Element at the End
+The push() method adds one or more elements at the end of an array.
+
+Syntax
+array.push(value);
+Example
+const numbers = [10, 20, 30];
+
+const result = numbers.push(40);
+
+console.log(numbers);
+console.log(result);
+Output:
+
+[10, 20, 30, 40]
+4
+Important
+Original Array → Updated
+Return → New Length
+6. pop() — Remove Element from the End
+The pop() method removes the last element from an array.
+
+const numbers = [10, 20, 30];
+
+const result = numbers.pop();
+
+console.log(numbers);
+console.log(result);
+Output:
+
+[10, 20]
+30
+Important
+Original Array → Updated
+Return → Removed Element
+7. unshift() — Add Element at the Beginning
+The unshift() method adds one or more elements at the beginning.
+
+const numbers = [20, 30];
+
+const result = numbers.unshift(10);
+
+console.log(numbers);
+console.log(result);
+Output:
+
+[10, 20, 30]
+3
+Important
+Original Array → Updated
+Return → New Length
+8. shift() — Remove Element from Beginning
+The shift() method removes the first element.
+
+const numbers = [10, 20, 30];
+
+const result = numbers.shift();
+
+console.log(numbers);
+console.log(result);
+Output:
+
+[20, 30]
+10
+Important
+Original Array → Updated
+Return → Removed Element
+9. slice() — Extract or Copy Array
+The slice() method extracts a portion of an array without changing the original array.
+
+Syntax
+array.slice(start, end);
+Example
+const numbers = [10, 20, 30, 40, 50];
+
+const result = numbers.slice(1, 4);
+
+console.log(result);
+console.log(numbers);
+Output:
+
+[20, 30, 40]
+[10, 20, 30, 40, 50]
+Important
+Start Index → Included
+End Index → Excluded
+Original Array → Not Updated
+Return → New Array
+10. splice() — Add, Remove and Replace
+The splice() method is used to add, remove or replace elements.
+
+Syntax
+array.splice(start, deleteCount, newValue);
+Remove
+const numbers = [10, 20, 30, 40];
+
+const result = numbers.splice(1, 2);
+
+console.log(numbers);
+console.log(result);
+Output:
+
+[10, 40]
+[20, 30]
+Add
+const numbers = [10, 20, 40];
+
+numbers.splice(2, 0, 30);
+
+console.log(numbers);
+Output:
+
+[10, 20, 30, 40]
+Replace
+const numbers = [10, 20, 30];
+
+numbers.splice(1, 1, 100);
+
+console.log(numbers);
+Output:
+
+[10, 100, 30]
+Important
+Original Array → Updated
+Return → Array of Removed Elements
+11. concat() — Combine Arrays
+The concat() method combines two or more arrays.
+
+const first = [10, 20];
+const second = [30, 40];
+
+const result = first.concat(second);
+
+console.log(result);
+console.log(first);
+Output:
+
+[10, 20, 30, 40]
+[10, 20]
+Important
+Original Array → Not Updated
+Return → New Array
+HIGHER ORDER ARRAY METHODS
+12. What is a Higher Order Function?
+A Higher Order Function is a function that:
+
+1. Accepts another function as an argument
+OR
+2. Returns another function
+Many JavaScript array methods accept callback functions.
+
+Example:
+
+const numbers = [10, 20, 30];
+
+numbers.map((value) => {
+    return value * 2;
+});
+Here:
+
+map() → Higher Order Function
+(value) => {} → Callback Function
+13. Important Higher Order Array Methods
+forEach()
+map()
+filter()
+find()
+findIndex()
+some()
+every()
+reduce()
+sort()
+14. forEach() — Loop Through Array
+The forEach() method executes a function for every array element.
+
+Syntax
+array.forEach((value, index, array) => {
+
+});
+Example
+const numbers = [10, 20, 30];
+
+numbers.forEach((value) => {
+    console.log(value);
+});
+Output:
+
+10
+20
+30
+Return Example
+const result = numbers.forEach((value) => {
+    console.log(value);
+});
+
+console.log(result);
+Output:
+
+undefined
+Important
+Return → undefined
+Original Array → Not Automatically Updated
+New Array → Not Created
+Use forEach When
+Looping
+Printing
+Performing side effects
+15. map() — Transform Every Element
+The map() method creates a new array by transforming every element.
+
+Syntax
+const result = array.map((value, index, array) => {
+    return value;
+});
+Example
+const numbers = [10, 20, 30];
+
+const result = numbers.map((value) => {
+    return value * 2;
+});
+
+console.log(result);
+console.log(numbers);
+Output:
+
+[20, 40, 60]
+[10, 20, 30]
+Important
+Return → New Array
+Original → Not Updated
+New Array Length → Same as Original
+Use map When
+Change every value
+Transform data
+Create modified copy
+16. filter() — Filter Matching Elements
+The filter() method returns elements that satisfy a condition.
+
+Syntax
+const result = array.filter((value) => {
+    return condition;
+});
+Example
+const numbers = [10, 15, 20, 25, 30];
+
+const result = numbers.filter((value) => {
+    return value % 2 === 0;
+});
+
+console.log(result);
+Output:
+
+[10, 20, 30]
+Important
+Return → New Array
+Original → Not Updated
+Result Length → Can Change
+Use filter When
+Need multiple matching values
+Need to remove unwanted data
+Need conditional data
+17. find() — Find First Matching Value
+The find() method returns only the first element that satisfies the condition.
+
+const numbers = [10, 25, 30, 45, 50];
+
+const result = numbers.find((value) => {
+    return value > 30;
+});
+
+console.log(result);
+Output:
+
+45
+Important
+Return → First Matching Value
+Not Found → undefined
+Original → Not Updated
+18. findIndex() — Find First Matching Index
+The findIndex() method returns the index of the first matching element.
+
+const numbers = [10, 25, 30, 45, 50];
+
+const result = numbers.findIndex((value) => {
+    return value > 30;
+});
+
+console.log(result);
+Output:
+
+3
+Important
+Return → Index
+Not Found → -1
+Original → Not Updated
+19. some() — Check At Least One
+The some() method checks whether at least one element satisfies a condition.
+
+const numbers = [10, 20, 30, 40];
+
+const result = numbers.some((value) => {
+    return value > 30;
+});
+
+console.log(result);
+Output:
+
+true
+Important
+Return → Boolean
+One Match is Enough → true
+No Match → false
+Original → Not Updated
+Think:
+
+some() = OR Concept
+20. every() — Check All Elements
+The every() method checks whether all elements satisfy a condition.
+
+const numbers = [10, 20, 30, 40];
+
+const result = numbers.every((value) => {
+    return value > 5;
+});
+
+console.log(result);
+Output:
+
+true
+Important
+Return → Boolean
+All Must Match → true
+One Fails → false
+Original → Not Updated
+Think:
+
+every() = AND Concept
+21. reduce() — Convert Array into Single Value
+The reduce() method reduces an array into one final value.
+
+Syntax
+const result = array.reduce((accumulator, value) => {
+    return accumulator;
+}, initialValue);
+Example — Sum
+const numbers = [10, 20, 30, 40];
+
+const result = numbers.reduce((total, value) => {
+    return total + value;
+}, 0);
+
+console.log(result);
+Output:
+
+100
+Process
+Initial Value = 0
+
+0 + 10 = 10
+10 + 20 = 30
+30 + 30 = 60
+60 + 40 = 100
+Important
+Return → Single Value
+Original → Not Updated
+22. includes() — Check Value Exists
+The includes() method checks whether a value exists.
+
+const numbers = [10, 20, 30];
+
+const result = numbers.includes(20);
+
+console.log(result);
+Output:
+
+true
+Important
+Return → Boolean
+Original → Not Updated
+23. indexOf() — Find Index
+The indexOf() method returns the index of a value.
+
+const numbers = [10, 20, 30];
+
+const result = numbers.indexOf(20);
+
+console.log(result);
+Output:
+
+1
+If the value does not exist:
+
+-1
+Important
+Return → Index
+Not Found → -1
+Original → Not Updated
+24. sort() — Sort Array
+The sort() method sorts the original array.
+
+Ascending
+const numbers = [40, 10, 30, 20];
+
+numbers.sort((a, b) => {
+    return a - b;
+});
+
+console.log(numbers);
+Output:
+
+[10, 20, 30, 40]
+Descending
+const numbers = [40, 10, 30, 20];
+
+numbers.sort((a, b) => {
+    return b - a;
+});
+
+console.log(numbers);
+Output:
+
+[40, 30, 20, 10]
+Important
+Original → Updated
+Return → Same Array Reference
+25. reverse() — Reverse Array
+The reverse() method reverses the original array.
+
+const numbers = [10, 20, 30];
+
+const result = numbers.reverse();
+
+console.log(numbers);
+Output:
+
+[30, 20, 10]
+Important
+Original → Updated
+Return → Same Array
+26. join() — Convert Array to String
+The join() method converts an array into a string.
+
+const fruits = ["Apple", "Mango", "Orange"];
+
+const result = fruits.join(" - ");
+
+console.log(result);
+Output:
+
+Apple - Mango - Orange
+Important
+Return → String
+Original → Not Updated
+27. flat() — Flatten Nested Array
+The flat() method removes nested array levels.
+
+const numbers = [1, [2, 3], [4, 5]];
+
+const result = numbers.flat();
+
+console.log(result);
+Output:
+
+[1, 2, 3, 4, 5]
+Important
+Return → New Array
+Original → Not Updated
+28. flatMap() — map() + flat()
+The flatMap() method performs map and flatten operations together.
+
+const numbers = [1, 2, 3];
+
+const result = numbers.flatMap((value) => {
+    return [value, value * 2];
+});
+
+console.log(result);
+Output:
+
+[1, 2, 2, 4, 3, 6]
+29. Array.isArray()
+Checks whether a value is an Array.
+
+const numbers = [10, 20, 30];
+
+console.log(Array.isArray(numbers));
+Output:
+
+true
+Return
+Boolean
+30. Array.from()
+Creates an Array from iterable data.
+
+const name = "JavaScript";
+
+const result = Array.from(name);
+
+console.log(result);
+Output:
+
+["J", "a", "v", "a", "S", "c", "r", "i", "p", "t"]
+31. at() — Access Array Elements
+The at() method allows positive and negative indexing.
+
+const numbers = [10, 20, 30];
+
+console.log(numbers.at(0));
+console.log(numbers.at(-1));
+Output:
+
+10
+30
+32. Modern Non-Mutating Methods
+Modern JavaScript provides immutable versions of some mutating methods.
+
+toSorted()
+Does not change the original array.
+
+const numbers = [30, 10, 20];
+
+const result = numbers.toSorted((a, b) => a - b);
+
+console.log(result);
+console.log(numbers);
+Return → New Sorted Array
+Original → Not Updated
+toReversed()
+const numbers = [10, 20, 30];
+
+const result = numbers.toReversed();
+
+console.log(result);
+console.log(numbers);
+Return → New Reversed Array
+Original → Not Updated
+33. Important Method Classification
+ADDING AND REMOVING
+push()       → Add End
+pop()        → Remove End
+unshift()    → Add Beginning
+shift()      → Remove Beginning
+splice()     → Add / Remove / Replace
+COPY AND COMBINE
+slice()      → Extract / Copy
+concat()     → Combine Arrays
+HIGHER ORDER ARRAY METHODS
+forEach()    → Loop
+map()        → Transform
+filter()     → Filter
+find()       → First Match
+findIndex()  → Find Index
+some()       → At Least One Match
+every()      → All Match
+reduce()     → Single Result
+SEARCH METHODS
+includes()   → Check Exists
+indexOf()    → Find Index
+find()       → Find First Value
+findIndex()  → Find First Index
+MODIFY METHODS
+splice()     → Add / Remove / Replace
+sort()       → Sort
+reverse()    → Reverse
+34. Important Interview Differences
+forEach() vs map()
+forEach()
+
+map()
+
+Used for looping
+
+Used for transformation
+
+Returns undefined
+
+Returns new array
+
+Does not create array
+
+Creates new array
+
+Used for side effects
+
+Used for changing data
+
+Example:
+
+const numbers = [10, 20, 30];
+
+numbers.forEach((value) => {
+    console.log(value);
+});
+
+const result = numbers.map((value) => {
+    return value * 2;
+});
+map() vs filter()
+map()
+
+filter()
+
+Changes every element
+
+Selects elements
+
+Same length
+
+Length can change
+
+Returns new array
+
+Returns new array
+
+const numbers = [10, 15, 20];
+
+const mapResult = numbers.map((value) => value * 2);
+
+const filterResult = numbers.filter((value) => value % 2 === 0);
+filter() vs find()
+filter()
+
+find()
+
+Returns all matches
+
+Returns first match
+
+Returns Array
+
+Returns Value
+
+Not found → []
+
+Not found → undefined
+
+some() vs every()
+some()
+
+every()
+
+At least one condition
+
+All conditions
+
+OR Concept
+
+AND Concept
+
+Returns Boolean
+
+Returns Boolean
+
+slice() vs splice()
+slice()
+
+splice()
+
+Does not modify original
+
+Modifies original
+
+Extracts values
+
+Add/Remove/Replace
+
+Returns New Array
+
+Returns Removed Array
+
+End Index
+
+Delete Count
+
+35. Complete Example — Higher Order Methods
+const numbers = [10, 15, 20, 25, 30, 35, 40];
+
+// map
+const doubled = numbers.map((value) => value * 2);
+
+// filter
+const evenNumbers = numbers.filter((value) => value % 2 === 0);
+
+// find
+const firstGreater = numbers.find((value) => value > 25);
+
+// findIndex
+const index = numbers.findIndex((value) => value > 25);
+
+// some
+const hasGreater = numbers.some((value) => value > 30);
+
+// every
+const allPositive = numbers.every((value) => value > 0);
+
+// reduce
+const total = numbers.reduce((sum, value) => sum + value, 0);
+
+console.log(doubled);
+console.log(evenNumbers);
+console.log(firstGreater);
+console.log(index);
+console.log(hasGreater);
+console.log(allPositive);
+console.log(total);
+36. Array Methods Return Type Summary
+push()       → New Length
+pop()        → Removed Value
+
+unshift()    → New Length
+shift()      → Removed Value
+
+slice()      → New Array
+splice()     → Removed Elements Array
+concat()     → New Array
+
+forEach()    → undefined
+map()        → New Array
+filter()     → New Array
+
+find()       → Value / undefined
+findIndex()  → Index / -1
+
+includes()   → Boolean
+indexOf()    → Index / -1
+
+some()       → Boolean
+every()      → Boolean
+
+reduce()     → Single Value
+
+sort()       → Same Array
+reverse()    → Same Array
+
+join()       → String
+
+flat()       → New Array
+flatMap()    → New Array
+
+Array.isArray() → Boolean
+Array.from()    → New Array
+37. Mutating Methods Summary
+These methods update the original array.
+
+push()
+pop()
+shift()
+unshift()
+splice()
+sort()
+reverse()
+fill()
+copyWithin()
+38. Non-Mutating Methods Summary
+These methods do not update the original array.
+
+slice()
+concat()
+forEach()
+map()
+filter()
+find()
+findIndex()
+includes()
+indexOf()
+some()
+every()
+reduce()
+join()
+flat()
+flatMap()
+Array.from()
+toSorted()
+toReversed()
+39. FINAL INTERVIEW CHEAT SHEET
+push()
+→ Add at End
+→ Updates Original
+→ Returns Length
+
+pop()
+→ Remove at End
+→ Updates Original
+→ Returns Removed Value
+
+unshift()
+→ Add at Beginning
+→ Updates Original
+→ Returns Length
+
+shift()
+→ Remove at Beginning
+→ Updates Original
+→ Returns Removed Value
+
+slice()
+→ Extract / Copy
+→ Does Not Update
+→ Returns New Array
+
+splice()
+→ Add / Remove / Replace
+→ Updates Original
+→ Returns Removed Array
+
+concat()
+→ Combine Arrays
+→ Does Not Update
+→ Returns New Array
+
+forEach()
+→ Loop
+→ Returns undefined
+
+map()
+→ Transform Every Element
+→ Returns New Array
+
+filter()
+→ Get Matching Elements
+→ Returns New Array
+
+find()
+→ Get First Matching Element
+→ Returns Value
+
+findIndex()
+→ Get First Matching Index
+→ Returns Index
+
+some()
+→ At Least One Match
+→ Returns Boolean
+
+every()
+→ All Must Match
+→ Returns Boolean
+
+reduce()
+→ Convert Array into Single Value
+→ Returns Final Value
+
+includes()
+→ Check Value Exists
+→ Returns Boolean
+
+indexOf()
+→ Find Position
+→ Returns Index
+
+sort()
+→ Sort Array
+→ Updates Original
+
+reverse()
+→ Reverse Array
+→ Updates Original
+
+join()
+→ Array to String
+→ Returns String
+
+flat()
+→ Flatten Nested Array
+→ Returns New Array
+GOLDEN INTERVIEW ANSWER
+JavaScript Array methods are built-in methods used to perform operations such as adding, removing, searching, transforming, filtering, sorting, and combining array elements. Array methods can be classified into mutating and non-mutating methods. Mutating methods like push(), pop(), splice(), sort(), and reverse() modify the original array, whereas methods like map(), filter(), slice(), and concat() return a new result without changing the original array. Higher-order array methods such as map(), filter(), find(), some(), every(), and reduce() accept callback functions and are widely used in modern JavaScript applications.
+
+BEST ORDER TO STUDY
+STEP 1
+push()
+pop()
+shift()
+unshift()
+
+STEP 2
+slice()
+splice()
+concat()
+
+STEP 3
+forEach()
+
+STEP 4
+map()
+filter()
+
+STEP 5
+find()
+findIndex()
+
+STEP 6
+some()
+every()
+
+STEP 7
+reduce()
+
+STEP 8
+sort()
+reverse()
+
+STEP 9
+join()
+flat()
+flatMap()
+
+STEP 10
+Modern Methods
+toSorted()
+toReversed()
+Array.from()
+Array.isArray()
+ONE LINE MEMORY TRICK 🔥
+forEach → Just Do
+map     → Change
+filter  → Select
+find    → First
+some    → Any
+every   → All
+reduce  → One
+
+day13
+JAVASCRIPT DOM — COMPLETE INTERVIEW NOTES
+
+1. What is DOM?
+DOM stands for Document Object Model. When a web page is loaded in the browser, the browser converts the HTML document into a tree-like object structure. JavaScript can use this structure to access, read, modify, add, or delete HTML elements dynamically.
+
+In simple words, DOM is the bridge between HTML and JavaScript. HTML creates the structure of the webpage, CSS designs the webpage, and JavaScript uses the DOM to interact with and manipulate the webpage.
+
+For example, consider the following HTML:
+
+<html>
+  <body>
+    <h1>Hello</h1>
+    <p>Welcome</p>
+  </body>
+</html>
+The browser understands it as a tree:
+
+Document
+   |
+  HTML
+   |
+  BODY
+  /   \
+ H1    P
+Using JavaScript, we can select any of these elements and change their content, style, attributes, or behavior.
+
+2. Why Do We Need DOM?
+Without DOM, JavaScript cannot directly interact with HTML elements on a webpage. DOM allows JavaScript to dynamically change the webpage without reloading it.
+
+Using DOM, we can:
+
+Change text content
+
+Change HTML content
+
+Change CSS styles
+
+Add new elements
+
+Remove elements
+
+Change attributes
+
+Handle user events
+
+Create interactive webpages
+
+Validate forms
+
+Build dynamic UI
+
+Real-world examples include:
+
+Login form validation
+
+Dark mode
+
+Dropdown menus
+
+Modal popup
+
+Image slider
+
+Todo application
+
+Add to cart
+
+Like button
+
+Counter application
+
+3. DOM Full Form
+D → Document
+O → Object
+M → Model
+Document
+The complete HTML webpage.
+
+Object
+Every HTML element is treated as an object.
+
+Model
+The browser represents the webpage in a structured tree format.
+
+4. DOM Example
+HTML:
+
+<h1 id="title">Hello World</h1>
+JavaScript:
+
+const heading = document.getElementById("title");
+
+console.log(heading);
+Here:
+
+document
+   ↓
+Complete HTML Page
+
+getElementById()
+   ↓
+Select HTML Element
+
+heading
+   ↓
+Stores Selected Element
+5. What is document in JavaScript?
+The document object represents the entire HTML document loaded in the browser.
+
+console.log(document);
+The document object provides many methods to access and manipulate HTML elements.
+
+Examples:
+
+document.getElementById();
+document.getElementsByClassName();
+document.getElementsByTagName();
+document.querySelector();
+document.querySelectorAll();
+document.createElement();
+==========================================
+DOM SELECTORS
+==========================================
+6. What is a DOM Selector?
+A DOM selector is used to select or access HTML elements from JavaScript.
+
+JavaScript provides multiple methods to select elements.
+
+The most important selectors are:
+
+getElementById()
+getElementsByClassName()
+getElementsByTagName()
+querySelector()
+querySelectorAll()
+7. getElementById()
+getElementById() is used to select one HTML element using its unique ID.
+
+HTML:
+
+<h1 id="title">Hello JavaScript</h1>
+JavaScript:
+
+const element = document.getElementById("title");
+
+console.log(element);
+To change the content:
+
+element.textContent = "Welcome to DOM";
+Important Points
+getElementById() selects an element using its ID. ID should normally be unique on a webpage. This method returns a single element object.
+
+Syntax:
+
+document.getElementById("idName");
+8. getElementsByClassName()
+getElementsByClassName() selects multiple elements using their class name.
+
+HTML:
+
+<p class="text">First</p>
+<p class="text">Second</p>
+<p class="text">Third</p>
+JavaScript:
+
+const elements = document.getElementsByClassName("text");
+
+console.log(elements);
+This returns an HTMLCollection.
+
+To access individual elements:
+
+console.log(elements[0]);
+console.log(elements[1]);
+console.log(elements[2]);
+Syntax
+document.getElementsByClassName("className");
+9. getElementsByTagName()
+getElementsByTagName() selects elements using their HTML tag name.
+
+HTML:
+
+<p>Hello</p>
+<p>Welcome</p>
+<p>JavaScript</p>
+JavaScript:
+
+const paragraphs = document.getElementsByTagName("p");
+
+console.log(paragraphs);
+This also returns an HTMLCollection.
+
+Access:
+
+console.log(paragraphs[0]);
+10. querySelector()
+querySelector() selects the first matching element using CSS selector syntax.
+
+This is one of the most commonly used DOM methods.
+
+HTML:
+
+<h1 id="title">Hello</h1>
+<p class="text">Welcome</p>
+JavaScript:
+
+const title = document.querySelector("#title");
+
+const text = document.querySelector(".text");
+
+const heading = document.querySelector("h1");
+Important
+# → ID
+. → Class
+No Symbol → Tag
+Example:
+
+document.querySelector("#title");
+document.querySelector(".text");
+document.querySelector("p");
+querySelector() returns only the first matching element.
+
+11. querySelectorAll()
+querySelectorAll() selects all matching elements.
+
+HTML:
+
+<p class="text">First</p>
+<p class="text">Second</p>
+<p class="text">Third</p>
+JavaScript:
+
+const elements = document.querySelectorAll(".text");
+
+console.log(elements);
+This returns a NodeList.
+
+We can use forEach() directly with querySelectorAll().
+
+elements.forEach((element) => {
+    console.log(element.textContent);
+});
+12. DOM Selectors Comparison
+Selector
+
+Selects
+
+Return
+
+getElementById()
+
+Single ID
+
+Element
+
+getElementsByClassName()
+
+Multiple Class
+
+HTMLCollection
+
+getElementsByTagName()
+
+Multiple Tags
+
+HTMLCollection
+
+querySelector()
+
+First Match
+
+Element
+
+querySelectorAll()
+
+All Matches
+
+NodeList
+
+Interview Point
+querySelector() and querySelectorAll() are powerful because they support CSS selector syntax.
+
+Example:
+
+document.querySelector(".container p");
+document.querySelector("#box .item");
+document.querySelectorAll("ul li");
+==========================================
+DOM CONTENT PROPERTIES
+==========================================
+13. textContent
+textContent is used to get or set the text content of an element.
+
+HTML:
+
+<h1 id="title">Hello</h1>
+JavaScript:
+
+const title = document.getElementById("title");
+
+console.log(title.textContent);
+Output:
+
+Hello
+To change text:
+
+title.textContent = "Welcome to JavaScript";
+Use textContent when:
+You only want to work with plain text.
+
+14. innerHTML
+innerHTML is used to get or set HTML content inside an element.
+
+HTML:
+
+<div id="box"></div>
+JavaScript:
+
+const box = document.getElementById("box");
+
+box.innerHTML = "<h1>Hello</h1><p>Welcome</p>";
+Here, JavaScript parses the value as HTML.
+
+Important Difference
+element.textContent = "<h1>Hello</h1>";
+Output on webpage:
+
+<h1>Hello</h1>
+But:
+
+element.innerHTML = "<h1>Hello</h1>";
+Output:
+
+Hello
+Interview Point
+textContent treats content as text, while innerHTML parses and inserts HTML.
+
+Avoid inserting untrusted user input directly through innerHTML, because it can create security risks.
+
+15. innerText
+innerText is also used to get or set visible text.
+
+element.innerText = "Hello";
+Difference
+textContent gets text from the DOM content.
+
+innerText focuses more on rendered/visible text.
+
+innerHTML works with HTML markup.
+
+For normal text updates, textContent is generally preferred.
+
+16. Content Properties Comparison
+Property
+
+Works With
+
+textContent
+
+Plain Text
+
+innerText
+
+Visible Text
+
+innerHTML
+
+HTML Content
+
+==========================================
+DOM STYLE PROPERTIES
+==========================================
+17. Changing CSS Using JavaScript
+We can modify CSS styles using the style property.
+
+HTML:
+
+<h1 id="title">Hello</h1>
+JavaScript:
+
+const title = document.getElementById("title");
+
+title.style.color = "red";
+title.style.backgroundColor = "black";
+title.style.fontSize = "40px";
+Important
+CSS:
+
+background-color
+font-size
+JavaScript:
+
+backgroundColor
+fontSize
+JavaScript uses camelCase for CSS properties.
+
+18. classList
+Instead of directly changing styles, real-world applications commonly add or remove CSS classes.
+
+HTML:
+
+<div id="box">Hello</div>
+CSS:
+
+.active {
+    background-color: green;
+    color: white;
+}
+JavaScript:
+
+const box = document.getElementById("box");
+
+box.classList.add("active");
+19. Important classList Methods
+add()
+Adds a class.
+
+element.classList.add("active");
+remove()
+Removes a class.
+
+element.classList.remove("active");
+toggle()
+Adds the class if it doesn't exist and removes it if it already exists.
+
+element.classList.toggle("dark");
+contains()
+Checks whether a class exists.
+
+const result = element.classList.contains("active");
+
+console.log(result);
+Returns:
+
+true
+or
+false
+classList Real-Time Example — Dark Mode
+HTML:
+
+<button id="btn">Dark Mode</button>
+<div id="box">
+    Welcome
+</div>
+CSS:
+
+.dark {
+    background-color: black;
+    color: white;
+}
+JavaScript:
+
+const button = document.getElementById("btn");
+const box = document.getElementById("box");
+
+button.addEventListener("click", () => {
+    box.classList.toggle("dark");
+});
+This is a real-world example of DOM manipulation and events.
+
+==========================================
+DOM ATTRIBUTES
+==========================================
+20. What are Attributes?
+Attributes provide additional information about HTML elements.
+
+Examples:
+
+<img src="image.jpg" alt="Image">
+<a href="https://example.com">Visit</a>
+<input type="text" placeholder="Enter Name">
+Important attributes:
+
+id
+class
+src
+href
+alt
+type
+placeholder
+value
+disabled
+21. getAttribute()
+Used to get an attribute value.
+
+HTML:
+
+<a id="link" href="https://google.com">Google</a>
+JavaScript:
+
+const link = document.getElementById("link");
+
+const result = link.getAttribute("href");
+
+console.log(result);
+22. setAttribute()
+Used to set or update an attribute.
+
+link.setAttribute("href", "https://youtube.com");
+23. removeAttribute()
+Used to remove an attribute.
+
+link.removeAttribute("href");
+24. hasAttribute()
+Checks whether an element has a specific attribute.
+
+const result = link.hasAttribute("href");
+
+console.log(result);
+Returns:
+
+true
+false
+==========================================
+CREATE ELEMENTS
+==========================================
+25. createElement()
+createElement() creates a new HTML element using JavaScript.
+
+const heading = document.createElement("h1");
+
+heading.textContent = "Hello JavaScript";
+At this point, the element is created in JavaScript memory but is not yet visible on the webpage.
+
+To display it, we need to add it to the DOM.
+
+26. append()
+Adds elements at the end.
+
+document.body.append(heading);
+Complete Example:
+
+const heading = document.createElement("h1");
+
+heading.textContent = "Hello DOM";
+
+document.body.append(heading);
+27. appendChild()
+Also adds a child element.
+
+document.body.appendChild(heading);
+Basic Difference
+append() can append multiple nodes and text values.
+
+appendChild() is traditionally used to append a single Node and returns the appended node.
+
+For beginner-level DOM manipulation, both are commonly seen.
+
+28. prepend()
+Adds an element at the beginning.
+
+document.body.prepend(heading);
+29. remove()
+Removes an element from the DOM.
+
+heading.remove();
+30. Complete Create and Remove Example
+HTML:
+
+<div id="container"></div>
+
+<button id="addBtn">Add</button>
+JavaScript:
+
+const container = document.getElementById("container");
+const button = document.getElementById("addBtn");
+
+button.addEventListener("click", () => {
+
+    const heading = document.createElement("h2");
+
+    heading.textContent = "New Element";
+
+    container.append(heading);
+
+});
+Every time the button is clicked, a new heading is created and added.
+
+==========================================
+DOM TRAVERSAL
+==========================================
+31. What is DOM Traversal?
+DOM traversal means moving between related elements in the DOM tree.
+
+We can move:
+
+Parent
+↓
+Child
+
+Child
+↑
+Parent
+
+Sibling
+↔
+Sibling
+32. parentElement
+Selects the parent element.
+
+HTML:
+
+<div id="parent">
+    <p id="child">Hello</p>
+</div>
+JavaScript:
+
+const child = document.getElementById("child");
+
+console.log(child.parentElement);
+Output:
+
+<div id="parent">
+33. children
+Selects child elements.
+
+const parent = document.getElementById("parent");
+
+console.log(parent.children);
+Returns an HTMLCollection.
+
+34. firstElementChild
+Selects the first child element.
+
+console.log(parent.firstElementChild);
+35. lastElementChild
+Selects the last child element.
+
+console.log(parent.lastElementChild);
+36. nextElementSibling
+Selects the next sibling.
+
+console.log(element.nextElementSibling);
+37. previousElementSibling
+Selects the previous sibling.
+
+console.log(element.previousElementSibling);
+==========================================
+JAVASCRIPT EVENTS
+==========================================
+38. What is an Event?
+An event is an action or occurrence that happens in the browser, usually because of user interaction or browser activity.
+
+Examples:
+
+User clicks a button
+
+User types in an input
+
+User submits a form
+
+Mouse moves
+
+Keyboard key is pressed
+
+Page loads
+
+Input value changes
+
+In simple words:
+
+User Action
+     ↓
+Event Happens
+     ↓
+JavaScript Listens
+     ↓
+JavaScript Executes Code
+Example:
+
+User clicks Login Button
+        ↓
+click Event
+        ↓
+JavaScript Function Runs
+39. What is an Event Listener?
+An Event Listener is a function that listens for a specific event and executes code when that event occurs.
+
+The most common method is:
+
+addEventListener()
+Syntax:
+
+element.addEventListener("eventName", function);
+Arrow Function:
+
+element.addEventListener("click", () => {
+
+});
+40. addEventListener() Full Process
+HTML:
+
+<button id="btn">Click Me</button>
+JavaScript:
+
+const button = document.getElementById("btn");
+
+button.addEventListener("click", () => {
+    console.log("Button Clicked");
+});
+Process:
+
+1. Select Button
+       ↓
+2. Add Event Listener
+       ↓
+3. Listen for Click Event
+       ↓
+4. User Clicks
+       ↓
+5. Callback Function Executes
+41. Common Events
+Mouse Events
+click
+dblclick
+mouseenter
+mouseleave
+mousemove
+mousedown
+mouseup
+Keyboard Events
+keydown
+keyup
+keypress
+Note: In modern code, keydown and keyup are generally preferred over the older keypress.
+
+Form Events
+submit
+input
+change
+focus
+blur
+Window / Document Events
+load
+DOMContentLoaded
+resize
+scroll
+42. Click Event Example
+HTML:
+
+<button id="btn">Click</button>
+
+<h1 id="title">Hello</h1>
+JavaScript:
+
+const button = document.getElementById("btn");
+const title = document.getElementById("title");
+
+button.addEventListener("click", () => {
+    title.textContent = "Button Clicked!";
+});
+43. Input Event Example
+HTML:
+
+<input id="nameInput" placeholder="Enter Name">
+
+<h2 id="output"></h2>
+JavaScript:
+
+const input = document.getElementById("nameInput");
+const output = document.getElementById("output");
+
+input.addEventListener("input", () => {
+    output.textContent = input.value;
+});
+Process
+User Types
+    ↓
+input Event
+    ↓
+Get Input Value
+    ↓
+Update Output
+This is a basic example of live data binding using DOM.
+
+44. Event Object
+When an event occurs, JavaScript automatically provides an Event Object.
+
+Example:
+
+button.addEventListener("click", (event) => {
+    console.log(event);
+});
+The event object contains information about the event.
+
+Important properties:
+
+event.target
+event.type
+event.preventDefault()
+event.currentTarget
+45. event.target
+event.target tells us which element triggered the event.
+
+button.addEventListener("click", (event) => {
+    console.log(event.target);
+});
+46. event.type
+Returns the type of event.
+
+button.addEventListener("click", (event) => {
+    console.log(event.type);
+});
+Output:
+
+click
+47. preventDefault()
+Some HTML elements have default browser behavior.
+
+For example, when a form is submitted, the page reloads by default.
+
+We can stop that behavior using:
+
+event.preventDefault();
+Example:
+
+HTML:
+
+<form id="form">
+    <input type="text">
+    <button>Submit</button>
+</form>
+JavaScript:
+
+const form = document.getElementById("form");
+
+form.addEventListener("submit", (event) => {
+
+    event.preventDefault();
+
+    console.log("Form Submitted");
+
+});
+Now the page will not reload.
+
+48. Event Bubbling
+Event bubbling means an event starts from the target element and propagates upward through its parent elements.
+
+Example:
+
+<div id="parent">
+    <button id="child">Click</button>
+</div>
+JavaScript:
+
+const parent = document.getElementById("parent");
+const child = document.getElementById("child");
+
+parent.addEventListener("click", () => {
+    console.log("Parent Clicked");
+});
+
+child.addEventListener("click", () => {
+    console.log("Child Clicked");
+});
+When the button is clicked:
+
+Child Clicked
+Parent Clicked
+Process:
+
+Button
+  ↑
+Parent
+  ↑
+Body
+  ↑
+Document
+This upward movement is called Event Bubbling.
+
+49. stopPropagation()
+Used to stop event bubbling.
+
+child.addEventListener("click", (event) => {
+
+    event.stopPropagation();
+
+    console.log("Child Clicked");
+
+});
+Now clicking the child will not trigger the parent's event listener.
+
+50. Event Delegation
+Event Delegation is a technique where we attach an event listener to a parent instead of adding listeners to every child.
+
+HTML:
+
+<ul id="list">
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>JavaScript</li>
+</ul>
+JavaScript:
+
+const list = document.getElementById("list");
+
+list.addEventListener("click", (event) => {
+
+    console.log(event.target.textContent);
+
+});
+Instead of adding three event listeners:
+
+Listener → HTML
+Listener → CSS
+Listener → JavaScript
+We use:
+
+One Listener
+     ↓
+Parent
+     ↓
+Handle All Children
+Event Delegation works using Event Bubbling.
+
+==========================================
+DOM PROPERTY VS ATTRIBUTE
+==========================================
+51. Property vs Attribute
+This is an important interview topic.
+
+An Attribute is defined in HTML.
+
+<input value="Hello">
+A Property is the current JavaScript object value.
+
+input.value
+Example:
+
+<input id="name" value="Sudhan">
+JavaScript:
+
+const input = document.getElementById("name");
+
+console.log(input.getAttribute("value"));
+console.log(input.value);
+Attributes generally represent the HTML configuration, while properties represent the current state of the DOM object.
+
+For form inputs, after the user changes the value, input.value represents the current value.
+
+52. Important DOM Properties
+textContent
+innerText
+innerHTML
+
+style
+classList
+
+value
+checked
+disabled
+
+parentElement
+children
+
+nextElementSibling
+previousElementSibling
+==========================================
+DOM METHODS SUMMARY
+==========================================
+53. DOM Selection Methods
+document.getElementById();
+document.getElementsByClassName();
+document.getElementsByTagName();
+
+document.querySelector();
+document.querySelectorAll();
+54. DOM Content Properties
+element.textContent;
+element.innerText;
+element.innerHTML;
+55. DOM Style Methods
+element.style.color = "red";
+
+element.classList.add();
+element.classList.remove();
+element.classList.toggle();
+element.classList.contains();
+56. DOM Attribute Methods
+element.getAttribute();
+element.setAttribute();
+element.removeAttribute();
+element.hasAttribute();
+57. Create and Remove Methods
+document.createElement();
+
+element.append();
+element.appendChild();
+
+element.prepend();
+
+element.remove();
+58. DOM Traversal
+element.parentElement;
+
+element.children;
+
+element.firstElementChild;
+element.lastElementChild;
+
+element.nextElementSibling;
+element.previousElementSibling;
+59. Event Methods
+element.addEventListener();
+
+event.preventDefault();
+
+event.stopPropagation();
+==========================================
+COMPLETE DOM PROJECT EXAMPLE
+==========================================
+60. Simple Counter Application
+HTML:
+
+<h1 id="count">0</h1>
+
+<button id="increment">+</button>
+<button id="decrement">-</button>
+<button id="reset">Reset</button>
+JavaScript:
+
+const countElement = document.getElementById("count");
+
+const incrementButton = document.getElementById("increment");
+const decrementButton = document.getElementById("decrement");
+const resetButton = document.getElementById("reset");
+
+let count = 0;
+
+incrementButton.addEventListener("click", () => {
+
+    count++;
+
+    countElement.textContent = count;
+
+});
+
+decrementButton.addEventListener("click", () => {
+
+    count--;
+
+    countElement.textContent = count;
+
+});
+
+resetButton.addEventListener("click", () => {
+
+    count = 0;
+
+    countElement.textContent = count;
+
+});
+Full Process
+HTML Element
+     ↓
+Select using DOM
+     ↓
+Store in Variable
+     ↓
+Add Event Listener
+     ↓
+User Performs Action
+     ↓
+JavaScript Runs
+     ↓
+Update Variable
+     ↓
+Update DOM
+     ↓
+UI Changes
+This process is the foundation of interactive frontend development.
+
+61. DOM Interview Questions
+1. What is DOM?
+DOM stands for Document Object Model. It represents an HTML document as a tree of objects and allows JavaScript to dynamically access and manipulate webpage elements.
+
+2. What is the difference between HTML and DOM?
+HTML is the markup used to define the initial structure of a webpage. DOM is the object representation created by the browser from that HTML, which JavaScript can interact with dynamically.
+
+3. What is the difference between querySelector and querySelectorAll?
+querySelector() returns the first matching element, while querySelectorAll() returns all matching elements as a NodeList.
+
+4. What is the difference between getElementById and querySelector?
+getElementById() selects an element using its ID only. querySelector() supports CSS selectors and returns the first matching element.
+
+5. What is the difference between innerHTML and textContent?
+innerHTML reads or writes HTML markup, while textContent reads or writes plain text.
+
+6. What is an Event?
+An event is an action or occurrence in the browser, such as clicking, typing, submitting a form, or moving the mouse.
+
+7. What is an Event Listener?
+An Event Listener listens for a specific event and executes a callback function when that event occurs.
+
+8. What is Event Bubbling?
+Event bubbling is the propagation of an event from the target element upward through its parent elements.
+
+9. What is Event Delegation?
+Event Delegation is attaching an event listener to a parent element and handling events from its child elements using event bubbling.
+
+10. What is preventDefault?
+preventDefault() prevents the browser's default action, such as stopping a form submission from reloading the page.
+
+11. What is the difference between Property and Attribute?
+Attributes are defined in HTML, while properties represent the current state of the corresponding DOM object in JavaScript.
+
+12. What is classList?
+classList provides methods to manage CSS classes dynamically, including add(), remove(), toggle(), and contains().
+
+FINAL DOM LEARNING ROADMAP
+STEP 1
+What is DOM?
+Document Object
+
+STEP 2
+DOM Selectors
+getElementById
+querySelector
+querySelectorAll
+
+STEP 3
+Content
+textContent
+innerText
+innerHTML
+
+STEP 4
+Style
+style
+classList
+
+STEP 5
+Attributes
+getAttribute
+setAttribute
+
+STEP 6
+Create Elements
+createElement
+append
+prepend
+remove
+
+STEP 7
+Traversal
+Parent
+Child
+Sibling
+
+STEP 8
+Events
+click
+input
+change
+submit
+keyboard events
+
+STEP 9
+Event Object
+target
+type
+preventDefault
+
+STEP 10
+Event Bubbling
+Event Delegation
+stopPropagation
+GOLDEN INTERVIEW ANSWER
+The DOM, or Document Object Model, is a programming interface that represents an HTML document as a tree of objects. It allows JavaScript to dynamically access, modify, create, and remove webpage elements. Using DOM APIs, developers can select elements, change content and styles, manage attributes and classes, create dynamic UI elements, and handle user interactions through events and event listeners. DOM manipulation is one of the fundamental concepts of frontend development because it enables static HTML pages to become interactive web applications.
+
+test pdf in frontend group
+
+day 15
+
+DOM Show / Hide Toggle using display: none
+
+HTML
+<div id="box">
+    Hello! I am Visible 👋
+</div>
+
+<button id="toggleBtn">
+    Hide
+</button>
+CSS
+#box {
+    width: 300px;
+    padding: 30px;
+    background-color: lightblue;
+}
+JavaScript
+const button = document.getElementById("toggleBtn");
+const box = document.getElementById("box");
+
+let isVisible = true;
+
+button.addEventListener("click", () => {
+
+    isVisible = !isVisible;
+
+    if (isVisible) {
+        box.style.display = "block";
+        button.textContent = "Hide";
+    } else {
+        box.style.display = "none";
+        button.textContent = "Show";
+    }
+
+});
+Step-by-Step Process 🧠
+Initial State
+let isVisible = true;
+இதன் meaning:
+
+Box → Visible
+First Click
+isVisible = !isVisible;
+true
+ ↓ !
+false
+So:
+
+box.style.display = "none";
+Result:
+
+Box Hidden ❌
+Button → Show
+Second Click
+Again:
+
+isVisible = !isVisible;
+false
+ ↓ !
+true
+So:
+
+box.style.display = "block";
+Result:
+
+Box Visible ✅
+Button → Hide
+Full Flow
+Initial
+
+isVisible = true
+Box → Visible
+
+        ↓ Click
+
+isVisible = false
+Box → display: none
+
+        ↓ Click
+
+isVisible = true
+Box → display: block
+Important Difference
+Color Toggle
+box.style.backgroundColor = "green";
+👉 Element இருக்கிறது, color மட்டும் change ஆகும்.
+
+Display Toggle
+box.style.display = "none";
+👉 Element முழுவதுமாக hide ஆகும்.
+
+Another Simple Method – Without Boolean Variable
+இதுவும் important 👇
+
+const button = document.getElementById("toggleBtn");
+const box = document.getElementById("box");
+
+button.addEventListener("click", () => {
+
+    if (box.style.display === "none") {
+
+        box.style.display = "block";
+        button.textContent = "Hide";
+
+    } else {
+
+        box.style.display = "none";
+        button.textContent = "Show";
+
+    }
+
+});
+Interview Point 🔥
+DOM Toggle செய்ய generally இரண்டு ways:
+
+1. Boolean State
+let isVisible = true;
+
+isVisible = !isVisible;
+2. Check Current Style
+if (box.style.display === "none")
+Real-time usage:
+
+Password Show / Hide
+
+Sidebar Open / Close
+
+Mobile Menu Toggle
+
+FAQ Accordion
+
+Modal Popup
+
+Notification Panel
+
+Dropdown Menu
+
+day16
+1. querySelector()
+
+What is querySelector?
+querySelector() என்பது CSS selector பயன்படுத்தி முதல் matching element மட்டும் select செய்யும்.
+
+Syntax
+document.querySelector("selector");
+Example 1 – ID Select
+HTML
+<h1 id="title">Hello JavaScript</h1>
+JavaScript
+const heading = document.querySelector("#title");
+
+console.log(heading);
+Process
+document
+   ↓
+querySelector("#title")
+   ↓
+Search for id="title"
+   ↓
+First Matching Element
+   ↓
+<h1>Hello JavaScript</h1>
+ID select பண்ண # பயன்படுத்த வேண்டும்.
+
+Example 2 – Class Select
+HTML
+<p class="message">First Message</p>
+<p class="message">Second Message</p>
+<p class="message">Third Message</p>
+JavaScript
+const message = document.querySelector(".message");
+
+console.log(message);
+Output
+First Message
+Why?
+querySelector() first matching element மட்டும் select பண்ணும்.
+
+.message
+
+First Message   ✅ Selected
+Second Message  ❌
+Third Message   ❌
+Example 3 – Tag Select
+HTML
+<h2>Hello</h2>
+<h2>Welcome</h2>
+const heading = document.querySelector("h2");
+
+console.log(heading.textContent);
+Output
+Hello
+Again → First matching element only.
+
+2. querySelectorAll()
+What is querySelectorAll?
+querySelectorAll() என்பது CSS selector பயன்படுத்தி எல்லா matching elements-யும் select செய்யும்.
+
+Syntax
+document.querySelectorAll("selector");
+It returns a:
+
+NodeList
+Example 1 – Select All Class Elements
+HTML
+<p class="message">Hello</p>
+<p class="message">Welcome</p>
+<p class="message">JavaScript</p>
+JavaScript
+const messages = document.querySelectorAll(".message");
+
+console.log(messages);
+Process
+document
+    ↓
+querySelectorAll(".message")
+    ↓
+Search All Elements
+    ↓
+Find All Matching Elements
+    ↓
+NodeList
+Result conceptually:
+
+NodeList [
+  p.message,
+  p.message,
+  p.message
+]
+How to Access querySelectorAll() Values?
+Since multiple elements are selected, use index.
+
+const messages = document.querySelectorAll(".message");
+
+console.log(messages[0].textContent);
+Output:
+
+Hello
+console.log(messages[1].textContent);
+Output:
+
+Welcome
+Loop Through All Elements
+<p class="message">HTML</p>
+<p class="message">CSS</p>
+<p class="message">JavaScript</p>
+const messages = document.querySelectorAll(".message");
+
+for (let i = 0; i < messages.length; i++) {
+    console.log(messages[i].textContent);
+}
+Process
+querySelectorAll()
+        ↓
+Multiple Elements
+        ↓
+NodeList
+        ↓
+messages.length
+        ↓
+Loop
+        ↓
+Access One by One
+Change All Elements Color
+const messages = document.querySelectorAll(".message");
+
+for (let i = 0; i < messages.length; i++) {
+    messages[i].style.color = "red";
+}
+Result:
+
+HTML         → Red
+CSS          → Red
+JavaScript   → Red
+Important Difference 🔥
+Feature
+
+querySelector()
+
+querySelectorAll()
+
+Select
+
+First matching element
+
+All matching elements
+
+Return
+
+Single Element
+
+NodeList
+
+Multiple access
+
+Not needed
+
+Use index / loop
+
+CSS Selector
+
+Yes
+
+Yes
+
+ID
+
+#id
+
+#id
+
+Class
+
+.class
+
+.class
+
+Tag
+
+tagName
+
+tagName
+
+Easy Real-Time Example
+Imagine a classroom 🏫
+
+querySelector(".student")
+Teacher says:
+
+"First student மட்டும் வாங்க"
+
+Result → ஒரே ஒரு student.
+
+querySelectorAll(".student")
+Teacher says:
+
+"Student class-ல இருக்கிற எல்லாரும் வாங்க"
+
+Result → அனைத்து students.
+
+One Important Interview Question 🔥
+What happens if no element matches?
+querySelector()
+const element = document.querySelector(".wrong");
+Result:
+
+null
+querySelectorAll()
+const elements = document.querySelectorAll(".wrong");
+Result:
+
+NodeList []
+
+
+JavaScript DOM – classList Methods
+
+DOM-ல CSS classes manipulate பண்ண use பண்ணுற முக்கியமான methods தான் classList.
+
+Today முக்கியமாக இந்த topics படிக்கலாம்:
+
+classList.add()
+classList.remove()
+classList.toggle()
+classList.contains()
+classList.replace()
+1. classList.add()
+
+ஒரு element-க்கு new CSS class add பண்ண பயன்படும்.
+
+HTML
+<div id="box">Hello World</div>
+
+<button id="btn">Add Class</button>
+CSS
+.active {
+    background-color: green;
+    color: white;
+    padding: 20px;
+}
+JavaScript
+const box = document.querySelector("#box");
+const btn = document.querySelector("#btn");
+
+btn.addEventListener("click", () => {
+    box.classList.add("active");
+});
+Process
+Button Click
+     ↓
+classList.add("active")
+     ↓
+active class added
+     ↓
+CSS Applied
+     ↓
+Box Changed
+Before
+<div id="box">Hello World</div>
+After Click
+<div id="box" class="active">
+    Hello World
+</div>
+2. classList.remove()
+
+ஒரு element-ல இருக்கிற CSS class-ஐ remove பண்ண பயன்படும்.
+
+box.classList.remove("active");
+Example
+<div id="box" class="active">
+    Hello World
+</div>
+
+<button id="btn">Remove Class</button>
+const box = document.querySelector("#box");
+const btn = document.querySelector("#btn");
+
+btn.addEventListener("click", () => {
+    box.classList.remove("active");
+});
+Process
+Button Click
+     ↓
+remove("active")
+     ↓
+active class removed
+     ↓
+CSS styling removed
+3. classList.toggle()
+
+ஒரே method மூலம் Add + Remove பண்ணலாம்.
+
+box.classList.toggle("active");
+Logic
+Class exists?
+     ↓
+YES → Remove
+NO  → Add
+Example
+btn.addEventListener("click", () => {
+    box.classList.toggle("active");
+});
+Click Process
+First Click
+→ active Added
+
+Second Click
+→ active Removed
+
+Third Click
+→ active Added
+4. classList.contains() ⭐ Important
+
+ஒரு class இருக்கிறதா இல்லையா என்று check பண்ண பயன்படும்.
+
+box.classList.contains("active");
+Return Value
+true
+
+அல்லது
+
+false
+Example with contains()
+<div id="box" class="active">
+    Hello
+</div>
+
+<button id="btn">Check</button>
+const box = document.querySelector("#box");
+const btn = document.querySelector("#btn");
+
+btn.addEventListener("click", () => {
+
+    if (box.classList.contains("active")) {
+        console.log("Active class exists");
+    } else {
+        console.log("Active class does not exist");
+    }
+
+});
+Process
+Button Click
+      ↓
+contains("active")
+      ↓
+Check Class
+      ↓
+Exists?
+   ↙        ↘
+ YES        NO
+ ↓           ↓
+true        false
+5. classList.replace()
+
+ஒரு existing class-ஐ remove பண்ணி அதற்கு பதிலாக another class replace பண்ணலாம்.
+
+Syntax
+element.classList.replace("oldClass", "newClass");
+Example
+HTML
+<div id="box" class="light">
+    Hello World
+</div>
+
+<button id="btn">Change Theme</button>
+CSS
+.light {
+    background-color: white;
+    color: black;
+    padding: 20px;
+}
+
+.dark {
+    background-color: black;
+    color: white;
+    padding: 20px;
+}
+JavaScript
+const box = document.querySelector("#box");
+const btn = document.querySelector("#btn");
+
+btn.addEventListener("click", () => {
+    box.classList.replace("light", "dark");
+});
+Process
+light class
+     ↓
+replace()
+     ↓
+light Removed
+     ↓
+dark Added
+Full classList Summary 🔥
+Method	Purpose
+add()	Add a class
+remove()	Remove a class
+toggle()	Add / Remove automatically
+contains()	Check whether class exists
+replace()	Replace one class with another
+Important Combined Example 🔥
+
+இதுல add(), remove(), contains() எல்லாம் புரியும்.
+
+<div id="box">
+    Hello JavaScript
+</div>
+
+<button id="addBtn">Add</button>
+<button id="removeBtn">Remove</button>
+<button id="checkBtn">Check</button>
+.active {
+    background-color: green;
+    color: white;
+    padding: 20px;
+}
+const box = document.querySelector("#box");
+
+const addBtn = document.querySelector("#addBtn");
+const removeBtn = document.querySelector("#removeBtn");
+const checkBtn = document.querySelector("#checkBtn");
+
+
+addBtn.addEventListener("click", () => {
+    box.classList.add("active");
+});
+
+
+removeBtn.addEventListener("click", () => {
+    box.classList.remove("active");
+});
+
+
+checkBtn.addEventListener("click", () => {
+
+    if (box.classList.contains("active")) {
+        console.log("Class is Active");
+    } else {
+        console.log("Class is Not Active");
+    }
+
+});
+day17
+
+JavaScript DOM — Input Data → Object → Array of Objects → Screen
+
+இது DOM-ல ரொம்ப முக்கியமான practical concept. இதை 3 stages-ஆ teach பண்ணலாம்:
+
+Input Data
+   ↓
+Screen Display
+   ↓
+Object
+   ↓
+Screen Display
+   ↓
+Array of Objects
+   ↓
+Screen Display
+1. Input-ல் Enter பண்ணின Data-வை Screen-ல் Display பண்ணுவது
+முதலில் user input-ல் data enter பண்ணுவார். Button click பண்ணும்போது அந்த value-ஐ எடுத்து <div> உள்ளே காட்டலாம்.
+
+HTML
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOM Input</title>
+</head>
+
+<body>
+
+    <input type="text" id="nameInput" placeholder="Enter Name">
+
+    <button id="btn">
+        Display
+    </button>
+
+    <div id="output"></div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+JavaScript
+const input = document.getElementById("nameInput");
+const button = document.getElementById("btn");
+const output = document.getElementById("output");
+
+button.addEventListener("click", () => {
+
+    const name = input.value;
+
+    output.textContent = name;
+
+});
+Process
+User enters:
+"Arun"
+
+      ↓
+
+input.value
+
+      ↓
+
+name variable
+
+      ↓
+
+output.textContent
+
+      ↓
+
+Screen
+
+Arun
+2. Input Data-வை Object-ஆ Save பண்ணி Screen-ல் Display பண்ணுவது
+இப்போ name மட்டும் இல்லாமல் multiple details வாங்கலாம்.
+
+Example:
+
+Name
+Age
+City
+இந்த data-வை ஒரு Object-ஆ store பண்ணலாம்.
+
+HTML
+<input type="text" id="name" placeholder="Enter Name">
+
+<input type="number" id="age" placeholder="Enter Age">
+
+<input type="text" id="city" placeholder="Enter City">
+
+<button id="saveBtn">
+    Save
+</button>
+
+<div id="output"></div>
+JavaScript
+const nameInput = document.getElementById("name");
+const ageInput = document.getElementById("age");
+const cityInput = document.getElementById("city");
+
+const saveBtn = document.getElementById("saveBtn");
+const output = document.getElementById("output");
+
+saveBtn.addEventListener("click", () => {
+
+    const student = {
+        name: nameInput.value,
+        age: ageInput.value,
+        city: cityInput.value
+    };
+
+    console.log(student);
+
+    output.innerHTML = `
+        <h2>Student Details</h2>
+        <p>Name: ${student.name}</p>
+        <p>Age: ${student.age}</p>
+        <p>City: ${student.city}</p>
+    `;
+
+});
+Example Input
+Name → Arun
+Age  → 22
+City → Chennai
+Object:
+
+{
+    name: "Arun",
+    age: "22",
+    city: "Chennai"
+}
+Screen:
+
+Student Details
+
+Name: Arun
+Age: 22
+City: Chennai
+3. Why Object?
+Multiple related values-ஐ ஒரே variable-க்குள் meaningful properties-ஆ store பண்ண Object use பண்ணுறோம்.
+
+Instead of:
+
+const name = "Arun";
+const age = 22;
+const city = "Chennai";
+We can use:
+
+const student = {
+    name: "Arun",
+    age: 22,
+    city: "Chennai"
+};
+Access:
+
+student.name
+student.age
+student.city
+4. Array of Objects
+ஒரு student மட்டும் இல்லாமல் multiple students இருக்கும்போது Array of Objects use பண்ணலாம்.
+
+Example:
+
+const students = [
+    {
+        name: "Arun",
+        age: 22,
+        city: "Chennai"
+    },
+    {
+        name: "Bala",
+        age: 23,
+        city: "Madurai"
+    },
+    {
+        name: "Kumar",
+        age: 21,
+        city: "Coimbatore"
+    }
+];
+Structure:
+
+Array
+  ↓
+Object
+  ↓
+Object
+  ↓
+Object
+5. Array of Objects-ஐ Screen-ல் Display
+இதுதான் important practical part 🔥
+
+HTML
+<div id="output"></div>
+JavaScript
+const students = [
+    {
+        name: "Arun",
+        age: 22,
+        city: "Chennai"
+    },
+    {
+        name: "Bala",
+        age: 23,
+        city: "Madurai"
+    },
+    {
+        name: "Kumar",
+        age: 21,
+        city: "Coimbatore"
+    }
+];
+
+const output = document.getElementById("output");
+
+for (let i = 0; i < students.length; i++) {
+
+    output.innerHTML += `
+        <div>
+            <h3>${students[i].name}</h3>
+            <p>Age: ${students[i].age}</p>
+            <p>City: ${students[i].city}</p>
+        </div>
+        <hr>
+    `;
+
+}
+Process
+Array of Objects
+       ↓
+students
+       ↓
+for loop
+       ↓
+One Object
+       ↓
+Access Properties
+       ↓
+Create HTML
+       ↓
+innerHTML
+       ↓
+Screen
+6. Complete Real-Time Example
+இப்போ Form → Object → Array → Screen complete flow பார்ப்போம்.
+
+HTML
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Student Management</title>
+</head>
+
+<body>
+
+    <h1>Student Registration</h1>
+
+    <input
+        type="text"
+        id="name"
+        placeholder="Enter Name"
+    >
+
+    <input
+        type="number"
+        id="age"
+        placeholder="Enter Age"
+    >
+
+    <input
+        type="text"
+        id="city"
+        placeholder="Enter City"
+    >
+
+    <button id="saveBtn">
+        Add Student
+    </button>
+
+    <hr>
+
+    <div id="output"></div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
+JavaScript
+const nameInput = document.getElementById("name");
+const ageInput = document.getElementById("age");
+const cityInput = document.getElementById("city");
+
+const saveBtn = document.getElementById("saveBtn");
+const output = document.getElementById("output");
+
+const students = [];
+
+
+saveBtn.addEventListener("click", () => {
+
+    // 1. Get input values
+
+    const name = nameInput.value;
+    const age = ageInput.value;
+    const city = cityInput.value;
+
+
+    // 2. Create Object
+
+    const student = {
+        name: name,
+        age: age,
+        city: city
+    };
+
+
+    // 3. Store Object inside Array
+
+    students.push(student);
+
+
+    // 4. Display Array of Objects
+
+    output.innerHTML = "";
+
+    for (let i = 0; i < students.length; i++) {
+
+        output.innerHTML += `
+            <div>
+
+                <h2>${students[i].name}</h2>
+
+                <p>
+                    Age: ${students[i].age}
+                </p>
+
+                <p>
+                    City: ${students[i].city}
+                </p>
+
+            </div>
+
+            <hr>
+        `;
+    }
+
+
+    // 5. Clear Inputs
+
+    nameInput.value = "";
+    ageInput.value = "";
+    cityInput.value = "";
+
+});
+7. Full Execution Process 🔥
+Suppose user enters:
+
+Name → Arun
+Age → 22
+City → Chennai
+Step 1 — Get Values
+const name = nameInput.value;
+const age = ageInput.value;
+const city = cityInput.value;
+Result:
+
+name = "Arun"
+age = "22"
+city = "Chennai"
+Step 2 — Create Object
+const student = {
+    name: name,
+    age: age,
+    city: city
+};
+Result:
+
+{
+    name: "Arun",
+    age: "22",
+    city: "Chennai"
+}
+Step 3 — Store Object in Array
+students.push(student);
+Array becomes:
+
+[
+    {
+        name: "Arun",
+        age: "22",
+        city: "Chennai"
+    }
+]
+Second Student
+User enters:
+
+Bala
+23
+Madurai
+Again:
+
+students.push(student);
+Now:
+
+[
+    {
+        name: "Arun",
+        age: "22",
+        city: "Chennai"
+    },
+
+    {
+        name: "Bala",
+        age: "23",
+        city: "Madurai"
+    }
+]
+8. Display Using Table
+For student/customer/employee data, table is often easier to understand.
+
+HTML
+<table border="1">
+
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>City</th>
+        </tr>
+    </thead>
+
+    <tbody id="studentTable"></tbody>
+
+</table>
+JavaScript
+const students = [
+    {
+        name: "Arun",
+        age: 22,
+        city: "Chennai"
+    },
+    {
+        name: "Bala",
+        age: 23,
+        city: "Madurai"
+    },
+    {
+        name: "Kumar",
+        age: 21,
+        city: "Coimbatore"
+    }
+];
+
+const table = document.getElementById("studentTable");
+
+for (let i = 0; i < students.length; i++) {
+
+    table.innerHTML += `
+        <tr>
+            <td>${students[i].name}</td>
+            <td>${students[i].age}</td>
+            <td>${students[i].city}</td>
+        </tr>
+    `;
+
+}
+Output concept:
+
+--------------------------------
+| Name  | Age | City           |
+--------------------------------
+| Arun  | 22  | Chennai        |
+| Bala  | 23  | Madurai        |
+| Kumar | 21  | Coimbatore     |
+--------------------------------
+9. Important Concept — innerHTML +=
+இந்த concept students புரிஞ்சுக்கணும்.
+
+output.innerHTML += `
+    <p>${students[i].name}</p>
+`;
++= means existing content-க்கு புதுசா content add பண்ணு.
+
+If we use:
+
+output.innerHTML = `
+    <p>${students[i].name}</p>
+`;
+ஒவ்வொரு loop-லும் previous content replace ஆகும்.
+
+But:
+
+output.innerHTML += `
+    <p>${students[i].name}</p>
+`;
+previous content-ஐ வைத்துக்கிட்டு new content add ஆகும்.
+
+10. Very Important Architecture to Remember 🧠
+USER
+ ↓
+INPUT
+ ↓
+input.value
+ ↓
+OBJECT
+ ↓
+ARRAY
+ ↓
+FOR LOOP
+ ↓
+HTML TEMPLATE
+ ↓
+innerHTML
+ ↓
+SCREEN
+Example:
+
+User enters Arun
+       ↓
+input.value
+       ↓
+{
+  name: "Arun",
+  age: 22,
+  city: "Chennai"
+}
+       ↓
+students.push(student)
+       ↓
+Array of Objects
+       ↓
+for loop
+       ↓
+HTML
+       ↓
+Browser Screen
+Interview Connection
+This is the basic foundation behind many real applications:
+
+Registration Form
+Customer Management
+Student Management
+Employee Management
+Product Management
+Shopping Cart
+Todo Application
+Later, when you learn API + JSON + React, the same concept becomes:
+
+Form
+ ↓
+Object
+ ↓
+API Request
+ ↓
+Backend
+ ↓
+Database
+ ↓
+Array of Objects / JSON
+ ↓
+Frontend
+ ↓
+Screen
+So this DOM exercise is actually a very good bridge from basic JavaScript → real-world frontend development.
+
+Using foreach needed not like For loop
+
+Yes 👍 If you want to teach displaying Array of Objects using forEach(), then use forEach() instead of the normal for loop.
+
+Array of Objects → Screen using forEach()
+const students = [
+    {
+        name: "Arun",
+        age: 22,
+        city: "Chennai"
+    },
+    {
+        name: "Bala",
+        age: 23,
+        city: "Madurai"
+    },
+    {
+        name: "Kumar",
+        age: 21,
+        city: "Coimbatore"
+    }
+];
+
+const output = document.getElementById("output");
+
+students.forEach((student) => {
+    output.innerHTML += `
+        <div>
+            <h2>${student.name}</h2>
+            <p>Age: ${student.age}</p>
+            <p>City: ${student.city}</p>
+        </div>
+        <hr>
+    `;
+});
+Process
+Array of Objects
+       ↓
+    forEach()
+       ↓
+Each Object
+       ↓
+student.name
+student.age
+student.city
+       ↓
+   innerHTML
+       ↓
+     Screen
+Real-time Form → Object → Array → Screen
+const students = [];
+
+saveBtn.addEventListener("click", () => {
+
+    const student = {
+        name: nameInput.value,
+        age: ageInput.value,
+        city: cityInput.value
+    };
+
+    students.push(student);
+
+    output.innerHTML = "";
+
+    students.forEach((student) => {
+        output.innerHTML += `
+            <div>
+                <h3>${student.name}</h3>
+                <p>Age: ${student.age}</p>
+                <p>City: ${student.city}</p>
+            </div>
+            <hr>
+        `;
+    });
+});
+So the concept you can teach is:
+
+Input → Object → Array of Objects → forEach() → DOM → Screen.
+
+day18
+JavaScript localStorage – Important Notes & Interview Points
+
+1. What is localStorage?
+localStorage is a browser storage mechanism used to store data in key-value format. The stored data remains available even after refreshing the page or closing and reopening the browser, until it is manually removed.
+
+localStorage.setItem("name", "Arun");
+2. Important localStorage Methods
+setItem()
+Used to store data.
+
+localStorage.setItem("name", "Arun");
+Syntax:
+
+localStorage.setItem("key", "value");
+getItem()
+Used to retrieve stored data.
+
+const name = localStorage.getItem("name");
+
+console.log(name);
+If the key does not exist, getItem() returns:
+
+null
+removeItem()
+Used to remove one particular item.
+
+localStorage.removeItem("name");
+clear()
+Used to remove all localStorage data for the current origin.
+
+localStorage.clear();
+3. localStorage Stores Strings
+localStorage stores values as strings.
+
+Primitive string:
+
+localStorage.setItem("name", "Arun");
+For Objects and Arrays, we normally use JSON conversion.
+
+4. JSON.stringify()
+JSON.stringify() converts a JavaScript Object or Array into a JSON string.
+
+const user = {
+    name: "Arun",
+    age: 22
+};
+
+const data = JSON.stringify(user);
+
+localStorage.setItem("user", data);
+Easy Memory
+Object / Array
+      ↓
+JSON.stringify()
+      ↓
+String
+      ↓
+localStorage
+Interview Point: JSON.stringify() is commonly used before storing structured JavaScript data in localStorage.
+
+5. JSON.parse()
+JSON.parse() converts a JSON string back into a JavaScript value such as an Object or Array.
+
+const data = localStorage.getItem("user");
+
+const user = JSON.parse(data);
+
+console.log(user.name);
+Easy Memory
+localStorage
+     ↓
+String
+     ↓
+JSON.parse()
+     ↓
+Object / Array
+6. Storing an Array of Objects
+const users = [
+    {
+        name: "Arun",
+        email: "arun@gmail.com"
+    },
+    {
+        name: "Bala",
+        email: "bala@gmail.com"
+    }
+];
+
+localStorage.setItem(
+    "users",
+    JSON.stringify(users)
+);
+Getting the data:
+
+const users = JSON.parse(
+    localStorage.getItem("users")
+);
+7. Why || [] is Used
+Very important in our Register program:
+
+const users =
+    JSON.parse(localStorage.getItem("users")) || [];
+If users exists:
+
+JSON.parse(localStorage.getItem("users"))
+returns the stored array.
+
+If users does not exist:
+
+localStorage.getItem("users")
+returns:
+
+null
+Then:
+
+null || []
+returns:
+
+[]
+So the application gets an empty array for the first registration.
+
+8. push() in Registration
+After creating a user object:
+
+const user = {
+    name: name,
+    email: email,
+    password: password
+};
+we add it to the users array:
+
+users.push(user);
+Then save the updated array again:
+
+localStorage.setItem(
+    "users",
+    JSON.stringify(users)
+);
+Process
+Input
+ ↓
+Object
+ ↓
+users.push(user)
+ ↓
+Array of Objects
+ ↓
+JSON.stringify()
+ ↓
+localStorage
+9. find() in Login
+find() searches an array and returns the first element that satisfies the condition.
+
+const loggedUser = users.find((user) => {
+    return (
+        user.email === email &&
+        user.password === password
+    );
+});
+If matching user exists:
+
+{
+    name: "Arun",
+    email: "arun@gmail.com",
+    password: "1234"
+}
+If no matching user exists:
+
+undefined
+Interview Point: find() returns the first matching element, not an array.
+
+10. && in Login
+user.email === email &&
+user.password === password
+Both conditions must be true.
+
+Email Match    → true
+Password Match → true
+
+true && true
+      ↓
+     true
+If password is wrong:
+
+true && false
+      ↓
+     false
+Interview Rule
+&& requires all required conditions to be true.
+
+11. || in Form Validation
+if (
+    name === "" ||
+    email === "" ||
+    password === ""
+) {
+    console.log("All fields are required");
+}
+Here we are asking:
+
+Is any one field empty?
+
+Example:
+
+Name empty?     false
+Email empty?    true
+Password empty? false
+
+false || true || false
+        ↓
+       true
+Therefore validation runs.
+
+Interview Rule
+|| → Any one true is enough.
+
+&& → All conditions must be true.
+12. return in Validation
+if (
+    name === "" ||
+    email === "" ||
+    password === ""
+) {
+    message.textContent = "All fields are required";
+    return;
+}
+return stops the current function execution.
+
+Without return, the remaining registration code could continue executing.
+
+Interview Point: return can both return a value and terminate function execution.
+
+13. window.location.href
+Used to navigate to another page.
+
+window.location.href = "login.html";
+Example:
+
+if (loggedUser) {
+    window.location.href = "dashboard.html";
+}
+14. Logged-in User
+After successful login:
+
+localStorage.setItem(
+    "loggedUser",
+    JSON.stringify(loggedUser)
+);
+This allows another page to read the selected user's data.
+
+Dashboard:
+
+const loggedUser = JSON.parse(
+    localStorage.getItem("loggedUser")
+);
+15. Dashboard Protection
+if (!loggedUser) {
+    window.location.href = "login.html";
+}
+! means NOT.
+
+If:
+
+loggedUser = null;
+then:
+
+!loggedUser
+becomes:
+
+true
+and the user is redirected to Login.
+
+16. Logout
+localStorage.removeItem("loggedUser");
+
+window.location.href = "login.html";
+We remove only the current login state.
+
+The registered users array can remain stored.
+
+17. Complete Flow to Remember
+REGISTER
+
+Input Values
+    ↓
+Validation
+    ↓
+Create Object
+    ↓
+Get Existing Array
+    ↓
+push()
+    ↓
+JSON.stringify()
+    ↓
+localStorage
+
+
+LOGIN
+
+Input Values
+    ↓
+getItem()
+    ↓
+JSON.parse()
+    ↓
+find()
+    ↓
+Email && Password
+    ↓
+Store loggedUser
+    ↓
+Dashboard
+
+
+DASHBOARD
+
+getItem("loggedUser")
+    ↓
+JSON.parse()
+    ↓
+Display User
+    ↓
+Logout
+    ↓
+removeItem()
+Important Interview Points
+1. What is localStorage?
+Browser storage that persists key-value data until it is explicitly removed.
+
+2. What does setItem() do?
+Stores a key-value pair.
+
+3. What does getItem() return if the key doesn't exist?
+null.
+
+4. Why use JSON.stringify()?
+To convert objects/arrays into a string representation suitable for storage.
+
+5. Why use JSON.parse()?
+To convert stored JSON text back into JavaScript data.
+
+6. What is the difference between removeItem() and clear()?
+removeItem() removes one key. clear() removes all localStorage entries for that origin.
+
+7. What does find() return?
+The first matching element or undefined.
+
+8. Why is || used in registration validation?
+Because an error should occur if any one required field is empty.
+
+9. Why is && used during login checking?
+Because both email and password must match.
+
+10. Can we store passwords in localStorage in a real application?
+No. This login/register project is for learning browser storage and JavaScript flow. Production authentication should be handled securely through a backend; plain-text passwords should never be stored in localStorage.
+
+Must-Remember Methods
+localStorage.setItem()
+localStorage.getItem()
+localStorage.removeItem()
+localStorage.clear()
+
+JSON.stringify()
+JSON.parse()
+
+array.push()
+array.find()
+
+window.location.href
+Final Memory Formula
+SAVE   → stringify()
+GET    → parse()
+ADD    → push()
+SEARCH → find()
+LOGIN  → && 
+VALIDATE EMPTY FIELDS → ||
+LOGOUT → removeItem()
+MOVE PAGE → window.location.href
+
+day19
+JavaScript Async Programming — Callback, Promise, Async/Await, Fetch, Then & Catch
+
+1. What is Asynchronous JavaScript?
+JavaScript normally executes code line by line. But some operations take time, such as API calls, file loading, timers, database requests, and network operations. If JavaScript waits for every slow operation to finish before moving forward, the application can become unresponsive.
+
+Asynchronous JavaScript allows time-consuming tasks to run without blocking the rest of the program. Common asynchronous concepts in JavaScript include callbacks, promises, async/await, fetch, then, and catch.
+
+Simple flow:
+
+Start Task
+   ↓
+Task Takes Time
+   ↓
+JavaScript Continues Other Work
+   ↓
+Task Completes
+   ↓
+Handle Result
+2. Callback Function
+A callback function is a function passed as an argument to another function and executed later. Callbacks are one of the earliest ways to handle asynchronous operations in JavaScript.
+
+Callbacks are commonly used in timers, events, and older asynchronous code. The main issue with too many nested callbacks is that the code becomes difficult to read and maintain, which is often called callback hell.
+
+Syntax
+const mainFunction = (callback) => {
+    callback();
+};
+Example
+const greet = () => {
+    console.log("Hello");
+};
+
+const processUser = (callback) => {
+    console.log("Processing...");
+    callback();
+};
+
+processUser(greet);
+Output:
+
+Processing...
+Hello
+3. Callback with setTimeout()
+const showMessage = () => {
+    console.log("Data Loaded");
+};
+
+setTimeout(showMessage, 2000);
+Process:
+
+setTimeout()
+    ↓
+Wait 2 Seconds
+    ↓
+Callback Executes
+    ↓
+Data Loaded
+4. Callback Hell
+When multiple callbacks are nested one inside another, code becomes difficult to understand.
+
+Example:
+
+const firstTask = (callback) => {
+    setTimeout(() => {
+        console.log("First Task");
+        callback();
+    }, 1000);
+};
+
+const secondTask = (callback) => {
+    setTimeout(() => {
+        console.log("Second Task");
+        callback();
+    }, 1000);
+};
+
+firstTask(() => {
+    secondTask(() => {
+        console.log("Completed");
+    });
+});
+This nested structure is one reason Promises became popular.
+
+5. Promise
+A Promise is an object that represents the future result of an asynchronous operation. It tells us whether the operation is still waiting, completed successfully, or failed.
+
+A Promise has three states:
+
+Pending
+   ↓
+Fulfilled
+   OR
+Rejected
+Pending → Operation is still running
+
+Fulfilled → Operation completed successfully
+
+Rejected → Operation failed
+
+6. Promise Syntax
+const promise = new Promise((resolve, reject) => {
+
+    // async operation
+
+});
+resolve() is used when the operation succeeds.
+
+reject() is used when the operation fails.
+
+7. Simple Promise Example
+const promise = new Promise((resolve, reject) => {
+
+    const success = true;
+
+    if (success) {
+        resolve("Task Completed");
+    } else {
+        reject("Task Failed");
+    }
+
+});
+8. .then()
+.then() is used to handle a successfully resolved Promise.
+
+promise.then((result) => {
+    console.log(result);
+});
+Full Example:
+
+const promise = new Promise((resolve, reject) => {
+
+    const success = true;
+
+    if (success) {
+        resolve("Data Loaded");
+    } else {
+        reject("Error");
+    }
+
+});
+
+promise.then((result) => {
+    console.log(result);
+});
+Output:
+
+Data Loaded
+9. .catch()
+.catch() is used to handle a rejected Promise or an error.
+
+promise.catch((error) => {
+    console.log(error);
+});
+Full Example:
+
+const promise = new Promise((resolve, reject) => {
+
+    const success = false;
+
+    if (success) {
+        resolve("Success");
+    } else {
+        reject("Something went wrong");
+    }
+
+});
+
+promise
+    .then((result) => {
+        console.log(result);
+    })
+    .catch((error) => {
+        console.log(error);
+    });
+Output:
+
+Something went wrong
+10. .finally()
+.finally() runs whether the Promise succeeds or fails.
+
+promise
+    .then((result) => {
+        console.log(result);
+    })
+    .catch((error) => {
+        console.log(error);
+    })
+    .finally(() => {
+        console.log("Process Completed");
+    });
+11. Promise Flow
+Create Promise
+      ↓
+Async Operation
+      ↓
+Success?
+  ↙       ↘
+Yes       No
+ ↓         ↓
+resolve   reject
+ ↓         ↓
+then      catch
+      ↓
+   finally
+12. Promise Chaining
+We can use multiple .then() methods.
+
+Promise.resolve(10)
+    .then((value) => {
+        return value * 2;
+    })
+    .then((value) => {
+        return value + 5;
+    })
+    .then((value) => {
+        console.log(value);
+    });
+Output:
+
+25
+13. What is async?
+The async keyword is used before a function to make it asynchronous.
+
+An async function always returns a Promise.
+
+Syntax
+const getData = async () => {
+
+};
+Example:
+
+const getData = async () => {
+    return "Hello";
+};
+
+getData().then((result) => {
+    console.log(result);
+});
+Output:
+
+Hello
+14. What is await?
+await is used inside an async function to wait for a Promise to complete.
+
+Instead of using multiple .then() methods, await allows asynchronous code to look more like normal synchronous code.
+
+Syntax
+const result = await promise;
+15. Async/Await Example
+const getData = async () => {
+
+    const result = await Promise.resolve("Data Received");
+
+    console.log(result);
+};
+
+getData();
+Output:
+
+Data Received
+16. Promise vs Async/Await
+Promise Style
+const getData = () => {
+
+    Promise.resolve("Data")
+        .then((result) => {
+            console.log(result);
+        })
+        .catch((error) => {
+            console.log(error);
+        });
+
+};
+Async/Await Style
+const getData = async () => {
+
+    try {
+
+        const result = await Promise.resolve("Data");
+
+        console.log(result);
+
+    } catch (error) {
+
+        console.log(error);
+
+    }
+
+};
+Async/await is usually easier to read when several asynchronous steps are involved.
+
+17. try...catch
+When using async/await, errors are commonly handled using try...catch.
+
+Syntax
+try {
+
+    // code
+
+} catch (error) {
+
+    // handle error
+
+}
+Example:
+
+const getData = async () => {
+
+    try {
+
+        const result = await Promise.resolve("Success");
+
+        console.log(result);
+
+    } catch (error) {
+
+        console.log(error);
+
+    }
+
+};
+
+getData();
+18. What is Fetch?
+fetch() is a browser API used to make HTTP requests, usually to get or send data from an API.
+
+fetch() returns a Promise.
+
+Syntax
+fetch("API_URL");
+Example:
+
+fetch("https://jsonplaceholder.typicode.com/users");
+Since fetch returns a Promise, we can handle it using:
+
+.then()
+.catch()
+or:
+
+async
+await
+19. Fetch using .then() and .catch()
+fetch("https://jsonplaceholder.typicode.com/users")
+    .then((response) => {
+        return response.json();
+    })
+    .then((data) => {
+        console.log(data);
+    })
+    .catch((error) => {
+        console.log(error);
+    });
+20. Why response.json()?
+When fetch receives an HTTP response, it gives us a Response object.
+
+response
+To read JSON data:
+
+response.json()
+response.json() itself returns a Promise.
+
+So:
+
+fetch()
+   ↓
+Response Object
+   ↓
+response.json()
+   ↓
+JavaScript Data
+21. Fetch Full Process
+fetch(API)
+   ↓
+Send HTTP Request
+   ↓
+Server Responds
+   ↓
+Response Object
+   ↓
+response.json()
+   ↓
+Convert Response Body
+   ↓
+JavaScript Object / Array
+   ↓
+Use Data
+22. Fetch using Async/Await
+const getUsers = async () => {
+
+    try {
+
+        const response = await fetch(
+            "https://jsonplaceholder.typicode.com/users"
+        );
+
+        const data = await response.json();
+
+        console.log(data);
+
+    } catch (error) {
+
+        console.log(error);
+
+    }
+
+};
+
+getUsers();
+23. Fetch + DOM Example
+HTML:
+
+<button id="loadBtn">Load Users</button>
+
+<div id="output"></div>
+JavaScript:
+
+const button = document.getElementById("loadBtn");
+const output = document.getElementById("output");
+
+button.addEventListener("click", async () => {
+
+    try {
+
+        const response = await fetch(
+            "https://jsonplaceholder.typicode.com/users"
+        );
+
+        const users = await response.json();
+
+        output.innerHTML = "";
+
+        users.forEach((user) => {
+
+            output.innerHTML += `
+                <div>
+                    <h3>${user.name}</h3>
+                    <p>${user.email}</p>
+                </div>
+            `;
+
+        });
+
+    } catch (error) {
+
+        output.textContent = "Failed to load users";
+
+    }
+
+});
+24. Important Fetch Interview Point
+fetch() does not automatically reject for every HTTP error status such as 404 or 500. It rejects mainly for network-level failures.
+
+So we should often check:
+
+response.ok
+Example:
+
+const getUsers = async () => {
+
+    try {
+
+        const response = await fetch(
+            "https://jsonplaceholder.typicode.com/users"
+        );
+
+        if (!response.ok) {
+            throw new Error("Request Failed");
+        }
+
+        const data = await response.json();
+
+        console.log(data);
+
+    } catch (error) {
+
+        console.log(error.message);
+
+    }
+
+};
+25. GET Request
+GET is used to retrieve data.
+
+fetch("https://jsonplaceholder.typicode.com/users")
+    .then((response) => response.json())
+    .then((data) => console.log(data))
+    .catch((error) => console.log(error));
+26. POST Request
+POST is used to send new data to the server.
+
+const user = {
+    name: "Arun",
+    email: "arun@gmail.com"
+};
+
+fetch("https://jsonplaceholder.typicode.com/users", {
+
+    method: "POST",
+
+    headers: {
+        "Content-Type": "application/json"
+    },
+
+    body: JSON.stringify(user)
+
+})
+    .then((response) => response.json())
+    .then((data) => {
+        console.log(data);
+    })
+    .catch((error) => {
+        console.log(error);
+    });
+27. POST using Async/Await
+const addUser = async () => {
+
+    const user = {
+        name: "Arun",
+        email: "arun@gmail.com"
+    };
+
+    try {
+
+        const response = await fetch(
+            "https://jsonplaceholder.typicode.com/users",
+            {
+                method: "POST",
+
+                headers: {
+                    "Content-Type": "application/json"
+                },
+
+                body: JSON.stringify(user)
+            }
+        );
+
+        if (!response.ok) {
+            throw new Error("Unable to create user");
+        }
+
+        const data = await response.json();
+
+        console.log(data);
+
+    } catch (error) {
+
+        console.log(error.message);
+
+    }
+
+};
+
+addUser();
+28. PUT Request
+PUT is commonly used to replace/update existing data.
+
+fetch("https://jsonplaceholder.typicode.com/users/1", {
+
+    method: "PUT",
+
+    headers: {
+        "Content-Type": "application/json"
+    },
+
+    body: JSON.stringify({
+        name: "Updated User",
+        email: "updated@gmail.com"
+    })
+
+})
+    .then((response) => response.json())
+    .then((data) => console.log(data))
+    .catch((error) => console.log(error));
+29. DELETE Request
+DELETE is used to remove data.
+
+fetch("https://jsonplaceholder.typicode.com/users/1", {
+
+    method: "DELETE"
+
+})
+    .then((response) => {
+        console.log("Deleted");
+    })
+    .catch((error) => {
+        console.log(error);
+    });
+30. HTTP Methods — Easy Memory
+GET
+→ Read Data
+
+POST
+→ Create Data
+
+PUT
+→ Update / Replace Data
+
+DELETE
+→ Delete Data
+31. Callback vs Promise vs Async/Await
+Callback
+const task = (callback) => {
+    callback();
+};
+Use:
+
+Pass function
+Execute later
+Problem:
+
+Too many nested callbacks
+→ Callback Hell
+Promise
+const promise = new Promise((resolve, reject) => {
+
+});
+Use:
+
+resolve → Success
+reject → Failure
+
+then → Handle Success
+catch → Handle Error
+Async/Await
+const getData = async () => {
+
+    try {
+
+        const result = await promise;
+
+    } catch (error) {
+
+    }
+
+};
+Use:
+
+Cleaner asynchronous code
+Easy to read
+Easy error handling
+32. Complete Evolution
+Callback
+   ↓
+Nested Callback Problem
+   ↓
+Promise
+   ↓
+.then()
+.catch()
+   ↓
+Async/Await
+   ↓
+try/catch
+33. Interview Difference — .then() vs await
+.then()
+fetch(url)
+    .then((response) => response.json())
+    .then((data) => console.log(data));
+await
+const response = await fetch(url);
+
+const data = await response.json();
+Both work with Promises.
+
+Main difference:
+
+.then()
+→ Promise chaining style
+
+await
+→ Sequential-looking async style
+34. Important Promise Methods
+Promise.resolve()
+Promise.resolve("Success")
+    .then((data) => {
+        console.log(data);
+    });
+Promise.reject()
+Promise.reject("Failed")
+    .catch((error) => {
+        console.log(error);
+    });
+Promise.all()
+Waits for all Promises to succeed.
+
+const p1 = Promise.resolve(10);
+const p2 = Promise.resolve(20);
+
+Promise.all([p1, p2])
+    .then((result) => {
+        console.log(result);
+    });
+Output:
+
+[10, 20]
+If one Promise rejects, Promise.all() rejects.
+
+Promise.allSettled()
+Waits for all Promises whether they succeed or fail.
+
+const p1 = Promise.resolve("Success");
+const p2 = Promise.reject("Failed");
+
+Promise.allSettled([p1, p2])
+    .then((result) => {
+        console.log(result);
+    });
+Promise.race()
+Returns the result of the first Promise that settles.
+
+const first = new Promise((resolve) => {
+    setTimeout(() => resolve("First"), 1000);
+});
+
+const second = new Promise((resolve) => {
+    setTimeout(() => resolve("Second"), 2000);
+});
+
+Promise.race([first, second])
+    .then((result) => {
+        console.log(result);
+    });
+Output:
+
+First
+35. Important Interview Questions
+What is a Callback?
+A callback is a function passed as an argument to another function and executed later.
+
+What is a Promise?
+A Promise is an object representing the future success or failure of an asynchronous operation.
+
+What are Promise states?
+Pending
+Fulfilled
+Rejected
+What does .then() do?
+Handles a fulfilled Promise.
+
+What does .catch() do?
+Handles a rejected Promise or error.
+
+What does .finally() do?
+Runs after the Promise settles, whether it succeeds or fails.
+
+What is async?
+async marks a function as asynchronous and makes it return a Promise.
+
+What is await?
+await pauses execution inside an async function until a Promise settles.
+
+What is fetch?
+fetch() is a Web API used to make HTTP requests and it returns a Promise.
+
+What is response.json()?
+It reads the response body as JSON and returns a Promise that resolves to JavaScript data.
+
+Why do we use try/catch with async/await?
+To handle errors in asynchronous operations.
+
+36. Most Important Interview Code
+const getData = async () => {
+
+    try {
+
+        const response = await fetch(
+            "https://jsonplaceholder.typicode.com/users"
+        );
+
+        if (!response.ok) {
+            throw new Error("Failed to fetch data");
+        }
+
+        const data = await response.json();
+
+        console.log(data);
+
+    } catch (error) {
+
+        console.log(error.message);
+
+    }
+
+};
+
+getData();
+Understand this line by line:
+
+async
+→ Function works with asynchronous code
+
+await fetch()
+→ Wait for HTTP response
+
+response.ok
+→ Check HTTP success
+
+await response.json()
+→ Convert response body to data
+
+try
+→ Run risky async operation
+
+catch
+→ Handle error
+37. Final Revision
+CALLBACK
+→ Function passed to another function
+
+PROMISE
+→ Future async result
+
+resolve()
+→ Success
+
+reject()
+→ Failure
+
+then()
+→ Handle success
+
+catch()
+→ Handle failure
+
+finally()
+→ Runs after success/failure
+
+async
+→ Makes function asynchronous
+
+await
+→ Waits for Promise result
+
+try
+→ Run code that may fail
+
+catch
+→ Handle error
+
+fetch()
+→ Make HTTP request
+
+response.json()
+→ Convert JSON response
+
+GET
+→ Read
+
+POST
+→ Create
+
+PUT
+→ Update
+
+DELETE
+→ Delete
+Golden Interview Answer
+JavaScript handles asynchronous operations using callbacks, Promises, and async/await. Callbacks pass functions to be executed later, but deeply nested callbacks can create callback hell. Promises provide a cleaner way to represent asynchronous results using pending, fulfilled, and rejected states, with .then() for success and .catch() for errors. Async/await is built on top of Promises and provides a cleaner syntax for writing asynchronous code. The Fetch API returns a Promise and is commonly used to communicate with HTTP APIs using methods such as GET, POST, PUT, and DELETE.
+
+
+day20
+JAVASCRIPT FETCH API – STUDY NOTES
+
+1. What is Fetch API?
+Fetch API is a modern JavaScript Web API used to communicate with a server through HTTP requests. Frontend applications use fetch() to request data from an API, receive a response, convert the response into usable JavaScript data, and display or process that data.
+
+For example, an application may need to get users, products, students, orders, or employee details from a backend. Instead of keeping all this data directly inside JavaScript, we can request it from a server using the Fetch API.
+
+fetch("API_URL");
+2. Why Do We Use Fetch?
+Fetch is mainly used for frontend-to-backend communication.
+
+Frontend
+   ↓
+fetch()
+   ↓
+HTTP Request
+   ↓
+Backend / API
+   ↓
+HTTP Response
+   ↓
+JavaScript
+Real-time examples:
+
+Login → Send email/password
+
+Products Page → Get products
+
+Dashboard → Get employee details
+
+Registration → Send new user data
+
+Delete Button → Delete a record
+
+Edit Form → Update existing data
+3. Basic Fetch Syntax
+fetch("API_URL")
+    .then((response) => {
+        return response.json();
+    })
+    .then((data) => {
+        console.log(data);
+    })
+    .catch((error) => {
+        console.log(error);
+    });
+The basic process is:
+
+fetch()
+   ↓
+Response
+   ↓
+response.json()
+   ↓
+Data
+   ↓
+Use Data
+4. fetch()
+fetch() sends an HTTP request to a URL.
+
+fetch("https://jsonplaceholder.typicode.com/users");
+Important interview point:
+
+fetch() returns a Promise.
+
+Because API communication takes time, JavaScript does not immediately receive the final data.
+
+Conceptually:
+
+fetch()
+   ↓
+Promise
+   ↓
+Waiting for Server
+   ↓
+Response
+5. What is .then()?
+.then() is used to handle the successful result of a Promise.
+
+fetch("https://jsonplaceholder.typicode.com/users")
+    .then((response) => {
+        console.log(response);
+    });
+The first .then() receives the HTTP Response object.
+
+It does not directly give us the final users array.
+
+6. What is response?
+The server sends an HTTP response after receiving our request.
+
+.then((response) => {
+    console.log(response);
+});
+The response contains information such as:
+
+status
+statusText
+headers
+ok
+body
+For example:
+
+response.status
+response.ok
+7. What is response.json()?
+API responses commonly contain JSON data.
+
+We use:
+
+response.json();
+to read and parse the JSON response body.
+
+Example:
+
+fetch("https://jsonplaceholder.typicode.com/users")
+    .then((response) => {
+        return response.json();
+    });
+Important:
+
+response.json() also returns a Promise.
+
+That's why another .then() is normally used.
+
+8. Why Two .then() Methods?
+This is an important interview question.
+
+fetch(url)
+    .then((response) => {
+        return response.json();
+    })
+    .then((data) => {
+        console.log(data);
+    });
+First:
+
+fetch()
+ ↓
+Response Object
+Then:
+
+response.json()
+ ↓
+JavaScript Data
+So:
+
+First .then()
+→ Handles HTTP Response
+
+Second .then()
+→ Handles Parsed Data
+9. What is .catch()?
+.catch() is used to handle errors from the Promise chain, such as network failures or errors thrown in previous handlers.
+
+fetch(url)
+    .then((response) => {
+        return response.json();
+    })
+    .then((data) => {
+        console.log(data);
+    })
+    .catch((error) => {
+        console.log(error);
+    });
+Easy memory:
+
+.then()
+→ Success handling
+
+.catch()
+→ Error handling
+10. Complete GET Example
+GET is used to retrieve data.
+
+fetch("https://jsonplaceholder.typicode.com/users")
+    .then((response) => {
+        return response.json();
+    })
+    .then((users) => {
+        console.log(users);
+    })
+    .catch((error) => {
+        console.log(error);
+    });
+Process:
+
+API URL
+   ↓
+fetch()
+   ↓
+GET Request
+   ↓
+Server
+   ↓
+Response
+   ↓
+response.json()
+   ↓
+Users Array
+   ↓
+console.log()
+11. Fetch Data and Display using DOM
+Suppose API returns an array of users.
+
+HTML:
+
+<div id="output"></div>
+JavaScript:
+
+const output = document.getElementById("output");
+
+fetch("https://jsonplaceholder.typicode.com/users")
+    .then((response) => {
+        return response.json();
+    })
+    .then((users) => {
+
+        users.forEach((user) => {
+
+            output.innerHTML += `
+                <h2>${user.name}</h2>
+                <p>${user.email}</p>
+            `;
+
+        });
+
+    })
+    .catch((error) => {
+        console.log(error);
+    });
+Here the complete connection is:
+
+API
+ ↓
+Fetch
+ ↓
+Array of Objects
+ ↓
+forEach()
+ ↓
+Object
+ ↓
+user.name
+user.email
+ ↓
+innerHTML
+ ↓
+Screen
+12. HTTP Methods
+The four important HTTP methods are:
+
+GET
+POST
+PUT
+DELETE
+Easy CRUD connection:
+
+CREATE → POST
+
+READ   → GET
+
+UPDATE → PUT
+
+DELETE → DELETE
+This is called:
+
+CRUD Operations
+
+C → Create
+R → Read
+U → Update
+D → Delete
+13. GET Request
+GET is used to retrieve existing data from the server.
+
+fetch("https://jsonplaceholder.typicode.com/users")
+    .then((response) => response.json())
+    .then((data) => {
+        console.log(data);
+    })
+    .catch((error) => {
+        console.log(error);
+    });
+Normally we don't need to explicitly write:
+
+method: "GET"
+because GET is the default method used by fetch().
+
+14. POST Request
+POST is used to send new data to the server.
+
+First create an object:
+
+const user = {
+    name: "Arun",
+    email: "arun@gmail.com"
+};
+Then:
+
+fetch("https://jsonplaceholder.typicode.com/users", {
+
+    method: "POST",
+
+    headers: {
+        "Content-Type": "application/json"
+    },
+
+    body: JSON.stringify(user)
+
+})
+    .then((response) => response.json())
+    .then((data) => {
+        console.log(data);
+    })
+    .catch((error) => {
+        console.log(error);
+    });
+15. Why JSON.stringify() in POST?
+Our JavaScript data may be an object:
+
+const user = {
+    name: "Arun",
+    age: 22
+};
+When sending JSON to the server, we commonly convert the JavaScript object into JSON text:
+
+JSON.stringify(user);
+Flow:
+
+JavaScript Object
+       ↓
+JSON.stringify()
+       ↓
+JSON String
+       ↓
+Request Body
+       ↓
+Server
+16. What are Headers?
+Headers provide additional information about an HTTP request.
+
+Example:
+
+headers: {
+    "Content-Type": "application/json"
+}
+This tells the server:
+
+"The request body I'm sending contains JSON."
+
+Important:
+
+Content-Type
+→ Format of the data being sent
+17. What is body?
+body contains the data we want to send to the server.
+
+body: JSON.stringify(user)
+Example:
+
+Frontend Object
+     ↓
+JSON.stringify()
+     ↓
+body
+     ↓
+Backend
+18. PUT Request
+PUT is commonly used to update/replace an existing resource.
+
+const user = {
+    name: "Arun Kumar",
+    email: "arun@gmail.com"
+};
+
+fetch("https://jsonplaceholder.typicode.com/users/1", {
+
+    method: "PUT",
+
+    headers: {
+        "Content-Type": "application/json"
+    },
+
+    body: JSON.stringify(user)
+
+})
+    .then((response) => response.json())
+    .then((data) => {
+        console.log(data);
+    })
+    .catch((error) => {
+        console.log(error);
+    });
+Here:
+
+/users/1
+means we are targeting the resource with ID 1.
+
+19. DELETE Request
+DELETE is used to delete data.
+
+fetch("https://jsonplaceholder.typicode.com/users/1", {
+
+    method: "DELETE"
+
+})
+    .then((response) => {
+        console.log(response);
+    })
+    .catch((error) => {
+        console.log(error);
+    });
+Flow:
+
+User ID
+  ↓
+DELETE Request
+  ↓
+Server
+  ↓
+Delete Resource
+20. Fetch with Async/Await
+Instead of .then() and .catch(), we can also use async/await.
+
+const getUsers = async () => {
+
+    try {
+
+        const response = await fetch(
+            "https://jsonplaceholder.typicode.com/users"
+        );
+
+        const data = await response.json();
+
+        console.log(data);
+
+    } catch (error) {
+
+        console.log(error);
+
+    }
+
+};
+
+getUsers();
+21. Why Two awaits?
+Notice:
+
+const response = await fetch(url);
+
+const data = await response.json();
+First:
+
+await fetch()
+→ Wait for HTTP Response
+Second:
+
+await response.json()
+→ Wait for response body to be parsed
+So:
+
+API
+ ↓
+await fetch()
+ ↓
+Response
+ ↓
+await response.json()
+ ↓
+Data
+22. .then() vs Async/Await
+Promise chaining:
+
+fetch(url)
+    .then((response) => response.json())
+    .then((data) => console.log(data))
+    .catch((error) => console.log(error));
+Async/Await:
+
+const getData = async () => {
+
+    try {
+
+        const response = await fetch(url);
+
+        const data = await response.json();
+
+        console.log(data);
+
+    } catch (error) {
+
+        console.log(error);
+
+    }
+
+};
+Both are Promise-based.
+
+.then() / .catch()
+→ Promise chaining style
+
+async / await
+→ Cleaner sequential-looking syntax
+23. Checking response.ok
+Very important interview point:
+
+fetch() does not automatically reject just because the server returns an HTTP error status such as 404 or 500.
+
+So we can check:
+
+if (!response.ok) {
+    throw new Error("Request Failed");
+}
+Complete example:
+
+Golden Interview Answer
+Fetch API is a Promise-based Web API used to make HTTP requests from JavaScript. It is commonly used to communicate between frontend applications and backend APIs. fetch() returns a Promise that resolves to a Response object, and methods such as response.json() are used to read the response body.
+
+Fetch supports HTTP methods such as GET, POST, PUT, and DELETE. GET retrieves data, POST creates data, PUT updates data, and DELETE removes data. Fetch can be handled using .then() and .catch() or using async/await with try...catch.
