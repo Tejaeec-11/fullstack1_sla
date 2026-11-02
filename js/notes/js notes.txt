@@ -1316,15 +1316,15 @@ A String represents text.
 
 Strings can be written using:
 
-Double quotes:
+Double quotes:""
 
 let username = "React";
 
-Single quotes:
+Single quotes:''
 
 let username = 'React';
 
-Template literals:
+Template literals:``
 
 let username = `React`;
 
@@ -1390,7 +1390,7 @@ NaN means:
 
 Not-a-Number
 
-Example:
+Example:  result use only one time it same as console .log 
 
 let result = "Hello" * 5;
 
@@ -1422,7 +1422,7 @@ true
 
 false
 
-Example:
+Example: use {is with or without } syntax keyword isvariablename  assignmentopeartor value;
 
 let isLoggedIn = true;
 
@@ -1536,9 +1536,9 @@ Object is used to store collections of related data.
 
 Example:
 
-let student = {
+let student = {  //keyword varaiblename = {
 
-name: "Rahul",
+name: "Rahul", // property : value; property : value; property : value; }
 
 age: 22,
 
@@ -1645,6 +1645,7 @@ function greet() {
 console.log("Hello");
 
 }
+/////greet()
 
 41. TYPEOF OPERATOR
 
@@ -1704,7 +1705,7 @@ Output:
 
 object
 
-console.log(typeof []);
+console.log(typeof []); ///array and function are object in typeof
 
 Output:
 
